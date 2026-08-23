@@ -20,6 +20,7 @@ public abstract class Shop : MonoBehaviour {
 	public Coroutine RunEnterShop { get; set; }
 	public Action OnGreeting {get;set;}
 	public Action OnSaleMade { get; set; }
+	public ShopController ShopController => GameManager.Instance.ShopController;
 
     #endregion
 
@@ -66,7 +67,6 @@ public abstract class Shop : MonoBehaviour {
 			this.OnGreeting?.Invoke();
 			yield return new WaitForSeconds(shopEnterTime);
         }
-        gameObject.SetActive(enter);
     }
 
     #endregion

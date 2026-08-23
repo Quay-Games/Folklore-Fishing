@@ -1,4 +1,5 @@
 using FMODUnity;
+using System.Collections;
 using UnityEngine;
 
 public class RodShop : Shop {
@@ -87,7 +88,14 @@ public class RodShop : Shop {
 	public override void VoiceLineOver(bool skipped) {
 
 	}
+    public override IEnumerator EnterShop(bool enable) {
+        base.EnterShop(enable);
+        yield return null;
+        if (!enable) {
+            this.ShopController.EnableMenu(this.ShopController.Shore.gameObject);
+        }
+    }
 
-	#endregion
+    #endregion
 
 }

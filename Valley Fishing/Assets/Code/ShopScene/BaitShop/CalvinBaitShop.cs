@@ -6,17 +6,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class BaitShop : Shop {
+public class CalvinBaitShop : Shop {
 
 	#region Serialized Fields
 
 	[SerializeField] private GameObject baitShopObject;
 	[SerializeField] protected FishBoard fishBoard;
 	[SerializeField] protected BaitBoard baitBoard;
-	[SerializeField] protected EventSystem eventSystem;
-	[SerializeField] protected EventReference[] fishboardTutorials;
-	[SerializeField] protected EventReference[] baitboardTutorials;
-	[SerializeField] protected EventReference[] fishBasketTutorials;
 	[SerializeField] protected ButtonVoiceOverComponent fishBoardButton;
 	[SerializeField] protected ButtonVoiceOverComponent fishBasketButton;
 	[SerializeField] protected ButtonVoiceOverComponent baitBoardButton;
@@ -25,18 +21,14 @@ public class BaitShop : Shop {
 	[SerializeField] protected EventReference fishBasketEvent;
 	[SerializeField] protected EventReference baitBoardEvent;
 	[SerializeField] protected EventReference leaveShopEvent;
-	[SerializeField] protected LerpObjectToPosition[] lerpObjectToPositions;
+	[SerializeField] protected float lerpTransformDuration;
+    [SerializeField] protected Transform[] lerpTransforms;
 
 	#endregion
 
 
 	#region Properties
 
-	public int FishSellPrice { get;	set; }
-	public bool TutorialBaitBought { get; set; }
-	public bool[] FishboardTutorialsCompleted { get; set; }
-	public bool[] BaitboardTutorialsCompleted { get; set; }
-	public bool[] FishBasketTutorialsCompleted { get; set; }
 	[field:SerializeField] public int[] BaitQuantities { get; set; }
 	public BaitBoard BaitBoard => baitBoard;
 	public FishBoard FishBoard => fishBoard;
@@ -49,15 +41,6 @@ public class BaitShop : Shop {
     public override void Start()
     {
 		base.Start();
-		for (int i = 0; i < fishboardTutorials.Length; i++)	{
-			this.FishboardTutorialsCompleted = new bool[fishboardTutorials.Length];
-		}
-		for (int i = 0; i < baitboardTutorials.Length; i++)	{
-			this.BaitboardTutorialsCompleted = new bool[baitboardTutorials.Length];
-		}
-		for (int i = 0; i < fishBasketTutorials.Length; i++) {
-			this.FishBasketTutorialsCompleted = new bool[fishBasketTutorials.Length];
-		}
 		fishBoardButton.SelectAction += FishBoardSelected;
 		fishBasketButton.SelectAction += FishBasketSelected;
 		baitBoardButton.SelectAction += BaitBoardSelected;
@@ -73,12 +56,17 @@ public class BaitShop : Shop {
 		leaveShopButton.SelectAction -= LeaveShopSelected;
 	}
 
-	#endregion
+    public void OnEnable() {
+		InputManager.Instance.SelectButton(InitialButton);
+		transform.position = lerpTransforms[0].position;
+    }
+
+    #endregion
 
 
-	#region Private Methods
+    #region Private Methods
 
-	public override void VoiceLineOver(bool skipped) {
+    public override void VoiceLineOver(bool skipped) {
 	}
 
 	#endregion
@@ -94,7 +82,6 @@ public class BaitShop : Shop {
 		AudioManager.Instance.SkipVoiceOver();
 		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity; i++) {
 			GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[fishIndex].ItemSellPrice;
-			this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[fishIndex].ItemSellPrice;
 		}
 		if (InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity > 0) {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
@@ -121,7 +108,6 @@ public class BaitShop : Shop {
 			}
 			for (int j = InventoryManager.Instance.OwnedFishTypeDatas[i].quantity - 1; j >= 0; j--) {
 				GameManager.Instance.Money += InventoryManager.Instance.FishDatas.Datas[i].ItemSellPrice;
-                this.FishSellPrice += InventoryManager.Instance.FishDatas.Datas[i].ItemSellPrice;
                 InventoryManager.Instance.OwnedFishTypeDatas[i].quantity--;
 			}
 		}
@@ -161,12 +147,20 @@ public class BaitShop : Shop {
 		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 	}
 
-	#endregion
+	public override IEnumerator EnterShop(bool enable) {
+		base.EnterShop(enable);
+		yield return null;
+		if (!enable) {
+			this.ShopController.EnableMenu(this.ShopController.Shore.gameObject);
+		}
+	}
+
+    #endregion
 
 
-	#region Private Methods
+    #region Private Methods
 
-	private void PerformSellFish(int fishIndex) {
+    private void PerformSellFish(int fishIndex) {
 		InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity = 0;
 	}
 
@@ -176,8 +170,8 @@ public class BaitShop : Shop {
 	}
 
 	public virtual void OpenFishBoard() {
-		lerpObjectToPositions[1].BeginLerp();
-		fishBoard.OpenFishBoard();
+        StartCoroutine(RunBeginLerp(lerpTransforms[1]));
+        fishBoard.OpenFishBoard();
 	}
 	public virtual void OpenBaitBoard() {
 		baitBoard.OpenBaitBoard();
@@ -187,22 +181,29 @@ public class BaitShop : Shop {
 		base.Skip();
 		AudioManager.Instance.DisableSkipping();
 	}
+    public virtual void FishBasketSelected() {
+		StartCoroutine(RunBeginLerp(lerpTransforms[0]));
+    }
 
-	public virtual void FishBoardSelected() {
-		lerpObjectToPositions[1].BeginLerp();
-	}
-
-	public virtual void FishBasketSelected() {
-		lerpObjectToPositions[0].BeginLerp();
-	}
+    public virtual void FishBoardSelected() {
+        StartCoroutine(RunBeginLerp(lerpTransforms[1]));
+    }	
 
 	public virtual void BaitBoardSelected() {
-		lerpObjectToPositions[2].BeginLerp();
-	}
+        StartCoroutine(RunBeginLerp(lerpTransforms[2]));
+    }
 	public virtual void LeaveShopSelected() {
-		lerpObjectToPositions[3].BeginLerp();
-	}
+        StartCoroutine(RunBeginLerp(lerpTransforms[3]));
+    }
+    private IEnumerator RunBeginLerp(Transform lerpTransform) {
+        float elapsedTime = 0;
+        while (elapsedTime < lerpTransformDuration) {
+            transform.position = Vector3.Lerp(transform.position, lerpTransform.position, (elapsedTime / lerpTransformDuration));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
 
-	#endregion
+    #endregion
 
 }

@@ -334,7 +334,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8664658853799117516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: EneterInventorsLab
         m_Mode: 1
@@ -358,7 +358,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: -425155890
@@ -375,7 +374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3868821135661395079}
-  - component: {fileID: 8664658853799117516}
+  - component: {fileID: 370024381049429140}
   m_Layer: 5
   m_Name: ShoreMenu
   m_TagString: Untagged
@@ -403,7 +402,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &8664658853799117516
+--- !u!114 &370024381049429140
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -412,16 +411,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1596625085206511626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea12935dd50182449c7289373f2a90b, type: 3}
+  m_Script: {fileID: 11500000, guid: decbd4321b6e1c046affae871fc3f71a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lastShopIndex: -1
-  shopButtons:
-  - {fileID: 5430153667093194481}
-  - {fileID: 7353043835317148546}
-  - {fileID: 2274842339559533034}
-  - {fileID: 1041738229507964229}
-  - {fileID: 4275944970178348321}
+  shopButtons: []
   eventSystem: {fileID: 0}
   <FinishedInShops>k__BackingField: 
   <AllShopsFinished>k__BackingField: 0
@@ -621,7 +615,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8664658853799117516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: EnterIcthyologists
         m_Mode: 1
@@ -645,7 +639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: -1166943654
@@ -1252,7 +1245,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8664658853799117516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: LeaveShore
         m_Mode: 1
@@ -1276,7 +1269,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 346608475
@@ -1482,7 +1474,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8664658853799117516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: EnterBaitShop
         m_Mode: 1
@@ -1506,7 +1498,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 1706060077
@@ -1773,7 +1764,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8664658853799117516}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: Shore, Assembly-CSharp
         m_MethodName: EnterRodShop
         m_Mode: 1
@@ -1797,7 +1788,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0b64e1ecfa4b8dc4fae5c109382afdc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 0
   HoverButtonSoundEventReference:
     Guid:
       Data1: 822187394

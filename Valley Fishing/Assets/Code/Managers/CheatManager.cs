@@ -17,11 +17,9 @@ public class CheatManager : Singleton<CheatManager>
 
 	private int ScenesLoaded;
 
-	[field:SerializeField]
-	private bool useCheats = true;
+	[field:SerializeField] private bool useCheats = true;
 
-	[field: SerializeField]
-	private bool superFastCatch;
+	[field: SerializeField] private bool superFastCatch;
 
 	#region Mono Behaviours
 
@@ -63,7 +61,9 @@ public class CheatManager : Singleton<CheatManager>
 			ShowThirdCatchTutorialCheats();
 			ShowFirstBossTutorialCheats();
 			ShowGameScenneCheats();
-		}
+			ShowCalvinShopTutorialCheats();
+
+        }
 	}
 
 	#endregion
@@ -228,6 +228,28 @@ public class CheatManager : Singleton<CheatManager>
 		}
 	}
 
-	#endregion
+    #endregion
+
+
+    #region Calvin Shop
+
+    [System.Serializable]
+    public class CalvinShoreCheats {
+        public CaughtFishCheatData[] CaughtFish;
+    }
+
+    [SerializeField] private CalvinShoreCheats calvinShoreCheats;
+
+    private void ShowCalvinShopTutorialCheats() {
+        if (SceneManager.GetActiveScene().name == LevelManager.ShopTutorial_02) {
+            for (int i = 0; i < calvinShoreCheats.CaughtFish.Length; i++) {
+                foreach (var fish in calvinShoreCheats.CaughtFish) {
+                    InventoryManager.Instance.OwnedFishTypeDatas[fish.FishIndex].quantity = fish.FishAmount;
+                }
+            }
+        }
+    }
+
+    #endregion
 
 }
