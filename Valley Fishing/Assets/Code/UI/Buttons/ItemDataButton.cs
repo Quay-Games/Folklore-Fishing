@@ -40,10 +40,10 @@ public class ItemDataButton : ButtonVoiceOverComponent
         }
         if (itemSellPrice != null)
         {
-            itemSellPrice.text = data.OwnedItemData.ItemSellPrice.ToString();
+            itemSellPrice.text = data.OwnedItemData.ItemSellPrice.ToString() + "g";
         }
 		if(itemQuantity != null) {
-			itemQuantity.text = data.quantity .ToString();
+			itemQuantity.text = "x" + data.quantity .ToString();
 		}
     }
 
@@ -54,7 +54,7 @@ public class ItemDataButton : ButtonVoiceOverComponent
         
         if (this.ItemData.OwnedItemData is FishDatas.FishData)
         {
-            int itemIndex = Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.ItemData);
+            int itemIndex = Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.ItemData.OwnedItemData);
             int intemQuantity = InventoryManager.Instance.OwnedFishTypeDatas[itemIndex].quantity;
             voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
             voiceoverChain.AddRange(FMODManager.Instance.GetNumber(this.ItemData.OwnedItemData.ItemSellPrice));
@@ -69,8 +69,10 @@ public class ItemDataButton : ButtonVoiceOverComponent
         if(this.ItemData.OwnedItemData is BaitDatas.BaitData)
         {
 			if (GameManager.Instance.ShopController != null) {
-				int itemIndex = Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.ItemData);
-				int itemValue = InventoryManager.Instance.OwnedFishTypeDatas[itemIndex].quantity * 5;
+				int itemIndex = Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData);
+				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[itemIndex];
+				int itemValue = InventoryManager.Instance.OwnedBaitTypeDatas[itemIndex].OwnedItemData.ItemSellPrice * baitQuantity;
+				voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
 				voiceoverChain.AddRange(FMODManager.Instance.GetNumber(itemValue));
 				voiceoverChain.Add(FMODManager.Instance.Gold);
 				if (GameManager.Instance.ShopController.BaitShop.BaitQuantities[itemIndex] == 0) {
@@ -101,7 +103,8 @@ public class ItemDataButton : ButtonVoiceOverComponent
         }
 		if (this.ItemData.OwnedItemData is BaitDatas.BaitData) {
 			if (GameManager.Instance.ShopController != null) {
-
+				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[transform.GetSiblingIndex()];
+				GameManager.Instance.ShopController.BaitShop.BuyBait(transform.GetSiblingIndex(), baitQuantity);
 			}
 			else {
 				GameManager.Instance.LevelController.BaitView.BaitClicked(Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData));

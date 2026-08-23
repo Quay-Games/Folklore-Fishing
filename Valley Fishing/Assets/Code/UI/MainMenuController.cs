@@ -25,10 +25,9 @@ public class MainMenuController : MonoBehaviour
 		GameManager.Instance.InputController.SelectButton(initialMenuButton);
 		List<EventReference> voiceOverChain = new List<EventReference>();
 		voiceOverChain.Add(FMODManager.Instance.MenuGreeting);
-		voiceOverChain.Add(FMODManager.Instance.ReplayVoiceLine);
 		voiceOverChain.Add(FMODManager.Instance.SkipVoiceLine);
-		//AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
-		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.MenuGreeting);
+		voiceOverChain.Add(FMODManager.Instance.ReplayVoiceLine);
+		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 		AudioManager.Instance.PlayMusic(menuMusic);
     }
 

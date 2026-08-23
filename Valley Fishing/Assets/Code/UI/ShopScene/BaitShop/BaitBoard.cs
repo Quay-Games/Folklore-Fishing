@@ -1,12 +1,12 @@
 using FMODUnity;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class BaitBoard : MonoBehaviour {
+public class BaitBoard : ItemDataButtonGenerator {
 
 	#region Serialized Fields
 
 	[SerializeField] private GameObject baitBoardObject;
-	[SerializeField] private GameObject initialButton;
 	[SerializeField] private GameObject[] baitshopComponents;
 	
 
@@ -42,7 +42,6 @@ public class BaitBoard : MonoBehaviour {
 			AudioManager.Instance.SetMusicParameter("BaitBoardVolume", 1);
 			baitBoardObject.SetActive(true);
 			for (int i = 0; i < baitshopComponents.Length; i++) {
-				EventReference eventReference = new EventReference();
 				InitiallizeBaitBoard(false);
 			}
 		} else {
@@ -57,6 +56,17 @@ public class BaitBoard : MonoBehaviour {
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoardOpenClose);
 	}
 
+	public override List<OwnedItemTypeData> GetTempBaitListForSelling() {
+		List<OwnedItemTypeData> data = new List<OwnedItemTypeData>();
+		for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
+			OwnedItemTypeData itemData = new OwnedItemTypeData();
+			itemData.OwnedItemData = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData;
+			itemData.quantity = BaitQuantities[i];
+			data.Add(itemData);
+		}
+		return data;
+	}
+
 	#endregion
 
 
@@ -68,9 +78,6 @@ public class BaitBoard : MonoBehaviour {
 		}
 		if (this.Initialized) {
 			return;
-		}
-		if (baitBoardObject.activeSelf) {
-			GameManager.Instance.EventSystem.SetSelectedGameObject(initialButton);
 		}
 		this.Initialized = true;
 	}

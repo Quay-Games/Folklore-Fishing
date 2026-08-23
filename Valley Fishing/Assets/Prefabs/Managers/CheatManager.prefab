@@ -73,6 +73,6 @@ MonoBehaviour:
     - FishIndex: 3
       FishAmount: 3
     - FishIndex: 4
-      FishAmount: 2
+      FishAmount: 3
   thirdShopTutorialCheats:
     CaughtFish: []

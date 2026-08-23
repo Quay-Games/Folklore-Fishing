@@ -396,29 +396,29 @@ MonoBehaviour:
       Data4: -1688856603
     Path: event:/VoiceOver/Narrator/Numbers/10
   - Guid:
-      Data1: -1462212755
-      Data2: 1294528865
-      Data3: -1528836730
-      Data4: 352432259
-    Path: event:/VoiceLines/Misc/Captain/Numbers/11
+      Data1: 977869842
+      Data2: 1172846665
+      Data3: 1935141820
+      Data4: -1572817308
+    Path: event:/VoiceOver/Narrator/Numbers/11
   - Guid:
-      Data1: 990291685
-      Data2: 1091456315
-      Data3: -80581228
-      Data4: -1099444654
-    Path: event:/VoiceLines/Misc/Captain/Numbers/12
+      Data1: 1763739186
+      Data2: 1288397464
+      Data3: 1890738054
+      Data4: -1213710651
+    Path: event:/VoiceOver/Narrator/Numbers/12
   - Guid:
-      Data1: -1425754279
-      Data2: 1156301123
-      Data3: -763326561
-      Data4: 447991623
-    Path: event:/VoiceLines/Misc/Captain/Numbers/13
+      Data1: -1357825732
+      Data2: 1307683517
+      Data3: 232297375
+      Data4: -608218681
+    Path: event:/VoiceOver/Narrator/Numbers/13
   - Guid:
-      Data1: -1584091325
-      Data2: 1094659541
-      Data3: 73538454
-      Data4: -1794947585
-    Path: event:/VoiceLines/Misc/Captain/Numbers/14
+      Data1: -577034750
+      Data2: 1238804101
+      Data3: 209072027
+      Data4: -1901809550
+    Path: event:/VoiceOver/Narrator/Numbers/14
   - Guid:
       Data1: -1421866527
       Data2: 1277445430
@@ -426,29 +426,29 @@ MonoBehaviour:
       Data4: 412724681
     Path: event:/VoiceOver/Narrator/Numbers/15
   - Guid:
-      Data1: 1297408707
-      Data2: 1119361569
-      Data3: -701199978
-      Data4: 939412141
-    Path: event:/VoiceLines/Misc/Captain/Numbers/16
+      Data1: -16390513
+      Data2: 1122778215
+      Data3: -419773822
+      Data4: 389427236
+    Path: event:/VoiceOver/Narrator/Numbers/16
   - Guid:
-      Data1: -1443686414
-      Data2: 1279033898
-      Data3: 1702955438
-      Data4: 1703990049
-    Path: event:/VoiceLines/Misc/Captain/Numbers/17
+      Data1: 1383974700
+      Data2: 1312900293
+      Data3: 1183121068
+      Data4: -1251231511
+    Path: event:/VoiceOver/Narrator/Numbers/17
   - Guid:
-      Data1: -1746877603
-      Data2: 1251469052
-      Data3: -1538664547
-      Data4: 598248264
-    Path: event:/VoiceLines/Misc/Captain/Numbers/18
+      Data1: -2007541333
+      Data2: 1329339119
+      Data3: -2138976072
+      Data4: 1366082860
+    Path: event:/VoiceOver/Narrator/Numbers/18
   - Guid:
-      Data1: 1846309256
-      Data2: 1292749796
-      Data3: -248059264
-      Data4: 1351548832
-    Path: event:/VoiceLines/Misc/Captain/Numbers/19
+      Data1: 291600890
+      Data2: 1173598401
+      Data3: -1330348911
+      Data4: 1256467675
+    Path: event:/VoiceOver/Narrator/Numbers/19
   - Guid:
       Data1: 1720019748
       Data2: 1169252553

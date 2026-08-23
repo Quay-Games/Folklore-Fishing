@@ -680,6 +680,10 @@ PrefabInstance:
       propertyPath: superFastCatch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: firstShopTutorialCheats.CaughtFish.Array.data[1].FishAmount
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0

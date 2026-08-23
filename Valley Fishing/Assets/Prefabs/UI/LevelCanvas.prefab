@@ -680,11 +680,11 @@ MonoBehaviour:
   initialButton: {fileID: 8056399850093802551}
   pauseLine:
     Guid:
-      Data1: 1001210754
-      Data2: 1276853941
-      Data3: 336968124
-      Data4: 173268719
-    Path: event:/VoiceOver/Narrator/Menus/Pause
+      Data1: -110431544
+      Data2: 1164387370
+      Data3: 72337331
+      Data4: 1682314902
+    Path: event:/VoiceOver/Narrator/Menus/Pause 2
 --- !u!1 &1499489511412858529
 GameObject:
   m_ObjectHideFlags: 0

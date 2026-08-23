@@ -527,6 +527,17 @@
                 },
                 {
                     "name": "",
+                    "id": "2fc8486e-10b0-45dd-ab36-85b979c82a09",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "Replay Line",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "987a1f9a-7e64-4a0b-9152-a194de5fbda5",
                     "path": "<Keyboard>/rightArrow",
                     "interactions": "",

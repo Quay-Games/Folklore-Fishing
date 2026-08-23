@@ -1214,7 +1214,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639194759208281312
+  lastModified: 639211425153038041
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1478,6 +1478,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-6015997037680891855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/12
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/12
+  Guid:
+    Data1: 1763739186
+    Data2: 1288397464
+    Data3: 1890738054
+    Data4: -1213710651
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1103811383121736687}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5788624456737476852
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2717,6 +2745,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3201402020616560375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/18
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/18
+  Guid:
+    Data1: -2007541333
+    Data2: 1329339119
+    Data3: -2138976072
+    Data4: 1366082860
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8776441774411674649}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3121020213042110083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3211,6 +3267,62 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2448000231711804552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/13
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/13
+  Guid:
+    Data1: -1357825732
+    Data2: 1307683517
+    Data3: 232297375
+    Data4: -608218681
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2232052457689665646}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2386630169655787281
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/11
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/11
+  Guid:
+    Data1: 977869842
+    Data2: 1172846665
+    Data3: 1935141820
+    Data4: -1572817308
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7564489478061543111}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2324879593652310206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3236,6 +3348,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 6656850721255284690}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2162631486143269033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/19
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/19
+  Guid:
+    Data1: 291600890
+    Data2: 1173598401
+    Data3: -1330348911
+    Data4: 1256467675
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8010375453075204189}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -3820,6 +3960,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1103811383121736687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/12/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-1036681565867345840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4256,6 +4420,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-128569912992235697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/16/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-102221894009129467
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4525,12 +4713,20 @@ MonoBehaviour:
   - {fileID: -7839766082977287680}
   - {fileID: 2580086007349199497}
   - {fileID: -4743026536122091851}
+  - {fileID: 3416447899058065380}
+  - {fileID: -2386630169655787281}
+  - {fileID: 3651194637723844241}
+  - {fileID: -6015997037680891855}
+  - {fileID: -2448000231711804552}
+  - {fileID: 6401719894389355941}
+  - {fileID: -3201402020616560375}
+  - {fileID: -2162631486143269033}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639208633888120155
+  cacheTime: 639211429595613274
   cacheVersion: 131624
 --- !u!114 &160373513521069307
 MonoBehaviour:
@@ -5351,10 +5547,34 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639208633888120155
+  lastModified: 639211429595613274
   FileSizes:
   - Name: Desktop
-    Value: 10006912
+    Value: 10014080
+  Exists: 1
+--- !u!114 &2232052457689665646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/13/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &2239498554853499246
 MonoBehaviour:
@@ -5879,6 +6099,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3224831187405586419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/14/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3296068694254628099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5935,6 +6179,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 557
+--- !u!114 &3416447899058065380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/14
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/14
+  Guid:
+    Data1: -577034750
+    Data2: 1238804101
+    Data3: 209072027
+    Data4: -1901809550
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3224831187405586419}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3449111546084285382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5983,6 +6255,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3651194637723844241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/17
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/17
+  Guid:
+    Data1: 1383974700
+    Data2: 1312900293
+    Data3: 1183121068
+    Data4: -1251231511
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3963943548562217122}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &3768590091513012719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6137,6 +6437,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &3963943548562217122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/17/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &4003602315122667043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7330,6 +7654,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6401719894389355941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Numbers/16
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Numbers/16
+  Guid:
+    Data1: -16390513
+    Data2: 1122778215
+    Data3: -419773822
+    Data4: 389427236
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -128569912992235697}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &6431041581417066969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7822,6 +8174,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7564489478061543111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/11/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7691446774550757167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7885,10 +8261,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639194759208311225
+  lastModified: 639211425153077915
   FileSizes:
   - Name: Desktop
-    Value: 9760
+    Value: 10016
   Exists: 1
 --- !u!114 &7903908746796994608
 MonoBehaviour:
@@ -7901,6 +8277,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/ThanksForPlaying/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8010375453075204189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/19/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -8177,6 +8577,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &8776441774411674649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/18/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &8904145442618960667
 MonoBehaviour:
   m_ObjectHideFlags: 0

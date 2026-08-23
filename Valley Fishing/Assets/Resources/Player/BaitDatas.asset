@@ -81,7 +81,7 @@ MonoBehaviour:
         Data3: -304369528
         Data4: 2045004071
       Path: event:/VoiceOver/Narrator/BaitLines/CricketBait
-    ItemSellPrice: 5
+    ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: 740693aaf7561694eb4134fa998e79c4, type: 3}
     IsTutorial: 0
     FishSpawnChances:

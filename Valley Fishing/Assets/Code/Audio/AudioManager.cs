@@ -305,14 +305,14 @@ public class AudioManager : Singleton<AudioManager>
 				PlayVoiceOver(this.VoiceOverChain[this.VoiceOverChainPosition]);
 			} else {
 				if (!this.Paused) {
-					this.OnVoiceLineOver?.Invoke(false);
 					this.InVoiceOverChain = false;
+					this.OnVoiceLineOver?.Invoke(false);
 				}
 			}
 		} else {
 			if (!this.Paused) {
-				this.OnVoiceLineOver?.Invoke(false);
 				this.VoiceLineInProgress = false;
+				this.OnVoiceLineOver?.Invoke(false);
 			}
 		}
 	}
