@@ -1062,7 +1062,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639230987387487273
+  lastModified: 639255241109627496
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1094,6 +1094,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 6585
+--- !u!114 &-6623645008478238700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UltraRarePole/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-6507412444721063870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1361,6 +1385,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5757533651085402622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/FailSpeedButton/UltraRareLine
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/UltraRareLine
+  Guid:
+    Data1: 1967484780
+    Data2: 1210059963
+    Data3: -311532613
+    Data4: -777204080
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2458079769236122076}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5739308609438027560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,6 +1424,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/GudgeonQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5549968742313887801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Inventors/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1506,6 +1582,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/1MorningLove/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-5247587839569792620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RareLine/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1909,6 +2009,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4419718015066979123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/FailSpeedButton/SuperRareLine
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/SuperRareLine
+  Guid:
+    Data1: -563244601
+    Data2: 1308546325
+    Data3: 386527928
+    Data4: 1721306589
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7031292057639301868}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4240211722851711189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1920,6 +2048,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/3Castyourrod/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-4227908707592991674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SuperRarePole/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -2491,7 +2643,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639230987451912351
+  lastModified: 639251144408169654
   FileSizes:
   - Name: Desktop
     Value: 2521408
@@ -2521,6 +2673,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -8116137385965190011}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-2830858603591469344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/SuperRarePole
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/SuperRarePole
+  Guid:
+    Data1: -2005974631
+    Data2: 1286334201
+    Data3: -1124633692
+    Data4: 1377771854
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4227908707592991674}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2786,6 +2966,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2458079769236122076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UltraRareLine/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2438677265044384389
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2838,6 +3042,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2380665297056484786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RodShop/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2315245278242392592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2993,6 +3221,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-2053036631867693094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/UltraRarePole
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/UltraRarePole
+  Guid:
+    Data1: 2084491217
+    Data2: 1110909358
+    Data3: -1430540107
+    Data4: -2145597255
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6623645008478238700}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-2046184979081100593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3141,6 +3397,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1526556479282380906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/RarePole
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/RarePole
+  Guid:
+    Data1: -1513220456
+    Data2: 1131282481
+    Data3: 1873855873
+    Data4: -2019000131
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5934158605962351070}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1480598258634758906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3838,6 +4122,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-111155994222720841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/UltraRareReel/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-78455826024170336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4111,12 +4419,26 @@ MonoBehaviour:
   - {fileID: 6576318060475834490}
   - {fileID: 2106231807915828764}
   - {fileID: -5422927914084317881}
+  - {fileID: 4662707587775002407}
+  - {fileID: 1646527357466573965}
+  - {fileID: 2266324813074022349}
+  - {fileID: 2525844186971478576}
+  - {fileID: 6980242242131459028}
+  - {fileID: 8333429315132385339}
+  - {fileID: 5361054776673176306}
+  - {fileID: 6404112513329864057}
+  - {fileID: -5757533651085402622}
+  - {fileID: -1526556479282380906}
+  - {fileID: -2830858603591469344}
+  - {fileID: -4419718015066979123}
+  - {fileID: -2053036631867693094}
+  - {fileID: 3143149567375345048}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639230987648769541
+  cacheTime: 639255241116479721
   cacheVersion: 131624
 --- !u!114 &31227456887572434
 MonoBehaviour:
@@ -4993,6 +5315,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1646527357466573965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/Inventors
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/Inventors
+  Guid:
+    Data1: 222754883
+    Data2: 1333769921
+    Data3: 987472048
+    Data4: 1501017170
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5549968742313887801}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1727988177202408261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5231,7 +5581,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639230987387118263
+  lastModified: 639251144404481796
   FileSizes:
   - Name: Desktop
     Value: 3997568
@@ -5359,11 +5709,39 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639230987648769541
+  lastModified: 639255241116479721
   FileSizes:
   - Name: Desktop
-    Value: 10014080
+    Value: 10191840
   Exists: 1
+--- !u!114 &2266324813074022349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/RodShop
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/RodShop
+  Guid:
+    Data1: -1169909378
+    Data2: 1312088110
+    Data3: -1751426640
+    Data4: -146649878
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2380665297056484786}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2279586603512432391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5465,6 +5843,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 2941741145115912750}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &2525844186971478576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/BaitShop
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/BaitShop
+  Guid:
+    Data1: 919756514
+    Data2: 1150950796
+    Data3: -390599282
+    Data4: -730567558
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6443171216000084963}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5775,6 +6181,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &3143149567375345048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/FailSpeedButton/RareLine
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/RareLine
+  Guid:
+    Data1: -414414361
+    Data2: 1191249149
+    Data3: 1631982236
+    Data4: -2129732055
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5247587839569792620}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &3179126727939770511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ichtyologists/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &3336269127706453910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6030,7 +6488,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639230987430152097
+  lastModified: 639251144406083766
   FileSizes:
   - Name: Desktop
     Value: 4982784
@@ -6508,6 +6966,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &4662707587775002407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/Ichtyologists
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/Ichtyologists
+  Guid:
+    Data1: 909429810
+    Data2: 1180878836
+    Data3: -806437457
+    Data4: -195252904
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 3179126727939770511}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &4688401620494483735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6922,6 +7408,58 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &5361054776673176306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/ReelSpeedButton/RareReel
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/RareReel
+  Guid:
+    Data1: -448664093
+    Data2: 1158116326
+    Data3: 211156139
+    Data4: -1807527008
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5362582531864768134}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &5362582531864768134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RareReel/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5362829595370221961
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7140,6 +7678,54 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/CommonCarpCatchLine1/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5934158605962351070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RarePole/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &5951215719415861703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BackToBoat/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -7408,6 +7994,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6404112513329864057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/ReelSpeedButton/UltraRareReel
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/UltraRareReel
+  Guid:
+    Data1: -549309190
+    Data2: 1156636881
+    Data3: 2137702273
+    Data4: -1087989002
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -111155994222720841}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &6443171216000084963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BaitShop/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6526969378020210807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7599,6 +8237,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &6980242242131459028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/BackToBoat
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/BackToBoat
+  Guid:
+    Data1: 353371122
+    Data2: 1280462784
+    Data3: -2144817518
+    Data4: 1407847178
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5951215719415861703}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7005599296153537333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7638,6 +8304,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/0/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &7031292057639301868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SuperRareLine/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -8001,10 +8691,34 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639230987387567062
+  lastModified: 639255241109657648
   FileSizes:
   - Name: Desktop
-    Value: 10016
+    Value: 10748
+  Exists: 1
+--- !u!114 &7911918505699605081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SuperRareReel/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
   Exists: 1
 --- !u!114 &7945531950089686290
 MonoBehaviour:
@@ -8210,6 +8924,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &8333429315132385339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/RodShopKeep/ReelSpeedButton/SuperRareReel
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/SuperRareReel
+  Guid:
+    Data1: -306170996
+    Data2: 1286228940
+    Data3: 601897388
+    Data4: -566299567
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7911918505699605081}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &8335148981472667034
 MonoBehaviour:
   m_ObjectHideFlags: 0

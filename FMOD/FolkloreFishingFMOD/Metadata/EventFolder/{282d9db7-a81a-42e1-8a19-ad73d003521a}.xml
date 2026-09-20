@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{282d9db7-a81a-42e1-8a19-ad73d003521a}">
+		<property name="name">
+			<value>FailSpeedButton</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c9cd03c4-8698-4ffd-a3a9-efcedca5a03d}</destination>
+		</relationship>
+	</object>
+</objects>

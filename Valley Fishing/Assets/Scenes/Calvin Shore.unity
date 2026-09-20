@@ -2312,6 +2312,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 484763219302371607, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 484763219302371607, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReelSpeedButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 484763219302371607, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 789812491188242851, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2326,7 +2338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 789812491188242851, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -145.39722
+      value: -145.44354
       objectReference: {fileID: 0}
     - target: {fileID: 1994541899094531492, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_Pivot.x
@@ -2408,6 +2420,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2238430486937193673, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2238430486937193673, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StrafeSpeedButtonClicked
+      objectReference: {fileID: 0}
     - target: {fileID: 2980239602897825509, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2422,7 +2442,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2980239602897825509, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -145.39722
+      value: -145.44354
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772930729791347959, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3772930729791347959, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ReelSpeedButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964938130982962896, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3964938130982962896, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FailSpeedButtonClicked
       objectReference: {fileID: 0}
     - target: {fileID: 5156454410088840490, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2438,7 +2474,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5156454410088840490, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -145.39722
+      value: -145.44354
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015231193970323479, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015231193970323479, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StrafeSpeedButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 6015231193970323479, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519358545105026550, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519358545105026550, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FailSpeedButtonClicked
+      objectReference: {fileID: 0}
+    - target: {fileID: 7519358545105026550, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7881263008960806878, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2454,7 +2514,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7881263008960806878, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -145.39722
+      value: -145.44354
       objectReference: {fileID: 0}
     - target: {fileID: 9120850309266698110, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: m_Navigation.m_SelectOnLeft
@@ -2512,6 +2572,10 @@ PrefabInstance:
     - target: {fileID: 2536111126999484089, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
+      propertyPath: <Money>k__BackingField
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: <EventSystem>k__BackingField
@@ -2600,23 +2664,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1444692932462867071, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Captain/FolkloreFishing!
+      value: event:/VoiceOver/Captain/Shore/RodShop
       objectReference: {fileID: 0}
     - target: {fileID: 1444692932462867071, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 751111704
+      value: -1169909378
       objectReference: {fileID: 0}
     - target: {fileID: 1444692932462867071, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1309586920
+      value: 1312088110
       objectReference: {fileID: 0}
     - target: {fileID: 1444692932462867071, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: -113407324
+      value: -1751426640
       objectReference: {fileID: 0}
     - target: {fileID: 1444692932462867071, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -772827154
+      value: -146649878
       objectReference: {fileID: 0}
     - target: {fileID: 1596625085206511626, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: m_Name
@@ -2728,43 +2792,43 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Captain/FolkloreFishing!
+      value: event:/VoiceOver/Captain/Shore/BackToBoat
       objectReference: {fileID: 0}
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 751111704
+      value: 353371122
       objectReference: {fileID: 0}
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1309586920
+      value: 1280462784
       objectReference: {fileID: 0}
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: -113407324
+      value: -2144817518
       objectReference: {fileID: 0}
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -772827154
+      value: 1407847178
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Captain/FolkloreFishing!
+      value: event:/VoiceOver/Captain/Shore/Inventors
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 751111704
+      value: 222754883
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1309586920
+      value: 1333769921
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: -113407324
+      value: 987472048
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -772827154
+      value: 1501017170
       objectReference: {fileID: 0}
     - target: {fileID: 4476540905371188980, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2788,23 +2852,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5901268470098882060, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Captain/FolkloreFishing!
+      value: event:/VoiceOver/Captain/Shore/Ichtyologists
       objectReference: {fileID: 0}
     - target: {fileID: 5901268470098882060, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 751111704
+      value: 909429810
       objectReference: {fileID: 0}
     - target: {fileID: 5901268470098882060, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1309586920
+      value: 1180878836
       objectReference: {fileID: 0}
     - target: {fileID: 5901268470098882060, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: -113407324
+      value: -806437457
       objectReference: {fileID: 0}
     - target: {fileID: 5901268470098882060, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -772827154
+      value: -195252904
       objectReference: {fileID: 0}
     - target: {fileID: 6005926071776538000, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -2848,23 +2912,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7453478537979751532, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Captain/FolkloreFishing!
+      value: event:/VoiceOver/Captain/Shore/BaitShop
       objectReference: {fileID: 0}
     - target: {fileID: 7453478537979751532, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 751111704
+      value: 919756514
       objectReference: {fileID: 0}
     - target: {fileID: 7453478537979751532, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1309586920
+      value: 1150950796
       objectReference: {fileID: 0}
     - target: {fileID: 7453478537979751532, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: -113407324
+      value: -390599282
       objectReference: {fileID: 0}
     - target: {fileID: 7453478537979751532, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -772827154
+      value: -730567558
       objectReference: {fileID: 0}
     - target: {fileID: 7592554680044243131, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: m_AnchorMax.y

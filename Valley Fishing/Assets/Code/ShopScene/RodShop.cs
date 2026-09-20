@@ -1,12 +1,14 @@
 using FMODUnity;
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using static UpgradesData;
 
 public class RodShop : Shop {
 
 	#region Serialized Fields
 
-	[SerializeField] private RodShopData rodShopData;
+	[SerializeField] private UpgradesData rodShopData;
 
 	#endregion
 
@@ -22,72 +24,71 @@ public class RodShop : Shop {
 
 	#region Public Methods
 
-	public void ReelSpeedButtonHovered() {
-        AudioManager.Instance.PlayVoiceOver(rodShopData.ReelSpeedDatas[UpgradeManager.Instance.ReelSpeed + 1].ReelSpeedHoverEvents);
+	
+
+	public void ReelSpeedButtonClicked(bool clicked) {
+		UpgradeButtonInteracted(clicked, rodShopData.ReelSpeedData, ref UpgradeManager.Instance.ReelSpeed);
     }
-    public void StrafeSpeedButtonHovered() {
-		AudioManager.Instance.PlayVoiceOver(rodShopData.StrafeSpeedDatas[UpgradeManager.Instance.StrafeSpeed + 1].StrafeSpeedHoverEvents);
+    public void StrafeSpeedButtonClicked(bool clicked) {
+		UpgradeButtonInteracted(clicked, rodShopData.StrafeSpeedData, ref UpgradeManager.Instance.StrafeSpeed);
 	}
-    public void FailSpeedButtonHovered() {
-		AudioManager.Instance.PlayVoiceOver(rodShopData.FailSpeedDatas[UpgradeManager.Instance.FailSpeed + 1].FailSpeedHoverEvents);
+    public void FailSpeedButtonClicked(bool clicked) {
+		UpgradeButtonInteracted(clicked, rodShopData.FailSpeedData, ref UpgradeManager.Instance.FailSpeed);
 	}
-
-    public void UpgradeReelSpeed()
-    {
-        int upgradeprice = rodShopData.ReelSpeedDatas[UpgradeManager.Instance.ReelSpeed + 1].ReelSpeedPrices;
-        if (GameManager.Instance.Money >= upgradeprice)
-        {            
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
-			AudioManager.Instance.PlayVoiceOver(rodShopData.ReelSpeedDatas[UpgradeManager.Instance.ReelSpeed + 1].ReelSpeedBoughtEvents);
-			UpgradeManager.Instance.ReelSpeed++;
-			this.OnSaleMade?.Invoke();
-		}
-        else
-        {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
-        }
-    }
-
-    public void UpgradeStrafeSpeed()
-    {
-        int upgradeprice = rodShopData.StrafeSpeedDatas[UpgradeManager.Instance.StrafeSpeed + 1].StrafeSpeedPrices;
-        if (GameManager.Instance.Money >= upgradeprice)
-        {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
-			AudioManager.Instance.PlayVoiceOver(rodShopData.StrafeSpeedDatas[UpgradeManager.Instance.StrafeSpeed + 1].StrafeSpeedBoughtEvents);
-			UpgradeManager.Instance.StrafeSpeed++;
-			this.OnSaleMade?.Invoke();
-		}
-        else
-        {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
-        }
-    }
-
-    public void UpgradeFailSpeed()
-    {
-        int upgradeprice = rodShopData.FailSpeedDatas[UpgradeManager.Instance.FailSpeed + 1].FailSpeedPrices;
-        if (GameManager.Instance.Money >= upgradeprice)
-        {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
-			AudioManager.Instance.PlayVoiceOver(rodShopData.FailSpeedDatas[UpgradeManager.Instance.FailSpeed + 1].FailSpeedBoughtEvents);
-			UpgradeManager.Instance.FailSpeed++;
-			this.OnSaleMade?.Invoke();
-		}
-        else
-        {
-            AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
-        }
-    }
 
 	#endregion
 
+
+	#region Private Methods
+
+	private void UpgradeButtonInteracted(bool clicked, UpgradeData upgradeData, ref int upgradeProgress) {
+		if (clicked) {
+			UpgradeButtonClicked(upgradeData, ref upgradeProgress);
+		} else {
+			UpgradeButtonHovered(upgradeData, upgradeProgress);
+		}
+	}
+
+	private void UpgradeButtonHovered(UpgradeData upgradeData, int upgradeProgress) {
+		List<EventReference> voiceOverChain = new List<EventReference>();
+		voiceOverChain.Add(upgradeData.UpgradeHoverEvents[upgradeProgress]);
+		for (int i = 0; i < FMODManager.Instance.GetNumber(upgradeData.UpgradePrices[upgradeProgress]).Count; i++) {
+			voiceOverChain.Add(FMODManager.Instance.GetNumber(upgradeData.UpgradePrices[upgradeProgress])[i]);
+		}
+		voiceOverChain.Add(FMODManager.Instance.Gold);
+		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
+	}
+
+	private void UpgradeButtonClicked(UpgradeData upgradeData, ref int upgradeProgress) {
+		int upgradeprice = upgradeData.UpgradePrices[upgradeProgress];
+		if (GameManager.Instance.Money >= upgradeprice) {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
+			AudioManager.Instance.PlayVoiceOver(upgradeData.UpgradeBoughtEvents[upgradeProgress]);
+			upgradeProgress++;
+			this.OnSaleMade?.Invoke();
+		}
+		else {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
+		}
+	}
+	private void UpgradeReelSpeed() {
+	}
+
+	private void UpgradeStrafeSpeed() {
+	}
+
+	private void UpgradeFailSpeed() {
+
+	}
+
+	#endregion
 
 	#region Shop
 
 	public override void VoiceLineOver(bool skipped) {
 
 	}
+
     public override IEnumerator EnterShop(bool enable) {
         base.EnterShop(enable);
         yield return null;
