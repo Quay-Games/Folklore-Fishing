@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class DialogueContainer : ScriptableObject {
 	public List<NodeLinkData> NodeLinkDatas = new List<NodeLinkData>();
+	public List<BaseData> NodeDatas = new List<BaseData>();
 
 	public List<DialogueData> DialogueDatas = new List<DialogueData>();
 	public List<NPCDialogueData> NPCDialogueDatas = new List<NPCDialogueData>();

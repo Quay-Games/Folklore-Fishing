@@ -24,7 +24,8 @@ public class InputController : AbstractState<InputController.State> {
 			case State.Default:
 				GameManager.Instance.InputController = this;
 				this.InputTypes = new List<InputType> { keyboard, controller };
-				StartCoroutine(EnableSceneSwitching());
+				StartCoroutine(EnableSceneSwitching());	
+				//why is this set here?
 				SetState(State.ReelingLocked);
 				break;
 			case State.ReelingLocked:

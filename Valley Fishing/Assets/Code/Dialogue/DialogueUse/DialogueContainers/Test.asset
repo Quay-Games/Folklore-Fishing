@@ -17,29 +17,29 @@ MonoBehaviour:
     BasePortName: Output
     TargetNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
     TargetPortName: Input
-  - BaseNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+  - BaseNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
     BasePortName: Continue
-    TargetNodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
+    TargetNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
     TargetPortName: Input
   - BaseNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
     BasePortName: Continue
     TargetNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
     TargetPortName: Input
-  - BaseNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
+  - BaseNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
     BasePortName: Continue
-    TargetNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+    TargetNodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
     TargetPortName: Input
   DialogueDatas: []
   NPCDialogueDatas:
   - NodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
-    Position: {x: 181, y: 254}
+    Position: {x: 181.59999, y: 254.4}
     VoiceEvent:
       Guid:
-        Data1: 1567598266
-        Data2: 1115362916
-        Data3: -461855609
-        Data4: -1277669855
-      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/1WelcomeAboard
+        Data1: 1577069172
+        Data2: 1285667607
+        Data3: 666933652
+        Data4: -1442052773
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
     DialogueText:
       ID:
         Value: 0
@@ -68,11 +68,11 @@ MonoBehaviour:
     Position: {x: 1024, y: 232}
     VoiceEvent:
       Guid:
-        Data1: 1422009774
-        Data2: 1244345562
-        Data3: 526257796
-        Data4: 1042754500
-      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/2Here,takemyoldrod
+        Data1: 1577069172
+        Data2: 1285667607
+        Data3: 666933652
+        Data4: -1442052773
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
     DialogueText:
       ID:
         Value: 0
@@ -100,18 +100,36 @@ MonoBehaviour:
   ResponceDatas: []
   EndDatas:
   - NodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
-    Position: {x: 1405, y: 271}
+    Position: {x: 1405.6, y: 271.2}
     EndNodeType:
       Value: 1
   StartDatas:
   - NodeGuid: 9563801c-d501-40a9-9245-2339f5904cb2
-    Position: {x: 8, y: 247}
-  EventDatas: []
-  ConditionDatas: []
-  BranchDatas: []
+    Position: {x: 8, y: 247.20001}
+  EventDatas:
+  - NodeGuid: f18d71cd-324f-4d2e-a850-72ae019ad866
+    Position: {x: 908.8, y: 376}
+    EventType: 0
+    EventData_EventName:
+      StringEventValue:
+        Value: 
+  ConditionDatas:
+  - NodeGuid: 7e063265-7918-41a1-a249-915adfc053d2
+    Position: {x: 644, y: 512}
+    trueGuidNode: 
+    falseGuidNode: 
+    EventData_EventName:
+      StringEventValue:
+        Value: 
+  BranchDatas:
+  - NodeGuid: 6ddbd563-ea8c-46c5-9afa-4dee08a21882
+    Position: {x: 245.59999, y: 534.4}
+    trueGuidNode: 
+    falseGuidNode: 
+    EventData_StringConditions: []
   ChoiceDatas: []
   ListenDatas:
   - NodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
-    Position: {x: 563, y: 289}
+    Position: {x: 563.2, y: 288.8}
     Container_ListenEventSOs:
     - ListenEventSO: {fileID: 11400000, guid: 56a63408418c1e04a851fcf9a8b6ffe6, type: 2}

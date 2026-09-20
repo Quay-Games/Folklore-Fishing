@@ -7,6 +7,7 @@ namespace Project.DialogueEditor {
 
 		[SerializeField] protected DialogueContainer dialogueContainer;
 
+		//Griff: replace alldatas with nodedatas when it is done
 		protected BaseData GetNodeByGuid(string targetNodeGuid) {
 			return dialogueContainer.AllDatas.Find(node => node.NodeGuid == targetNodeGuid);
 		}

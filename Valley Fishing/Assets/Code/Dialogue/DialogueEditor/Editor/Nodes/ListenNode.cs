@@ -8,19 +8,24 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 public class ListenNode : BaseNode {
+    [System.Serializable]
+    public class ListenData : BaseData
+    {
+        public List<Container_ListenEventSO> Container_ListenEventSOs = new List<Container_ListenEventSO>();
+    }
 
-	ListenData listenData = new ListenData();
+    ListenData listenData = new ListenData();
 
-	public ListenData ListenData {
-		get => listenData;
-		set => listenData = value;
-	}
+	//public ListenData ListenData {
+	//	get => listenData;
+	//	set => listenData = value;
+	//}
 
 	public ListenNode() {
 
 	}
 
-	public ListenNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView) {
+	public ListenNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData data = null) {
 		base.editorWindow = _editorWindow;
 		base.graphView = _graphView;
 
@@ -28,8 +33,26 @@ public class ListenNode : BaseNode {
 		styleSheets.Add(styleSheet);
 
 		title = "ListenNode";
-		SetPosition(new Rect(_position, defaultNodeSize));
-		nodeGuid = Guid.NewGuid().ToString();
+
+		//if theres data to initialize with, do that, if not use default values
+		if (data != null)
+		{
+			SetPosition(new Rect(data.Position, defaultNodeSize));
+            NodeGuid = data.NodeGuid;
+
+            foreach (Container_ListenEventSO item in (data as ListenData).Container_ListenEventSOs)
+            {
+                this.AddScriptableEvent(item);
+            }
+
+			//virtual in base class and not overridden, currently the call does nothing
+            //this.LoadValueInToField();
+        } else
+		{
+            SetPosition(new Rect(_position, defaultNodeSize));
+            nodeGuid = Guid.NewGuid().ToString();
+        }
+
 		AddInputPort("Input", Port.Capacity.Multi);
 		AddOutputPort("Continue");
 		AddScriptableEvent();
@@ -85,4 +108,33 @@ public class ListenNode : BaseNode {
 		}
 		return null;
 	}
+	//this function generates some listen data to give out to the scriptable object
+    public override BaseData Save()
+    {
+        ListenData nodeData = new ListenData()
+        {
+            NodeGuid = NodeGuid,
+            Position = base.GetPosition().position,
+        };
+
+        // Save Dialogue Event
+        foreach (Container_ListenEventSO dialogueEvent in listenData.Container_ListenEventSOs)
+        {
+            nodeData.Container_ListenEventSOs.Add(dialogueEvent);
+        }
+
+        return nodeData;
+    }
+	//this function should take in data and distribute it out to this class, while creating a listen node on the graph
+	//id like to do a copy constructor instead of this, but it would need to be called from outside here
+    //public override void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
+    //{
+
+		//now copy out the scriptable objects that the listen data can hold
+
+
+		//who cares about the tempnode's values????
+
+		//why does it add the tempnode????
+    //}
 }

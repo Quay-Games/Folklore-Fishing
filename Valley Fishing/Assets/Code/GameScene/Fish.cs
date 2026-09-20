@@ -137,6 +137,7 @@ public class Fish : MonoBehaviour
 		InventoryManager.Instance.OwnedFishTypeDatas[(System.Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;		
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.CatchSplash);
+		//Griff: maybe this shouldnt be here
 		GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);

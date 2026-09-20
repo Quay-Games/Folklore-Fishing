@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.PlayerSettings;
 
 namespace Project.DialogueEditor {
 	public class DialogueGraphView : GraphView {
@@ -73,6 +74,7 @@ namespace Project.DialogueEditor {
 		public ResponceNode CreateResponceNode(Vector2 position, bool isNew = false) {
 			var node = new ResponceNode(position, editorWindow, this);
 			if (isNew) {
+				//Nodes should own the need to initialize this
 				node.TextLine();
 				node.TextLine();
 			}
@@ -101,8 +103,47 @@ namespace Project.DialogueEditor {
 		public BranchNode CreateBranchNode(Vector2 position) {
 			return new BranchNode(position, editorWindow, this);
 		}
-		public ListenNode CreateListenNode(Vector2 position) {
-			return new ListenNode(position, editorWindow, this);
+		//I want to be able to remove this, but it is used in one place
+		//public ListenNode CreateListenNode(Vector2 position) {
+		//	return new ListenNode(position, editorWindow, this);
+		//}
+
+		public bool CreateEmptyNodeOfType(BaseNode searchResultNode, Vector2 pos)
+		{
+			BaseNode nodeToCreate = null;
+			switch (searchResultNode)
+			{
+				case ListenNode node:
+					nodeToCreate = new ListenNode(pos, editorWindow, this);
+					break;
+				default:
+					return false;
+			}
+			if (nodeToCreate != null)
+			{
+                AddElement(nodeToCreate);
+                return true;
+            } else
+			{
+				return false;
+			}
 		}
+		
+		public void CreateNodeFromData(BaseData data) 
+		{
+			BaseNode node = null;
+			switch(data)
+			{
+				case ListenData:
+					node = new ListenNode(new Vector2(), editorWindow, this, data);
+                    break;
+				default:
+					break;
+			}
+			if (node != null)
+			{
+                this.AddElement(node);
+            }
+        }
 	}
 }

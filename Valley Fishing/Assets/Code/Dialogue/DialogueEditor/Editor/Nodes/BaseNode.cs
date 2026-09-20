@@ -407,5 +407,17 @@ namespace Project.DialogueEditor {
 			public TextField textField;
 			public string placeholderText;
 		}
-	}
+
+        #region Griff Extra Functions
+		public virtual BaseData Save()
+		{
+			return null;
+		}
+
+		public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
+		{
+		}
+        #endregion
+
+    }
 }

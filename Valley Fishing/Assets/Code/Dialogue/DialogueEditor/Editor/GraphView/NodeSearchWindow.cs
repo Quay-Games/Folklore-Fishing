@@ -27,6 +27,8 @@ namespace Project.DialogueEditor {
 			new SearchTreeGroupEntry(new GUIContent("Dialogue Editor"),0),
 			new SearchTreeGroupEntry(new GUIContent("Dialogue Node"),1),
 
+			//This can be made generic, just look at the nodes folder and create instances of the class for each file
+			//that isnt base node. just make sure each of these classes has an empty constructor
 			AddNodeSearch("Branch Node", new BranchNode()),
 			AddNodeSearch("Dialogue Node", new DialogueNode()),
 			AddNodeSearch("Responce Node", new ResponceNode()),
@@ -52,39 +54,42 @@ namespace Project.DialogueEditor {
 
 			Vector2 mousePosition = editorWindow.rootVisualElement.ChangeCoordinatesTo(editorWindow.rootVisualElement.parent, _context.screenMousePosition - editorWindow.position.position);
 			Vector2 graphMousePosition = graphView.contentViewContainer.WorldToLocal(mousePosition);
-			return CheckForNodeType(_searchTreeEntry, graphMousePosition);
+			return CreateNodeOfType(_searchTreeEntry, graphMousePosition);
 		}
 
-		private bool CheckForNodeType(SearchTreeEntry _searchTreeEntry, Vector2 _pos) {
-			switch (_searchTreeEntry.userData) {
-				case StartNode node:
-					graphView.AddElement(graphView.CreateStartNode(_pos));
-					return true;
-				case DialogueNode node:
-					graphView.AddElement(graphView.CreateNPCDialogueNode(_pos,true));
-					return true;
-				case ResponceNode node:
-					graphView.AddElement(graphView.CreateResponceNode(_pos,true));
-					return true;
-				case EventNode node:
-					graphView.AddElement(graphView.CreateNPCEventNode(_pos,true));
-					return true;
-				case ConditionNode node:
-					graphView.AddElement(graphView.CreateNPCConditionNode(_pos, true));
-					return true;
-				case EndNode node:
-					graphView.AddElement(graphView.CreateEndNode(_pos));
-					return true;
-				case BranchNode node:
-					graphView.AddElement(graphView.CreateBranchNode(_pos));
-					return true;
-				case ListenNode node:
-					graphView.AddElement(graphView.CreateListenNode(_pos));
-					return true;
-				default:
-					break;
-			}
-			return false;
+		//this can be made generic, Im not entirely sure how at the moment, but it would be a check
+		//agaisnt the type of the class
+		private bool CreateNodeOfType(SearchTreeEntry _searchTreeEntry, Vector2 _pos) {
+			return graphView.CreateEmptyNodeOfType(_searchTreeEntry.userData as BaseNode, _pos);
+			//switch (_searchTreeEntry.userData) {
+			//	case StartNode node:
+			//		graphView.AddElement(graphView.CreateStartNode(_pos));
+			//		return true;
+			//	case DialogueNode node:
+			//		graphView.AddElement(graphView.CreateNPCDialogueNode(_pos,true));
+			//		return true;
+			//	case ResponceNode node:
+			//		graphView.AddElement(graphView.CreateResponceNode(_pos,true));
+			//		return true;
+			//	case EventNode node:
+			//		graphView.AddElement(graphView.CreateNPCEventNode(_pos,true));
+			//		return true;
+			//	case ConditionNode node:
+			//		graphView.AddElement(graphView.CreateNPCConditionNode(_pos, true));
+			//		return true;
+			//	case EndNode node:
+			//		graphView.AddElement(graphView.CreateEndNode(_pos));
+			//		return true;
+			//	case BranchNode node:
+			//		graphView.AddElement(graphView.CreateBranchNode(_pos));
+			//		return true;
+			//	case ListenNode node:
+			//		graphView.AddElement(graphView.CreateListenNode(_pos));
+			//		return true;
+			//	default:
+			//		break;
+			//}
+			//return false;
 		}
 
 	}

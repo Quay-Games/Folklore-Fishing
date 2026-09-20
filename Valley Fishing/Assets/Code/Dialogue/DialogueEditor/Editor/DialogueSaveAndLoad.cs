@@ -5,6 +5,7 @@ using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
+//this class seems to do lots of operations on the dialogcontainer, but doesnt actually store a reference to it?
 
 namespace Project.DialogueEditor {
 	public class DialogueSaveAndLoad {
@@ -61,7 +62,11 @@ namespace Project.DialogueEditor {
 			dialogueContainer.ResponceDatas.Clear();
 			dialogueContainer.ListenDatas.Clear();
 
+			dialogueContainer.NodeDatas.Clear();
+
 			nodes.ForEach(node => {
+				//the savenodedata function is hella overloaded, we need to make it on the nodedata class
+				dialogueContainer.NodeDatas.Add(node.Save());
 				switch (node) {
 					case StartNode startNode:
 						dialogueContainer.StartDatas.Add(SaveNodeData(startNode));
@@ -84,9 +89,9 @@ namespace Project.DialogueEditor {
 					case BranchNode branchNode:
 						dialogueContainer.BranchDatas.Add(SaveNodeData(branchNode));
 						break;
-						case ListenNode listenNode:
-						dialogueContainer.ListenDatas.Add(SaveNodeData(listenNode));
-						break;
+						//case ListenNode listenNode:
+						//dialogueContainer.ListenDatas.Add(SaveNodeData(listenNode));
+						//break;
 					default:
 						break;
 				}
@@ -188,19 +193,19 @@ namespace Project.DialogueEditor {
 
 			return nodeData;
 		}
-		private ListenData SaveNodeData(ListenNode node) {
-			ListenData nodeData = new ListenData() {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-			};
+		//private ListenData SaveNodeData(ListenNode node) {
+		//	ListenData nodeData = new ListenData() {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//	};
 
-			// Save Dialogue Event
-			foreach (Container_ListenEventSO dialogueEvent in node.ListenData.Container_ListenEventSOs) {
-				nodeData.Container_ListenEventSOs.Add(dialogueEvent);
-			}
+		//	// Save Dialogue Event
+		//	foreach (Container_ListenEventSO dialogueEvent in node.ListenData.Container_ListenEventSOs) {
+		//		nodeData.Container_ListenEventSOs.Add(dialogueEvent);
+		//	}
 
-			return nodeData;
-		}
+		//	return nodeData;
+		//}
 
 
 		private ResponceData SaveNodeData(ResponceNode node) {
@@ -246,7 +251,16 @@ namespace Project.DialogueEditor {
 			}
 		}
 
+		//this is what im working on at the moment, making the nodes themselves (or the data) own the loading of the data
+		//I wanted to make it so that we can just loop over the whole types
 		private void GenerateNodes(DialogueContainer dialogueContainer) {
+			//this is what I want to achieve
+			foreach(BaseData data in dialogueContainer.NodeDatas)
+			{
+				graphView.CreateNodeFromData(data);
+            }
+
+
 			// Start
 			foreach (StartData node in dialogueContainer.StartDatas) {
 				StartNode tempNode = graphView.CreateStartNode(node.Position);
@@ -255,16 +269,17 @@ namespace Project.DialogueEditor {
 				graphView.AddElement(tempNode);
 			}
 			//Listen Node
-			foreach (ListenData node in dialogueContainer.ListenDatas) {
-				ListenNode tempNode = graphView.CreateListenNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
+			//foreach (ListenData node in dialogueContainer.ListenDatas) {
+			//	//this needs to be replaced with a call to the contstructor of ListenNode
+			//	ListenNode tempNode = graphView.CreateListenNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
 
-				foreach (Container_ListenEventSO item in node.Container_ListenEventSOs) {
-					tempNode.AddScriptableEvent(item);
-				}
-				tempNode.LoadValueInToField();
-				graphView.AddElement(tempNode);
-			}
+			//	foreach (Container_ListenEventSO item in node.Container_ListenEventSOs) {
+			//		tempNode.AddScriptableEvent(item);
+			//	}
+			//	tempNode.LoadValueInToField();
+			//	graphView.AddElement(tempNode);
+			//}
 
 			// End Node 
 			foreach (EndData node in dialogueContainer.EndDatas) {
