@@ -674,11 +674,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: useCheats
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: superFastCatch
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: firstShopTutorialCheats.CaughtFish.Array.data[1].FishAmount

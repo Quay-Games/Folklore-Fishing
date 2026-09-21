@@ -56,8 +56,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
             case ListUsed.Bait:
 				if (GameManager.Instance.ShopController != null) {
 					chosenList = GetTempBaitListForSelling();
-				}
-				else {
+				} else {
 					chosenList = InventoryManager.Instance.OwnedBaitTypeDatas;
 				}
                 break;
@@ -125,7 +124,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
     //This will be removed
 
     public virtual List<OwnedItemTypeData> GetTempBaitListForSelling(){
-		return null;
+		return CheatManager.Instance.TempBaitBoardDatas;
     }
 
     #endregion

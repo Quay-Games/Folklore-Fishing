@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,7 +16,8 @@ public class CheatManager : Singleton<CheatManager>
 		public int FishAmount;
 	}
 
-	private int ScenesLoaded;
+	private int ScenesLoaded;	
+	public List<OwnedItemTypeData> TempBaitBoardDatas;
 
 	[field:SerializeField] private bool useCheats = true;
 

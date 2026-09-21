@@ -9,14 +9,19 @@ public class UpgradeManager : Singleton<UpgradeManager>
 	public int FailSpeed;
 	public int AIRod;
 	public int InstaWin;
+	public LevelController LevelController { get => GameManager.Instance.LevelController; }
 
 	public void Start() {
-		GameManager.Instance.LevelController.OnFishSpawned += SetFishSpeed;
+		if (this.LevelController != null) {
+			GameManager.Instance.LevelController.OnFishSpawned += SetFishSpeed;
+		}
 	}
 
 
 	public void OnDestroy() {
-		GameManager.Instance.LevelController.OnFishSpawned -= SetFishSpeed;
+		if (this.LevelController != null) {
+			GameManager.Instance.LevelController.OnFishSpawned -= SetFishSpeed;
+		}
 	}
 
 	private void SetFishSpeed() {
