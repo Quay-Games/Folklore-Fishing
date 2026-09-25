@@ -414,9 +414,9 @@ namespace Project.DialogueEditor {
 			return null;
 		}
 
-		public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
-		{
-		}
+		//public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
+		//{
+		//}
         #endregion
 
     }
