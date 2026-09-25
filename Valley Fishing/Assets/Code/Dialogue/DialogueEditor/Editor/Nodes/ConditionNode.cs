@@ -20,17 +20,14 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public ConditionNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView) {
-			base.editorWindow = _editorWindow;
-			base.graphView = _graphView;
-
-			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/EventNodeStyleSheet");
-			styleSheets.Add(styleSheet);
-
-			title = "NPC Condition";
-			SetPosition(new Rect(_position, defaultNodeSize));
-			nodeGuid = Guid.NewGuid().ToString();
-			AddInputPort("Input", Port.Capacity.Multi);
+		public ConditionNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Condition", _data) {
+			if(_data != null)
+            {
+                NPCConditionData = _data as ConditionData;
+                TextLine(NPCConditionData.EventData_EventName);
+            }
+            AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("True", Port.Capacity.Single);
 			AddOutputPort("False", Port.Capacity.Single);
 		}

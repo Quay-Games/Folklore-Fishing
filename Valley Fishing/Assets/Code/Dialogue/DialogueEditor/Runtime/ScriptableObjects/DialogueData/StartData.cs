@@ -4,5 +4,5 @@ using UnityEngine;
 
 [System.Serializable]
 public class StartData: BaseData {
-
+    //an empty class, yippee!
 }

@@ -27,6 +27,26 @@ namespace Project.DialogueEditor {
 			styleSheets.Add(styleSheet);
 		}
 
+		//here is a special constructor that takes care of redundant operations all nodes will need to do with this kind of data
+		public BaseNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, string _stylesheet, string _title, BaseData data = null)
+        {
+            editorWindow = _editorWindow;
+            graphView = _graphView;
+			title = _title;
+			if(data != null)
+            {
+                nodeGuid = data.NodeGuid;
+                SetPosition(new Rect(data.Position, defaultNodeSize));
+            } else
+			{
+                nodeGuid = Guid.NewGuid().ToString();
+                SetPosition(new Rect(_position, defaultNodeSize));
+            }
+
+            StyleSheet styleSheet = Resources.Load<StyleSheet>(_stylesheet);
+			styleSheets.Add(styleSheet);
+        }
+
 		protected Label GetNewLabel(string labelName, string USS01 = "", string USS02 = "") {
 			Label label_texts = new Label(labelName);
 			label_texts.AddToClassList(USS01);

@@ -753,7 +753,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Ambience.bank
   Name: Ambience
   StudioPath: bank:/Ambience
-  lastModified: 639118042192756379
+  lastModified: 639230894933441188
   FileSizes:
   - Name: Desktop
     Value: 3997568
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639211425153038041
+  lastModified: 639230894933521170
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -2844,10 +2844,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/SFX.bank
   Name: SFX
   StudioPath: bank:/SFX
-  lastModified: 639237107627813713
+  lastModified: 639230894956475516
   FileSizes:
   - Name: Desktop
-    Value: 2521536
+    Value: 2521440
   Exists: 1
 --- !u!114 &-3024954121380953897
 MonoBehaviour:
@@ -4726,7 +4726,7 @@ MonoBehaviour:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639237107627813713
+  cacheTime: 639230894973666966
   cacheVersion: 131624
 --- !u!114 &160373513521069307
 MonoBehaviour:
@@ -5547,10 +5547,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639237103889387797
+  lastModified: 639230894973666966
   FileSizes:
   - Name: Desktop
-    Value: 10211808
+    Value: 10014080
   Exists: 1
 --- !u!114 &2232052457689665646
 MonoBehaviour:
@@ -6353,7 +6353,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Music.bank
   Name: Music
   StudioPath: bank:/Music
-  lastModified: 639118042193277606
+  lastModified: 639230894949485390
   FileSizes:
   - Name: Desktop
     Value: 4982784
@@ -8261,7 +8261,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639211425153077915
+  lastModified: 639230894933556824
   FileSizes:
   - Name: Desktop
     Value: 10016

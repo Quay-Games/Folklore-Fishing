@@ -77,7 +77,7 @@ namespace Project.DialogueEditor {
 					case DialogueNode npcDialogueNode:
 						dialogueContainer.NPCDialogueDatas.Add(SaveNodeData(npcDialogueNode));
 						break;
-					case ResponceNode responceNode:
+					case ResponseNode responceNode:
 						dialogueContainer.ResponceDatas.Add(SaveNodeData(responceNode));
 						break;
 					case EventNode npcEventNode:
@@ -208,7 +208,7 @@ namespace Project.DialogueEditor {
 		//}
 
 
-		private ResponceData SaveNodeData(ResponceNode node) {
+		private ResponseData SaveNodeData(ResponseNode node) {
 
 			List<Edge> tmpEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
 
@@ -216,19 +216,19 @@ namespace Project.DialogueEditor {
 			Edge SecondOptionOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "Option 2");
 
 
-			ResponceData data = new ResponceData {
+			ResponseData data = new ResponseData {
 				NodeGuid = node.NodeGuid,
 				Position = node.GetPosition().position,
-				ResponceData_Texts = new List<ResponceData_Text>(),
+				ResponceData_Texts = new List<ResponseData_Text>(),
 				FirstOptionGuid = (FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
 				SecondOptionGuid = (SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
 			};
 
 			// Assign unique IDs and store response texts
-			for (int i = 0; i < node.ResponceData.ResponceData_Texts.Count; i++) {
-				ResponceData_Text original = node.ResponceData.ResponceData_Texts[i];
+			for (int i = 0; i < node.ResponseData.ResponceData_Texts.Count; i++) {
+				ResponseData_Text original = node.ResponseData.ResponceData_Texts[i];
 
-				ResponceData_Text textCopy = new ResponceData_Text {
+				ResponseData_Text textCopy = new ResponseData_Text {
 					ID = new Container_Int { Value = i },
 					GuidID = original.GuidID,
 					Text = new List<LanguageGeneric<string>>(original.Text)
@@ -262,12 +262,12 @@ namespace Project.DialogueEditor {
 
 
 			// Start
-			foreach (StartData node in dialogueContainer.StartDatas) {
-				StartNode tempNode = graphView.CreateStartNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
+			//foreach (StartData node in dialogueContainer.StartDatas) {
+			//	StartNode tempNode = graphView.CreateStartNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
 
-				graphView.AddElement(tempNode);
-			}
+			//	graphView.AddElement(tempNode);
+			//}
 			//Listen Node
 			//foreach (ListenData node in dialogueContainer.ListenDatas) {
 			//	//this needs to be replaced with a call to the contstructor of ListenNode
@@ -282,96 +282,98 @@ namespace Project.DialogueEditor {
 			//}
 
 			// End Node 
-			foreach (EndData node in dialogueContainer.EndDatas) {
-				EndNode tempNode = graphView.CreateEndNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
-				tempNode.EndData.EndNodeType.Value = node.EndNodeType.Value;
+			//foreach (EndData node in dialogueContainer.EndDatas) {
+			//	EndNode tempNode = graphView.CreateEndNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
+			//	tempNode.EndData.EndNodeType.Value = node.EndNodeType.Value;
 
-				tempNode.LoadValueInToField();
-				graphView.AddElement(tempNode);
-			}
+			//	graphView.AddElement(tempNode);
+			//}
 
 			// NPCEvent Node
-			foreach (EventData node in dialogueContainer.EventDatas) {
-				EventNode tempNode = graphView.CreateNPCEventNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
+			//foreach (EventData node in dialogueContainer.EventDatas) {
+			//	EventNode tempNode = graphView.CreateNPCEventNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
 
-				tempNode.NPCEventData = node;
+			//	tempNode.NPCEventData = node;
 
-				tempNode.TextLine(node.EventData_EventName, node.EventType);
+			//	tempNode.TextLine(node.EventData_EventName, node.EventType);
 
-				graphView.AddElement(tempNode);
-			}
+			//	graphView.AddElement(tempNode);
+			//}
 
 			// NPCCondition Node
-			foreach (ConditionData node in dialogueContainer.ConditionDatas) {
-				ConditionNode tempNode = graphView.CreateNPCConditionNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
-				tempNode.NPCConditionData = node;
-				tempNode.TextLine(node.EventData_EventName);
+			//foreach (ConditionData node in dialogueContainer.ConditionDatas) {
+			//	ConditionNode tempNode = graphView.CreateNPCConditionNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
+			//	tempNode.NPCConditionData = node;
+			//	tempNode.TextLine(node.EventData_EventName);
 
-				tempNode.ReloadLanguage();
-				graphView.AddElement(tempNode);
-			}
+			//	tempNode.ReloadLanguage();
+			//	graphView.AddElement(tempNode);
+			//}
 
 			// Branch Node
-			foreach (BranchData node in dialogueContainer.BranchDatas) {
-				BranchNode tempNode = graphView.CreateBranchNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
+			//foreach (BranchData node in dialogueContainer.BranchDatas) {
+			//	BranchNode tempNode = graphView.CreateBranchNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
 
-				foreach (EventData_StringCondition item in node.EventData_StringConditions) {
-					tempNode.AddCondition(item);
-				}
+			//	foreach (EventData_StringCondition item in node.EventData_StringConditions) {
+			//		tempNode.AddCondition(item);
+			//	}
 
-				tempNode.ReloadLanguage();
-				graphView.AddElement(tempNode);
-			}
+			//	tempNode.ReloadLanguage();
+			//	graphView.AddElement(tempNode);
+			//}
 
 
 			// Dialogue Node
-			foreach (NPCDialogueData node in dialogueContainer.NPCDialogueDatas) {
-				DialogueNode tempNode = graphView.CreateNPCDialogueNode(node.Position);
+			//foreach (NPCDialogueData node in dialogueContainer.NPCDialogueDatas) {
+			//	DialogueNode tempNode = graphView.CreateNPCDialogueNode(node.Position);
 
-				tempNode.NodeGuid = node.NodeGuid;
-				tempNode.DialogueData.VoiceEvent = node.VoiceEvent;
+			//	tempNode.NodeGuid = node.NodeGuid;
+			//	tempNode.DialogueData.VoiceEvent = node.VoiceEvent;
 
-				DialogueTextData textData = new DialogueTextData {
-					GuidID = node.DialogueText.GuidID,
-					Text = node.DialogueText.Text,
-					ID = node.DialogueText.ID
-				};
+			//	DialogueTextData textData = new DialogueTextData {
+			//		GuidID = node.DialogueText.GuidID,
+			//		Text = node.DialogueText.Text,
+			//		ID = node.DialogueText.ID
+			//	};
 
-				tempNode.TextLine(textData);
+			//	tempNode.TextLine(textData);
 
-				tempNode.EventReferenceBox();
-				tempNode.ReloadLanguage();
+			//	tempNode.EventReferenceBox();
+			//	tempNode.ReloadLanguage();
 
-				graphView.AddElement(tempNode);
-			}
+			//	graphView.AddElement(tempNode);
+			//}
 
 			// Responce node
-			foreach (ResponceData node in dialogueContainer.ResponceDatas) {
-				ResponceNode tempNode = graphView.CreateResponceNode(node.Position);
-				tempNode.NodeGuid = node.NodeGuid;
+			//foreach (ResponseData node in dialogueContainer.ResponceDatas) {
+			//	ResponseNode tempNode = graphView.CreateResponceNode(node.Position);
+			//	tempNode.NodeGuid = node.NodeGuid;
 
-				List<ResponceData_Text> textData = new List<ResponceData_Text>();
-				if (node.ResponceData_Texts.Count > 0) {
-					for (int i = 0; i < node.ResponceData_Texts.Count; i++) {
-						ResponceData_Text tmp = new ResponceData_Text();
-						tmp.GuidID = node.ResponceData_Texts[i].GuidID;
-						tmp.Text = node.ResponceData_Texts[i].Text;
-						tmp.ID = node.ResponceData_Texts[i].ID;
-						textData.Add(tmp);
-					}
-					tempNode.TextLine(textData[0]);
-					tempNode.TextLine(textData[1]);
-				} else {
-					tempNode.TextLine();
-					tempNode.TextLine();
-				}
+			//	List<ResponseData_Text> textData = new List<ResponseData_Text>();
+			//	if (node.ResponceData_Texts.Count > 0) {
+			//		for (int i = 0; i < node.ResponceData_Texts.Count; i++) {
+			//			ResponseData_Text tmp = new ResponseData_Text();
+			//			tmp.GuidID = node.ResponceData_Texts[i].GuidID;
+			//			tmp.Text = node.ResponceData_Texts[i].Text;
+			//			tmp.ID = node.ResponceData_Texts[i].ID;
+			//			textData.Add(tmp);
+			//		}
+			//		tempNode.TextLine(textData[0]);
+			//		tempNode.TextLine(textData[1]);
+			//	} else {
+			//		tempNode.TextLine();
+			//		tempNode.TextLine();
+			//	}
 
-				tempNode.ReloadLanguage();
-				graphView.AddElement(tempNode);
+			//	tempNode.ReloadLanguage();
+			//	graphView.AddElement(tempNode);
+
+
+				//what were these below????
 
 				//if (!string.IsNullOrEmpty(node.FirstOptionGuid)) {
 				//	dialogueContainer.NodeLinkDatas.Add(new DialogueContainer.NodeLinkData {
@@ -388,7 +390,7 @@ namespace Project.DialogueEditor {
 				//		TargetNodeGuid = node.SecondOptionGuid
 				//	});
 				//}
-			}
+			//}
 		}
 
 		private void ConnectNodes(DialogueContainer dialogueContainer) {

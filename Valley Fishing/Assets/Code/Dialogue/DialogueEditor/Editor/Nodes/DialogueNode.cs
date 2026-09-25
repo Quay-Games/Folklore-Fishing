@@ -23,17 +23,24 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public DialogueNode(Vector2 _position, DialogueEditorWindow editorWindow, DialogueGraphView graphView) {
-			base.editorWindow = editorWindow;
-			base.graphView = graphView;
+		public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		: base(_position, _editorWindow, _graphView, "USS/Nodes/DialogueNodeStyleSheet", "NPC Dialogue", _data)
+        {
+			if (_data != null) {
+				DialogueData = _data as NPCDialogueData;
 
-			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/DialogueNodeStyleSheet");
-			styleSheets.Add(styleSheet);
+                DialogueTextData textData = new DialogueTextData
+                {
+                    GuidID = DialogueData.DialogueText.GuidID,
+                    Text = DialogueData.DialogueText.Text,
+                    ID = DialogueData.DialogueText.ID
+                };
 
-			title = "NPC Dialogue";
-			SetPosition(new Rect(_position, defaultNodeSize));
-			nodeGuid = Guid.NewGuid().ToString();
+                TextLine(textData);
 
+                EventReferenceBox();
+                ReloadLanguage();
+            }
 			AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("Continue");
 		}

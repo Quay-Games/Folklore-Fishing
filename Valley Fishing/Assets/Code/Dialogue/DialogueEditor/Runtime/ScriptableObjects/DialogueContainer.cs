@@ -6,12 +6,13 @@ using UnityEngine.UIElements;
 [CreateAssetMenu(menuName = "Dialogue/New Dialoguee")]
 [System.Serializable]
 public class DialogueContainer : ScriptableObject {
-	public List<NodeLinkData> NodeLinkDatas = new List<NodeLinkData>();
+    //my ambition here is to remove all of these lists and just have a single list of BaseData
+    public List<NodeLinkData> NodeLinkDatas = new List<NodeLinkData>();
 	public List<BaseData> NodeDatas = new List<BaseData>();
 
 	public List<DialogueData> DialogueDatas = new List<DialogueData>();
 	public List<NPCDialogueData> NPCDialogueDatas = new List<NPCDialogueData>();
-	public List<ResponceData> ResponceDatas = new List<ResponceData>();
+	public List<ResponseData> ResponceDatas = new List<ResponseData>();
 	public List<EndData> EndDatas = new List<EndData>();
 	public List<StartData> StartDatas = new List<StartData>();
 	public List<EventData> EventDatas = new List<EventData>();

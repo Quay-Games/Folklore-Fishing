@@ -61,8 +61,8 @@ namespace Project.DialogueEditor {
         }
 
         /*
- * This function gets a list of all the nodes in the nodes folder that extend from BaseNode
- */
+		 * This function gets a list of all the nodes in the nodes folder that extend from BaseNode
+		 */
         private List<BaseNode> GetSearchableNodes()
         {
             List<BaseNode> nodes = new List<BaseNode>();

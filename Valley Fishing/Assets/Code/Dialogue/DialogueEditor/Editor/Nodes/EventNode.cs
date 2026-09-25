@@ -22,17 +22,16 @@ namespace Project.DialogueEditor {
 
 		private EnumField eventTypeDropdown;
 
-		public EventNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView) {
-			base.editorWindow = _editorWindow;
-			base.graphView = _graphView;
-
-			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/EventNodeStyleSheet");
-			styleSheets.Add(styleSheet);
-
-			title = "NPC Event";
-			SetPosition(new Rect(_position, defaultNodeSize));
-			nodeGuid = Guid.NewGuid().ToString();
-			AddInputPort("Input", Port.Capacity.Multi);
+		public EventNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Event", _data)
+        {
+			//is this the proper way to assign this data and actually have it be used??
+            if (_data != null)
+            {
+                NPCEventData = _data as EventData;
+                TextLine(NPCEventData.EventData_EventName, NPCEventData.EventType);
+            }
+            AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("Output", Port.Capacity.Single);
 		}
 

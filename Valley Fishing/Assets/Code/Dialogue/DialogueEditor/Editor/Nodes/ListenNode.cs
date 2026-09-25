@@ -2,17 +2,18 @@ using Project.DialogueEditor;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
 public class ListenNode : BaseNode {
-    [System.Serializable]
-    public class ListenData : BaseData
-    {
-        public List<Container_ListenEventSO> Container_ListenEventSOs = new List<Container_ListenEventSO>();
-    }
+    //[System.Serializable]
+    //public class ListenData : BaseData
+    //{
+    //    public List<Container_ListenEventSO> Container_ListenEventSOs = new List<Container_ListenEventSO>();
+    //}
 
     ListenData listenData = new ListenData();
 
@@ -25,27 +26,24 @@ public class ListenNode : BaseNode {
 
 	}
 
-	public ListenNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData data = null) {
-		base.editorWindow = _editorWindow;
-		base.graphView = _graphView;
-
-		StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/EventNodeStyleSheet");
-		styleSheets.Add(styleSheet);
-
-		title = "ListenNode";
+	public ListenNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+	: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "ListenNode", _data){
 
 		//if theres data to initialize with, do that, if not use default values
-		if (data != null)
+		if (_data != null)
 		{
-			SetPosition(new Rect(data.Position, defaultNodeSize));
-            NodeGuid = data.NodeGuid;
+			
+            NodeGuid = _data.NodeGuid;
 
-            foreach (Container_ListenEventSO item in (data as ListenData).Container_ListenEventSOs)
+            foreach (Container_ListenEventSO item in (_data as ListenData).Container_ListenEventSOs)
             {
                 this.AddScriptableEvent(item);
             }
 
-			//virtual in base class and not overridden, currently the call does nothing
+			//is this even a worthwhile thing to do? do these data objects actually get used?
+			listenData = _data as ListenData;
+
+            //virtual in base class and not overridden, currently the call does nothing
             //this.LoadValueInToField();
         } else
 		{

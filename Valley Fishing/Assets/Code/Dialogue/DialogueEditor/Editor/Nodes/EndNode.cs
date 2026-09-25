@@ -15,17 +15,14 @@ namespace Project.DialogueEditor {
 		public EndNode() {
 
 		}
+		public EndNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null) 
+			: base(_position, _editorWindow, _graphView, "USS/Nodes/EndNodeStyleSheet", "End", _data) {
 
-		public EndNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView) {
-			base.editorWindow = _editorWindow;
-			base.graphView = _graphView;
-
-			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/EndNodeStyleSheet");
-			styleSheets.Add(styleSheet);
-
-			title = "End";
-			SetPosition(new Rect(_position, defaultNodeSize));
-			nodeGuid = Guid.NewGuid().ToString();
+			if(_data != null)
+			{
+                EndData.EndNodeType.Value = (_data as EndData).EndNodeType.Value;
+				LoadValueInToField();
+            }
 
 			AddInputPort("Input", Port.Capacity.Multi);
 

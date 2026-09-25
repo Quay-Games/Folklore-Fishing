@@ -40,7 +40,7 @@ namespace Project.DialogueEditor {
 		}
 
 		public void Continue(int option) {
-			if (this.CurrentNode is ResponceData responceData) {
+			if (this.CurrentNode is ResponseData responceData) {
 				if (option == 0) {
 					CheckNodeType(GetNodeByGuid(responceData.FirstOptionGuid));
 				} else {
@@ -74,7 +74,7 @@ namespace Project.DialogueEditor {
 				case ConditionData nodeData:
 					RunNode(nodeData);
 					break;
-				case ResponceData nodeData:
+				case ResponseData nodeData:
 					RunNode(nodeData);
 					break;
 				case ListenData nodeData:
@@ -146,9 +146,9 @@ namespace Project.DialogueEditor {
 			CheckNodeType(GetNextNode(nodeData));
 		}
 
-		private void RunNode(ResponceData nodeData) {
+		private void RunNode(ResponseData nodeData) {
 			CurrentNode = nodeData;
-			List<ResponceData_Text> tmp = new List<ResponceData_Text>(nodeData.ResponceData_Texts);
+			List<ResponseData_Text> tmp = new List<ResponseData_Text>(nodeData.ResponceData_Texts);
 			List<string> texts = new List<string>();
 			for (int i = 0; i < tmp.Count; i++) {
 				texts.Add(tmp[i].Text.Find(text => text.LanguageType == LanguageController.Instance.Language).LanguageGenericType);

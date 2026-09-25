@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -58,51 +59,51 @@ namespace Project.DialogueEditor {
 			}
 		}
 
-		public StartNode CreateStartNode(Vector2 position) {
-			return new StartNode(position, editorWindow, this);
-		}
+		//public StartNode CreateStartNode(Vector2 position) {
+		//	return new StartNode(position, editorWindow, this);
+		//}
 
-		public DialogueNode CreateNPCDialogueNode(Vector2 position, bool isNew = false) {
-			var node = new DialogueNode(position, editorWindow, this);
-			if (isNew) {
-				node.TextLine();
-				node.EventReferenceBox();
-			}
-			return node;
-		}
+		//public DialogueNode CreateNPCDialogueNode(Vector2 position, bool isNew = false) {
+		//	var node = new DialogueNode(position, editorWindow, this);
+		//	if (isNew) {
+		//		node.TextLine();
+		//		node.EventReferenceBox();
+		//	}
+		//	return node;
+		//}
 
-		public ResponceNode CreateResponceNode(Vector2 position, bool isNew = false) {
-			var node = new ResponceNode(position, editorWindow, this);
-			if (isNew) {
-				//Nodes should own the need to initialize this
-				node.TextLine();
-				node.TextLine();
-			}
-			return node;
-		}
+		//public ResponseNode CreateResponceNode(Vector2 position, bool isNew = false) {
+		//	var node = new ResponseNode(position, editorWindow, this);
+		//	if (isNew) {
+		//		//Nodes should own the need to initialize this
+		//		node.TextLine();
+		//		node.TextLine();
+		//	}
+		//	return node;
+		//}
 
-		public EventNode CreateNPCEventNode(Vector2 position, bool isNew = false) {
-			var node = new EventNode(position, editorWindow, this);
-			if (isNew) {
-				node.TextLine();
-			}
-			return node;
-		}
-		public ConditionNode CreateNPCConditionNode(Vector2 position, bool isNew = false) {
-			var node = new ConditionNode(position, editorWindow, this);
-			if (isNew) {
-				node.TextLine();
-			}
-			return node;
-		}
+		//public EventNode CreateNPCEventNode(Vector2 position, bool isNew = false) {
+		//	var node = new EventNode(position, editorWindow, this);
+		//	if (isNew) {
+		//		node.TextLine();
+		//	}
+		//	return node;
+		//}
+		//public ConditionNode CreateNPCConditionNode(Vector2 position, bool isNew = false) {
+		//	var node = new ConditionNode(position, editorWindow, this);
+		//	if (isNew) {
+		//		node.TextLine();
+		//	}
+		//	return node;
+		//}
 
-		public EndNode CreateEndNode(Vector2 position) {
-			return new EndNode(position, editorWindow, this);
-		}
+		//public EndNode CreateEndNode(Vector2 position) {
+		//	return new EndNode(position, editorWindow, this);
+		//}
 
-		public BranchNode CreateBranchNode(Vector2 position) {
-			return new BranchNode(position, editorWindow, this);
-		}
+		//public BranchNode CreateBranchNode(Vector2 position) {
+		//	return new BranchNode(position, editorWindow, this);
+		//}
 		//I want to be able to remove this, but it is used in one place
 		//public ListenNode CreateListenNode(Vector2 position) {
 		//	return new ListenNode(position, editorWindow, this);
@@ -110,7 +111,7 @@ namespace Project.DialogueEditor {
 
 		public bool CreateEmptyNodeOfType(BaseNode searchResultNode, Vector2 pos)
 		{
-			BaseNode nodeToCreate = null;
+			BaseNode nodeToCreate = Activator.CreateInstance(searchResultNode.GetType(), pos, editorWindow, this) as BaseNode;
 			switch (searchResultNode)
 			{
 				case ListenNode node:
@@ -137,7 +138,28 @@ namespace Project.DialogueEditor {
 				case ListenData:
 					node = new ListenNode(new Vector2(), editorWindow, this, data);
                     break;
-				default:
+				case StartData:
+                    node = new StartNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case EndData:
+                    node = new EndNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case DialogueData:
+                    node = new DialogueNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case BranchData:
+                    node = new BranchNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case EventData:
+                    node = new EventNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case ConditionData:
+                    node = new ConditionNode(new Vector2(), editorWindow, this, data);
+                    break;
+				case ResponseData:
+                    node = new ResponseNode(new Vector2(), editorWindow, this, data);
+                    break;
+                default:
 					break;
 			}
 			if (node != null)

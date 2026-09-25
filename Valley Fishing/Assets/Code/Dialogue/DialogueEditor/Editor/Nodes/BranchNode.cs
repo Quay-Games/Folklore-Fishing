@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -19,16 +20,19 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public BranchNode(Vector2 position, DialogueEditorWindow editorWindow, DialogueGraphView graphView) {
-			base.editorWindow = editorWindow;
-			base.graphView = graphView;
+		public BranchNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		: base(_position, _editorWindow, _graphView, "USS/Nodes/BranchNodeStyleSheet", "Branch", _data)
+        {
+			if (_data != null)
+			{
+				BranchData = _data as BranchData;
+                foreach (EventData_StringCondition item in BranchData.EventData_StringConditions)
+                {
+                    AddCondition(item);
+                }
 
-			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/BranchNodeStyleSheet");
-			styleSheets.Add(styleSheet);
-
-			title = "Branch";
-			SetPosition(new Rect(position, defaultNodeSize));
-			nodeGuid = Guid.NewGuid().ToString();
+                ReloadLanguage();
+            }
 
 			AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("True", Port.Capacity.Single);
