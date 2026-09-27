@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Tutorials/03_FirstBoss.unity
     guid: d892f87f2c6368443b2cc659aa87303b
+  - enabled: 1
+    path: Assets/Scenes/Calvin Shore.unity
+    guid: c48c9f0b9ed0b5e43a3939b47033707e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

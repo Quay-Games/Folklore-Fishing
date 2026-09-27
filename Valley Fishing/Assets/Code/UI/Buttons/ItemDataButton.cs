@@ -75,7 +75,7 @@ public class ItemDataButton : ButtonVoiceOverComponent
 				voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
 				voiceoverChain.AddRange(FMODManager.Instance.GetNumber(itemValue));
 				voiceoverChain.Add(FMODManager.Instance.Gold);
-				if (GameManager.Instance.ShopController.BaitShop.BaitQuantities[itemIndex] == 0) {
+				if (GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[itemIndex] == 0) {
 					voiceoverChain.Add(FMODManager.Instance.SoldOut);
 					AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
 					return;
@@ -103,8 +103,10 @@ public class ItemDataButton : ButtonVoiceOverComponent
         }
 		if (this.ItemData.OwnedItemData is BaitDatas.BaitData) {
 			if (GameManager.Instance.ShopController != null) {
-				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[transform.GetSiblingIndex()];
-				GameManager.Instance.ShopController.BaitShop.BuyBait(transform.GetSiblingIndex(), baitQuantity);
+				int baitIndex = System.Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData);
+				Debug.Log(baitIndex);
+				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[baitIndex];
+				GameManager.Instance.ShopController.BaitShop.BuyBait(baitIndex, baitQuantity);
 			}
 			else {
 				GameManager.Instance.LevelController.BaitView.BaitClicked(Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData));

@@ -14,4 +14,5 @@ public class LevelManager
 	public const string BossTutorial_00 = "03_FirstBoss";
 	public const string GameSence = "04_GameScene";
 	public const string CalvinShore = "Calvin Shore";
+	public const string CalvinLevel = "Calvin Level";
 }

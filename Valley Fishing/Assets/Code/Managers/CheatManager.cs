@@ -17,7 +17,7 @@ public class CheatManager : Singleton<CheatManager>
 	}
 
 	private int ScenesLoaded;	
-	public List<OwnedItemTypeData> TempBaitBoardDatas;
+	public List<BaitCheatData> TempBaitBoardDatas;
 
 	[field:SerializeField] private bool useCheats = true;
 

@@ -28,8 +28,6 @@ public class CalvinBaitShop : Shop {
 
 
 	#region Properties
-
-	[field:SerializeField] public int[] BaitQuantities { get; set; }
 	public BaitBoard BaitBoard => baitBoard;
 	public FishBoard FishBoard => fishBoard;
 
@@ -125,17 +123,20 @@ public class CalvinBaitShop : Shop {
 	}
 
 	public virtual void BuyBait(int baitIndex, int sellQuantity) {
-		if(this.BaitQuantities[baitIndex] == 0) {
+		if(baitBoard.BaitQuantities[baitIndex] == 0) {
+			Debug.Log("here");
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
 		if (InventoryManager.Instance.BaitDatas.Datas[baitIndex].ItemSellPrice * sellQuantity > GameManager.Instance.Money) {
+			Debug.Log("here");
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
+		Debug.Log("buy");
 		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.Datas[baitIndex].ItemSellPrice * sellQuantity;
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity += sellQuantity;
-		this.BaitQuantities[baitIndex] -= sellQuantity;
+		baitBoard.BaitQuantities[baitIndex] -= sellQuantity;
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.MoneyEarnt);
 		List<EventReference> voiceOverChain = new List<EventReference>();
 		voiceOverChain.Add(FMODManager.Instance.BaitShopBoughtBait);
@@ -155,12 +156,12 @@ public class CalvinBaitShop : Shop {
 		}
 	}
 
-    #endregion
+	#endregion
 
 
-    #region Private Methods
+		#region Private Methods
 
-    private void PerformSellFish(int fishIndex) {
+	private void PerformSellFish(int fishIndex) {
 		InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity = 0;
 	}
 
@@ -180,6 +181,12 @@ public class CalvinBaitShop : Shop {
 	public override void Skip() {
 		base.Skip();
 		AudioManager.Instance.DisableSkipping();
+		if (baitBoard.gameObject.activeInHierarchy && !AudioManager.Instance.VoiceLineInProgress) {
+			OpenBaitBoard();
+		}
+		if (fishBoard.gameObject.activeInHierarchy && !AudioManager.Instance.VoiceLineInProgress) {
+			OpenFishBoard();
+		}
 	}
     public virtual void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		StartCoroutine(RunBeginLerp(lerpTransforms[0]));

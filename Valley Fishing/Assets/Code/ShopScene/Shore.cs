@@ -44,7 +44,7 @@ public class Shore : MonoBehaviour
     }
 
 	public void LeaveShore() {
-		SceneManager.LoadScene(LevelManager.CatchTutorial_01);
+		SceneManager.LoadScene(LevelManager.CalvinLevel);
 	}
 
 	#endregion

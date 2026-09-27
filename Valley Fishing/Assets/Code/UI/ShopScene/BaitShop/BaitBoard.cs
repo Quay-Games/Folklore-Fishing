@@ -56,17 +56,6 @@ public class BaitBoard : ItemDataButtonGenerator {
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoardOpenClose);
 	}
 
-	public override List<OwnedItemTypeData> GetTempBaitListForSelling() {
-		List<OwnedItemTypeData> data = new List<OwnedItemTypeData>();
-		for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-			OwnedItemTypeData itemData = new OwnedItemTypeData();
-			itemData.OwnedItemData = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData;
-			itemData.quantity = BaitQuantities[i];
-			data.Add(itemData);
-		}
-		return data;
-	}
-
 	#endregion
 
 

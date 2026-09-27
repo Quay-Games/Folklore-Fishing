@@ -66,7 +66,6 @@ public class ItemDataButtonGenerator : MonoBehaviour
         }		
 		List<bool> buttonsToEnable = new List<bool>();
 		if (this.initialButton != null) {
-			Debug.Log(initialButton);
 			this.Buttons.Add(initialButton);
 			buttonsToEnable.Insert(0, true);
 		}
@@ -79,20 +78,13 @@ public class ItemDataButtonGenerator : MonoBehaviour
                 buttonsToEnable.Add(false);
             }
         }
-		if (!this.Initialized) { 
-			for (int i = 0; i < chosenList.Count; i++) {
-                ItemDataButton buttonInstance = Instantiate(itemButton, buttonParent.transform);
-				buttonInstance.AssignData(chosenList[i]);
-                buttonInstance.name = chosenList[i].OwnedItemData.ItemName;
-				this.ItemDataButtons.Add(buttonInstance);
-                Buttons.Add(buttonInstance.Button);
-            }
-		}
-		else {
-			for (int i = 0; i < this.ItemDataButtons.Count; i++) {
-				this.ItemDataButtons[i].AssignData(chosenList[i]);
-			}
-		}
+		for (int i = 0; i < chosenList.Count; i++) {
+            ItemDataButton buttonInstance = Instantiate(itemButton, buttonParent.transform);
+			buttonInstance.AssignData(chosenList[i]);
+            buttonInstance.name = chosenList[i].OwnedItemData.ItemName;
+			this.ItemDataButtons.Add(buttonInstance);
+            Buttons.Add(buttonInstance.Button);
+        }
 		Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
 		if (navigationType == NavigationType.Horizontal) {
 			Utilities.LinkHorizontalButtons(this.Buttons, leaveShopButton);
@@ -124,7 +116,15 @@ public class ItemDataButtonGenerator : MonoBehaviour
     //This will be removed
 
     public virtual List<OwnedItemTypeData> GetTempBaitListForSelling(){
-		return CheatManager.Instance.TempBaitBoardDatas;
+		List<OwnedItemTypeData> tempBaitListForSelling = new List<OwnedItemTypeData>();
+		for (int i = 0; i < CheatManager.Instance.TempBaitBoardDatas.Count; i++) {
+			OwnedItemTypeData baitData = InventoryManager.Instance.OwnedBaitTypeDatas[CheatManager.Instance.TempBaitBoardDatas[i].BaitIndex];
+			baitData.quantity = CheatManager.Instance.TempBaitBoardDatas[i].BaitAmount;
+			tempBaitListForSelling.Add(baitData);
+			GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[CheatManager.Instance.TempBaitBoardDatas[i].BaitIndex] = CheatManager.Instance.TempBaitBoardDatas[i].BaitAmount;
+		}
+
+		return tempBaitListForSelling;
     }
 
     #endregion

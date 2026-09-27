@@ -31,7 +31,7 @@ public class BaitBoardButton : ButtonVoiceOverComponent {
             voiceoverChain.Add(FMODManager.Instance.GetNumber(baitValue)[i]);
         }
         voiceoverChain.Add(FMODManager.Instance.Gold);
-        if (GameManager.Instance.ShopController.BaitShop.BaitQuantities[baitIndex] == 0)
+        if (GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[baitIndex] == 0)
         {
             voiceoverChain.Add(FMODManager.Instance.SoldOut);
             AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);

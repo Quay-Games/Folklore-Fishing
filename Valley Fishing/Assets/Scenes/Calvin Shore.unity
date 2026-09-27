@@ -129,11 +129,59 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: useCheats
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.size
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.size
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[0].quantity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[0].BaitIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[1].BaitIndex
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[2].BaitIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[3].BaitIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[4].BaitIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[0].BaitAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[1].BaitAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[2].BaitAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[3].BaitAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: TempBaitBoardDatas.Array.data[4].BaitAmount
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.data[0].FishIndex
@@ -1884,7 +1932,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.size
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].quantity
@@ -2267,23 +2315,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
-      value: event:/VoiceOver/Narrator/Shop Prompts/LeaveShop
+      value: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data1
-      value: 1897283032
+      value: -908910996
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data2
-      value: 1306888824
+      value: 1281000809
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data3
-      value: 1730168463
+      value: -553183553
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
-      value: -1967625427
+      value: 675443858
       objectReference: {fileID: 0}
     - target: {fileID: 7573461600486003569, guid: f53ab109f960c2443bd672b9e98f0661, type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
@@ -2586,7 +2634,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: <Money>k__BackingField
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3439270965734018076, guid: 83a52f5544583ba4087abec2f6ca1d2f, type: 3}
       propertyPath: <EventSystem>k__BackingField
@@ -2609,6 +2657,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1507399596}
     m_Modifications:
+    - target: {fileID: 250277832014298761, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 250277832014298761, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2820,6 +2872,34 @@ PrefabInstance:
     - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Guid.Data4
       value: 1407847178
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1808427007}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveShore
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shore, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3881110969053705823, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 4204759374258576016, guid: bc0137a215d168e47984e528a5d63ffb, type: 3}
       propertyPath: HoverButtonSoundEventReference.Path
@@ -3112,6 +3192,38 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1507399596}
     m_Modifications:
+    - target: {fileID: 658492919335262046, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: listUsed
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: navigationType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: BaitQuantities.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: 'BaitQuantities.Array.data[3]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: 'BaitQuantities.Array.data[5]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1520943541242630875, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: 'BaitQuantities.Array.data[6]'
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1694516626369230537, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2393832143569554026, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
       propertyPath: baitBoard
       value: 
@@ -3136,9 +3248,21 @@ PrefabInstance:
       propertyPath: 'lerpTransforms.Array.data[3]'
       value: 
       objectReference: {fileID: 436117398}
+    - target: {fileID: 2393832143569554026, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: <BaitQuantities>k__BackingField.Array.size
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3024479349131905888, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4206476643468240999, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5776932506046416879, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6230285890369903632, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
       propertyPath: m_Pivot.x
@@ -3220,13 +3344,229 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: buttonType
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Path
+      value: event:/VoiceOver/BaitShopkeep/Buttons/Leavemyshopalt
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data1
+      value: -908910996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data2
+      value: 1281000809
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data3
+      value: -553183553
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data4
+      value: 675443858
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1712901701}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: LeaveShop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Shop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6726635784609469454, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6764280053037418444, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
       propertyPath: m_Name
       value: CalvinBaitShop
       objectReference: {fileID: 0}
+    - target: {fileID: 6764280053037418444, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: buttonType
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Path
+      value: event:/VoiceOver/BaitShopkeep/Buttons/Fishbasket
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data1
+      value: -1810839440
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data2
+      value: 1190833303
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data3
+      value: 1325553301
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data4
+      value: 122302985
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1712901701}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SellAllFish
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CalvinBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7219572475215690530, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7505805747263277167, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: buttonType
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Path
+      value: event:/VoiceOver/BaitShopkeep/Buttons/Fishboard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data1
+      value: -1121983338
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data2
+      value: 1332014771
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data3
+      value: 613597590
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data4
+      value: 1834513874
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1712901701}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenFishBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CalvinBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8295504475028966151, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: buttonType
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Path
+      value: event:/VoiceOver/BaitShopkeep/Buttons/Baitbaord
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data1
+      value: 193982054
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data2
+      value: 1125355496
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data3
+      value: 144938908
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: HoverButtonSoundEventReference.Guid.Data4
+      value: 1109169038
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1712901701}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OpenBaitBoard
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: CalvinBaitShop, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8389793271943558853, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 8854251974101331196, guid: 2890942154c157a4a9cf084d0c60c0e2, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
