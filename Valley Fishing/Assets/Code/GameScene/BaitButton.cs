@@ -36,7 +36,7 @@ public class BaitButton : MonoBehaviour {
 
 	#region Public Methods
 
-	public void SelectBait() {
+	public void SelectBait(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		baitView.BaitSelected(baitIndex);
 		if (!InventoryManager.Instance.BaitDatas.Datas[baitIndex].IsTutorial) {
 			if (AudioManager.Instance.VoiceLineInProgress) {

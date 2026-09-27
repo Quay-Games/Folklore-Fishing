@@ -83,6 +83,7 @@ public class RodShop : Shop {
 
 	#endregion
 
+
 	#region Shop
 
 	public override void VoiceLineOver(bool skipped) {

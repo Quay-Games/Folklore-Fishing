@@ -181,18 +181,18 @@ public class CalvinBaitShop : Shop {
 		base.Skip();
 		AudioManager.Instance.DisableSkipping();
 	}
-    public virtual void FishBasketSelected() {
+    public virtual void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		StartCoroutine(RunBeginLerp(lerpTransforms[0]));
     }
 
-    public virtual void FishBoardSelected() {
+    public virtual void FishBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[1]));
     }	
 
-	public virtual void BaitBoardSelected() {
+	public virtual void BaitBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[2]));
     }
-	public virtual void LeaveShopSelected() {
+	public virtual void LeaveShopSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[3]));
     }
     private IEnumerator RunBeginLerp(Transform lerpTransform) {

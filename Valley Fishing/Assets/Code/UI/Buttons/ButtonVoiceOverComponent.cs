@@ -1,22 +1,26 @@
 using FMODUnity;
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler, ISubmitHandler 
 {
 	#region Serialised Fields
-
+	[SerializeField] protected ButtonType buttonType;
     [SerializeField] protected EventReference HoverButtonSoundEventReference;
+	[SerializeField] protected UnityEvent hoverEvent;
+	[SerializeField] protected UnityEvent clickEvent;
 
     #endregion
 
 
     #region Properties
 
-    public Action SelectAction { get; set; }
+    public Action<ButtonType, ButtonVoiceOverComponent> SelectAction { get; set; }
 	private Button ButtonReference { get; set; }
+	public bool TutorialTriggered { get; set; }
 	public Button Button {
 		get {
 			if (this.ButtonReference == null)
@@ -39,14 +43,19 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 			return;
 		}
 		GameManager.Instance.LastSelectedButton = gameObject;
-		SelectAction?.Invoke();
+		SelectAction?.Invoke(buttonType,this);
+		if (this.TutorialTriggered) {
+			this.TutorialTriggered = false;
+			return;
+		}
 		DoHoverEffect();
 	}
 
 	public virtual void DoHoverEffect() {
 		if (!HoverButtonSoundEventReference.IsNull) {
-			AudioManager.Instance.PlayVoiceOver(HoverButtonSoundEventReference);
-		}		
+			AudioManager.Instance.PlayVoiceOver(HoverButtonSoundEventReference);			
+		}
+		hoverEvent?.Invoke();
 	}
 
 	public void OnMove(AxisEventData eventData) {
@@ -85,6 +94,7 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 	}
 
 	public virtual bool ButtonClicked(bool buttonInteractable) {
+		clickEvent?.Invoke();
 		return buttonInteractable;
 	}
 }
