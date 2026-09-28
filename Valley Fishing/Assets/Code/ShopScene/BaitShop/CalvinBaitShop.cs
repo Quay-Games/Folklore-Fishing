@@ -133,7 +133,6 @@ public class CalvinBaitShop : Shop {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 			return;
 		}
-		Debug.Log("buy");
 		GameManager.Instance.Money -= InventoryManager.Instance.BaitDatas.Datas[baitIndex].ItemSellPrice * sellQuantity;
 		InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity += sellQuantity;
 		baitBoard.BaitQuantities[baitIndex] -= sellQuantity;

@@ -3,6 +3,7 @@ using FMODUnity;
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FishView : MonoBehaviour
 {
@@ -62,6 +63,9 @@ public class FishView : MonoBehaviour
 				fishUis[i].SetActive(enable);
 			}
 		fishText.gameObject.SetActive(enable);
+			if(InventoryManager.Instance.TotalOwnedBaits == 0) {
+				SceneManager.LoadScene(LevelManager.CalvinShore);
+			}
 		}
 	}
 

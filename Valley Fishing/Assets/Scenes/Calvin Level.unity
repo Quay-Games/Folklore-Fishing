@@ -626,7 +626,6 @@ GameObject:
   m_Component:
   - component: {fileID: 582599907}
   - component: {fileID: 582599906}
-  - component: {fileID: 582599908}
   - component: {fileID: 582599909}
   m_Layer: 0
   m_Name: '[LevelController]'
@@ -647,7 +646,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8f95b3ee26bffa41b423ef9e668ab67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <CurrentState>k__BackingField: 0
+  <CurrentState>k__BackingField: 3
   eventSystem: {fileID: 1015315668}
   levelMusic:
     Guid:
@@ -664,7 +663,7 @@ MonoBehaviour:
       Data4: 0
     Path: 
   gameplayContainer: {fileID: 641266736}
-  VoiceOverController: {fileID: 582599908}
+  VoiceOverController: {fileID: 0}
   <FishView>k__BackingField: {fileID: 723462215}
   <BaitView>k__BackingField: {fileID: 1927175311}
   <LeftStrafeTransform>k__BackingField: {fileID: 138858724}
@@ -685,73 +684,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &582599908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 582599905}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34f8ba43273332b48b9ebe37dbae3cbb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  applyBaitTutorials:
-  - Guid:
-      Data1: 1897020937
-      Data2: 1098993638
-      Data3: -144721280
-      Data4: -48055372
-    Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/2Don_tforgetwhatyouhavelearnt
-  castRodTutorials:
-  - Guid:
-      Data1: -1619988193
-      Data2: 1295411151
-      Data3: 1255521409
-      Data4: 1968769829
-    Path: event:/VoiceOver/Captain/GameIntroduction/6-BossEncounter/3Castyourrod
-  reelTutorials: []
-  tutorialCatchVoices:
-  - Guid:
-      Data1: -449038532
-      Data2: 1280758308
-      Data3: -1433694552
-      Data4: -474234592
-    Path: event:/VoiceLines/Level Scene/Caught Fish/Boss 0/0 Llyn Llyn Salmon
-  tooFastPrompt:
-    Guid:
-      Data1: -1540413782
-      Data2: 1194833894
-      Data3: -1875334778
-      Data4: 1597380477
-    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/Help2-Easyboy,you_rereelingtofast
-  tooSlowPrompt:
-    Guid:
-      Data1: -818729371
-      Data2: 1266573359
-      Data3: 863739279
-      Data4: -924373461
-    Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/Help1-Putyourbackintoit
-  levelIndex: 3
-  CastRodTutorialsCompleted: 
-  ReelTutorialsCompleted: 
-  CaughtFishTutorialsCompleted: 
-  endScreenUI: {fileID: 0}
-  initialButton: {fileID: 0}
-  thanksForPlayingEvent:
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
-  - Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
 --- !u!114 &582599909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1254,53 +1186,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
---- !u!1 &1820882503
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1820882505}
-  - component: {fileID: 1820882504}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1820882504
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820882503}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef4521a5a829ea74f93163c8863f2d6d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueContainer: {fileID: 11400000, guid: f64bb5b40fc61bb45a1db8d394d12ae8, type: 2}
-  speakerName: {fileID: 0}
-  <DialogueStarted>k__BackingField: 0
---- !u!4 &1820882505
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1820882503}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.56089, y: 71.213806, z: -51.992542}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1927175311 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4378699412491670689, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
@@ -1598,4 +1483,3 @@ SceneRoots:
   - {fileID: 1420622171}
   - {fileID: 1503912088}
   - {fileID: 1700058524}
-  - {fileID: 1820882505}

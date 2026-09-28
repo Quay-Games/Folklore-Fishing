@@ -56,8 +56,10 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.Cutscene:
 				break;
 			case State.Idle:
+				SetState(State.AttatchBait);
 				break;
 			case State.AttatchBait:
+				GameManager.Instance.LevelController = this;
 				this.BaitView.EnableBaitUI(true);
 				break;
 			case State.IdleWithBait:

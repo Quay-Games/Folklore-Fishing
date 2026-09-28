@@ -63,28 +63,38 @@ public class ItemDataButtonGenerator : MonoBehaviour
             default:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
                 break;
-        }		
+        }
+		
 		List<bool> buttonsToEnable = new List<bool>();
 		if (this.initialButton != null) {
-			this.Buttons.Add(initialButton);
+			if (!this.Initialized) {
+				this.Buttons.Add(initialButton);
+			}
 			buttonsToEnable.Insert(0, true);
 		}
 		for (int i = 0; i < chosenList.Count; i++) {
-            if (chosenList[i].quantity > 0) {
-                buttonsToEnable.Add(true);
-            }
-            else
-            {
-                buttonsToEnable.Add(false);
-            }
-        }
+			if (chosenList[i].quantity > 0) {
+				buttonsToEnable.Add(true);
+			}
+			else {
+				buttonsToEnable.Add(false);
+			}
+		}
 		for (int i = 0; i < chosenList.Count; i++) {
-            ItemDataButton buttonInstance = Instantiate(itemButton, buttonParent.transform);
-			buttonInstance.AssignData(chosenList[i]);
-            buttonInstance.name = chosenList[i].OwnedItemData.ItemName;
-			this.ItemDataButtons.Add(buttonInstance);
-            Buttons.Add(buttonInstance.Button);
-        }
+			ItemDataButton buttonInstance;
+			if (this.ItemDataButtons.Count <= i) {
+				buttonInstance = Instantiate(itemButton, buttonParent.transform);
+				buttonInstance.name = chosenList[i].OwnedItemData.ItemName;
+				this.ItemDataButtons.Add(buttonInstance);
+				this.Buttons.Add(buttonInstance.Button);
+			}
+			else {
+				buttonInstance = this.ItemDataButtons[i];
+				this.ItemDataButtons[i]= buttonInstance;
+				this.Buttons[i] = buttonInstance.Button;
+			}
+			buttonInstance.AssignData(chosenList[i]);				
+		}
 		Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
 		if (navigationType == NavigationType.Horizontal) {
 			Utilities.LinkHorizontalButtons(this.Buttons, leaveShopButton);
@@ -92,8 +102,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
 		else {
 			Utilities.LinkVerticalButtons(this.Buttons, leaveShopButton);
 		}
-        if (leaveShopButton != null)
-        {
+        if (leaveShopButton != null) {
             leaveShopButton.transform.SetAsLastSibling();
 			Buttons.Add(leaveShopButton);
 		}
@@ -118,12 +127,12 @@ public class ItemDataButtonGenerator : MonoBehaviour
     public virtual List<OwnedItemTypeData> GetTempBaitListForSelling(){
 		List<OwnedItemTypeData> tempBaitListForSelling = new List<OwnedItemTypeData>();
 		for (int i = 0; i < CheatManager.Instance.TempBaitBoardDatas.Count; i++) {
-			OwnedItemTypeData baitData = InventoryManager.Instance.OwnedBaitTypeDatas[CheatManager.Instance.TempBaitBoardDatas[i].BaitIndex];
+			OwnedItemTypeData baitData = new OwnedItemTypeData();
+			baitData.OwnedItemData =	InventoryManager.Instance.OwnedBaitTypeDatas[CheatManager.Instance.TempBaitBoardDatas[i].BaitIndex].OwnedItemData;
 			baitData.quantity = CheatManager.Instance.TempBaitBoardDatas[i].BaitAmount;
 			tempBaitListForSelling.Add(baitData);
 			GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[CheatManager.Instance.TempBaitBoardDatas[i].BaitIndex] = CheatManager.Instance.TempBaitBoardDatas[i].BaitAmount;
 		}
-
 		return tempBaitListForSelling;
     }
 

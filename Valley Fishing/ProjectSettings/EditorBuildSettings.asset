@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Calvin Shore.unity
     guid: c48c9f0b9ed0b5e43a3939b47033707e
+  - enabled: 1
+    path: Assets/Scenes/Calvin Level.unity
+    guid: fbc37a8d6f5429c4d98fa1db7230d9ba
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0
