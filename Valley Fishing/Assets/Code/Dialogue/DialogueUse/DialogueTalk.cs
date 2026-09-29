@@ -36,7 +36,7 @@ namespace Project.DialogueEditor {
 				return;
 			}
 			this.DialogueStarted = true;
-			CheckNodeType(GetNextNode(dialogueContainer.StartDatas[0]));
+			CheckNodeType(GetNextNode(dialogueContainer.getStartData()));
 		}
 
 		public void Continue(int option) {
@@ -85,16 +85,19 @@ namespace Project.DialogueEditor {
 			}
 		}
 
+		//could be moved elsewhere
 		private void RunNode(StartData nodeData) {
-			CheckNodeType(GetNextNode(dialogueContainer.StartDatas[0]));
+			CheckNodeType(GetNextNode(dialogueContainer.getStartData()));
 		}
 
+		//could be moved elsewhere
 		private void RunNode(ListenData nodeData) {
 			CurrentNode = nodeData;
 			nodeData.Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered += ListenEventTriggered;
 			nodeData.Container_ListenEventSOs[0].ListenEventSO.RunEvent(this);
 		}
-
+		
+		//could be moved elsewhere
 		private void RunNode(BranchData nodeData) {
 			bool checkBranch = true;
 			foreach (EventData_StringCondition item in nodeData.EventData_StringConditions) {
@@ -108,6 +111,7 @@ namespace Project.DialogueEditor {
 			CheckNodeType(GetNodeByGuid(nextNoce));
 		}
 
+		//could be moved elsewhere
 		private void RunNode(NPCDialogueData nodeData) {
 			CurrentNode = nodeData;
 			Debug.Log(nodeData.VoiceEvent);
@@ -117,12 +121,15 @@ namespace Project.DialogueEditor {
 			Continue(0);
 		}
 
-		private void RunNode(ConditionData nodeData) {
+        //so this is always true??????
+        //could be moved elsewhere
+        private void RunNode(ConditionData nodeData) {
 			bool checkBranch = true;
 			string nextNoce = (checkBranch ? nodeData.trueGuidNode : nodeData.falseGuidNode);
 			CheckNodeType(GetNodeByGuid(nextNoce));
 		}
 
+		//a bit hard to move this, it uses functions from this class
 		private void RunNode(EventData nodeData) {
 			switch (nodeData.EventType) {
 				case EventType.None:
@@ -146,6 +153,7 @@ namespace Project.DialogueEditor {
 			CheckNodeType(GetNextNode(nodeData));
 		}
 
+		//does this even do anything??
 		private void RunNode(ResponseData nodeData) {
 			CurrentNode = nodeData;
 			List<ResponseData_Text> tmp = new List<ResponseData_Text>(nodeData.ResponceData_Texts);
@@ -164,7 +172,7 @@ namespace Project.DialogueEditor {
 					CheckNodeType(GetNodeByGuid(CurrentNode.NodeGuid));
 					break;
 				case EndNodeType.ReturnToStart:
-					CheckNodeType(GetNextNode(dialogueContainer.StartDatas[0]));
+					CheckNodeType(GetNextNode(dialogueContainer.getStartData()));
 					break;
 				default:
 					break;

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+//does this class actually get properly used?
 [System.Serializable]
 public class DialogueData : BaseData {
 

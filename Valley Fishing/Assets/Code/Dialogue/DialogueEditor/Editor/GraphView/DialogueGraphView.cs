@@ -111,15 +111,8 @@ namespace Project.DialogueEditor {
 
 		public bool CreateEmptyNodeOfType(BaseNode searchResultNode, Vector2 pos)
 		{
-			BaseNode nodeToCreate = Activator.CreateInstance(searchResultNode.GetType(), pos, editorWindow, this) as BaseNode;
-			switch (searchResultNode)
-			{
-				case ListenNode node:
-					nodeToCreate = new ListenNode(pos, editorWindow, this);
-					break;
-				default:
-					return false;
-			}
+			Debug.Log(searchResultNode.GetType());
+			BaseNode nodeToCreate = Activator.CreateInstance(searchResultNode.GetType(), pos, editorWindow, this, null) as BaseNode;
 			if (nodeToCreate != null)
 			{
                 AddElement(nodeToCreate);
@@ -144,7 +137,7 @@ namespace Project.DialogueEditor {
 				case EndData:
                     node = new EndNode(new Vector2(), editorWindow, this, data);
                     break;
-				case DialogueData:
+				case NPCDialogueData:
                     node = new DialogueNode(new Vector2(), editorWindow, this, data);
                     break;
 				case BranchData:

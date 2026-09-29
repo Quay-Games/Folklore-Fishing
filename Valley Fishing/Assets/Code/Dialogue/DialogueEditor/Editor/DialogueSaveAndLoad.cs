@@ -51,148 +51,150 @@ namespace Project.DialogueEditor {
 		}
 
 		private void SaveNodes(DialogueContainer dialogueContainer) {
-			dialogueContainer.EventDatas.Clear();
-			dialogueContainer.NPCDialogueDatas.Clear();
-			dialogueContainer.EndDatas.Clear();
-			dialogueContainer.StartDatas.Clear();
-			dialogueContainer.BranchDatas.Clear();
-			dialogueContainer.DialogueDatas.Clear();
-			dialogueContainer.ChoiceDatas.Clear();
-			dialogueContainer.ConditionDatas.Clear();
-			dialogueContainer.ResponceDatas.Clear();
-			dialogueContainer.ListenDatas.Clear();
+			//dialogueContainer.EventDatas.Clear();
+			//dialogueContainer.NPCDialogueDatas.Clear();
+			//dialogueContainer.EndDatas.Clear();
+			//dialogueContainer.StartDatas.Clear();
+			//dialogueContainer.BranchDatas.Clear();
+			//dialogueContainer.DialogueDatas.Clear();
+			//dialogueContainer.ChoiceDatas.Clear();
+			//dialogueContainer.ConditionDatas.Clear();
+			//dialogueContainer.ResponceDatas.Clear();
+			//dialogueContainer.ListenDatas.Clear();
 
 			dialogueContainer.NodeDatas.Clear();
 
 			nodes.ForEach(node => {
 				//the savenodedata function is hella overloaded, we need to make it on the nodedata class
-				dialogueContainer.NodeDatas.Add(node.Save());
+				
 				switch (node) {
-					case StartNode startNode:
-						dialogueContainer.StartDatas.Add(SaveNodeData(startNode));
-						break;
-					case EndNode endNode:
-						dialogueContainer.EndDatas.Add(SaveNodeData(endNode));
-						break;
-					case DialogueNode npcDialogueNode:
-						dialogueContainer.NPCDialogueDatas.Add(SaveNodeData(npcDialogueNode));
-						break;
-					case ResponseNode responceNode:
-						dialogueContainer.ResponceDatas.Add(SaveNodeData(responceNode));
-						break;
-					case EventNode npcEventNode:
-						dialogueContainer.EventDatas.Add(SaveNodeData(npcEventNode));
-						break;
-					case ConditionNode npcConditionNode:
-						dialogueContainer.ConditionDatas.Add(SaveNodeData(npcConditionNode));
-						break;
-					case BranchNode branchNode:
-						dialogueContainer.BranchDatas.Add(SaveNodeData(branchNode));
-						break;
-						//case ListenNode listenNode:
-						//dialogueContainer.ListenDatas.Add(SaveNodeData(listenNode));
+					//case StartNode startNode:
+					//	dialogueContainer.StartDatas.Add(SaveNodeData(startNode));
+					//	break;
+					//case EndNode endNode:
+					//	dialogueContainer.EndDatas.Add(SaveNodeData(endNode));
+					//	break;
+					//case DialogueNode npcDialogueNode:
+					//	dialogueContainer.NPCDialogueDatas.Add(SaveNodeData(npcDialogueNode));
+					//	break;
+					//case ResponseNode responceNode:
+					//	dialogueContainer.ResponceDatas.Add(SaveNodeData(responceNode));
+					//	break;
+					//case EventNode npcEventNode:
+					//	dialogueContainer.EventDatas.Add(SaveNodeData(npcEventNode));
+					//	break;
+					//case ConditionNode npcConditionNode:
+					//	dialogueContainer.ConditionDatas.Add(SaveNodeData(npcConditionNode));
+					//	break;
+					//case BranchNode branchNode:
+					//	dialogueContainer.BranchDatas.Add(SaveNodeData(branchNode));
 						//break;
+					//case ListenNode listenNode:
+					//dialogueContainer.ListenDatas.Add(SaveNodeData(listenNode));
+					//break;
 					default:
-						break;
+                        dialogueContainer.NodeDatas.Add(node.Save());
+                        break;
 				}
 			});
 		}
 
-		private NPCDialogueData SaveNodeData(DialogueNode node) {
-			NPCDialogueData dialogueData = new NPCDialogueData {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-				VoiceEvent = node.DialogueData.VoiceEvent
-			};
-			Debug.Log(node.DialogueData.VoiceEvent);
-			DialogueTextData tmp = node.DialogueData.DialogueText;
+		//private NPCDialogueData SaveNodeData(DialogueNode node) {
+		//	NPCDialogueData dialogueData = new NPCDialogueData {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//		VoiceEvent = node.DialogueData.VoiceEvent
+		//	};
+		//	Debug.Log(node.DialogueData.VoiceEvent);
+		//	DialogueTextData tmp = node.DialogueData.DialogueText;
 
-			if (tmp != null) {
-				dialogueData.DialogueText = new DialogueTextData {
-					ID = tmp.ID,
-					GuidID = tmp.GuidID,
-					Text = new List<LanguageGeneric<string>>(tmp.Text)
-				};
-			}
+		//	if (tmp != null) {
+		//		dialogueData.DialogueText = new DialogueTextData {
+		//			ID = tmp.ID,
+		//			GuidID = tmp.GuidID,
+		//			Text = new List<LanguageGeneric<string>>(tmp.Text)
+		//		};
+		//	}
 
-			return dialogueData;
-		}
+		//	return dialogueData;
+		//}
 
-		private StartData SaveNodeData(StartNode node) {
-			StartData nodeData = new StartData() {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-			};
+		//I think ive avoided the need for this function altogether by having the BaseNode save function do this generically
+		//private StartData SaveNodeData(StartNode node) {
+		//	StartData nodeData = new StartData() {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//	};
 
-			return nodeData;
-		}
+		//	return nodeData;
+		//}
 
-		private EndData SaveNodeData(EndNode node) {
-			EndData nodeData = new EndData() {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-			};
-			nodeData.EndNodeType.Value = node.EndData.EndNodeType.Value;
+		//private EndData SaveNodeData(EndNode node) {
+		//	EndData nodeData = new EndData() {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//	};
+		//	nodeData.EndNodeType.Value = node.EndData.EndNodeType.Value;
 
-			return nodeData;
-		}
+		//	return nodeData;
+		//}
 
-		private EventData SaveNodeData(EventNode node) {
-			EventData nodeData = new EventData() {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-				EventType = node.NPCEventData.EventType
-			};
+		//private EventData SaveNodeData(EventNode node) {
+		//	EventData nodeData = new EventData() {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//		EventType = node.NPCEventData.EventType
+		//	};
 
-			nodeData.EventData_EventName.StringEventValue.Value =
-				node.NPCEventData.EventData_EventName.StringEventValue.Value;
+		//	nodeData.EventData_EventName.StringEventValue.Value =
+		//		node.NPCEventData.EventData_EventName.StringEventValue.Value;
 
-			return nodeData;
-		}
+		//	return nodeData;
+		//}
 
-		private BranchData SaveNodeData(BranchNode node) {
-			List<Edge> tmpEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
+		//private BranchData SaveNodeData(BranchNode node) {
+		//	List<Edge> tmpEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
 
-			Edge trueOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "True");
-			Edge flaseOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "False");
+		//	Edge trueOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "True");
+		//	Edge flaseOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "False");
 
-			BranchData nodeData = new BranchData() {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-				trueGuidNode = (trueOutput != null ? (trueOutput.input.node as BaseNode).NodeGuid : string.Empty),
-				falseGuidNode = (flaseOutput != null ? (flaseOutput.input.node as BaseNode).NodeGuid : string.Empty),
-			};
+		//	BranchData nodeData = new BranchData() {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//		trueGuidNode = (trueOutput != null ? (trueOutput.input.node as BaseNode).NodeGuid : string.Empty),
+		//		falseGuidNode = (flaseOutput != null ? (flaseOutput.input.node as BaseNode).NodeGuid : string.Empty),
+		//	};
 
-			foreach (EventData_StringCondition stringEvents in node.BranchData.EventData_StringConditions) {
-				EventData_StringCondition tmp = new EventData_StringCondition();
-				tmp.StringEventValue.Value = stringEvents.StringEventValue.Value;
-				tmp.StringEventText.Value = stringEvents.StringEventText.Value;
-				tmp.StringEventConditionType.Value = stringEvents.StringEventConditionType.Value;
+		//	foreach (EventData_StringCondition stringEvents in node.BranchData.EventData_StringConditions) {
+		//		EventData_StringCondition tmp = new EventData_StringCondition();
+		//		tmp.StringEventValue.Value = stringEvents.StringEventValue.Value;
+		//		tmp.StringEventText.Value = stringEvents.StringEventText.Value;
+		//		tmp.StringEventConditionType.Value = stringEvents.StringEventConditionType.Value;
 
-				nodeData.EventData_StringConditions.Add(tmp);
-			}
+		//		nodeData.EventData_StringConditions.Add(tmp);
+		//	}
 
-			return nodeData;
+		//	return nodeData;
 
-		}
+		//}
 
-		private ConditionData SaveNodeData(ConditionNode node) {
+		//private ConditionData SaveNodeData(ConditionNode node) {
 
-			Edge trueOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "True");
-			Edge falseOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "False");
+		//	Edge trueOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "True");
+		//	Edge falseOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "False");
 
-			ConditionData nodeData = new ConditionData {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-				trueGuidNode = trueOutput != null ? (trueOutput.input.node as BaseNode)?.NodeGuid : string.Empty,
-				falseGuidNode = falseOutput != null ? (falseOutput.input.node as BaseNode)?.NodeGuid : string.Empty,
-			};
+		//	ConditionData nodeData = new ConditionData {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//		trueGuidNode = trueOutput != null ? (trueOutput.input.node as BaseNode)?.NodeGuid : string.Empty,
+		//		falseGuidNode = falseOutput != null ? (falseOutput.input.node as BaseNode)?.NodeGuid : string.Empty,
+		//	};
 
-			nodeData.EventData_EventName.StringEventValue.Value =
-			node.NPCConditionData.EventData_EventName.StringEventValue.Value;
+		//	nodeData.EventData_EventName.StringEventValue.Value =
+		//	node.NPCConditionData.EventData_EventName.StringEventValue.Value;
 
-			return nodeData;
-		}
+		//	return nodeData;
+		//}
 		//private ListenData SaveNodeData(ListenNode node) {
 		//	ListenData nodeData = new ListenData() {
 		//		NodeGuid = node.NodeGuid,
@@ -208,37 +210,37 @@ namespace Project.DialogueEditor {
 		//}
 
 
-		private ResponseData SaveNodeData(ResponseNode node) {
+		//private ResponseData SaveNodeData(ResponseNode node) {
 
-			List<Edge> tmpEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
+		//	List<Edge> tmpEdges = edges.Where(x => x.output.node == node).Cast<Edge>().ToList();
 
-			Edge FirstOptionOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "Option 1");
-			Edge SecondOptionOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "Option 2");
+		//	Edge FirstOptionOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "Option 1");
+		//	Edge SecondOptionOutput = edges.FirstOrDefault(x => x.output.node == node && x.output.portName == "Option 2");
 
 
-			ResponseData data = new ResponseData {
-				NodeGuid = node.NodeGuid,
-				Position = node.GetPosition().position,
-				ResponceData_Texts = new List<ResponseData_Text>(),
-				FirstOptionGuid = (FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
-				SecondOptionGuid = (SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
-			};
+		//	ResponseData data = new ResponseData {
+		//		NodeGuid = node.NodeGuid,
+		//		Position = node.GetPosition().position,
+		//		ResponceData_Texts = new List<ResponseData_Text>(),
+		//		FirstOptionGuid = (FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
+		//		SecondOptionGuid = (SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty),
+		//	};
 
-			// Assign unique IDs and store response texts
-			for (int i = 0; i < node.ResponseData.ResponceData_Texts.Count; i++) {
-				ResponseData_Text original = node.ResponseData.ResponceData_Texts[i];
+		//	// Assign unique IDs and store response texts
+		//	for (int i = 0; i < node.ResponseData.ResponceData_Texts.Count; i++) {
+		//		ResponseData_Text original = node.ResponseData.ResponceData_Texts[i];
 
-				ResponseData_Text textCopy = new ResponseData_Text {
-					ID = new Container_Int { Value = i },
-					GuidID = original.GuidID,
-					Text = new List<LanguageGeneric<string>>(original.Text)
-				};
+		//		ResponseData_Text textCopy = new ResponseData_Text {
+		//			ID = new Container_Int { Value = i },
+		//			GuidID = original.GuidID,
+		//			Text = new List<LanguageGeneric<string>>(original.Text)
+		//		};
 
-				data.ResponceData_Texts.Add(textCopy);
-			}
+		//		data.ResponceData_Texts.Add(textCopy);
+		//	}
 
-			return data;
-		}
+		//	return data;
+		//}
 
 		#endregion
 

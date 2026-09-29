@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
@@ -52,5 +53,23 @@ namespace Project.DialogueEditor {
 			TextField textField = GetNewTextField(container.StringEventValue, "Text area", "TextBox");
 			boxContainer.Add(textField);
 		}
+
+		public override BaseData Save()
+		{
+            List<Edge> edges = graphView.edges.ToList();
+
+            Edge trueOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "True");
+            Edge falseOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "False");
+
+			ConditionData conditionData = new ConditionData();
+			SaveData(conditionData);
+			conditionData.trueGuidNode = trueOutput != null ? (trueOutput.input.node as BaseNode)?.NodeGuid : string.Empty;
+			conditionData.falseGuidNode = falseOutput != null ? (falseOutput.input.node as BaseNode)?.NodeGuid : string.Empty;
+
+            conditionData.EventData_EventName.StringEventValue.Value =
+            NPCConditionData.EventData_EventName.StringEventValue.Value;
+
+            return conditionData;
+        }
 	}
 }

@@ -19,5 +19,12 @@ namespace Project.DialogueEditor {
 			RefreshPorts();
 		}
 
-	}
+		//this is only necessary because otherwise a start node will get saved as a basenode
+		public override BaseData Save()
+        {
+            StartData data = new StartData();
+            SaveData(data);
+            return data;
+        }
+    }
 }

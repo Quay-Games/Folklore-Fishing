@@ -26,7 +26,11 @@ namespace Project.DialogueEditor {
 		public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/DialogueNodeStyleSheet", "NPC Dialogue", _data)
         {
-			if (_data != null) {
+            AddInputPort("Input", Port.Capacity.Multi);
+            AddOutputPort("Continue");
+            EventReferenceBox();
+
+            if (_data != null) {
 				DialogueData = _data as NPCDialogueData;
 
                 DialogueTextData textData = new DialogueTextData
@@ -38,11 +42,8 @@ namespace Project.DialogueEditor {
 
                 TextLine(textData);
 
-                EventReferenceBox();
                 ReloadLanguage();
             }
-			AddInputPort("Input", Port.Capacity.Multi);
-			AddOutputPort("Continue");
 		}
 
 
@@ -142,5 +143,28 @@ namespace Project.DialogueEditor {
 		public override void LoadValueInToField() {
 
 		}
+
+        public override BaseData Save()
+        {
+			//originally there was a simple call to the original method, but I realized you cannot cast objects forward
+			//into complex types, you can only cast backwards to more simple types
+			NPCDialogueData data = new NPCDialogueData();
+			SaveData(data);
+			data.VoiceEvent = dialogueData.VoiceEvent;
+
+            DialogueTextData tmp = DialogueData.DialogueText;
+
+            if (tmp != null)
+            {
+                data.DialogueText = new DialogueTextData
+                {
+                    ID = tmp.ID,
+                    GuidID = tmp.GuidID,
+                    Text = new List<LanguageGeneric<string>>(tmp.Text)
+                };
+            }
+
+            return data;
+        }
 	}
 }

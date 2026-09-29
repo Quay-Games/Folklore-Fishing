@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
@@ -95,5 +96,40 @@ namespace Project.DialogueEditor {
 		public override void ReloadLanguage() {
 			base.ReloadLanguage();
 		}
+
+		public override BaseData Save()
+		{
+            List<Edge> edges = graphView.edges.ToList();
+
+            List<Edge> tmpEdges = edges.Where(x => x.output.node == this).Cast<Edge>().ToList();
+
+            Edge FirstOptionOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "Option 1");
+            Edge SecondOptionOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "Option 2");
+
+
+			ResponseData responseData = new ResponseData();
+			SaveData(responseData);
+
+			responseData.ResponceData_Texts = new List<ResponseData_Text>();
+			responseData.FirstOptionGuid = (FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
+			responseData.SecondOptionGuid = (SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
+
+            // Assign unique IDs and store response texts
+            for (int i = 0; i < ResponseData.ResponceData_Texts.Count; i++)
+            {
+                ResponseData_Text original = ResponseData.ResponceData_Texts[i];
+
+                ResponseData_Text textCopy = new ResponseData_Text
+                {
+                    ID = new Container_Int { Value = i },
+                    GuidID = original.GuidID,
+                    Text = new List<LanguageGeneric<string>>(original.Text)
+                };
+
+                responseData.ResponceData_Texts.Add(textCopy);
+            }
+
+            return responseData;
+        }
 	}
 }

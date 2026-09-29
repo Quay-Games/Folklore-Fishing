@@ -431,12 +431,28 @@ namespace Project.DialogueEditor {
         #region Griff Extra Functions
 		public virtual BaseData Save()
 		{
-			return null;
-		}
+			BaseData data = new BaseData
+            {
+                NodeGuid = nodeGuid,
+                Position = GetPosition().position
+            };
+			return data;
+        }
 
-		//public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
-		//{
-		//}
+        public virtual void Run()
+        {
+			//this method will be implemented in child classes, see them for details
+        }
+
+        protected void SaveData(BaseData data)
+        {
+            data.NodeGuid = nodeGuid;
+            data.Position = GetPosition().position;
+        }
+
+        //public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
+        //{
+        //}
         #endregion
 
     }

@@ -7,13 +7,14 @@ namespace Project.DialogueEditor {
 
 		[SerializeField] protected DialogueContainer dialogueContainer;
 
-		//Griff: replace alldatas with nodedatas when it is done
+		//Griff: replace alldatas with nodedatas when it is done 
+		//DONE
 		protected BaseData GetNodeByGuid(string targetNodeGuid) {
-			return dialogueContainer.AllDatas.Find(node => node.NodeGuid == targetNodeGuid);
+			return dialogueContainer.NodeDatas.Find(node => node.NodeGuid == targetNodeGuid);
 		}
 
 		protected BaseData GetNodeByNodePort(DialogueData_Port nodePort) {
-			return dialogueContainer.AllDatas.Find(node => node.NodeGuid == nodePort.InputGuid);
+			return dialogueContainer.NodeDatas.Find(node => node.NodeGuid == nodePort.InputGuid);
 		}
 
 		protected BaseData GetNextNode(BaseData baseNodeData) {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -53,5 +54,32 @@ namespace Project.DialogueEditor {
 		public void AddCondition(EventData_StringCondition stringEvent = null) {
 			AddStringConditionEventBuild(branchData.EventData_StringConditions, stringEvent);
 		}
-	}
+
+		public override BaseData Save()
+		{
+            List<Edge> edges = graphView.edges.ToList();
+            List<Edge> tmpEdges = edges.Where(x => x.output.node == this).Cast<Edge>().ToList();
+
+            Edge trueOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "True");
+            Edge flaseOutput = edges.FirstOrDefault(x => x.output.node == this && x.output.portName == "False");
+
+            BranchData branchData = new BranchData();
+			SaveData(branchData);
+            branchData.trueGuidNode = (trueOutput != null ? (trueOutput.input.node as BaseNode).NodeGuid : string.Empty);
+			branchData.falseGuidNode = (flaseOutput != null ? (flaseOutput.input.node as BaseNode).NodeGuid : string.Empty);
+
+            foreach (EventData_StringCondition stringEvents in BranchData.EventData_StringConditions)
+            {
+                EventData_StringCondition tmp = new EventData_StringCondition();
+                tmp.StringEventValue.Value = stringEvents.StringEventValue.Value;
+                tmp.StringEventText.Value = stringEvents.StringEventText.Value;
+                tmp.StringEventConditionType.Value = stringEvents.StringEventConditionType.Value;
+
+                branchData.EventData_StringConditions.Add(tmp);
+            }
+
+            return branchData;
+
+        }
+    }
 }

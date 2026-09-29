@@ -61,5 +61,17 @@ namespace Project.DialogueEditor {
 			TextField textField = GetNewTextField(container.StringEventValue, "Text area", "TextBox");
 			boxContainer.Add(textField);
 		}
-	}
+
+		public override BaseData Save()
+        {
+            EventData eventData = new EventData();
+            SaveData(eventData);
+            eventData.EventType = NPCEventData.EventType;
+
+            eventData.EventData_EventName.StringEventValue.Value =
+                NPCEventData.EventData_EventName.StringEventValue.Value;
+			
+            return eventData;
+        }
+    }
 }

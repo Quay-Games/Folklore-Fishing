@@ -13,123 +13,441 @@ MonoBehaviour:
   m_Name: Test
   m_EditorClassIdentifier: 
   NodeLinkDatas:
-  - BaseNodeGuid: 9563801c-d501-40a9-9245-2339f5904cb2
+  - BaseNodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
     BasePortName: Output
-    TargetNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
+    TargetNodeGuid: 0a2dcfe3-c003-4efd-991b-65a9cc503e82
     TargetPortName: Input
-  - BaseNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
+  - BaseNodeGuid: 0a2dcfe3-c003-4efd-991b-65a9cc503e82
     BasePortName: Continue
-    TargetNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
+    TargetNodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
     TargetPortName: Input
-  - BaseNodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
-    BasePortName: Continue
-    TargetNodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
-    TargetPortName: Input
-  - BaseNodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
-    BasePortName: Continue
-    TargetNodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
-    TargetPortName: Input
-  DialogueDatas: []
-  NPCDialogueDatas:
-  - NodeGuid: 226479cd-d6b1-4cec-89db-0fed71f15b46
-    Position: {x: 181.59999, y: 254.4}
-    VoiceEvent:
-      Guid:
-        Data1: 1577069172
-        Data2: 1285667607
-        Data3: 666933652
-        Data4: -1442052773
-      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
-    DialogueText:
-      ID:
-        Value: 0
-      GuidID:
-        Value: f6cbe986-c6fa-45c2-a009-46a051dcbc5e
-      Text:
-      - LanguageType: 1
-        LanguageGenericType: welccome aboard
-      - LanguageType: 2
-        LanguageGenericType: 
-      - LanguageType: 3
-        LanguageGenericType: 
-      - LanguageType: 4
-        LanguageGenericType: 
-      - LanguageType: 5
-        LanguageGenericType: 
-      - LanguageType: 6
-        LanguageGenericType: 
-      - LanguageType: 7
-        LanguageGenericType: 
-      - LanguageType: 8
-        LanguageGenericType: 
-      - LanguageType: 9
-        LanguageGenericType: 
-  - NodeGuid: ab1b8a2c-93b2-48be-b4c7-619cf8aae4ed
-    Position: {x: 1024, y: 232}
-    VoiceEvent:
-      Guid:
-        Data1: 1577069172
-        Data2: 1285667607
-        Data3: 666933652
-        Data4: -1442052773
-      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
-    DialogueText:
-      ID:
-        Value: 0
-      GuidID:
-        Value: 9d87b5db-89d8-4df8-a9c1-4352079eed96
-      Text:
-      - LanguageType: 1
-        LanguageGenericType: test
-      - LanguageType: 2
-        LanguageGenericType: 
-      - LanguageType: 3
-        LanguageGenericType: 
-      - LanguageType: 4
-        LanguageGenericType: 
-      - LanguageType: 5
-        LanguageGenericType: 
-      - LanguageType: 6
-        LanguageGenericType: 
-      - LanguageType: 7
-        LanguageGenericType: 
-      - LanguageType: 8
-        LanguageGenericType: 
-      - LanguageType: 9
-        LanguageGenericType: 
-  ResponceDatas: []
-  EndDatas:
-  - NodeGuid: 9f2e6fa5-cee3-4eb3-8380-f1bf7a47bd75
-    Position: {x: 1405.6, y: 271.2}
-    EndNodeType:
-      Value: 1
-  StartDatas:
-  - NodeGuid: 9563801c-d501-40a9-9245-2339f5904cb2
-    Position: {x: 8, y: 247.20001}
-  EventDatas:
-  - NodeGuid: f18d71cd-324f-4d2e-a850-72ae019ad866
-    Position: {x: 908.8, y: 376}
-    EventType: 0
-    EventData_EventName:
-      StringEventValue:
-        Value: 
-  ConditionDatas:
-  - NodeGuid: 7e063265-7918-41a1-a249-915adfc053d2
-    Position: {x: 644, y: 512}
-    trueGuidNode: 
-    falseGuidNode: 
-    EventData_EventName:
-      StringEventValue:
-        Value: 
-  BranchDatas:
-  - NodeGuid: 6ddbd563-ea8c-46c5-9afa-4dee08a21882
-    Position: {x: 245.59999, y: 534.4}
-    trueGuidNode: 
-    falseGuidNode: 
-    EventData_StringConditions: []
-  ChoiceDatas: []
-  ListenDatas:
-  - NodeGuid: 00f787b9-fde0-4f8b-b2cb-5da1ced7396e
-    Position: {x: 563.2, y: 288.8}
-    Container_ListenEventSOs:
-    - ListenEventSO: {fileID: 11400000, guid: 56a63408418c1e04a851fcf9a8b6ffe6, type: 2}
+  NodeDatas:
+  - rid: 3784685718220570715
+  - rid: 3784685718220570716
+  - rid: 3784685718220570717
+  - rid: 3784685718220570718
+  - rid: 3784685718220570719
+  - rid: 3784685718220570720
+  - rid: 3784685718220570721
+  - rid: 3784685718220570722
+  references:
+    version: 2
+    RefIds:
+    - rid: 3784685718220570715
+      type: {class: EndData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
+        Position: {x: 1072, y: 341.6}
+        EndNodeType:
+          Value: 2
+    - rid: 3784685718220570716
+      type: {class: StartData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
+        Position: {x: 545.6, y: 345.6}
+    - rid: 3784685718220570717
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 0a2dcfe3-c003-4efd-991b-65a9cc503e82
+        Position: {x: 671.2, y: 307.2}
+        VoiceEvent:
+          Guid:
+            Data1: 751111704
+            Data2: 1309586920
+            Data3: -113407324
+            Data4: -772827154
+          Path: event:/VoiceOver/Captain/FolkloreFishing!
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 'Hello '
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 3784685718220570718
+      type: {class: ConditionData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 93fde78f-a8a6-43a3-bbc4-724bda814f1d
+        Position: {x: 780, y: 102.4}
+        trueGuidNode: 
+        falseGuidNode: 
+        EventData_EventName:
+          StringEventValue:
+            Value: 
+    - rid: 3784685718220570719
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: a683d3e2-7538-451e-a34d-875c7cb6705f
+        Position: {x: 732, y: 680.8}
+        Container_ListenEventSOs:
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+        - ListenEventSO: {fileID: 0}
+    - rid: 3784685718220570720
+      type: {class: BranchData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: daba2b8f-735f-4c0f-8fd6-8b57b3f25c4b
+        Position: {x: 312.8, y: 512.8}
+        trueGuidNode: 
+        falseGuidNode: 
+        EventData_StringConditions: []
+    - rid: 3784685718220570721
+      type: {class: ResponseData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 3e9dd09d-2e6c-4eba-95ff-a772f576c973
+        Position: {x: 257.6, y: 299.2}
+        FirstOptionGuid: 
+        SecondOptionGuid: 
+        ResponceData_Texts: []
+    - rid: 3784685718220570722
+      type: {class: ResponseData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 48ef3f68-6ec2-4449-ad47-81aa36667a53
+        Position: {x: 1226.4, y: 169.6}
+        FirstOptionGuid: 
+        SecondOptionGuid: 
+        ResponceData_Texts:
+        - ID:
+            Value: 0
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 1
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 2
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 3
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 4
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 5
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 6
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 7
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 8
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 9
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 10
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 11
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 12
+          GuidID:
+            Value: 4d1e25d1-d689-4459-b337-e39af7982aaa
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+        - ID:
+            Value: 13
+          GuidID:
+            Value: 614c3251-55a8-414c-9b8c-2b9293a1f7e0
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 

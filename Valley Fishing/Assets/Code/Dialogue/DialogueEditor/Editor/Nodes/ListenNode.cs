@@ -109,11 +109,8 @@ public class ListenNode : BaseNode {
 	//this function generates some listen data to give out to the scriptable object
     public override BaseData Save()
     {
-        ListenData nodeData = new ListenData()
-        {
-            NodeGuid = NodeGuid,
-            Position = base.GetPosition().position,
-        };
+        ListenData nodeData = new ListenData();
+        SaveData(nodeData);
 
         // Save Dialogue Event
         foreach (Container_ListenEventSO dialogueEvent in listenData.Container_ListenEventSOs)

@@ -39,5 +39,13 @@ namespace Project.DialogueEditor {
 			if (EndData.EndNodeType.EnumField != null)
 				EndData.EndNodeType.EnumField.SetValueWithoutNotify(EndData.EndNodeType.Value);
 		}
+
+		public override BaseData Save()
+		{
+			EndData data = new EndData();
+			SaveData(data);
+            data.EndNodeType.Value = EndData.EndNodeType.Value;
+            return data;
+        }
 	}
 }
