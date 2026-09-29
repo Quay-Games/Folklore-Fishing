@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 namespace Project.DialogueEditor {
-	public class DialogueTalk : DialogueGetData {
+	public class DialogueTalk : DialogueGetData, IDialogueRuntime {
 
 		#region Serialized Fields
 
@@ -16,18 +16,21 @@ namespace Project.DialogueEditor {
 
 
 		#region Properties
+		//why is this called currentnode when it holds data, not a node
 		private BaseData CurrentNode { get; set; }
 		private List<DialogueData_BaseContainer> BaseContainers { get; set;	} = new List<DialogueData_BaseContainer>();
 		[field:SerializeField]
 		public bool DialogueStarted { get; set;	}
 		private int CurrentIndex { get;	set; } = 0;
 		private string CurrentText { get; set; }
-
-		#endregion
-
+        public MonoBehaviour Runner { get => this; }
 
 
-		public void Start() {
+        #endregion
+
+
+
+        public void Start() {
 			StartDialogue();
 		}
 
@@ -54,8 +57,8 @@ namespace Project.DialogueEditor {
 		private void CheckNodeType(BaseData _baseNodeData) {
 			switch (_baseNodeData) {
 				case StartData nodeData:
-					RunNode(nodeData);
-					break;
+					nodeData.Run();
+                    break;
 				case DialogueData nodeData:
 					RunNode(nodeData);
 					break;
@@ -86,9 +89,9 @@ namespace Project.DialogueEditor {
 		}
 
 		//could be moved elsewhere
-		private void RunNode(StartData nodeData) {
-			CheckNodeType(GetNextNode(dialogueContainer.getStartData()));
-		}
+		//private void RunNode(StartData nodeData) {
+		//	CheckNodeType(GetNextNode(dialogueContainer.getStartData()));
+		//}
 
 		//could be moved elsewhere
 		private void RunNode(ListenData nodeData) {
@@ -209,6 +212,7 @@ namespace Project.DialogueEditor {
 			}
 		}
 
+		//refactor this behavior into run methods returning booleans on wether to keep running
 		public void EndDialogue() {
 			this.DialogueStarted = false;		
 		}
@@ -219,5 +223,16 @@ namespace Project.DialogueEditor {
 			StopAllCoroutines();
 			Continue(0);
 		}
-	}
+
+		//from this chatgpt class, I may remove them
+        BaseData IDialogueRuntime.GetNextNode(BaseData node)
+        {
+            return GetNextNode(node);
+        }
+
+        BaseData IDialogueRuntime.GetNodeByGuid(string guid)
+        {
+            return GetNodeByGuid(guid);
+        }
+    }
 }

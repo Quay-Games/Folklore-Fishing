@@ -31,7 +31,7 @@ namespace Project.DialogueEditor {
 		}
 
 		/*
-		 * This function will create a list of all the nodes that exist in the Nodes folder and adds them to
+		 * This function will create a list of all the nodes that exist in the Nodes folder and ad them to
 		 * the search window.
 		 */
 		public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context) {
