@@ -23,6 +23,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: e7be3fcd556abcd4f8b48e6ca1077022, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -54,6 +55,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: 9c25ad76b755fca4dbccf69fa7645e97, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -85,6 +87,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: b2b21047721790c45913ee4445e53824, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -116,6 +119,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Eel
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: 860c3c0e34d19e341801e8967d5d423b, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -147,6 +151,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Pike
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: b5b94636089cc274695f901a636a0b2f, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -178,6 +183,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Bream
     ItemSellPrice: 5
     ItemImage: {fileID: 21300000, guid: 3f63c3021b66bf6419061e46687d87cc, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -209,6 +215,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Chub
     ItemSellPrice: 4
     ItemImage: {fileID: 21300000, guid: 4f283f4d8e0b4424f8c9c71631fb381d, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -240,6 +247,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Perch
     ItemSellPrice: 4
     ItemImage: {fileID: 21300000, guid: 3a1126960003a2f42a13033786f18693, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -271,6 +279,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Bullhead
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 526a5952ff696e74499152ddd2fe1cce, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -302,6 +311,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Gudgeon
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: b5b94636089cc274695f901a636a0b2f, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -333,6 +343,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/Fish Lines/Roach
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: 73c68a4e788f68b47a045f9955c928b1, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -364,6 +375,7 @@ MonoBehaviour:
       Path: 
     ItemSellPrice: 3
     ItemImage: {fileID: 21300000, guid: b48407450548d3c4bb51934d3b67ff35, type: 3}
+    IsLoot: 0
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -385,3 +397,163 @@ MonoBehaviour:
         Data4: -1186297269
       Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/LLymLlymSalmonInfo
     catchSFX: 1
+  - ItemName: Old Boot
+    ItemNameEvent:
+      Guid:
+        Data1: 1682681175
+        Data2: 1119515301
+        Data3: 1949820588
+        Data4: -2038157336
+      Path: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBoot
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    IsLoot: 1
+    IsFailable: 0
+    ReelInSpeed: 10
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -1684915732
+        Data2: 1223275000
+        Data3: 1008671399
+        Data4: 1927470532
+      Path: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBootQuip
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -1684915732
+        Data2: 1223275000
+        Data3: 1008671399
+        Data4: 1927470532
+      Path: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBootQuip
+    catchSFX: 0
+  - ItemName: Driftwood
+    ItemNameEvent:
+      Guid:
+        Data1: 352419089
+        Data2: 1179557861
+        Data3: 1408178834
+        Data4: -1433374669
+      Path: event:/VoiceOver/Captain/ItemLines/Driftwood/Driftwood
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    IsLoot: 1
+    IsFailable: 0
+    ReelInSpeed: 10
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -1601896384
+        Data2: 1169587027
+        Data3: -1974729320
+        Data4: -545327825
+      Path: event:/VoiceOver/Captain/ItemLines/Driftwood/DriftwoodQuip
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -1601896384
+        Data2: 1169587027
+        Data3: -1974729320
+        Data4: -545327825
+      Path: event:/VoiceOver/Captain/ItemLines/Driftwood/DriftwoodQuip
+    catchSFX: 0
+  - ItemName: GlassBottle
+    ItemNameEvent:
+      Guid:
+        Data1: 1980989510
+        Data2: 1227419125
+        Data3: -1331373434
+        Data4: 1426465159
+      Path: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottle
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    IsLoot: 1
+    IsFailable: 0
+    ReelInSpeed: 10
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: 339080037
+        Data2: 1253317944
+        Data3: 523042235
+        Data4: 291250403
+      Path: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottleQuip
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 339080037
+        Data2: 1253317944
+        Data3: 523042235
+        Data4: 291250403
+      Path: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottleQuip
+    catchSFX: 0
+  - ItemName: RustyCoin
+    ItemNameEvent:
+      Guid:
+        Data1: -1076770070
+        Data2: 1290433794
+        Data3: -1066931575
+        Data4: -2118030865
+      Path: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoin
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    IsLoot: 1
+    IsFailable: 0
+    ReelInSpeed: 10
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -605272160
+        Data2: 1073935202
+        Data3: 1395039917
+        Data4: -1904734183
+      Path: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoinQuip
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -605272160
+        Data2: 1073935202
+        Data3: 1395039917
+        Data4: -1904734183
+      Path: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoinQuip
+    catchSFX: 0
+  - ItemName: ScrapMetal
+    ItemNameEvent:
+      Guid:
+        Data1: -1507515716
+        Data2: 1295299184
+        Data3: 940973188
+        Data4: -1880963776
+      Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetal
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    IsLoot: 1
+    IsFailable: 0
+    ReelInSpeed: 10
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -870874098
+        Data2: 1312753875
+        Data3: -1418371912
+        Data4: 376693318
+      Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetalQuip
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -870874098
+        Data2: 1312753875
+        Data3: -1418371912
+        Data4: 376693318
+      Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetalQuip
+    catchSFX: 0

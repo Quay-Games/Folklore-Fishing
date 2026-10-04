@@ -179,6 +179,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-8873272343165560936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/Driftwood/DriftwoodQuip
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/Driftwood/DriftwoodQuip
+  Guid:
+    Data1: -1601896384
+    Data2: 1169587027
+    Data3: -1974729320
+    Data4: -545327825
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8957669307511178980}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-8821340010074399058
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -566,6 +594,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7689010841982910622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetal
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetal
+  Guid:
+    Data1: -1507515716
+    Data2: 1295299184
+    Data3: 940973188
+    Data4: -1880963776
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 8128289191103647357}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7673411082141487709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -778,6 +834,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-7409452479409856175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottle
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottle
+  Guid:
+    Data1: 1980989510
+    Data2: 1227419125
+    Data3: -1331373434
+    Data4: 1426465159
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5995411168891557574}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-7228500245547084002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1062,7 +1146,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639255241109627496
+  lastModified: 639267382185284583
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1254,6 +1338,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6284660020127740402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/OldBootQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6264808009195308420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoinQuip
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoinQuip
+  Guid:
+    Data1: -605272160
+    Data2: 1073935202
+    Data3: 1395039917
+    Data4: -1904734183
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1975605154799957888}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6260213503940221084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1334,6 +1470,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5995411168891557574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GlassBottle/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5853794852422440405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1802,6 +1962,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4891851627137414536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBoot
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBoot
+  Guid:
+    Data1: 1682681175
+    Data2: 1119515301
+    Data3: 1949820588
+    Data4: -2038157336
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2380516382697186399}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4867366199036378307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2241,6 +2429,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-4032759033038715551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/Driftwood/Driftwood
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/Driftwood/Driftwood
+  Guid:
+    Data1: 352419089
+    Data2: 1179557861
+    Data3: 1408178834
+    Data4: -1433374669
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 6714160685724447734}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-4023260521171765653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2417,6 +2633,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3817332517120257368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetalQuip
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetalQuip
+  Guid:
+    Data1: -870874098
+    Data2: 1312753875
+    Data3: -1418371912
+    Data4: 376693318
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -744283429854141426}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3542632730595239849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3066,6 +3310,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2380516382697186399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/OldBoot/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2315245278242392592
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3535,6 +3803,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-1314256584204200601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoin
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/RustyCoin/RustyCoin
+  Guid:
+    Data1: -1076770070
+    Data2: 1290433794
+    Data3: -1066931575
+    Data4: -2118030865
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 988501845510464749}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1261821117601704080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3882,6 +4178,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-744283429854141426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ScrapMetalQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-692869954579376608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,12 +4753,22 @@ MonoBehaviour:
   - {fileID: -4419718015066979123}
   - {fileID: -2053036631867693094}
   - {fileID: 3143149567375345048}
+  - {fileID: -3817332517120257368}
+  - {fileID: -4032759033038715551}
+  - {fileID: -8873272343165560936}
+  - {fileID: -7409452479409856175}
+  - {fileID: -4891851627137414536}
+  - {fileID: 4405041083799170640}
+  - {fileID: -6264808009195308420}
+  - {fileID: -7689010841982910622}
+  - {fileID: -1314256584204200601}
+  - {fileID: 650223248327042933}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639255241116479721
+  cacheTime: 639267382193215848
   cacheVersion: 131624
 --- !u!114 &31227456887572434
 MonoBehaviour:
@@ -4791,6 +5121,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &650223248327042933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBootQuip
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBootQuip
+  Guid:
+    Data1: -1684915732
+    Data2: 1223275000
+    Data3: 1008671399
+    Data4: 1927470532
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6284660020127740402}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &712131890721834024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4951,6 +5309,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &988501845510464749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RustyCoin/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1111162009482625090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5511,6 +5893,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &1975605154799957888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/RustyCoinQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2008667904995397799
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5709,10 +6115,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639255241116479721
+  lastModified: 639267382193215848
   FileSizes:
   - Name: Desktop
-    Value: 10191840
+    Value: 10314976
   Exists: 1
 --- !u!114 &2266324813074022349
 MonoBehaviour:
@@ -6867,6 +7273,34 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &4405041083799170640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottleQuip
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/ItemLines/GlassBottle/GlassBottleQuip
+  Guid:
+    Data1: 339080037
+    Data2: 1253317944
+    Data3: 523042235
+    Data4: 291250403
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7408249248188134930}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -8126,6 +8560,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &6714160685724447734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Driftwood/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &6753592811351011056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8493,6 +8951,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7408249248188134930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/GlassBottleQuip/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7451738106563685410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8691,10 +9173,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639255241109657648
+  lastModified: 639267382185324480
   FileSizes:
   - Name: Desktop
-    Value: 10748
+    Value: 11252
   Exists: 1
 --- !u!114 &7911918505699605081
 MonoBehaviour:
@@ -8783,6 +9265,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/2Theboataintmoving/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8128289191103647357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ScrapMetal/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -9354,6 +9860,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/1Therainispickingup/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &8957669307511178980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/DriftwoodQuip/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 

@@ -53,7 +53,10 @@ public class FishView : MonoBehaviour {
 			PlayCorrectFishCatchSFX();
 			AudioManager.Instance.PlayVoiceOver(GameManager.Instance.CurrentFish.FishData.fishCatchAudio);
 		}	else {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
+			if(InventoryManager.Instance.TotalOwnedBaits == 0) {
+				SceneManager.LoadScene(LevelManager.CalvinShore);
+				return;
+			}
 			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}
 	}

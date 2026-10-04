@@ -11,6 +11,7 @@ public class FishDatas : ScriptableObject {
 
 	[System.Serializable]
 	public class FishData: BaseItemData {
+		public bool IsLoot;
 		public bool IsFailable;
 		public float ReelInSpeed;
 		public float SwimAwaySpeed;

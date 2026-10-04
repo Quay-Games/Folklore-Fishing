@@ -86,9 +86,11 @@ MonoBehaviour:
     IsTutorial: 0
     FishSpawnChances:
     - FishName: 3
-      SpawnChance: 0.5
+      SpawnChance: 0.1
     - FishName: 4
-      SpawnChance: 0.5
+      SpawnChance: 0.1
+    - FishName: 12
+      SpawnChance: 0.8
   - ItemName: Leech Bait
     ItemNameEvent:
       Guid:

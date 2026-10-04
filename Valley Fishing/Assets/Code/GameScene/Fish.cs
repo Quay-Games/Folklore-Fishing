@@ -134,7 +134,20 @@ public class Fish : MonoBehaviour
 		}
 		this.Caught = true;
 		AudioManager.Instance.PlayUnspoolSound(false, 0);
-		InventoryManager.Instance.OwnedFishTypeDatas[(System.Array.IndexOf(InventoryManager.Instance.FishDatas.Datas, this.FishData))].quantity++;		
+		if (this.FishData.IsLoot) {
+			for (int i = 0; i < InventoryManager.Instance.OwnedLootTypeDatas.Count; i++) {
+				if (InventoryManager.Instance.OwnedLootTypeDatas[i].OwnedItemData == this.FishData) {
+					InventoryManager.Instance.OwnedLootTypeDatas[i].quantity++;
+				}
+			}
+		}
+		else{
+			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
+				if (InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData == this.FishData) {
+					InventoryManager.Instance.OwnedFishTypeDatas[i].quantity++;
+				}
+			}
+		}
 		AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.CatchSplash);
 		GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);

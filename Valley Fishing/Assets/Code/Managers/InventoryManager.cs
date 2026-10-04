@@ -7,8 +7,8 @@ public class InventoryManager : Singleton<InventoryManager> {
 
 
 	public FishDatas FishDatas;
-
 	public List<OwnedItemTypeData> OwnedFishTypeDatas;
+	public List<OwnedItemTypeData> OwnedLootTypeDatas;
     public int TotalOwnedFish
     {
         get
@@ -57,10 +57,8 @@ public class InventoryManager : Singleton<InventoryManager> {
 	{
         foreach (var fish in OwnedFishTypeDatas)
         {
-			Debug.Log(fish.OwnedItemData.ItemName);
             if(fish.OwnedItemData.ItemName.Equals(fishName))
 			{
-				Debug.Log(fish.quantity);
 				return fish.quantity;
 			}
         }
@@ -69,6 +67,13 @@ public class InventoryManager : Singleton<InventoryManager> {
     public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
+			if (this.FishDatas.Datas[i].IsLoot) {
+				OwnedItemTypeData lootTypeCatchData = new OwnedItemTypeData();
+				lootTypeCatchData.quantity = 0;
+				lootTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
+				OwnedLootTypeDatas.Add(lootTypeCatchData);
+				continue;
+			}
             OwnedItemTypeData fishTypeCatchData = new OwnedItemTypeData();
 			fishTypeCatchData.quantity = 0;
 			fishTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];

@@ -704,7 +704,7 @@ MonoBehaviour:
   duckCooldown: 0.5
   SeagullAvoidanceThreshold: 0.2
   flies: {fileID: 8433282127539381563, guid: 095fd802f375c454da1d72faee6f2fad, type: 3}
-  fliesIntervalTime: 10
+  fliesIntervalTime: 0
   fliesToSwat: 10
   fliesEffectTime: 5
   fliesFailTime: 2
@@ -1219,11 +1219,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.size
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.data[0].BaitIndex
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.data[1].BaitIndex
@@ -1231,7 +1231,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.data[0].BaitAmount
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.data[1].BaitAmount
