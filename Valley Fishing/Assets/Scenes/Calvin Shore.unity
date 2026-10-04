@@ -129,7 +129,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: useCheats
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: TempBaitBoardDatas.Array.size
@@ -137,7 +137,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.size
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: TempBaitBoardDatas.Array.data[0].quantity
@@ -185,18 +185,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.data[0].FishIndex
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.data[1].FishIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: calvinShoreCheats.CaughtFish.Array.data[2].FishIndex
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.data[0].FishAmount
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinShoreCheats.CaughtFish.Array.data[1].FishAmount
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: calvinShoreCheats.CaughtFish.Array.data[2].FishAmount
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
@@ -1936,7 +1944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].quantity
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[1].quantity

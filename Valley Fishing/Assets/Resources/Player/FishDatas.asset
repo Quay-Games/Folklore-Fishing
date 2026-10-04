@@ -22,7 +22,7 @@ MonoBehaviour:
         Data4: -1050338756
       Path: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
     ItemSellPrice: 1
-    ItemImage: {fileID: 21300000, guid: dbdd19b0b14af9b448e945aee0ef1319, type: 3}
+    ItemImage: {fileID: 21300000, guid: e7be3fcd556abcd4f8b48e6ca1077022, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -53,7 +53,7 @@ MonoBehaviour:
         Data4: -2089778651
       Path: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
     ItemSellPrice: 1
-    ItemImage: {fileID: 21300000, guid: 3f63c3021b66bf6419061e46687d87cc, type: 3}
+    ItemImage: {fileID: 21300000, guid: 9c25ad76b755fca4dbccf69fa7645e97, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -84,7 +84,7 @@ MonoBehaviour:
         Data4: -157560319
       Path: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
     ItemSellPrice: 1
-    ItemImage: {fileID: 21300000, guid: 73c68a4e788f68b47a045f9955c928b1, type: 3}
+    ItemImage: {fileID: 21300000, guid: b2b21047721790c45913ee4445e53824, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -115,7 +115,7 @@ MonoBehaviour:
         Data4: 1755121227
       Path: event:/VoiceOver/Narrator/Fish Lines/Eel
     ItemSellPrice: 2
-    ItemImage: {fileID: 21300000, guid: d9744195b081e9e4b99097159afe37ca, type: 3}
+    ItemImage: {fileID: 21300000, guid: 860c3c0e34d19e341801e8967d5d423b, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -208,7 +208,7 @@ MonoBehaviour:
         Data4: -1180710536
       Path: event:/VoiceOver/Narrator/Fish Lines/Chub
     ItemSellPrice: 4
-    ItemImage: {fileID: 21300000, guid: dbdd19b0b14af9b448e945aee0ef1319, type: 3}
+    ItemImage: {fileID: 21300000, guid: 4f283f4d8e0b4424f8c9c71631fb381d, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -239,7 +239,7 @@ MonoBehaviour:
         Data4: 534657013
       Path: event:/VoiceOver/Narrator/Fish Lines/Perch
     ItemSellPrice: 4
-    ItemImage: {fileID: 21300000, guid: f352bb0632952ce4fa6bafe955b8550e, type: 3}
+    ItemImage: {fileID: 21300000, guid: 3a1126960003a2f42a13033786f18693, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100
@@ -363,7 +363,7 @@ MonoBehaviour:
         Data4: 0
       Path: 
     ItemSellPrice: 3
-    ItemImage: {fileID: 21300000, guid: d03f6fa56d8a52f49979d22815162e67, type: 3}
+    ItemImage: {fileID: 21300000, guid: b48407450548d3c4bb51934d3b67ff35, type: 3}
     IsFailable: 0
     ReelInSpeed: 2
     SwimAwaySpeed: 100

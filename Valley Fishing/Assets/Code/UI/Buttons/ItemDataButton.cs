@@ -43,7 +43,6 @@ public class ItemDataButton : ButtonVoiceOverComponent
             itemSellPrice.text = data.OwnedItemData.ItemSellPrice.ToString() + "g";
         }
 		if(itemQuantity != null) {
-			Debug.Log(data.quantity);
 			itemQuantity.text = "x" + data.quantity .ToString();
 		}
     }

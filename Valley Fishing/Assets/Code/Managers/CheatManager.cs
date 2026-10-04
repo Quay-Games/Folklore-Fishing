@@ -40,7 +40,8 @@ public class CheatManager : Singleton<CheatManager>
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
 		ShowFirstBossTutorialCheats();
-		ShowGameScenneCheats();
+		ShowGameSceneCheats();
+		ShowCalvinLevelCheats();
 	}
 
 	public void OnDestroy() {
@@ -62,10 +63,10 @@ public class CheatManager : Singleton<CheatManager>
 			ShowSecondCatchTutorialCheats();
 			ShowThirdCatchTutorialCheats();
 			ShowFirstBossTutorialCheats();
-			ShowGameScenneCheats();
+			ShowGameSceneCheats();
 			ShowCalvinShopTutorialCheats();
-
-        }
+			ShowCalvinLevelCheats();
+		}
 	}
 
 	#endregion
@@ -153,7 +154,7 @@ public class CheatManager : Singleton<CheatManager>
 	[SerializeField]
 	private GameSceneCheats gameSceneCheats;
 
-	private void ShowGameScenneCheats() {
+	private void ShowGameSceneCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.GameSence) {
 			for (int i = 0; i < gameSceneCheats.Baits.Length; i++) {
                 InventoryManager.Instance.OwnedBaitTypeDatas[gameSceneCheats.Baits[i].BaitIndex].quantity = gameSceneCheats.Baits[i].BaitAmount;
@@ -252,6 +253,26 @@ public class CheatManager : Singleton<CheatManager>
         }
     }
 
-    #endregion
+	#endregion
 
+
+	#region Calvin Level
+
+	[System.Serializable]
+	public class CalvinLevel {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private CalvinLevel calvinLevel;
+
+	private void ShowCalvinLevelCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.CalvinLevel) {
+			for (int i = 0; i < calvinLevel.Baits.Length; i++) {
+				InventoryManager.Instance.OwnedBaitTypeDatas[calvinLevel.Baits[i].BaitIndex].quantity = calvinLevel.Baits[i].BaitAmount;
+			}
+		}
+	}
+
+	#endregion
 }

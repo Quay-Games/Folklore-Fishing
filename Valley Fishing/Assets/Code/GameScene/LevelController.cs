@@ -51,7 +51,7 @@ public class LevelController : AbstractState<LevelController.State> {
 				GameManager.Instance.EventSystem = eventSystem;
 				AudioManager.Instance.PlayMusic(levelMusic);
 				AudioManager.Instance.PlayAmbience(levelAmbience);
-				SetState(State.Cutscene);
+				SetState(State.Idle);
 				break;
 			case State.Cutscene:
 				break;

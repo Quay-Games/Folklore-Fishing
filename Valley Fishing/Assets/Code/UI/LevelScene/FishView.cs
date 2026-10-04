@@ -1,22 +1,19 @@
 using FMOD.Studio;
 using FMODUnity;
 using System.Collections;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class FishView : MonoBehaviour
-{
+public class FishView : MonoBehaviour {
+
 	#region Serialized Fields
 
-	[SerializeField]
-	private GameObject[] fishUis;
-
-	[SerializeField]
-	private TMP_Text fishText;
-
-	[SerializeField]
-	private string[] fishCaughtTexts;
+	[SerializeField] private Image fishImage;
+	[SerializeField] private TMP_Text fishText;
+	[SerializeField]private string[] fishCaughtTexts;
 
 	#endregion
 
@@ -47,25 +44,17 @@ public class FishView : MonoBehaviour
 	#region Public Methods
 
 	public void EnableFishUI(bool enable) {
-		if (enable) {
-			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
-				if (InventoryManager.Instance.FishDatas.Datas[i].ItemName == GameManager.Instance.CurrentFish.FishData.ItemName) {
-					fishUis[i].SetActive(enable);
-				}
-			}
-			int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
-			fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
-			fishText.gameObject.SetActive(enable);
-			PlayCorrectFishCatchSFX();
-        }
-		else {
-			for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
-				fishUis[i].SetActive(enable);
-			}
+		fishImage.sprite = GameManager.Instance.CurrentFish.FishData.ItemImage;
+		fishImage.gameObject.SetActive(enable);
+		int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
+		fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 		fishText.gameObject.SetActive(enable);
-			if(InventoryManager.Instance.TotalOwnedBaits == 0) {
-				SceneManager.LoadScene(LevelManager.CalvinShore);
-			}
+		if (enable) {
+			PlayCorrectFishCatchSFX();
+			AudioManager.Instance.PlayVoiceOver(GameManager.Instance.CurrentFish.FishData.fishCatchAudio);
+		}	else {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
+			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
 		}
 	}
 
@@ -75,28 +64,30 @@ public class FishView : MonoBehaviour
 	#region Private Methods
 
 	private void DisableUI(bool value) {
-		DisableFishUI();
+		if (GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
+			EnableFishUI(false);
+		}
 	}
 
 	public void DisableFishUI() {
-		if (GameManager.Instance.LevelController.StateLocked) {
-			return;
-		}
-		bool allreadyDisabled = true;
-		for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
-			if (fishUis[i].activeSelf) {
-				allreadyDisabled = false;
-			}
-		}
-		if (allreadyDisabled) {
-			return;
-		}
-		EnableFishUI(false);
-		AudioManager.Instance.SkipVoiceOver();
-		if(GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
-			AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
-			GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
-		}
+		//if (GameManager.Instance.LevelController.StateLocked) {
+		//	return;
+		//}
+		//bool allreadyDisabled = true;
+		//for (int i = 0; i < InventoryManager.Instance.FishDatas.Datas.Length; i++) {
+		//	if (fishUis[i].activeSelf) {
+		//		allreadyDisabled = false;
+		//	}
+		//}
+		//if (allreadyDisabled) {
+		//	return;
+		//}
+		//EnableFishUI(false);
+		//AudioManager.Instance.SkipVoiceOver();
+		//if (GameManager.Instance.LevelController.CurrentState == LevelController.State.FishCaught) {
+		//	AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
+		//	GameManager.Instance.LevelController.SetState(LevelController.State.Idle);
+		//}
 	}
 
 	private void PlayCorrectFishCatchSFX()

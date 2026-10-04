@@ -11,5 +11,5 @@ public enum FishName
     Bullhead,
     Gudgeon,
     Roach,
-    LlymLlySalmon,
+    LlymLlySalmon
 }
