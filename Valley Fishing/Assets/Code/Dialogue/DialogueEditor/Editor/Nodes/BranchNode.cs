@@ -21,7 +21,7 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public BranchNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public BranchNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/BranchNodeStyleSheet", "Branch", _data)
         {
 			if (_data != null)
@@ -65,8 +65,8 @@ namespace Project.DialogueEditor {
 
             BranchData branchData = new BranchData();
 			SaveData(branchData);
-            branchData.trueGuidNode = (trueOutput != null ? (trueOutput.input.node as BaseNode).NodeGuid : string.Empty);
-			branchData.falseGuidNode = (flaseOutput != null ? (flaseOutput.input.node as BaseNode).NodeGuid : string.Empty);
+            branchData.SetBranchOneNodeGuid((trueOutput != null ? (trueOutput.input.node as BaseNode).NodeGuid : string.Empty));
+			branchData.SetBranchTwoNodeGuid((flaseOutput != null ? (flaseOutput.input.node as BaseNode).NodeGuid : string.Empty));
 
             foreach (EventData_StringCondition stringEvents in BranchData.EventData_StringConditions)
             {

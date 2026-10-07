@@ -23,7 +23,7 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public DialogueNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public DialogueNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/DialogueNodeStyleSheet", "NPC Dialogue", _data)
         {
             AddInputPort("Input", Port.Capacity.Multi);

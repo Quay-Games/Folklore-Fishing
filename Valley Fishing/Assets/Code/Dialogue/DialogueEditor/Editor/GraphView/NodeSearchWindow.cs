@@ -14,14 +14,14 @@ using UnityEngine.UIElements;
 namespace Project.DialogueEditor {
 	public class NodeSearchWindow : ScriptableObject, ISearchWindowProvider {
 
-		private DialogueEditorWindow editorWindow;
-		private DialogueGraphView graphView;
+		private NodeGraphEditorWindow editorWindow;
+		private NodeGraphView graphView;
 
 		private Texture2D iconImage;
 		//where nodes should sit
 		private const string NodeFolderPath = "Assets/Code/Dialogue/DialogueEditor/Editor/Nodes";
 
-		public void Configure(DialogueEditorWindow _editorWindow, DialogueGraphView _graphView) {
+		public void Configure(NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView) {
 			editorWindow = _editorWindow;
 			graphView = _graphView;
 

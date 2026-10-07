@@ -20,19 +20,19 @@ namespace Project.DialogueEditor {
 
 		}
 		// TODO: make the optional data assign to the rest of the class
-		public ResponseNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public ResponseNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/BranchNodeStyleSheet", "Response", _data) {
 			if (_data != null) {
 				ResponseData = (_data as ResponseData);
                 List<ResponseData_Text> textData = new List<ResponseData_Text>();
-                if (ResponseData.ResponceData_Texts.Count > 0)
+                if (ResponseData.ResponseData_Texts.Count > 0)
                 {
-                    for (int i = 0; i < ResponseData.ResponceData_Texts.Count; i++)
+                    for (int i = 0; i < ResponseData.ResponseData_Texts.Count; i++)
                     {
                         ResponseData_Text tmp = new ResponseData_Text();
-                        tmp.GuidID = ResponseData.ResponceData_Texts[i].GuidID;
-                        tmp.Text = ResponseData.ResponceData_Texts[i].Text;
-                        tmp.ID = ResponseData.ResponceData_Texts[i].ID;
+                        tmp.GuidID = ResponseData.ResponseData_Texts[i].GuidID;
+                        tmp.Text = ResponseData.ResponseData_Texts[i].Text;
+                        tmp.ID = ResponseData.ResponseData_Texts[i].ID;
                         textData.Add(tmp);
                     }
                     TextLine(textData[0]);
@@ -53,7 +53,7 @@ namespace Project.DialogueEditor {
 
 		public void TextLine(ResponseData_Text data_Text = null) {
 			ResponseData_Text newDialogueBaseContainer_Text = new ResponseData_Text();
-			ResponseData.ResponceData_Texts.Add(newDialogueBaseContainer_Text);
+			ResponseData.ResponseData_Texts.Add(newDialogueBaseContainer_Text);
 
 			// Add Container Box
 			Box boxContainer = new Box();
@@ -110,14 +110,14 @@ namespace Project.DialogueEditor {
 			ResponseData responseData = new ResponseData();
 			SaveData(responseData);
 
-			responseData.ResponceData_Texts = new List<ResponseData_Text>();
-			responseData.FirstOptionGuid = (FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
-			responseData.SecondOptionGuid = (SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
+			responseData.ResponseData_Texts = new List<ResponseData_Text>();
+			responseData.SetBranchOneNodeGuid(FirstOptionOutput != null ? (FirstOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
+			responseData.SetBranchTwoNodeGuid(SecondOptionOutput != null ? (SecondOptionOutput.input.node as BaseNode).NodeGuid : string.Empty);
 
             // Assign unique IDs and store response texts
-            for (int i = 0; i < ResponseData.ResponceData_Texts.Count; i++)
+            for (int i = 0; i < ResponseData.ResponseData_Texts.Count; i++)
             {
-                ResponseData_Text original = ResponseData.ResponceData_Texts[i];
+                ResponseData_Text original = ResponseData.ResponseData_Texts[i];
 
                 ResponseData_Text textCopy = new ResponseData_Text
                 {
@@ -126,7 +126,7 @@ namespace Project.DialogueEditor {
                     Text = new List<LanguageGeneric<string>>(original.Text)
                 };
 
-                responseData.ResponceData_Texts.Add(textCopy);
+                responseData.ResponseData_Texts.Add(textCopy);
             }
 
             return responseData;

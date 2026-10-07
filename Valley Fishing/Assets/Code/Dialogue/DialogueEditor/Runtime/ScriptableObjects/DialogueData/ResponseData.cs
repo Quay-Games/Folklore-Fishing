@@ -4,12 +4,19 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [System.Serializable]
-public class ResponseData : BaseData
+public class ResponseData : BranchingTypeData
 {
-	public string FirstOptionGuid;
-	public string SecondOptionGuid;
+	public List<ResponseData_Text> ResponseData_Texts = new List<ResponseData_Text>();
 
-	public List<ResponseData_Text> ResponceData_Texts = new List<ResponseData_Text>();
+    public override void Run(IDialogueRuntime runtime)
+    {
+        List<ResponseData_Text> tmp = new List<ResponseData_Text>(ResponseData_Texts);
+        List<string> texts = new List<string>();
+        for (int i = 0; i < tmp.Count; i++)
+        {
+            texts.Add(tmp[i].Text.Find(text => text.LanguageType == LanguageController.Instance.Language).LanguageGenericType);
+        }
+    }
 }
 
 [System.Serializable]

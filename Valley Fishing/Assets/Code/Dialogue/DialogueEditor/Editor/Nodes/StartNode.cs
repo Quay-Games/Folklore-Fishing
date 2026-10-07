@@ -10,7 +10,7 @@ namespace Project.DialogueEditor {
 		}
 
 		//does a start node make use of basedata properly?
-		public StartNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public StartNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/StartNodeStyleSheet", "Start", _data)
         {
 			AddOutputPort("Output", Port.Capacity.Single);

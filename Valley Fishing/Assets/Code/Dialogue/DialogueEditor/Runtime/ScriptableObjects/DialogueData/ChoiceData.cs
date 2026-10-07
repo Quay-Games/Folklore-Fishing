@@ -16,4 +16,9 @@ public class ChoiceData : BaseData {
 	public Container_ChoiceStateType ChoiceStateTypes = new Container_ChoiceStateType();
 	public List<LanguageGeneric<string>> Text = new List<LanguageGeneric<string>>();
 	public List<EventData_StringCondition> EventData_StringConditions = new List<EventData_StringCondition>();
+
+    public override void Run(IDialogueRuntime runtime)
+    {
+		//the original choicedata implementation didnt actually have any running behavior, so this will sit empty for now
+    }
 }

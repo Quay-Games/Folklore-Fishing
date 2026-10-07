@@ -8,12 +8,12 @@ using UnityEngine.UIElements;
 using static UnityEditor.PlayerSettings;
 
 namespace Project.DialogueEditor {
-	public class DialogueGraphView : GraphView {
+	public class NodeGraphView : GraphView {
 		private string graphViewStyleSheetName = "USS/GraphView/GraphViewStyleSheet";
-		private DialogueEditorWindow editorWindow;
+		private NodeGraphEditorWindow editorWindow;
 		private NodeSearchWindow searchWindow;
 
-		public DialogueGraphView(DialogueEditorWindow editorWindow) {
+		public NodeGraphView(NodeGraphEditorWindow editorWindow) {
 			this.editorWindow = editorWindow;
 			SetupZoom(ContentZoomer.DefaultMinScale, ContentZoomer.DefaultMaxScale);
 
@@ -126,6 +126,7 @@ namespace Project.DialogueEditor {
 		public void CreateNodeFromData(BaseData data) 
 		{
 			BaseNode node = null;
+			//I want to remove this switch statement, will need some fancy way to determine the nodes from their data types
 			switch(data)
 			{
 				case ListenData:

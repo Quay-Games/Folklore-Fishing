@@ -8,10 +8,10 @@ using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class DialogueEditorWindow : EditorWindow {
+	public class NodeGraphEditorWindow : EditorWindow {
 		private DialogueContainer currentDialogueContainer;
-		private DialogueGraphView graphView;
-		private DialogueSaveAndLoad saveAndLoad;
+		private NodeGraphView graphView;
+		private NodeGraphSaveAndLoad saveAndLoad;
 
 		private LanguageType selectLanguage = LanguageType.English;
 		private ToolbarMenu languageDropdownMenu;
@@ -27,7 +27,7 @@ namespace Project.DialogueEditor {
 		public static bool ShowWindow(int instanceId, int line) {
 			UnityEngine.Object item = EditorUtility.InstanceIDToObject(instanceId);
 			if (item is DialogueContainer) {
-				DialogueEditorWindow window = (DialogueEditorWindow)GetWindow(typeof(DialogueEditorWindow));
+				NodeGraphEditorWindow window = (NodeGraphEditorWindow)GetWindow(typeof(NodeGraphEditorWindow));
 				window.titleContent = new GUIContent("Dialogue Editor");
 				window.currentDialogueContainer = item as DialogueContainer;
 				window.minSize = new Vector2(500, 250);
@@ -47,10 +47,10 @@ namespace Project.DialogueEditor {
 		}
 
 		private void ConstructGraphView() {
-			graphView = new DialogueGraphView(this);
+			graphView = new NodeGraphView(this);
 			graphView.StretchToParentSize();
 			rootVisualElement.Add(graphView);
-			saveAndLoad = new DialogueSaveAndLoad(graphView);
+			saveAndLoad = new NodeGraphSaveAndLoad(graphView);
 		}
 
 		private void GenerateToolbar() {

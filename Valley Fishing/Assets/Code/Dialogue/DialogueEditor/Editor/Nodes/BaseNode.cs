@@ -9,10 +9,10 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class BaseNode : Node {
+	public abstract class BaseNode : Node {
 		public string nodeGuid;
-		protected DialogueGraphView graphView;
-		protected DialogueEditorWindow editorWindow;
+		protected NodeGraphView graphView;
+		protected NodeGraphEditorWindow editorWindow;
 		protected Vector2 defaultNodeSize = new Vector2(200, 250);
 
 		private List<LanguageGenericHolder_Text> languageGenericHolder_Texts = new List<LanguageGenericHolder_Text>();
@@ -22,13 +22,13 @@ namespace Project.DialogueEditor {
 			set => nodeGuid = value;
 		}
 
-		public BaseNode() {
+        public BaseNode() {
 			StyleSheet styleSheet = Resources.Load<StyleSheet>("USS/Nodes/NodeStyleSheet");
 			styleSheets.Add(styleSheet);
 		}
 
 		//here is a special constructor that takes care of redundant operations all nodes will need to do with this kind of data
-		public BaseNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, string _stylesheet, string _title, BaseData data = null)
+		public BaseNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, string _stylesheet, string _title, BaseData data = null)
         {
             editorWindow = _editorWindow;
             graphView = _graphView;
@@ -428,31 +428,14 @@ namespace Project.DialogueEditor {
 			public string placeholderText;
 		}
 
-        #region Griff Extra Functions
-		public virtual BaseData Save()
-		{
-			BaseData data = new BaseData
-            {
-                NodeGuid = nodeGuid,
-                Position = GetPosition().position
-            };
-			return data;
-        }
-
-        public virtual void Run()
-        {
-			//this method will be implemented in child classes, see them for details
-        }
+		#region Griff Extra Functions
+		public abstract BaseData Save();
 
         protected void SaveData(BaseData data)
         {
             data.NodeGuid = nodeGuid;
             data.Position = GetPosition().position;
         }
-
-        //public virtual void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
-        //{
-        //}
         #endregion
 
     }

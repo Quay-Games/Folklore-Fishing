@@ -8,13 +8,13 @@ using UnityEngine.UIElements;
 //this class seems to do lots of operations on the dialogcontainer, but doesnt actually store a reference to it?
 
 namespace Project.DialogueEditor {
-	public class DialogueSaveAndLoad {
+	public class NodeGraphSaveAndLoad {
 		private List<Edge> edges => graphView.edges.ToList();
 		private List<BaseNode> nodes => graphView.nodes.ToList().Where(node => node is BaseNode).Cast<BaseNode>().ToList();
 
-		private DialogueGraphView graphView;
+		private NodeGraphView graphView;
 
-		public DialogueSaveAndLoad(DialogueGraphView graphView) {
+		public NodeGraphSaveAndLoad(NodeGraphView graphView) {
 			this.graphView = graphView;
 		}
 

@@ -26,7 +26,7 @@ public class ListenNode : BaseNode {
 
 	}
 
-	public ListenNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+	public ListenNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 	: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "ListenNode", _data){
 
 		//if theres data to initialize with, do that, if not use default values

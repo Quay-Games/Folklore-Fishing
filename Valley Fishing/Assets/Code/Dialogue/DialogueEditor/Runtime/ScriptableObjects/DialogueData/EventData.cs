@@ -12,4 +12,27 @@ public class EventData : BaseData {
 		EventData_EventName = new EventData_EventName();
 		EventType = EventType.None;
 	}
+
+    public override void Run(IDialogueRuntime runtime)
+    {
+        switch (EventType)
+        {
+            case EventType.None:
+                break;
+            case EventType.StartObjective:
+                break;
+            case EventType.FinishObjective:
+                break;
+            case EventType.StartChallenge:
+                return;
+            case EventType.FinishChallenge:
+                break;
+            case EventType.NpcEvent:
+                break;
+            case EventType.GiveMoney:
+                break;
+            default:
+                break;
+        }
+    }
 }

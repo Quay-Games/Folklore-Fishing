@@ -49,8 +49,9 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.Default:
 				GameManager.Instance.LevelController = this;
 				GameManager.Instance.EventSystem = eventSystem;
-				AudioManager.Instance.PlayMusic(levelMusic);
-				AudioManager.Instance.PlayAmbience(levelAmbience);
+				//AudioManager.Instance.PlayMusic(levelMusic);
+				//the below line causes an error if there is no ambience to play
+				//AudioManager.Instance.PlayAmbience(levelAmbience);
 				SetState(State.Cutscene);
 				break;
 			case State.Cutscene:

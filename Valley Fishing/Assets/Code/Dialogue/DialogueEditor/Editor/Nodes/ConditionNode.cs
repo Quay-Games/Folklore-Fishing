@@ -21,7 +21,7 @@ namespace Project.DialogueEditor {
 
 		}
 
-		public ConditionNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public ConditionNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Condition", _data) {
 			if(_data != null)
             {
@@ -63,8 +63,8 @@ namespace Project.DialogueEditor {
 
 			ConditionData conditionData = new ConditionData();
 			SaveData(conditionData);
-			conditionData.trueGuidNode = trueOutput != null ? (trueOutput.input.node as BaseNode)?.NodeGuid : string.Empty;
-			conditionData.falseGuidNode = falseOutput != null ? (falseOutput.input.node as BaseNode)?.NodeGuid : string.Empty;
+			conditionData.SetBranchOneNodeGuid(trueOutput != null ? (trueOutput.input.node as BaseNode)?.NodeGuid : string.Empty);
+			conditionData.SetBranchTwoNodeGuid(falseOutput != null ? (falseOutput.input.node as BaseNode)?.NodeGuid : string.Empty)	;
 
             conditionData.EventData_EventName.StringEventValue.Value =
             NPCConditionData.EventData_EventName.StringEventValue.Value;

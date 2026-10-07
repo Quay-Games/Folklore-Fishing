@@ -6,18 +6,19 @@ public class ListenData : BaseData
 {
 	public List<Container_ListenEventSO> Container_ListenEventSOs = new List<Container_ListenEventSO>();
 
-    public override bool Run(IDialogueRuntime runtime)
+    public override void Run(IDialogueRuntime runtime)
     {
-        Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered += ListenEventTriggered;
-        Container_ListenEventSOs[0].ListenEventSO.RunEvent(runtime.Runner);
-        return true;
+        Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered += ListenEventTriggered(runtime);
+        Container_ListenEventSOs[0].ListenEventSO.RunEvent(runtime.GetMonoBehaviour());
     }
 
-    private void ListenEventTriggered()
+    private System.Action ListenEventTriggered(IDialogueRuntime runtime)
     {
-        Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered -= ListenEventTriggered;
-        //will need access to the runner here, let me think on it
-        //StopAllCoroutines();
-        //Continue(0);
+        //I hope this works the way I think it does
+        return () =>
+        {
+            Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered -= ListenEventTriggered(runtime);
+            runtime.StopCoroutines();
+        };
     }
 }

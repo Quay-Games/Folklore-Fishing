@@ -10,6 +10,12 @@ using UnityEngine.UIElements;
 public class NPCDialogueData : BaseData {
 	public EventReference VoiceEvent;
 	public DialogueTextData DialogueText;
+
+    public override void Run(IDialogueRuntime runtime)
+    {
+        AudioManager.Instance.PlayVoiceOver(VoiceEvent);
+        DialogueTextData tmp = DialogueText;
+    }
 }
 
 [System.Serializable]

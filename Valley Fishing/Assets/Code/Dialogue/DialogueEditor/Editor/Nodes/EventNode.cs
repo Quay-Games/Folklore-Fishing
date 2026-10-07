@@ -22,7 +22,7 @@ namespace Project.DialogueEditor {
 
 		private EnumField eventTypeDropdown;
 
-		public EventNode(Vector2 _position, DialogueEditorWindow _editorWindow, DialogueGraphView _graphView, BaseData _data = null)
+		public EventNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Event", _data)
         {
 			//is this the proper way to assign this data and actually have it be used??

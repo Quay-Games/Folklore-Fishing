@@ -7,7 +7,7 @@ using UnityEngine.UIElements;
 [System.Serializable]
 public class DialogueData : BaseData {
 
-	public List<DialogueData_BaseContainer> DialogueData_BaseContainers {
+	public List<DialogueData_BaseContainer> BaseContainers {
 		get;
 		set;
 	} = new List<DialogueData_BaseContainer>();
@@ -15,6 +15,35 @@ public class DialogueData : BaseData {
 	public List<DialogueData_Name> DialogueData_Names = new List<DialogueData_Name>();
 	public List<DialogueData_Text> DialogueData_Texts = new List<DialogueData_Text>();
 	public List<DialogueData_Port> DialogueData_Ports = new List<DialogueData_Port>();
+
+    public override void Run(IDialogueRuntime runtime)
+    {
+        BaseContainers = new List<DialogueData_BaseContainer>();
+        BaseContainers.AddRange(DialogueData_Names);
+        BaseContainers.AddRange(DialogueData_Texts);
+
+        BaseContainers.Sort(delegate (DialogueData_BaseContainer x, DialogueData_BaseContainer y) {
+            return x.ID.Value.CompareTo(y.ID.Value);
+        });
+
+        for (int i = 1; i < BaseContainers.Count; i++)
+        {
+            if (BaseContainers[i] is DialogueData_Name)
+            {
+                DialogueData_Name tmp = BaseContainers[i] as DialogueData_Name;
+                runtime.SetSpeakerName(tmp.CharacterName.Value);
+            }
+            if (BaseContainers[i] is DialogueData_Text)
+            {
+                DialogueData_Text tmp = BaseContainers[i] as DialogueData_Text;
+                //dialogueText.text = tmp.Text.Find(text => text.LanguageType == LanguageController.Instance.Language).LanguageGenericType;
+                break;
+            }
+        }
+
+        //im not sure if this is necessary but im keeping it for now
+        runtime.SetBaseContainers(BaseContainers);
+    }
 }
 
 [System.Serializable]
