@@ -9,6 +9,11 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
+    //this below line will never be used, but it is to illustrate what each node type will need to function
+    //this attribute links the node to the type of data it will be using, this removes the need for manual linking
+    //in NodeGraphView's CreateNodeFromData function.
+	//If you do not make use of this attribute, the node will not be able to load from saved data.
+    [NodeDataType(typeof(BaseData))]
 	public abstract class BaseNode : Node {
 		public string nodeGuid;
 		protected NodeGraphView graphView;

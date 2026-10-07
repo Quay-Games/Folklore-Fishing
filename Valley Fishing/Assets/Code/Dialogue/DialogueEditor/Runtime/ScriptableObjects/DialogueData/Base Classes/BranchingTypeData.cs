@@ -5,6 +5,7 @@ using UnityEngine;
 using Project.DialogueEditor;
 using UnityEditor.Experimental.GraphView;
 [System.Serializable]
+//A parent class for those nodes that have two branches, since they share behavior, such behavior is defined here
 public abstract class BranchingTypeData : BaseData
 {
     protected string branchOneNodeGuid;

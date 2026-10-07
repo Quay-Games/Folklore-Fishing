@@ -69,10 +69,6 @@ namespace Project.DialogueEditor {
 			{
                 switch ((CurrentNodeData as EndData).EndNodeType.Value)
                 {
-					//why is this an option? repeating the end node over and over seems pointless
-                    //case EndNodeType.Repeat:
-                    //    RunNextNode(GetNodeByGuid(CurrentNode.NodeGuid));
-                    //    return true;
                     case EndNodeType.ReturnToStart:
 						CurrentNodeData = dialogueContainer.getStartData();
 						break;
@@ -82,6 +78,7 @@ namespace Project.DialogueEditor {
                 }
             } else
 			{
+				//for normal nodes which just do their job and go on to the next node
 				CurrentNodeData = GetNextNode(CurrentNodeData);
             }
 			if(CurrentNodeData != null)
