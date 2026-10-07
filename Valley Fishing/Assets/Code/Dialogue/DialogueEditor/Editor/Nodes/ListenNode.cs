@@ -121,16 +121,4 @@ public class ListenNode : BaseNode {
 
         return nodeData;
     }
-	//this function should take in data and distribute it out to this class, while creating a listen node on the graph
-	//id like to do a copy constructor instead of this, but it would need to be called from outside here
-    //public override void Load(BaseData data, DialogueContainer container, DialogueGraphView graphView)
-    //{
-
-		//now copy out the scriptable objects that the listen data can hold
-
-
-		//who cares about the tempnode's values????
-
-		//why does it add the tempnode????
-    //}
 }

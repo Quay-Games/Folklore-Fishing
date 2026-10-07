@@ -19,6 +19,7 @@ public class BranchData : BranchingTypeData
             }
         }
 
+        //see parent class for what this is used for, but this is the value that will be used to determine which branch to take
         choice = (checkBranch ? 0 : 1);
     }
 }

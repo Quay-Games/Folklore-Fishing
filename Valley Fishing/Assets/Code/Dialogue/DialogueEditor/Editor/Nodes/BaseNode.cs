@@ -433,9 +433,13 @@ namespace Project.DialogueEditor {
 			public string placeholderText;
 		}
 
-		#region Griff Extra Functions
-		public abstract BaseData Save();
+        #region Griff Extra Functions
+        //this is a method that all nodes need to implement which puts the data they have into a serialized
+        //object to be loaded later. See nodes for examples of how to implement this function.
+        public abstract BaseData Save();
 
+        //a method used by all nodes since they all need to do these two things. Reference it 
+        //when implementing the Save() method in node classes.
         protected void SaveData(BaseData data)
         {
             data.NodeGuid = nodeGuid;
