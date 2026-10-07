@@ -9,7 +9,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class BranchNode : BaseNode {
+    [NodeDataType(typeof(BranchData))]
+    public class BranchNode : BaseNode {
 
 		private BranchData branchData = new BranchData();
 		public BranchData BranchData {

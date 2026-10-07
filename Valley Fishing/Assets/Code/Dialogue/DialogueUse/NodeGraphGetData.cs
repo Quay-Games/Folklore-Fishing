@@ -35,15 +35,6 @@ namespace Project.DialogueEditor {
 		}
 		protected BaseData GetNextNode(BaseData baseNodeData) {
 			//some null checks from Codex that I may remove
-			if (dialogueContainer == null) {
-				Debug.LogWarning($"{nameof(NodeGraphGetData)} has no dialogue container assigned.");
-				return null;
-			}
-
-			if (baseNodeData == null) {
-				Debug.LogWarning($"Dialogue '{dialogueContainer.name}' tried to advance from a missing node.");
-				return null;
-			}
 
 			if (dialogueContainer.NodeLinkDatas == null) {
 				Debug.LogWarning($"Dialogue '{dialogueContainer.name}' has no link data.");

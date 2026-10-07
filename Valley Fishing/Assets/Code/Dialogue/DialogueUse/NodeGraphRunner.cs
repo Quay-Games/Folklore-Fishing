@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 namespace Project.DialogueEditor {
 	//A class whose job is to oversee the running of the node graph, but not control the behavior 
 	//of individual nodes.
-	public class NodeGraphRunner : NodeGraphGetData, IDialogueRuntime {
+	public class NodeGraphRunner : NodeGraphGetData, IGraphRunnerRuntime {
 
 		#region Serialized Fields
 
@@ -77,7 +77,8 @@ namespace Project.DialogueEditor {
 						CurrentNodeData = dialogueContainer.getStartData();
 						break;
                     default:
-                        break;
+						//this statement is what allows the end note to actually end
+						return false;
                 }
             } else
 			{
@@ -230,12 +231,12 @@ namespace Project.DialogueEditor {
 		//	StopAllCoroutines();
 		//}
 
-		void IDialogueRuntime.StopCoroutines()
+		void IGraphRunnerRuntime.StopCoroutines()
 		{
             StopAllCoroutines();
         }
 
-        MonoBehaviour IDialogueRuntime.GetMonoBehaviour()
+        MonoBehaviour IGraphRunnerRuntime.GetMonoBehaviour()
 		{
             return this;
         }

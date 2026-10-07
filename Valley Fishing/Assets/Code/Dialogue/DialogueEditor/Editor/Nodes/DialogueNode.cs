@@ -8,7 +8,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class DialogueNode : BaseNode {
+    [NodeDataType(typeof(NPCDialogueData))]
+    public class DialogueNode : BaseNode {
 		private NPCDialogueData dialogueData = new NPCDialogueData();
 
 		public NPCDialogueData DialogueData {

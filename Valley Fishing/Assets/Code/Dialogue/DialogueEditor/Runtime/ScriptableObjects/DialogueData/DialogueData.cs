@@ -16,7 +16,7 @@ public class DialogueData : BaseData {
 	public List<DialogueData_Text> DialogueData_Texts = new List<DialogueData_Text>();
 	public List<DialogueData_Port> DialogueData_Ports = new List<DialogueData_Port>();
 
-    public override void Run(IDialogueRuntime runtime)
+    public override void Run(IGraphRunnerRuntime runtime)
     {
         BaseContainers = new List<DialogueData_BaseContainer>();
         BaseContainers.AddRange(DialogueData_Names);

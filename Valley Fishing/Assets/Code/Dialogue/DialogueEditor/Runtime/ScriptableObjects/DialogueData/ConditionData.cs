@@ -7,7 +7,7 @@ public class ConditionData : BranchingTypeData
 {
 	public EventData_EventName EventData_EventName = new EventData_EventName();
 
-    public override void Run(IDialogueRuntime runtime)
+    public override void Run(IGraphRunnerRuntime runtime)
     {
         //this is useless at the moment, but we'll fill it out in future
         bool checkBranch = true;

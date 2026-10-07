@@ -7,7 +7,7 @@ public class BranchData : BranchingTypeData
 {
 	public List<EventData_StringCondition> EventData_StringConditions = new List<EventData_StringCondition>();
 
-    public override void Run(IDialogueRuntime runtime)
+    public override void Run(IGraphRunnerRuntime runtime)
     {
         bool checkBranch = true;
         foreach (EventData_StringCondition item in EventData_StringConditions)

@@ -8,5 +8,5 @@ public abstract class BaseData
 {
     public string NodeGuid;
     public Vector2 Position;
-    public abstract void Run(IDialogueRuntime runtime);
+    public abstract void Run(IGraphRunnerRuntime runtime);
 }

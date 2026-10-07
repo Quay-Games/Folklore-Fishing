@@ -13,7 +13,7 @@ public class EventData : BaseData {
 		EventType = EventType.None;
 	}
 
-    public override void Run(IDialogueRuntime runtime)
+    public override void Run(IGraphRunnerRuntime runtime)
     {
         switch (EventType)
         {

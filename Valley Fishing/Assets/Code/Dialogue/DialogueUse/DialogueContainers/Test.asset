@@ -15,85 +15,43 @@ MonoBehaviour:
   NodeLinkDatas:
   - BaseNodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
     BasePortName: Output
-    TargetNodeGuid: 22c2cda0-c369-493c-baf3-fe6d5771069d
+    TargetNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
     TargetPortName: Input
-  - BaseNodeGuid: 22c2cda0-c369-493c-baf3-fe6d5771069d
-    BasePortName: True
+  - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+    BasePortName: Continue
     TargetNodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
     TargetPortName: Input
-  - BaseNodeGuid: 22c2cda0-c369-493c-baf3-fe6d5771069d
-    BasePortName: False
-    TargetNodeGuid: 580244be-bb91-48e1-a009-3f2781f1c487
-    TargetPortName: Input
-  - BaseNodeGuid: 580244be-bb91-48e1-a009-3f2781f1c487
-    BasePortName: False
-    TargetNodeGuid: 0c1a568d-fa37-476b-b175-234922d8153b
-    TargetPortName: Input
-  - BaseNodeGuid: 580244be-bb91-48e1-a009-3f2781f1c487
-    BasePortName: True
-    TargetNodeGuid: a3ab9db5-0e3d-4bbf-9aa9-dfb52f287e41
-    TargetPortName: Input
   NodeDatas:
-  - rid: 2368649480995340364
-  - rid: 2368649480995340365
-  - rid: 2368649480995340366
-  - rid: 2368649480995340367
-  - rid: 2368649480995340368
-  - rid: 2368649480995340369
+  - rid: 2368649480995340388
+  - rid: 2368649480995340389
+  - rid: 2368649480995340390
   references:
     version: 2
     RefIds:
-    - rid: 2368649480995340364
+    - rid: 2368649480995340388
       type: {class: StartData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
         Position: {x: 545.6, y: 345.6}
-    - rid: 2368649480995340365
-      type: {class: ConditionData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 22c2cda0-c369-493c-baf3-fe6d5771069d
-        Position: {x: 700.8, y: 337.6}
-        trueGuidNode: 50e2ec36-dc68-4fae-908f-2534cdde01bd
-        falseGuidNode: 580244be-bb91-48e1-a009-3f2781f1c487
-        EventData_EventName:
-          StringEventValue:
-            Value: 
-    - rid: 2368649480995340366
+    - rid: 2368649480995340389
       type: {class: EndData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
         Position: {x: 1022.4, y: 327.2}
         EndNodeType:
           Value: 1
-    - rid: 2368649480995340367
-      type: {class: ConditionData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 580244be-bb91-48e1-a009-3f2781f1c487
-        Position: {x: 891.2, y: 521.6}
-        trueGuidNode: a3ab9db5-0e3d-4bbf-9aa9-dfb52f287e41
-        falseGuidNode: 0c1a568d-fa37-476b-b175-234922d8153b
-        EventData_EventName:
-          StringEventValue:
-            Value: 
-    - rid: 2368649480995340368
-      type: {class: EndData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 0c1a568d-fa37-476b-b175-234922d8153b
-        Position: {x: 1184.8, y: 622.39996}
-        EndNodeType:
-          Value: 1
-    - rid: 2368649480995340369
+    - rid: 2368649480995340390
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
-        NodeGuid: a3ab9db5-0e3d-4bbf-9aa9-dfb52f287e41
-        Position: {x: 1089.6, y: 456.80002}
+        NodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+        Position: {x: 735.2, y: 327.2}
         VoiceEvent:
           Guid:
-            Data1: 0
-            Data2: 0
-            Data3: 0
-            Data4: 0
-          Path: 
+            Data1: 751111704
+            Data2: 1309586920
+            Data3: -113407324
+            Data4: -772827154
+          Path: event:/VoiceOver/Captain/FolkloreFishing!
         DialogueText:
           ID:
             Value: 0

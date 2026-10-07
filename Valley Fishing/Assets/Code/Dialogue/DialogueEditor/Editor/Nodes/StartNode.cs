@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class StartNode : BaseNode {
+    [NodeDataType(typeof(StartData))]
+    public class StartNode : BaseNode {
 		public StartNode() {
 
 		}

@@ -11,7 +11,7 @@ public class NPCDialogueData : BaseData {
 	public EventReference VoiceEvent;
 	public DialogueTextData DialogueText;
 
-    public override void Run(IDialogueRuntime runtime)
+    public override void Run(IGraphRunnerRuntime runtime)
     {
         AudioManager.Instance.PlayVoiceOver(VoiceEvent);
         DialogueTextData tmp = DialogueText;

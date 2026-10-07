@@ -8,7 +8,8 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class ConditionNode : BaseNode {
+    [NodeDataType(typeof(ConditionData))]
+    public class ConditionNode : BaseNode {
 
 		ConditionData nPCConditionData = new ConditionData();
 

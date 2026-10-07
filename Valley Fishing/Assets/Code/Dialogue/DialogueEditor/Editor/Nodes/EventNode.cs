@@ -7,7 +7,9 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
-	public class EventNode : BaseNode {
+
+    [NodeDataType(typeof(EventData))]
+    public class EventNode : BaseNode {
 
 		EventData eventData = new EventData();
 

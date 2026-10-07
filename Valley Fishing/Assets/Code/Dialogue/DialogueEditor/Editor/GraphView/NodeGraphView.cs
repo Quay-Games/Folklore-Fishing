@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -111,7 +112,6 @@ namespace Project.DialogueEditor {
 
 		public bool CreateEmptyNodeOfType(BaseNode searchResultNode, Vector2 pos)
 		{
-			Debug.Log(searchResultNode.GetType());
 			BaseNode nodeToCreate = Activator.CreateInstance(searchResultNode.GetType(), pos, editorWindow, this, null) as BaseNode;
 			if (nodeToCreate != null)
 			{
@@ -126,36 +126,61 @@ namespace Project.DialogueEditor {
 		public void CreateNodeFromData(BaseData data) 
 		{
 			BaseNode node = null;
-			//I want to remove this switch statement, will need some fancy way to determine the nodes from their data types
-			switch(data)
+
+			var mydata = data.GetType().GetCustomAttributes(typeof(NodeDataTypeAttribute), false);
+			Type dataType = data.GetType();
+			var nodeTypes = TypeCache.GetTypesDerivedFrom<BaseNode>();
+			for(int i = 0; i < nodeTypes.Count; i++)
 			{
-				case ListenData:
-					node = new ListenNode(new Vector2(), editorWindow, this, data);
+                var nodeType = nodeTypes[i];
+                var attributes = nodeType.GetCustomAttributes(typeof(NodeDataTypeAttribute), false);
+                foreach (var attribute in attributes)
+                {
+                    if (attribute is NodeDataTypeAttribute nodeDataTypeAttribute)
+                    {
+                        if (nodeDataTypeAttribute.DataType == dataType)
+                        {
+                            node = Activator.CreateInstance(nodeType, new Vector2(), editorWindow, this, data) as BaseNode;
+                            break;
+                        }
+                    }
+                }
+                if (node != null)
+                {
                     break;
-				case StartData:
-                    node = new StartNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case EndData:
-                    node = new EndNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case NPCDialogueData:
-                    node = new DialogueNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case BranchData:
-                    node = new BranchNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case EventData:
-                    node = new EventNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case ConditionData:
-                    node = new ConditionNode(new Vector2(), editorWindow, this, data);
-                    break;
-				case ResponseData:
-                    node = new ResponseNode(new Vector2(), editorWindow, this, data);
-                    break;
-                default:
-					break;
-			}
+                }
+            }
+
+   //         Debug.Log(mydata[0]);
+   //         switch (data)
+			//{
+			//	case ListenData:
+			//		node = new ListenNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case StartData:
+   //                 node = new StartNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case EndData:
+   //                 node = new EndNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case NPCDialogueData:
+   //                 node = new DialogueNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case BranchData:
+   //                 node = new BranchNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case EventData:
+   //                 node = new EventNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case ConditionData:
+   //                 node = new ConditionNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+			//	case ResponseData:
+   //                 node = new ResponseNode(new Vector2(), editorWindow, this, data);
+   //                 break;
+   //             default:
+			//		break;
+			//}
 			if (node != null)
 			{
                 this.AddElement(node);

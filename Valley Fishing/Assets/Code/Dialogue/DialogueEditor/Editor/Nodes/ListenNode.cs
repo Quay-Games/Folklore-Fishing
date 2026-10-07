@@ -8,6 +8,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[NodeDataType(typeof(ListenData))]
 public class ListenNode : BaseNode {
     //[System.Serializable]
     //public class ListenData : BaseData
