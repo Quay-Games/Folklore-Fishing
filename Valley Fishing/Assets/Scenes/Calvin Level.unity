@@ -961,9 +961,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2815466924776582727, guid: 4b066942968a7ec4fb551f37afcb6aa2, type: 3}
+      propertyPath: inventionDatas
+      value: 
+      objectReference: {fileID: 11400000, guid: be58126ed656dac4ab43db6b3484e8ef, type: 2}
     - target: {fileID: 6415424950060976325, guid: 4b066942968a7ec4fb551f37afcb6aa2, type: 3}
       propertyPath: m_Name
-      value: InnovationManager
+      value: InventionManager
       objectReference: {fileID: 0}
     - target: {fileID: 6513870504537550992, guid: 4b066942968a7ec4fb551f37afcb6aa2, type: 3}
       propertyPath: m_LocalPosition.x

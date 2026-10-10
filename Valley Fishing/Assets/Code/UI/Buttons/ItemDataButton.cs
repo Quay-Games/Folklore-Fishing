@@ -14,13 +14,14 @@ public class ItemDataButton : ButtonVoiceOverComponent
     [SerializeField] private Image itemImage;
     [SerializeField] private TMP_Text itemSellPrice;
 	[SerializeField] private TMP_Text itemQuantity;
+	[SerializeField] private Transform additionalButtonInfoTransform;
 
-    #endregion
+	#endregion
 
 
-    #region Properties
-
-    public OwnedItemTypeData ItemData { get; set; }
+	#region Properties
+	public Transform AdditionalButtonInfoTransform => additionalButtonInfoTransform;
+	public OwnedItemTypeData ItemData { get; set; }
 
     #endregion
 

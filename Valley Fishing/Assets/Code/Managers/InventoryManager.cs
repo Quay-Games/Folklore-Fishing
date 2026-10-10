@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -21,8 +22,27 @@ public class InventoryManager : Singleton<InventoryManager> {
             return count;
         }
     }
+	public List<FishName> OwnedLootNames {
+		get {
+			List<FishName> lootNames = new List<FishName>();
 
-    public BaitDatas BaitDatas;
+			for (int i = 0; i < this.OwnedLootTypeDatas.Count; i++) {
+				if (this.OwnedLootTypeDatas[i].quantity == 0) {
+					continue;
+				}
+				string itemName = this.OwnedLootTypeDatas[i].OwnedItemData.ItemName;
+				if (Enum.TryParse(itemName, out FishName fishName)) {
+					if (!lootNames.Contains(fishName)) {
+						Debug.Log(fishName);
+						lootNames.Add(fishName);
+					}
+				}
+			}
+			return lootNames;
+		}
+	}
+
+	public BaitDatas BaitDatas;
 	public List<OwnedItemTypeData> OwnedBaitTypeDatas;
 
 	public int TotalOwnedBaits { get

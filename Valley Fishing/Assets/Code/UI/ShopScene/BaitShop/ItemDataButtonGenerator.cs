@@ -11,7 +11,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
     {
         Fish,
         Bait,
-        Junk
+        Inventions
     }
 
 	enum NavigationType {
@@ -60,7 +60,10 @@ public class ItemDataButtonGenerator : MonoBehaviour
 					chosenList = InventoryManager.Instance.OwnedBaitTypeDatas;
 				}
                 break;
-            default:
+			case ListUsed.Inventions:
+				chosenList = InventionManager.Instance.CraftableInventions;
+				break;
+			default:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
                 break;
         }
@@ -73,7 +76,8 @@ public class ItemDataButtonGenerator : MonoBehaviour
 			buttonsToEnable.Insert(0, true);
 		}
 		for (int i = 0; i < chosenList.Count; i++) {
-			if (chosenList[i].quantity > 0) {
+			if (chosenList[i].quantity > 0 ||
+				listUsed == ListUsed.Inventions) {
 				buttonsToEnable.Add(true);
 			}
 			else {

@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d3ae4f41de8ae4b867ddbdd1af6f13, type: 3}
+  m_Name: InventionDatas
+  m_EditorClassIdentifier: 
+  Datas:
+  - ItemName: Scarecrow
+    ItemNameEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: f352bb0632952ce4fa6bafe955b8550e, type: 3}
+    InventionComponents:
+    - Item: 12
+      quantity: 1
+    - Item: 14
+      quantity: 3
+  - ItemName: Radio
+    ItemNameEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
+    InventionComponents:
+    - Item: 13
+      quantity: 1
+    - Item: 16
+      quantity: 3
+    - Item: 15
+      quantity: 1
+  - ItemName: Fly Swatter
+    ItemNameEvent:
+      Guid:
+        Data1: 0
+        Data2: 0
+        Data3: 0
+        Data4: 0
+      Path: 
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: b0383ea68ed66a9458a61179584065c4, type: 3}
+    InventionComponents:
+    - Item: 13
+      quantity: 1
+    - Item: 15
+      quantity: 1
+    - Item: 16
+      quantity: 1
