@@ -33,7 +33,6 @@ public class InventoryManager : Singleton<InventoryManager> {
 				string itemName = this.OwnedLootTypeDatas[i].OwnedItemData.ItemName;
 				if (Enum.TryParse(itemName, out FishName fishName)) {
 					if (!lootNames.Contains(fishName)) {
-						Debug.Log(fishName);
 						lootNames.Add(fishName);
 					}
 				}

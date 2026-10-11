@@ -14,7 +14,6 @@ public class InventionManager : Singleton<InventionManager> {
 			for (int i = 0; i < inventionDatas.Datas.Length; i++) {
 				for (int j = 0; j < inventionDatas.Datas[i].InventionComponents.Length; j++) {
 					if (InventoryManager.Instance.OwnedLootNames.Contains(inventionDatas.Datas[i].InventionComponents[j].Item)) {
-						Debug.Log(inventionDatas.Datas[i]);
 						OwnedItemTypeData inventionTypeCatchData = new OwnedItemTypeData();
 						inventionTypeCatchData.quantity = 0;
 						inventionTypeCatchData.OwnedItemData = inventionDatas.Datas[i];
