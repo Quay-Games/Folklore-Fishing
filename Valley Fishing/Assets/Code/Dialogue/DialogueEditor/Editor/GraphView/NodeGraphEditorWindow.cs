@@ -9,7 +9,7 @@ using UnityEngine.UIElements;
 
 namespace Project.DialogueEditor {
 	public class NodeGraphEditorWindow : EditorWindow {
-		private DialogueContainer currentDialogueContainer;
+		private NodeGraphDataContainer currentDialogueContainer;
 		private NodeGraphView graphView;
 		private NodeGraphSaveAndLoad saveAndLoad;
 
@@ -26,10 +26,10 @@ namespace Project.DialogueEditor {
 		[OnOpenAsset(0)]
 		public static bool ShowWindow(int instanceId, int line) {
 			UnityEngine.Object item = EditorUtility.InstanceIDToObject(instanceId);
-			if (item is DialogueContainer) {
+			if (item is NodeGraphDataContainer) {
 				NodeGraphEditorWindow window = (NodeGraphEditorWindow)GetWindow(typeof(NodeGraphEditorWindow));
 				window.titleContent = new GUIContent("Dialogue Editor");
-				window.currentDialogueContainer = item as DialogueContainer;
+				window.currentDialogueContainer = item as NodeGraphDataContainer;
 				window.minSize = new Vector2(500, 250);
 				window.Load();
 			}

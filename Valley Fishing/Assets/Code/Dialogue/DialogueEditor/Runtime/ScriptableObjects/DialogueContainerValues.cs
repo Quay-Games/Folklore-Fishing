@@ -18,8 +18,8 @@ public class LanguageGeneric<T> {
 }
 
 [System.Serializable]
-public class Container_ListenEventSO {
-	public ListenEventSO ListenEventSO;
+public class Container_ListenEvent {
+	public ListenEvent ListenEvent;
 }
 
 //values

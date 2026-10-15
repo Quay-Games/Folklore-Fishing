@@ -16,7 +16,7 @@ public class DialogueData : BaseData {
 	public List<DialogueData_Text> DialogueData_Texts = new List<DialogueData_Text>();
 	public List<DialogueData_Port> DialogueData_Ports = new List<DialogueData_Port>();
 
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
         BaseContainers = new List<DialogueData_BaseContainer>();
         BaseContainers.AddRange(DialogueData_Names);
@@ -43,6 +43,7 @@ public class DialogueData : BaseData {
 
         //im not sure if this is necessary but im keeping it for now
         runtime.SetBaseContainers(BaseContainers);
+        yield break;
     }
 }
 

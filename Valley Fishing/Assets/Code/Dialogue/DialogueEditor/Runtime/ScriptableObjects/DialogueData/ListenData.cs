@@ -1,15 +1,18 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
 public class ListenData : BaseData
 {
-	public List<Container_ListenEventSO> Container_ListenEventSOs = new List<Container_ListenEventSO>();
+	public List<Container_ListenEvent> listenEvents = new List<Container_ListenEvent>();
 
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
-        Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered += ListenEventTriggered(runtime);
-        Container_ListenEventSOs[0].ListenEventSO.RunEvent(runtime.GetMonoBehaviour());
+        listenEvents[0].ListenEvent.OnEventTriggered += ListenEventTriggered(runtime);
+        listenEvents[0].ListenEvent.RunEvent(runtime.GetMonoBehaviour());
+        //this will probably need to be changed to something that waits for the event to trigger, but for now this will stay
+        yield break;
     }
 
     private System.Action ListenEventTriggered(IGraphRunnerRuntime runtime)
@@ -17,7 +20,7 @@ public class ListenData : BaseData
         //I hope this works the way I think it does
         return () =>
         {
-            Container_ListenEventSOs[0].ListenEventSO.OnEventTriggered -= ListenEventTriggered(runtime);
+            listenEvents[0].ListenEvent.OnEventTriggered -= ListenEventTriggered(runtime);
             runtime.StopCoroutines();
         };
     }

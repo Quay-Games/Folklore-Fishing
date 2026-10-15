@@ -24,12 +24,12 @@ public static class CSVHelper
 		return tmp;
 	}
 
-	public static List<DialogueContainer> FindAllDialogueContainers() {
+	public static List<NodeGraphDataContainer> FindAllDialogueContainers() {
 		string[] guids = AssetDatabase.FindAssets("t:DiaologueContainer");
-		DialogueContainer[] items = new DialogueContainer[guids.Length];
+		NodeGraphDataContainer[] items = new NodeGraphDataContainer[guids.Length];
 		for (int i = 0; i < guids.Length; i++) {
 			string path = AssetDatabase.GUIDToAssetPath(guids[i]);
-			items[i] = AssetDatabase.LoadAssetAtPath<DialogueContainer>(path);
+			items[i] = AssetDatabase.LoadAssetAtPath<NodeGraphDataContainer>(path);
 		}
 		return items.ToList();
 	}

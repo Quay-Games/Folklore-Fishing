@@ -1228,7 +1228,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueContainer: {fileID: 11400000, guid: f64bb5b40fc61bb45a1db8d394d12ae8, type: 2}
   speakerName: {fileID: 0}
-  <DialogueStarted>k__BackingField: 0
 --- !u!4 &1820882505
 Transform:
   m_ObjectHideFlags: 0

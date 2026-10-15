@@ -225,18 +225,18 @@ namespace Project.DialogueEditor {
 
 			return textField;
 		}
-		protected ObjectField GetNewObjectField_ListenEvent(Container_ListenEventSO inputListenEventSO, string USS01 = "", string USS02 = "") {
+		protected ObjectField GetNewObjectField_ListenEvent(Container_ListenEvent inputListenEventSO, string USS01 = "", string USS02 = "") {
 			ObjectField objectField = new ObjectField() {
-				objectType = typeof(ListenEventSO),
+				objectType = typeof(ListenEvent),
 				allowSceneObjects = false,
-				value = inputListenEventSO.ListenEventSO,
+				value = inputListenEventSO.ListenEvent,
 			};
 
 			// When we change the variable from graph view.
 			objectField.RegisterValueChangedCallback(value => {
-				inputListenEventSO.ListenEventSO = value.newValue as ListenEventSO;
+				inputListenEventSO.ListenEvent = value.newValue as ListenEvent;
 			});
-			objectField.SetValueWithoutNotify(inputListenEventSO.ListenEventSO);
+			objectField.SetValueWithoutNotify(inputListenEventSO.ListenEvent);
 
 			// Set uss class for stylesheet.
 			objectField.AddToClassList(USS01);

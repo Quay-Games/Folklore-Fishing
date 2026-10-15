@@ -18,7 +18,7 @@ namespace Project.DialogueEditor {
 			this.graphView = graphView;
 		}
 
-		public void Save(DialogueContainer dialogueContainer) {
+		public void Save(NodeGraphDataContainer dialogueContainer) {
 			SaveEdges(dialogueContainer);
 			SaveNodes(dialogueContainer);
 
@@ -26,14 +26,14 @@ namespace Project.DialogueEditor {
 			AssetDatabase.SaveAssets();
 		}
 
-		public void Load(DialogueContainer dialogueContainer) {
+		public void Load(NodeGraphDataContainer dialogueContainer) {
 			ClearGraph();
 			GenerateNodes(dialogueContainer);
 			ConnectNodes(dialogueContainer);
 		}
 
 		#region Save
-		private void SaveEdges(DialogueContainer dialogueContainer) {
+		private void SaveEdges(NodeGraphDataContainer dialogueContainer) {
 			dialogueContainer.NodeLinkDatas.Clear();
 
 			Edge[] connectedEdges = edges.Where(edge => edge.input.node != null).ToArray();
@@ -41,7 +41,7 @@ namespace Project.DialogueEditor {
 				BaseNode outputNode = (BaseNode)connectedEdges[i].output.node;
 				BaseNode inputNode = connectedEdges[i].input.node as BaseNode;
 
-				dialogueContainer.NodeLinkDatas.Add(new DialogueContainer.NodeLinkData {
+				dialogueContainer.NodeLinkDatas.Add(new NodeGraphDataContainer.NodeLinkData {
 					BaseNodeGuid = outputNode.NodeGuid,
 					BasePortName = connectedEdges[i].output.portName,
 					TargetNodeGuid = inputNode.NodeGuid,
@@ -50,7 +50,7 @@ namespace Project.DialogueEditor {
 			}
 		}
 
-		private void SaveNodes(DialogueContainer dialogueContainer) {
+		private void SaveNodes(NodeGraphDataContainer dialogueContainer) {
 			//dialogueContainer.EventDatas.Clear();
 			//dialogueContainer.NPCDialogueDatas.Clear();
 			//dialogueContainer.EndDatas.Clear();
@@ -255,7 +255,7 @@ namespace Project.DialogueEditor {
 
 		//this is what im working on at the moment, making the nodes themselves (or the data) own the loading of the data
 		//I wanted to make it so that we can just loop over the whole types
-		private void GenerateNodes(DialogueContainer dialogueContainer) {
+		private void GenerateNodes(NodeGraphDataContainer dialogueContainer) {
 			//this is what I want to achieve
 			foreach(BaseData data in dialogueContainer.NodeDatas)
 			{
@@ -395,10 +395,10 @@ namespace Project.DialogueEditor {
 			//}
 		}
 
-		private void ConnectNodes(DialogueContainer dialogueContainer) {
+		private void ConnectNodes(NodeGraphDataContainer dialogueContainer) {
 			// Make connection for all node.
 			for (int i = 0; i < nodes.Count; i++) {
-				List<DialogueContainer.NodeLinkData> connections = dialogueContainer.NodeLinkDatas.Where(edge => edge.BaseNodeGuid == nodes[i].NodeGuid).ToList();
+				List<NodeGraphDataContainer.NodeLinkData> connections = dialogueContainer.NodeLinkDatas.Where(edge => edge.BaseNodeGuid == nodes[i].NodeGuid).ToList();
 
 				List<Port> allOutputPorts = nodes[i].outputContainer.Children().Where(x => x is Port).Cast<Port>().ToList();
 

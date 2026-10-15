@@ -1,4 +1,5 @@
 using FMODUnity;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -10,11 +11,32 @@ using UnityEngine.UIElements;
 public class NPCDialogueData : BaseData {
 	public EventReference VoiceEvent;
 	public DialogueTextData DialogueText;
-
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
-        AudioManager.Instance.PlayVoiceOver(VoiceEvent);
-        DialogueTextData tmp = DialogueText;
+        bool finished = false;
+
+        void OnFinished(bool skipped)
+        {
+            finished = true;
+        }
+
+        AudioManager.Instance.OnVoiceLineOver += OnFinished;
+
+        try
+        {
+            AudioManager.Instance.PlayVoiceOver(VoiceEvent);
+            DialogueTextData tmp = DialogueText;
+
+            while (!finished)
+            {
+                yield return null;
+            }
+
+        }
+        finally
+        {
+            AudioManager.Instance.OnVoiceLineOver -= OnFinished;
+        }
     }
 }
 

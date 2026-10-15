@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//not really used
 public class GameEvents : Singleton<GameEvents>
 {
 	private event Action loadGameScene;

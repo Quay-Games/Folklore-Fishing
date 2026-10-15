@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "Dialogue/Listen For Seconds")]
-public class ListenForThreeSeconds : ListenEventSO
+public class ListenForThreeSeconds : ListenEvent
 {
 	[SerializeField] private float listenTime;
 

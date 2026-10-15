@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//unusued as far as I can see
 public class DialogueEvents : GameEvents
 {
 	public override bool DialogueConditionEvents(string stringEvent, StringEventConditionType stringEventConditionType, string value = "") {

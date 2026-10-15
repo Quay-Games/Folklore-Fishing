@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 namespace Project.DialogueEditor {
 	//A class whose job is to oversee the running of the node graph, but not control the behavior 
 	//of individual nodes.
-	public class NodeGraphRunner : NodeGraphGetData, IGraphRunnerRuntime {
+	public class NodeGraphController : NodeGraphGetData, IGraphRunnerRuntime {
 
 		#region Serialized Fields
 
@@ -36,25 +36,26 @@ namespace Project.DialogueEditor {
 			CurrentNodeData = dialogueContainer.getStartData();
 			if(CurrentNodeData != null)
 			{
-				RunNodeGraph();
+				StartCoroutine(RunNodeGraph());
 			}
 
 		}
 
-		private void RunNodeGraph()
+		private IEnumerator RunNodeGraph()
 		{
 			bool running = true;
             while(running)
 			{
-				try
-				{
-                    this.CurrentNodeData.Run(this);
-                    running = ChooseNextNode();
-                } catch
-				{
-					Debug.LogError($"Dialogue '{dialogueContainer.name}' encountered an error while running node '{CurrentNodeData?.NodeGuid}'.");
-					running = false;
-                }
+				//try
+				//{
+				//we may need to wait for nodes to finish
+				yield return this.CurrentNodeData.Run(this);
+				ChooseNextNode();
+    //            } catch
+				//{
+				//	Debug.LogError($"Dialogue '{dialogueContainer.name}' encountered an error while running node '{CurrentNodeData?.NodeGuid}'.");
+				//	running = false;
+    //            }
 			}
 		}
 

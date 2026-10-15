@@ -17,44 +17,103 @@ MonoBehaviour:
     BasePortName: Output
     TargetNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
     TargetPortName: Input
-  - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+  - BaseNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
     BasePortName: Continue
     TargetNodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
     TargetPortName: Input
+  - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+    BasePortName: Continue
+    TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+    TargetPortName: Input
   NodeDatas:
-  - rid: 2368649480995340388
-  - rid: 2368649480995340389
-  - rid: 2368649480995340390
+  - rid: 2368649669238587461
+  - rid: 2368649669238587462
+  - rid: 2368649669238587463
+  - rid: 2368649669238587464
   references:
     version: 2
     RefIds:
-    - rid: 2368649480995340388
+    - rid: 2368649669238587461
       type: {class: StartData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
         Position: {x: 545.6, y: 345.6}
-    - rid: 2368649480995340389
-      type: {class: EndData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
-        Position: {x: 1022.4, y: 327.2}
-        EndNodeType:
-          Value: 1
-    - rid: 2368649480995340390
+    - rid: 2368649669238587462
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
-        NodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
-        Position: {x: 735.2, y: 327.2}
+        NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+        Position: {x: 927.2, y: 172.8}
         VoiceEvent:
           Guid:
-            Data1: 751111704
-            Data2: 1309586920
-            Data3: -113407324
-            Data4: -772827154
-          Path: event:/VoiceOver/Captain/FolkloreFishing!
+            Data1: 1422009774
+            Data2: 1244345562
+            Data3: 526257796
+            Data4: 1042754500
+          Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/2Here,takemyoldrod
         DialogueText:
           ID:
             Value: 0
           GuidID:
             Value: 
-          Text: []
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Take my rod
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649669238587463
+      type: {class: EndData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
+        Position: {x: 1210.4, y: 345.6}
+        EndNodeType:
+          Value: 1
+    - rid: 2368649669238587464
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+        Position: {x: 621.6, y: 172.8}
+        VoiceEvent:
+          Guid:
+            Data1: 1567598266
+            Data2: 1115362916
+            Data3: -461855609
+            Data4: -1277669855
+          Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/1WelcomeAboard
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Welcome Aboard!
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 

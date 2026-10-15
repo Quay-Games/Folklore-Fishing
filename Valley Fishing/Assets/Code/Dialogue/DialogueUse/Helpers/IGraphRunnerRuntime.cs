@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//TODO GRIFF: maybe look at removing this
 public interface IGraphRunnerRuntime
 {
     //A smattering of methods that are exposed to nodes for use, as some nodes need to access things

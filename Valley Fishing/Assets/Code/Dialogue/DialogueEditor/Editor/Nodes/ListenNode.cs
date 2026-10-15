@@ -36,7 +36,7 @@ public class ListenNode : BaseNode {
 			
             NodeGuid = _data.NodeGuid;
 
-            foreach (Container_ListenEventSO item in (_data as ListenData).Container_ListenEventSOs)
+            foreach (Container_ListenEvent item in (_data as ListenData).listenEvents)
             {
                 this.AddScriptableEvent(item);
             }
@@ -48,6 +48,7 @@ public class ListenNode : BaseNode {
             //this.LoadValueInToField();
         } else
 		{
+			//TODO GRIFF: might not be necessary anymore
             SetPosition(new Rect(_position, defaultNodeSize));
             nodeGuid = Guid.NewGuid().ToString();
         }
@@ -57,29 +58,29 @@ public class ListenNode : BaseNode {
 		AddScriptableEvent();
 	}
 
-	public void AddScriptableEvent(Container_ListenEventSO paramidaEventScriptableObjectData = null) {
+	public void AddScriptableEvent(Container_ListenEvent paramidaEventScriptableObjectData = null) {
 
 		// Try to reuse an existing empty box before creating a new one
 		Box existingEmptyBox = FindEmptyEventBox();
 
 		if (paramidaEventScriptableObjectData != null && existingEmptyBox != null) {
 			ObjectField existingObjectField = existingEmptyBox.Q<ObjectField>();
-			Container_ListenEventSO existingData = existingObjectField?.userData as Container_ListenEventSO;
+			Container_ListenEvent existingData = existingObjectField?.userData as Container_ListenEvent;
 
 			if (existingObjectField != null && existingData != null) {
-				existingData.ListenEventSO = paramidaEventScriptableObjectData.ListenEventSO;
-				existingObjectField.SetValueWithoutNotify(existingData.ListenEventSO);
+				existingData.ListenEvent = paramidaEventScriptableObjectData.ListenEvent;
+				existingObjectField.SetValueWithoutNotify(existingData.ListenEvent);
 				return;
 			}
 		}
 
 		// No reusable box found — create a new one as before
-		Container_ListenEventSO tmpListenEventSO = new Container_ListenEventSO();
+		Container_ListenEvent tmpListenEventSO = new Container_ListenEvent();
 
 		if (paramidaEventScriptableObjectData != null) {
-			tmpListenEventSO.ListenEventSO = paramidaEventScriptableObjectData.ListenEventSO;
+			tmpListenEventSO.ListenEvent = paramidaEventScriptableObjectData.ListenEvent;
 		}
-		listenData.Container_ListenEventSOs.Add(tmpListenEventSO);
+		listenData.listenEvents.Add(tmpListenEventSO);
 
 		// Container of all object.
 		Box boxContainer = new Box();
@@ -114,9 +115,9 @@ public class ListenNode : BaseNode {
         SaveData(nodeData);
 
         // Save Dialogue Event
-        foreach (Container_ListenEventSO dialogueEvent in listenData.Container_ListenEventSOs)
+        foreach (Container_ListenEvent dialogueEvent in listenData.listenEvents)
         {
-            nodeData.Container_ListenEventSOs.Add(dialogueEvent);
+            nodeData.listenEvents.Add(dialogueEvent);
         }
 
         return nodeData;

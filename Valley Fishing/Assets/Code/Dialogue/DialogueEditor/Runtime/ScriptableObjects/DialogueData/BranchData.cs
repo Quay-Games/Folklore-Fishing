@@ -7,7 +7,7 @@ public class BranchData : BranchingTypeData
 {
 	public List<EventData_StringCondition> EventData_StringConditions = new List<EventData_StringCondition>();
 
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
         bool checkBranch = true;
         foreach (EventData_StringCondition item in EventData_StringConditions)
@@ -21,5 +21,7 @@ public class BranchData : BranchingTypeData
 
         //see parent class for what this is used for, but this is the value that will be used to determine which branch to take
         choice = (checkBranch ? 0 : 1);
+        //needed to make this a coroutine, but we don't need to do anything else here
+        yield break;
     }
 }

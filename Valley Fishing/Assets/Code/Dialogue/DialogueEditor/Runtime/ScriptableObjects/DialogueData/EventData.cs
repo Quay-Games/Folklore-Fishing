@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 
 [System.Serializable]
+//TODO GRIFF: Look into being able to pass integers and other things based on the event type.
 public class EventData : BaseData {
 	public EventType EventType;
 	public EventData_EventName EventData_EventName;
@@ -13,7 +14,7 @@ public class EventData : BaseData {
 		EventType = EventType.None;
 	}
 
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
         switch (EventType)
         {
@@ -24,7 +25,7 @@ public class EventData : BaseData {
             case EventType.FinishObjective:
                 break;
             case EventType.StartChallenge:
-                return;
+                break;
             case EventType.FinishChallenge:
                 break;
             case EventType.NpcEvent:
@@ -34,5 +35,6 @@ public class EventData : BaseData {
             default:
                 break;
         }
+        yield break;
     }
 }

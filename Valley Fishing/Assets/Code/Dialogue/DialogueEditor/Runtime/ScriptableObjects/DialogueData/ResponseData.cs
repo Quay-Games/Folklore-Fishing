@@ -8,7 +8,7 @@ public class ResponseData : BranchingTypeData
 {
 	public List<ResponseData_Text> ResponseData_Texts = new List<ResponseData_Text>();
 
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
         List<ResponseData_Text> tmp = new List<ResponseData_Text>(ResponseData_Texts);
         List<string> texts = new List<string>();
@@ -16,6 +16,7 @@ public class ResponseData : BranchingTypeData
         {
             texts.Add(tmp[i].Text.Find(text => text.LanguageType == LanguageController.Instance.Language).LanguageGenericType);
         }
+        yield break;
     }
 }
 

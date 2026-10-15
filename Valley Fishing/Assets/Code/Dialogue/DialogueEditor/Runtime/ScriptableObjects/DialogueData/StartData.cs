@@ -4,8 +4,9 @@ using UnityEngine;
 
 [System.Serializable]
 public class StartData: BaseData {
-    public override void Run(IGraphRunnerRuntime runtime)
+    public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
         //this node will always run the next node, and doesnt do anything else
+        yield break;
     }
 }

@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 
 [System.Serializable]
-public class ListenEventSO : ScriptableObject {
+public class ListenEvent : ScriptableObject {
 
 	public Action OnEventTriggered { get; set; }
 
