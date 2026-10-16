@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e698f666800ad9d42a60d283dd1655b7, type: 3}
   m_Name: Wait for Slow Reel
   m_EditorClassIdentifier: 
-  reelSpeed: 1
+  reelSpeed: 0
+  secondsToListen: 3

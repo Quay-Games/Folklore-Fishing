@@ -17,75 +17,47 @@ MonoBehaviour:
     BasePortName: Output
     TargetNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
     TargetPortName: Input
+  - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
+    BasePortName: Continue
+    TargetNodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
+    TargetPortName: Input
+  - BaseNodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
+    BasePortName: Output
+    TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+    TargetPortName: Input
   - BaseNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+    BasePortName: Continue
+    TargetNodeGuid: c11648e4-9013-4a8f-b633-20d0bc1f9d71
+    TargetPortName: Input
+  - BaseNodeGuid: c11648e4-9013-4a8f-b633-20d0bc1f9d71
+    BasePortName: Continue
+    TargetNodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
+    TargetPortName: Input
+  - BaseNodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
     BasePortName: Continue
     TargetNodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
     TargetPortName: Input
-  - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
-    BasePortName: Continue
-    TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
-    TargetPortName: Input
   NodeDatas:
-  - rid: 2368649669238587461
-  - rid: 2368649669238587462
-  - rid: 2368649669238587463
-  - rid: 2368649669238587464
+  - rid: 2368649690640285785
+  - rid: 2368649690640285786
+  - rid: 2368649690640285787
+  - rid: 2368649690640285788
+  - rid: 2368649690640285789
+  - rid: 2368649690640285790
+  - rid: 2368649690640285791
   references:
     version: 2
     RefIds:
-    - rid: 2368649669238587461
+    - rid: 2368649690640285785
       type: {class: StartData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
-        Position: {x: 545.6, y: 345.6}
-    - rid: 2368649669238587462
-      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
-        Position: {x: 927.2, y: 172.8}
-        VoiceEvent:
-          Guid:
-            Data1: 1422009774
-            Data2: 1244345562
-            Data3: 526257796
-            Data4: 1042754500
-          Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/2Here,takemyoldrod
-        DialogueText:
-          ID:
-            Value: 0
-          GuidID:
-            Value: 
-          Text:
-          - LanguageType: 1
-            LanguageGenericType: Take my rod
-          - LanguageType: 2
-            LanguageGenericType: 
-          - LanguageType: 3
-            LanguageGenericType: 
-          - LanguageType: 4
-            LanguageGenericType: 
-          - LanguageType: 5
-            LanguageGenericType: 
-          - LanguageType: 6
-            LanguageGenericType: 
-          - LanguageType: 7
-            LanguageGenericType: 
-          - LanguageType: 8
-            LanguageGenericType: 
-          - LanguageType: 9
-            LanguageGenericType: 
-    - rid: 2368649669238587463
-      type: {class: EndData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
-        Position: {x: 1210.4, y: 345.6}
-        EndNodeType:
-          Value: 1
-    - rid: 2368649669238587464
+        Position: {x: 88.8, y: 296}
+    - rid: 2368649690640285786
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
-        Position: {x: 621.6, y: 172.8}
+        Position: {x: 164.8, y: 298.4}
         VoiceEvent:
           Guid:
             Data1: 1567598266
@@ -117,3 +89,98 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
+    - rid: 2368649690640285787
+      type: {class: EventData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
+        Position: {x: 356, y: 298.4}
+        EventType: 7
+        EventData_EventName:
+          StringEventValue:
+            Value: 
+    - rid: 2368649690640285788
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+        Position: {x: 561.6, y: 298.4}
+        VoiceEvent:
+          Guid:
+            Data1: 1422009774
+            Data2: 1244345562
+            Data3: 526257796
+            Data4: 1042754500
+          Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/2Here,takemyoldrod
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Take my rod
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649690640285789
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: c11648e4-9013-4a8f-b633-20d0bc1f9d71
+        Position: {x: 752.8, y: 298.4}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
+    - rid: 2368649690640285790
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
+        Position: {x: 1020, y: 298.4}
+        VoiceEvent:
+          Guid:
+            Data1: 1980434504
+            Data2: 1288004170
+            Data3: -203209085
+            Data4: -452545694
+          Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/3Let_sPracticeReeling
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649690640285791
+      type: {class: EndData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
+        Position: {x: 1211.2, y: 301.6}
+        EndNodeType:
+          Value: 1

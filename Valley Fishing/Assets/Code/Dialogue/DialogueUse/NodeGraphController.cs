@@ -50,7 +50,7 @@ namespace Project.DialogueEditor {
 				//{
 				//we may need to wait for nodes to finish
 				yield return this.CurrentNodeData.Run(this);
-				ChooseNextNode();
+				running = ChooseNextNode();
     //            } catch
 				//{
 				//	Debug.LogError($"Dialogue '{dialogueContainer.name}' encountered an error while running node '{CurrentNodeData?.NodeGuid}'.");

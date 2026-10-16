@@ -37,8 +37,12 @@ public class FMODManager : Singleton<FMODManager>
 	//shop keeper
 	public EventReference Left;
 
+	[Header("ReelSpeedVoiceOver")]
+	public EventReference tooFastPrompt;
+    public EventReference tooSlowPrompt;
 
-	[Header("Prices")]
+
+    [Header("Prices")]
 
 	public EventReference Gold;
 	public EventReference And;
@@ -105,4 +109,5 @@ public class FMODManager : Singleton<FMODManager>
 
 	[Header("ShoreMenuButtons")]
 	public EventReference BaitShopButton;
+
 }

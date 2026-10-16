@@ -10,5 +10,6 @@ public enum EventType
 	StartChallenge,
 	FinishChallenge,
 	NpcEvent,
-	GiveMoney
+	GiveMoney,
+	GiveRod
 }

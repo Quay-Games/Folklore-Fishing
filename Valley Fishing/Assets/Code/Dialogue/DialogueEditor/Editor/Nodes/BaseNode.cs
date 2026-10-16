@@ -52,7 +52,7 @@ namespace Project.DialogueEditor {
 			styleSheets.Add(styleSheet);
         }
 
-		protected Label GetNewLabel(string labelName, string USS01 = "", string USS02 = "") {
+        protected Label GetNewLabel(string labelName, string USS01 = "", string USS02 = "") {
 			Label label_texts = new Label(labelName);
 			label_texts.AddToClassList(USS01);
 			label_texts.AddToClassList(USS02);
