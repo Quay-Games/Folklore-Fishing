@@ -37,8 +37,7 @@ namespace Project.DialogueEditor {
 		public List<SearchTreeEntry> CreateSearchTree(SearchWindowContext context) {
 
 			List<SearchTreeEntry> tree = new List<SearchTreeEntry> {
-			new SearchTreeGroupEntry(new GUIContent("Dialogue Editor"),0),
-			new SearchTreeGroupEntry(new GUIContent("Dialogue Node"),1),
+			new SearchTreeGroupEntry(new GUIContent("Creatable Nodes"),0),
 		};
 
 			foreach (BaseNode node in GetSearchableNodes()) {
@@ -109,7 +108,7 @@ namespace Project.DialogueEditor {
         {
             SearchTreeEntry tmp = new SearchTreeEntry(new GUIContent(_name, iconImage))
             {
-                level = 2,
+                level = 1,
                 userData = _baseNode
             };
             return tmp;
@@ -152,39 +151,8 @@ namespace Project.DialogueEditor {
 			return result.ToString();
 		}
 
-		//this can be made generic, Im not entirely sure how at the moment, but it would be a check
-		//agaisnt the type of the class
 		private bool CreateNodeOfType(SearchTreeEntry _searchTreeEntry, Vector2 _pos) {
 			return graphView.CreateEmptyNodeOfType(_searchTreeEntry.userData as BaseNode, _pos);
-			//switch (_searchTreeEntry.userData) {
-			//	case StartNode node:
-			//		graphView.AddElement(graphView.CreateStartNode(_pos));
-			//		return true;
-			//	case DialogueNode node:
-			//		graphView.AddElement(graphView.CreateNPCDialogueNode(_pos,true));
-			//		return true;
-			//	case ResponceNode node:
-			//		graphView.AddElement(graphView.CreateResponceNode(_pos,true));
-			//		return true;
-			//	case EventNode node:
-			//		graphView.AddElement(graphView.CreateNPCEventNode(_pos,true));
-			//		return true;
-			//	case ConditionNode node:
-			//		graphView.AddElement(graphView.CreateNPCConditionNode(_pos, true));
-			//		return true;
-			//	case EndNode node:
-			//		graphView.AddElement(graphView.CreateEndNode(_pos));
-			//		return true;
-			//	case BranchNode node:
-			//		graphView.AddElement(graphView.CreateBranchNode(_pos));
-			//		return true;
-			//	case ListenNode node:
-			//		graphView.AddElement(graphView.CreateListenNode(_pos));
-			//		return true;
-			//	default:
-			//		break;
-			//}
-			//return false;
 		}
 
 	}
