@@ -127,86 +127,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: useCheats
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[0].quantity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[0].BaitIndex
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[1].BaitIndex
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[2].BaitIndex
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[3].BaitIndex
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[4].BaitIndex
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[0].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[1].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[2].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[3].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: TempBaitBoardDatas.Array.data[4].BaitAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[0].FishIndex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[1].FishIndex
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[2].FishIndex
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[0].FishAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[1].FishAmount
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
-      propertyPath: calvinShoreCheats.CaughtFish.Array.data[2].FishAmount
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 6663090804494182391, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1253,6 +1173,37 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1562456607 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2390997344623889761, guid: e8932269b8482ac43b82c2542d7294df, type: 3}
+  m_PrefabInstance: {fileID: 2668517356498677869}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1562456610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562456607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 1
+  m_ChildForceExpandHeight: 1
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!224 &1638940042 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8073213638466815347, guid: e8932269b8482ac43b82c2542d7294df, type: 3}
@@ -1939,7 +1890,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedLootTypeDatas.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].quantity
@@ -1951,7 +1902,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedLootTypeDatas.Array.data[0].quantity
-      value: 1
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].quantity
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].OwnedItemData.ItemName
@@ -1959,7 +1914,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemName
-      value: OldBoot
+      value: Driftwood
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemName
+      value: Old Boot
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].OwnedItemData.ItemImage
@@ -1972,6 +1931,14 @@ PrefabInstance:
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Path
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Path
+      value: event:/VoiceOver/Captain/ItemLines/Driftwood/Driftwood
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemNameEvent.Path
+      value: event:/VoiceOver/Captain/ItemLines/OldBoot/OldBoot
       objectReference: {fileID: 0}
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data1
@@ -1988,6 +1955,38 @@ PrefabInstance:
     - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
       propertyPath: OwnedFishTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data4
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data1
+      value: 352419089
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data2
+      value: 1179557861
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data3
+      value: 1408178834
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[0].OwnedItemData.ItemNameEvent.Guid.Data4
+      value: -1433374669
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemNameEvent.Guid.Data1
+      value: 1682681175
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemNameEvent.Guid.Data2
+      value: 1119515301
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemNameEvent.Guid.Data3
+      value: 1949820588
+      objectReference: {fileID: 0}
+    - target: {fileID: 8888757970164877042, guid: 9aeb8a60b73b4d34f8a1b2bcf9b1bd80, type: 3}
+      propertyPath: OwnedLootTypeDatas.Array.data[1].OwnedItemData.ItemNameEvent.Guid.Data4
+      value: -2038157336
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2098,7 +2097,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2390997344623889761, guid: e8932269b8482ac43b82c2542d7294df, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1562456610}
   m_SourcePrefab: {fileID: 100100000, guid: e8932269b8482ac43b82c2542d7294df, type: 3}
 --- !u!1001 &3059253654963157545
 PrefabInstance:

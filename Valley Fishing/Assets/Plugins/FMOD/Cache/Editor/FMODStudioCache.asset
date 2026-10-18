@@ -945,6 +945,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-7145434962733235795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Made By Combining/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-7063659054101121422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,7 +1170,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639267382185284583
+  lastModified: 639279323169733208
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1470,6 +1494,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6047014716766386837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music Box/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5995411168891557574
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2014,6 +2062,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-4810562028109741427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Fly Lamp/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-4809920652825234459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2194,6 +2266,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -9025438031788028061}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-4476791991751883422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Magnet
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Magnet
+  Guid:
+    Data1: -1553305354
+    Data2: 1095633848
+    Data3: 123240117
+    Data4: 849159388
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 5520287868908371708}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -2661,6 +2761,58 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3688374300926378414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Scarecrow/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3571466287634845248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Music Box
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Music Box
+  Guid:
+    Data1: -1603079113
+    Data2: 1332902964
+    Data3: 401909653
+    Data4: -92696743
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6047014716766386837}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3542632730595239849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2844,6 +2996,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-3161588063904393466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Net/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-3065577724166929075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3580,6 +3756,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/5I_llleaveyoutoit/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-1748519101968034936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Radio/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -4763,12 +4963,19 @@ MonoBehaviour:
   - {fileID: -7689010841982910622}
   - {fileID: -1314256584204200601}
   - {fileID: 650223248327042933}
+  - {fileID: 1393316508062723943}
+  - {fileID: -3571466287634845248}
+  - {fileID: 7241391673073871418}
+  - {fileID: 1182557421022632672}
+  - {fileID: 7148623640412851386}
+  - {fileID: 2944088105709407258}
+  - {fileID: -4476791991751883422}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639267382193215848
+  cacheTime: 639279376567648111
   cacheVersion: 131624
 --- !u!114 &31227456887572434
 MonoBehaviour:
@@ -5361,6 +5568,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1182557421022632672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Scarecrow
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Scarecrow
+  Guid:
+    Data1: -912583556
+    Data2: 1088473977
+    Data3: 1816412824
+    Data4: -812479257
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3688374300926378414}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &1207680676715177428
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5546,6 +5781,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -3840337526198177557}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &1393316508062723943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Fly Lamp
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Fly Lamp
+  Guid:
+    Data1: -417905870
+    Data2: 1269667552
+    Data3: -20508265
+    Data4: -1074684518
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -4810562028109741427}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -6115,10 +6378,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639267382193215848
+  lastModified: 639279376567648111
   FileSizes:
   - Name: Desktop
-    Value: 10314976
+    Value: 10319008
   Exists: 1
 --- !u!114 &2266324813074022349
 MonoBehaviour:
@@ -6535,6 +6798,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2944088105709407258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Net
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Net
+  Guid:
+    Data1: 1062134700
+    Data2: 1107021203
+    Data3: -8656452
+    Data4: 529285342
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3161588063904393466}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &2991524925286234466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7998,6 +8289,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &5520287868908371708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Magnet/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &5674807416411908248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8903,6 +9218,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7148623640412851386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Inventions/Radio
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Inventions/Radio
+  Guid:
+    Data1: 1497807530
+    Data2: 1091929594
+    Data3: 821632896
+    Data4: 2126157554
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -1748519101968034936}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7182138295110830308
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8927,6 +9270,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7241391673073871418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Misc/Made By Combining
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Misc/Made By Combining
+  Guid:
+    Data1: -1877384326
+    Data2: 1338466824
+    Data3: -353683053
+    Data4: 272576660
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -7145434962733235795}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &7382209454723628624
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9173,10 +9544,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639267382185324480
+  lastModified: 639279323169773139
   FileSizes:
   - Name: Desktop
-    Value: 11252
+    Value: 11560
   Exists: 1
 --- !u!114 &7911918505699605081
 MonoBehaviour:

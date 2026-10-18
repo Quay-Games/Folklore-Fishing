@@ -7,7 +7,7 @@ public class InventionManager : Singleton<InventionManager> {
 	[SerializeField] private InventionDatas inventionDatas;
 
 
-	public List<InventionDatas.InventionData> CurrrentIventions { get; set; }
+	public List<InventionDatas.InventionData> CurrrentIventions;
 	public List<OwnedItemTypeData> CraftableInventions {
 		get {
 			List<OwnedItemTypeData> inventions = new List<OwnedItemTypeData>();
@@ -27,7 +27,15 @@ public class InventionManager : Singleton<InventionManager> {
 		}
 	}
 
-	public void InventionAdded(InventionDatas.InventionData invention) {
+	public void BuyInvention(InventionDatas.InventionData invention) {
+		for (int i = 0; i < invention.InventionComponents.Length; i++) {
+			for (int j = 0; j < InventoryManager.Instance.OwnedLootTypeDatas.Count; j++) {
+				string inventionName = InventoryManager.Instance.OwnedLootTypeDatas[j].OwnedItemData.ItemName.Replace(" ", "");
+				if (invention.InventionComponents[i].Item.ToString() == inventionName) {
+					InventoryManager.Instance.OwnedLootTypeDatas[j].quantity -= invention.InventionComponents[i].quantity;
+				}
+			}
+		}
 		this.CurrrentIventions.Add(invention);
 	}
 	public void InventionDestroyed(InventionDatas.InventionData invention) {

@@ -50,18 +50,13 @@ public class ItemDataButton : ButtonVoiceOverComponent
 			List<InventionDatas.InventionComponent> inventionComponents = new List<InventionDatas.InventionComponent> ();
 			InventionDatas.InventionData inventionData = data.OwnedItemData as InventionDatas.InventionData;
 			for (int i = 0; i < inventionData.InventionComponents.Length ; i++) {
-				Debug.Log((data.OwnedItemData as InventionDatas.InventionData).InventionComponents[i].Item);
 				inventionComponents.Add((data.OwnedItemData as InventionDatas.InventionData).InventionComponents[i]);
 			}
 			for (int i = 0; i < inventionComponents.Count; i++) {
 				buttons.Add(Instantiate(itemDataButton,additionalButtonInfoTransform));
 				buttons[i].itemName.text = inventionComponents[i].Item.ToString();
 				buttons[i].itemQuantity.text = inventionComponents[i].quantity.ToString();
-				for (int j = 0; j < InventoryManager.Instance.FishDatas.Datas.Length; j++) {
-					if (InventoryManager.Instance.FishDatas.Datas[j].ItemName == inventionComponents[i].Item.ToString()) {
-						buttons[i].itemImage.sprite = InventoryManager.Instance.FishDatas.Datas[j].ItemImage;
-					}
-				}				
+				buttons[i].itemImage.sprite = InventoryManager.Instance.GetLoot(inventionComponents[i].Item).ItemImage;
 			}
 		}
     }
@@ -111,7 +106,21 @@ public class ItemDataButton : ButtonVoiceOverComponent
 				voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
 			}
 		}
-        AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
+		if (this.ItemData.OwnedItemData is InventionDatas.InventionData) {
+			InventionDatas.InventionData invention = this.ItemData.OwnedItemData as InventionDatas.InventionData;
+			voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
+			voiceoverChain.Add(FMODManager.Instance.MadeByCombining);
+			for (int i = 0; i < invention.InventionComponents.Length; i++) {
+				for (int j = 0; j < FMODManager.Instance.GetNumber(invention.InventionComponents[i].quantity).Count; j++) {
+					voiceoverChain.Add(FMODManager.Instance.GetNumber(invention.InventionComponents[i].quantity)[j]);
+					voiceoverChain.Add(InventoryManager.Instance.GetLoot(invention.InventionComponents[i].Item).ItemNameEvent);
+					if (i != invention.InventionComponents.Length - 1) {
+						voiceoverChain.Add(FMODManager.Instance.And);
+					}
+				}
+			}
+		}
+		AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
     }
 
 	public override void OnSubmit(BaseEventData eventData) {
@@ -129,7 +138,16 @@ public class ItemDataButton : ButtonVoiceOverComponent
 				GameManager.Instance.LevelController.BaitView.BaitClicked(Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData));
 			}
 		}
-    }
+		if (this.ItemData.OwnedItemData is InventionDatas.InventionData) {
+			for (int i = 0; i < (this.ItemData.OwnedItemData as InventionDatas.InventionData).InventionComponents.Length; i++) {
+				InventionDatas.InventionComponent component = (this.ItemData.OwnedItemData as InventionDatas.InventionData).InventionComponents[i];	
+				if (component.quantity > InventoryManager.Instance.GetNumberOfSpecificLoot(component.Item.ToString().Replace(" ",""))) {
+					return;
+				}
+			}
+			InventionManager.Instance.BuyInvention(this.ItemData.OwnedItemData as InventionDatas.InventionData);
+		}
+	}
 
     #endregion
 

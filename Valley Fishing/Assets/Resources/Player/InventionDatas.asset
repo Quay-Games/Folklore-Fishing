@@ -16,26 +16,26 @@ MonoBehaviour:
   - ItemName: Scarecrow
     ItemNameEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -912583556
+        Data2: 1088473977
+        Data3: 1816412824
+        Data4: -812479257
+      Path: event:/VoiceOver/Narrator/Inventions/Scarecrow
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: f352bb0632952ce4fa6bafe955b8550e, type: 3}
     InventionComponents:
     - Item: 12
       quantity: 1
-    - Item: 14
+    - Item: 13
       quantity: 3
   - ItemName: Radio
     ItemNameEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: 1497807530
+        Data2: 1091929594
+        Data3: 821632896
+        Data4: 2126157554
+      Path: event:/VoiceOver/Narrator/Inventions/Radio
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 89361ea8257dd2646a4622071cca1721, type: 3}
     InventionComponents:
@@ -45,14 +45,65 @@ MonoBehaviour:
       quantity: 3
     - Item: 15
       quantity: 1
-  - ItemName: Fly Swatter
+  - ItemName: Music Box
     ItemNameEvent:
       Guid:
-        Data1: 0
-        Data2: 0
-        Data3: 0
-        Data4: 0
-      Path: 
+        Data1: -1603079113
+        Data2: 1332902964
+        Data3: 401909653
+        Data4: -92696743
+      Path: event:/VoiceOver/Narrator/Inventions/Music Box
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: b0383ea68ed66a9458a61179584065c4, type: 3}
+    InventionComponents:
+    - Item: 13
+      quantity: 1
+    - Item: 15
+      quantity: 1
+    - Item: 16
+      quantity: 1
+  - ItemName: Fly Lamp
+    ItemNameEvent:
+      Guid:
+        Data1: -417905870
+        Data2: 1269667552
+        Data3: -20508265
+        Data4: -1074684518
+      Path: event:/VoiceOver/Narrator/Inventions/Fly Lamp
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: b0383ea68ed66a9458a61179584065c4, type: 3}
+    InventionComponents:
+    - Item: 13
+      quantity: 1
+    - Item: 15
+      quantity: 1
+    - Item: 16
+      quantity: 1
+  - ItemName: Magnet
+    ItemNameEvent:
+      Guid:
+        Data1: -1553305354
+        Data2: 1095633848
+        Data3: 123240117
+        Data4: 849159388
+      Path: event:/VoiceOver/Narrator/Inventions/Magnet
+    ItemSellPrice: 0
+    ItemImage: {fileID: 21300000, guid: b0383ea68ed66a9458a61179584065c4, type: 3}
+    InventionComponents:
+    - Item: 13
+      quantity: 1
+    - Item: 15
+      quantity: 1
+    - Item: 16
+      quantity: 1
+  - ItemName: Net
+    ItemNameEvent:
+      Guid:
+        Data1: 1062134700
+        Data2: 1107021203
+        Data3: -8656452
+        Data4: 529285342
+      Path: event:/VoiceOver/Narrator/Inventions/Net
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: b0383ea68ed66a9458a61179584065c4, type: 3}
     InventionComponents:

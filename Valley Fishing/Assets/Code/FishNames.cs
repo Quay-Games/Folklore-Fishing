@@ -11,12 +11,10 @@ public enum FishName
     Bullhead,
     Gudgeon,
     Roach,
-    LlymLlySalmon,
-
-
-	OldBoot,
-	GlassBottle,
-	DriftWood,
-	RustyCoin,
-	ScrapMetal
+    LlymLlywSalmon,
+    OldBoot,
+    Driftwood,
+    GlassBottle,
+    RustyCoin,
+    ScrapMetal,
 }

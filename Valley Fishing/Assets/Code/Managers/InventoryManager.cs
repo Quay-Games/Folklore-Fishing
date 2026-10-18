@@ -83,7 +83,16 @@ public class InventoryManager : Singleton<InventoryManager> {
         }
 		return -1;
     }
-    public override void Awake() {
+
+	public int GetNumberOfSpecificLoot(string fishName) {
+		foreach (var loot in OwnedLootTypeDatas) {
+			if (loot.OwnedItemData.ItemName.Replace(" ","").Equals(fishName)) {
+				return loot.quantity;
+			}
+		}
+		return -1;
+	}
+	public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
 			if (this.FishDatas.Datas[i].IsLoot) {
@@ -107,5 +116,14 @@ public class InventoryManager : Singleton<InventoryManager> {
 
         }
 	}
-
+	public FishDatas.FishData GetLoot(FishName lootname) {
+		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
+			string itemName = this.FishDatas.Datas[i].ItemName.Replace(" ", "");
+			//Debug.Log(this.FishDatas.Datas[i].ItemName. + " " + lootname.ToString());
+			if (itemName == lootname.ToString()) {
+				return this.FishDatas.Datas[i];
+			}
+		}
+		return null;
+	}
 }

@@ -328,6 +328,13 @@ MonoBehaviour:
       Data3: 822507704
       Data4: -1547051263
     Path: event:/VoiceLines/Misc/Captain/Numbers/SoldOut
+  MadeByCombining:
+    Guid:
+      Data1: -1877384326
+      Data2: 1338466824
+      Data3: -353683053
+      Data4: 272576660
+    Path: event:/VoiceOver/Narrator/Misc/Made By Combining
   Numbers:
   - Guid:
       Data1: -438280932
