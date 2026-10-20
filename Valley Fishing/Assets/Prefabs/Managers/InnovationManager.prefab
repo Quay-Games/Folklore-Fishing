@@ -44,3 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9f63e845d806d84a98c4eed6296727b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inventionDatas: {fileID: 11400000, guid: be58126ed656dac4ab43db6b3484e8ef, type: 2}

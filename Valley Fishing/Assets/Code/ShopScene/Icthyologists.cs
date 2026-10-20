@@ -1,4 +1,5 @@
 using FMODUnity;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -29,37 +30,7 @@ public class Icthyologists : Shop
 	#region Mono Behaviours
 
 	public void OnEnable() {
-		List<bool> buttonsToEnable = new List<bool>();
-		for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
-			if (InventoryManager.Instance.OwnedFishTypeDatas[i].quantity > 0) {
-				buttonsToEnable.Add(true);
-			} else {
-				buttonsToEnable.Add(false);
-			}
-		}
-		for (int i = 0; i < IcthyologistManager.Instance.SoldFish.Length; i++) {
-			if (IcthyologistManager.Instance.SoldFish[i]) {
-				buttonsToEnable[i] = true;
-			}
-		}
-		if (!this.Initialized) {
-			for (int i = 0; i < InventoryManager.Instance.OwnedFishTypeDatas.Count; i++) {
-				ItemDataButton buttonInstance = Instantiate(fishButton, buttonParent);
-				buttonInstance.AssignData(InventoryManager.Instance.OwnedFishTypeDatas[i]);
-				buttonInstance.name = InventoryManager.Instance.OwnedFishTypeDatas[i].OwnedItemData.ItemName;
-				Buttons.Add(buttonInstance.Button);
-			}
-		}
-		Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
-		Utilities.LinkHorizontalButtons(this.Buttons, leaveShopButton);
-		leaveShopButton.transform.SetAsLastSibling();
-		this.Initialized = true;
-		for (int i = 0; i < this.Buttons.Count; i++) {
-			if (this.Buttons[i].gameObject.activeSelf) {
-				GameManager.Instance.EventSystem.SetSelectedGameObject(this.Buttons[i].gameObject);
-				return;
-			}
-		}
+		InputManager.Instance.SelectButton(InitialButton);
 	}
 
 	#endregion
@@ -106,11 +77,14 @@ public class Icthyologists : Shop
 		}
 	}
 
-	public override void LeaveShop() {
-		base.LeaveShop();
-		this.JustSoldFish = false;
-	}
+    public override IEnumerator EnterShop(bool enable) {
+        base.EnterShop(enable);
+        yield return null;
+        if (!enable) {
+            this.ShopController.EnableMenu(this.ShopController.Shore.gameObject);
+        }
+    }
 
-	#endregion
+    #endregion
 
 }

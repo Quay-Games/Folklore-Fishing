@@ -46,7 +46,7 @@ public class BaitShop : Shop {
 
     #region Shop
 
-    public override void Awake()
+    public override void Start()
     {
 		base.Start();
 		for (int i = 0; i < fishboardTutorials.Length; i++)	{
@@ -188,18 +188,18 @@ public class BaitShop : Shop {
 		AudioManager.Instance.DisableSkipping();
 	}
 
-	public virtual void FishBoardSelected() {
+	public virtual void FishBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		lerpObjectToPositions[1].BeginLerp();
 	}
 
-	public virtual void FishBasketSelected() {
+	public virtual void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		lerpObjectToPositions[0].BeginLerp();
 	}
 
-	public virtual void BaitBoardSelected() {
+	public virtual void BaitBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		lerpObjectToPositions[2].BeginLerp();
 	}
-	public virtual void LeaveShopSelected() {
+	public virtual void LeaveShopSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		lerpObjectToPositions[3].BeginLerp();
 	}
 

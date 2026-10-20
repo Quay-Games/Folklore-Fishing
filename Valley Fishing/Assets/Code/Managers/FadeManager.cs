@@ -30,11 +30,11 @@ public class FadeManager : Singleton<FadeManager>
 	#region Public Methods
 
 	public void FadeToBlack(Scene scene) {
-        StartCoroutine(FadeImageToBlack());
+        //StartCoroutine(FadeImageToBlack());
     }
 
     public void FadeToClear(Scene scene, LoadSceneMode loadSceneMode) {
-        StartCoroutine(FadeImageToClear());
+       // StartCoroutine(FadeImageToClear());
     }
 
     #endregion

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -15,13 +16,12 @@ public class CheatManager : Singleton<CheatManager>
 		public int FishAmount;
 	}
 
-	private int ScenesLoaded;
+	private int ScenesLoaded;	
+	public List<BaitCheatData> TempBaitBoardDatas;
 
-	[field:SerializeField]
-	private bool useCheats = true;
+	[field:SerializeField] private bool useCheats = true;
 
-	[field: SerializeField]
-	private bool superFastCatch;
+	[field: SerializeField] private bool superFastCatch;
 
 	#region Mono Behaviours
 
@@ -40,7 +40,8 @@ public class CheatManager : Singleton<CheatManager>
 		ShowSecondCatchTutorialCheats();
 		ShowThirdCatchTutorialCheats();
 		ShowFirstBossTutorialCheats();
-		ShowGameScenneCheats();
+		ShowGameSceneCheats();
+		ShowCalvinLevelCheats();
 	}
 
 	public void OnDestroy() {
@@ -62,7 +63,9 @@ public class CheatManager : Singleton<CheatManager>
 			ShowSecondCatchTutorialCheats();
 			ShowThirdCatchTutorialCheats();
 			ShowFirstBossTutorialCheats();
-			ShowGameScenneCheats();
+			ShowGameSceneCheats();
+			ShowCalvinShopTutorialCheats();
+			ShowCalvinLevelCheats();
 		}
 	}
 
@@ -151,7 +154,7 @@ public class CheatManager : Singleton<CheatManager>
 	[SerializeField]
 	private GameSceneCheats gameSceneCheats;
 
-	private void ShowGameScenneCheats() {
+	private void ShowGameSceneCheats() {
 		if (SceneManager.GetActiveScene().name == LevelManager.GameSence) {
 			for (int i = 0; i < gameSceneCheats.Baits.Length; i++) {
                 InventoryManager.Instance.OwnedBaitTypeDatas[gameSceneCheats.Baits[i].BaitIndex].quantity = gameSceneCheats.Baits[i].BaitAmount;
@@ -228,6 +231,50 @@ public class CheatManager : Singleton<CheatManager>
 		}
 	}
 
+    #endregion
+
+
+    #region Calvin Shop
+
+    [System.Serializable]
+    public class CalvinShoreCheats {
+        public CaughtFishCheatData[] CaughtFish;
+    }
+
+    [SerializeField] private CalvinShoreCheats calvinShoreCheats;
+
+    private void ShowCalvinShopTutorialCheats() {
+		Debug.Log(LevelManager.CalvinShore);
+		if (SceneManager.GetActiveScene().name == LevelManager.CalvinShore) {
+			Debug.Log("here");
+            for (int i = 0; i < calvinShoreCheats.CaughtFish.Length; i++) {
+                foreach (var fish in calvinShoreCheats.CaughtFish) {
+                    InventoryManager.Instance.OwnedFishTypeDatas[fish.FishIndex].quantity = fish.FishAmount;
+                }
+            }
+        }
+    }
+
 	#endregion
 
+
+	#region Calvin Level
+
+	[System.Serializable]
+	public class CalvinLevel {
+		public BaitCheatData[] Baits;
+	}
+
+	[SerializeField]
+	private CalvinLevel calvinLevel;
+
+	private void ShowCalvinLevelCheats() {
+		if (SceneManager.GetActiveScene().name == LevelManager.CalvinLevel) {
+			for (int i = 0; i < calvinLevel.Baits.Length; i++) {
+				InventoryManager.Instance.OwnedBaitTypeDatas[calvinLevel.Baits[i].BaitIndex].quantity = calvinLevel.Baits[i].BaitAmount;
+			}
+		}
+	}
+
+	#endregion
 }

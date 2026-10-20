@@ -44,7 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f826d40152fef43a2a4d141a72bae0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useCheats: 0
+  TempBaitBoardDatas:
+  - BaitIndex: 3
+    BaitAmount: 5
+  - BaitIndex: 4
+    BaitAmount: 5
+  - BaitIndex: 5
+    BaitAmount: 5
+  - BaitIndex: 6
+    BaitAmount: 5
+  useCheats: 1
   superFastCatch: 0
   level_01_Catch_Tutorial:
     Baits:
@@ -76,3 +85,13 @@ MonoBehaviour:
       FishAmount: 3
   thirdShopTutorialCheats:
     CaughtFish: []
+  calvinShoreCheats:
+    CaughtFish:
+    - FishIndex: 1
+      FishAmount: 5
+    - FishIndex: 3
+      FishAmount: 5
+    - FishIndex: 4
+      FishAmount: 5
+  calvinLevel:
+    Baits: []

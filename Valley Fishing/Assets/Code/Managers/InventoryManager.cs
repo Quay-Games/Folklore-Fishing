@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -7,8 +8,8 @@ public class InventoryManager : Singleton<InventoryManager> {
 
 
 	public FishDatas FishDatas;
-
 	public List<OwnedItemTypeData> OwnedFishTypeDatas;
+	public List<OwnedItemTypeData> OwnedLootTypeDatas;
     public int TotalOwnedFish
     {
         get
@@ -21,8 +22,26 @@ public class InventoryManager : Singleton<InventoryManager> {
             return count;
         }
     }
+	public List<FishName> OwnedLootNames {
+		get {
+			List<FishName> lootNames = new List<FishName>();
 
-    public BaitDatas BaitDatas;
+			for (int i = 0; i < this.OwnedLootTypeDatas.Count; i++) {
+				if (this.OwnedLootTypeDatas[i].quantity == 0) {
+					continue;
+				}
+				string itemName = this.OwnedLootTypeDatas[i].OwnedItemData.ItemName;
+				if (Enum.TryParse(itemName, out FishName fishName)) {
+					if (!lootNames.Contains(fishName)) {
+						lootNames.Add(fishName);
+					}
+				}
+			}
+			return lootNames;
+		}
+	}
+
+	public BaitDatas BaitDatas;
 	public List<OwnedItemTypeData> OwnedBaitTypeDatas;
 
 	public int TotalOwnedBaits { get
@@ -57,18 +76,32 @@ public class InventoryManager : Singleton<InventoryManager> {
 	{
         foreach (var fish in OwnedFishTypeDatas)
         {
-			Debug.Log(fish.OwnedItemData.ItemName);
             if(fish.OwnedItemData.ItemName.Equals(fishName))
 			{
-				Debug.Log(fish.quantity);
 				return fish.quantity;
 			}
         }
 		return -1;
     }
-    public override void Awake() {
+
+	public int GetNumberOfSpecificLoot(string fishName) {
+		foreach (var loot in OwnedLootTypeDatas) {
+			if (loot.OwnedItemData.ItemName.Replace(" ","").Equals(fishName)) {
+				return loot.quantity;
+			}
+		}
+		return -1;
+	}
+	public override void Awake() {
 		base.Awake();
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
+			if (this.FishDatas.Datas[i].IsLoot) {
+				OwnedItemTypeData lootTypeCatchData = new OwnedItemTypeData();
+				lootTypeCatchData.quantity = 0;
+				lootTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
+				OwnedLootTypeDatas.Add(lootTypeCatchData);
+				continue;
+			}
             OwnedItemTypeData fishTypeCatchData = new OwnedItemTypeData();
 			fishTypeCatchData.quantity = 0;
 			fishTypeCatchData.OwnedItemData = this.FishDatas.Datas[i];
@@ -83,5 +116,14 @@ public class InventoryManager : Singleton<InventoryManager> {
 
         }
 	}
-
+	public FishDatas.FishData GetLoot(FishName lootname) {
+		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
+			string itemName = this.FishDatas.Datas[i].ItemName.Replace(" ", "");
+			//Debug.Log(this.FishDatas.Datas[i].ItemName. + " " + lootname.ToString());
+			if (itemName == lootname.ToString()) {
+				return this.FishDatas.Datas[i];
+			}
+		}
+		return null;
+	}
 }

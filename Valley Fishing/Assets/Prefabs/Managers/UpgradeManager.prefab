@@ -44,3 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4638ec05b63f1ba4eaaf7ec4601835b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rodShopData: {fileID: 11400000, guid: 526c8a1176d3efe4fb2d6e06c55633a6, type: 2}
+  ReelSpeed: 0
+  StrafeSpeed: 0
+  FailSpeed: 0
+  AIRod: 0
+  InstaWin: 0

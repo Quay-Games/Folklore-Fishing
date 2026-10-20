@@ -5,22 +5,25 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using static InventionDatas;
 
 public class ItemDataButton : ButtonVoiceOverComponent
 {
     #region Serialized Fields
 
-    [SerializeField] private TMP_Text itemName;
-    [SerializeField] private Image itemImage;
-    [SerializeField] private TMP_Text itemSellPrice;
-	[SerializeField] private TMP_Text itemQuantity;
+    public TMP_Text itemName;
+	public Image itemImage;
+	public TMP_Text itemSellPrice;
+	public TMP_Text itemQuantity;
+	public Transform additionalButtonInfoTransform;
+	public ItemDataButton itemDataButton;
 
-    #endregion
+	#endregion
 
 
-    #region Properties
-
-    public OwnedItemTypeData ItemData { get; set; }
+	#region Properties
+	public Transform AdditionalButtonInfoTransform => additionalButtonInfoTransform;
+	public OwnedItemTypeData ItemData { get; set; }
 
     #endregion
 
@@ -30,20 +33,31 @@ public class ItemDataButton : ButtonVoiceOverComponent
     public void AssignData(OwnedItemTypeData data)
     {
         this.ItemData = data;
-        if (itemName != null)
-        {
+        if (itemName != null) {
             itemName.text = data.OwnedItemData.ItemName;
         }
-        if (itemImage != null)
-        {
+        if (itemImage != null) {
             itemImage.sprite = data.OwnedItemData.ItemImage;
         }
-        if (itemSellPrice != null)
-        {
+        if (itemSellPrice != null) {
             itemSellPrice.text = data.OwnedItemData.ItemSellPrice.ToString() + "g";
         }
 		if(itemQuantity != null) {
 			itemQuantity.text = "x" + data.quantity .ToString();
+		}
+		if (additionalButtonInfoTransform != null) {
+			List<ItemDataButton> buttons = new List<ItemDataButton>();
+			List<InventionDatas.InventionComponent> inventionComponents = new List<InventionDatas.InventionComponent> ();
+			InventionDatas.InventionData inventionData = data.OwnedItemData as InventionDatas.InventionData;
+			for (int i = 0; i < inventionData.InventionComponents.Length ; i++) {
+				inventionComponents.Add((data.OwnedItemData as InventionDatas.InventionData).InventionComponents[i]);
+			}
+			for (int i = 0; i < inventionComponents.Count; i++) {
+				buttons.Add(Instantiate(itemDataButton,additionalButtonInfoTransform));
+				buttons[i].itemName.text = inventionComponents[i].Item.ToString();
+				buttons[i].itemQuantity.text = inventionComponents[i].quantity.ToString();
+				buttons[i].itemImage.sprite = InventoryManager.Instance.GetLoot(inventionComponents[i].Item).ItemImage;
+			}
 		}
     }
 
@@ -60,8 +74,7 @@ public class ItemDataButton : ButtonVoiceOverComponent
             voiceoverChain.AddRange(FMODManager.Instance.GetNumber(this.ItemData.OwnedItemData.ItemSellPrice));
             voiceoverChain.Add(FMODManager.Instance.Gold);
             voiceoverChain.Add(FMODManager.Instance.YouHave);
-            for (int i = 0; i < FMODManager.Instance.GetNumber(intemQuantity).Count; i++)
-            {
+            for (int i = 0; i < FMODManager.Instance.GetNumber(intemQuantity).Count; i++) {
                 voiceoverChain.Add(FMODManager.Instance.GetNumber(intemQuantity)[i]);
             }            
         }
@@ -75,7 +88,7 @@ public class ItemDataButton : ButtonVoiceOverComponent
 				voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
 				voiceoverChain.AddRange(FMODManager.Instance.GetNumber(itemValue));
 				voiceoverChain.Add(FMODManager.Instance.Gold);
-				if (GameManager.Instance.ShopController.BaitShop.BaitQuantities[itemIndex] == 0) {
+				if (GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[itemIndex] == 0) {
 					voiceoverChain.Add(FMODManager.Instance.SoldOut);
 					AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
 					return;
@@ -93,7 +106,21 @@ public class ItemDataButton : ButtonVoiceOverComponent
 				voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
 			}
 		}
-        AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
+		if (this.ItemData.OwnedItemData is InventionDatas.InventionData) {
+			InventionDatas.InventionData invention = this.ItemData.OwnedItemData as InventionDatas.InventionData;
+			voiceoverChain.Add(this.ItemData.OwnedItemData.ItemNameEvent);
+			voiceoverChain.Add(FMODManager.Instance.MadeByCombining);
+			for (int i = 0; i < invention.InventionComponents.Length; i++) {
+				for (int j = 0; j < FMODManager.Instance.GetNumber(invention.InventionComponents[i].quantity).Count; j++) {
+					voiceoverChain.Add(FMODManager.Instance.GetNumber(invention.InventionComponents[i].quantity)[j]);
+					voiceoverChain.Add(InventoryManager.Instance.GetLoot(invention.InventionComponents[i].Item).ItemNameEvent);
+					if (i != invention.InventionComponents.Length - 1) {
+						voiceoverChain.Add(FMODManager.Instance.And);
+					}
+				}
+			}
+		}
+		AudioManager.Instance.PlayVoiceOverChain(voiceoverChain);
     }
 
 	public override void OnSubmit(BaseEventData eventData) {
@@ -103,14 +130,24 @@ public class ItemDataButton : ButtonVoiceOverComponent
         }
 		if (this.ItemData.OwnedItemData is BaitDatas.BaitData) {
 			if (GameManager.Instance.ShopController != null) {
-				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[transform.GetSiblingIndex()];
-				GameManager.Instance.ShopController.BaitShop.BuyBait(transform.GetSiblingIndex(), baitQuantity);
+				int baitIndex = System.Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData);
+				int baitQuantity = GameManager.Instance.ShopController.BaitShop.BaitBoard.BaitQuantities[baitIndex];
+				GameManager.Instance.ShopController.BaitShop.BuyBait(baitIndex, baitQuantity);
 			}
 			else {
 				GameManager.Instance.LevelController.BaitView.BaitClicked(Array.IndexOf(InventoryManager.Instance.BaitDatas.Datas, this.ItemData.OwnedItemData));
 			}
 		}
-    }
+		if (this.ItemData.OwnedItemData is InventionDatas.InventionData) {
+			for (int i = 0; i < (this.ItemData.OwnedItemData as InventionDatas.InventionData).InventionComponents.Length; i++) {
+				InventionDatas.InventionComponent component = (this.ItemData.OwnedItemData as InventionDatas.InventionData).InventionComponents[i];	
+				if (component.quantity > InventoryManager.Instance.GetNumberOfSpecificLoot(component.Item.ToString().Replace(" ",""))) {
+					return;
+				}
+			}
+			InventionManager.Instance.BuyInvention(this.ItemData.OwnedItemData as InventionDatas.InventionData);
+		}
+	}
 
     #endregion
 

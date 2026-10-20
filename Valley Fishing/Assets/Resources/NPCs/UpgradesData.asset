@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e23e1087a4438774ba7b0465bc02a4f4, type: 3}
+  m_Name: UpgradesData
+  m_EditorClassIdentifier: 
+  ReelSpeedData:
+    UpgradePrices: 010000000200000003000000
+    UpgradeValues: 02000000050000000a000000
+    UpgradeHoverEvents:
+    - Guid:
+        Data1: -448664093
+        Data2: 1158116326
+        Data3: 211156139
+        Data4: -1807527008
+      Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/RareReel
+    - Guid:
+        Data1: -306170996
+        Data2: 1286228940
+        Data3: 601897388
+        Data4: -566299567
+      Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/SuperRareReel
+    - Guid:
+        Data1: -549309190
+        Data2: 1156636881
+        Data3: 2137702273
+        Data4: -1087989002
+      Path: event:/VoiceOver/RodShopKeep/ReelSpeedButton/UltraRareReel
+    UpgradeBoughtEvents:
+    - Guid:
+        Data1: -1780778380
+        Data2: 1152155833
+        Data3: 659819139
+        Data4: -1235957993
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+    - Guid:
+        Data1: -1780778380
+        Data2: 1152155833
+        Data3: 659819139
+        Data4: -1235957993
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+    - Guid:
+        Data1: -1780778380
+        Data2: 1152155833
+        Data3: 659819139
+        Data4: -1235957993
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
+  StrafeSpeedData:
+    UpgradePrices: 010000000200000003000000
+    UpgradeValues: 
+    UpgradeHoverEvents:
+    - Guid:
+        Data1: -1513220456
+        Data2: 1131282481
+        Data3: 1873855873
+        Data4: -2019000131
+      Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/RarePole
+    - Guid:
+        Data1: -2005974631
+        Data2: 1286334201
+        Data3: -1124633692
+        Data4: 1377771854
+      Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/SuperRarePole
+    - Guid:
+        Data1: 2084491217
+        Data2: 1110909358
+        Data3: -1430540107
+        Data4: -2145597255
+      Path: event:/VoiceOver/RodShopKeep/StrafeSpeedButton/UltraRarePole
+    UpgradeBoughtEvents:
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  FailSpeedData:
+    UpgradePrices: 010000000200000003000000
+    UpgradeValues: 
+    UpgradeHoverEvents:
+    - Guid:
+        Data1: -414414361
+        Data2: 1191249149
+        Data3: 1631982236
+        Data4: -2129732055
+      Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/RareLine
+    - Guid:
+        Data1: -563244601
+        Data2: 1308546325
+        Data3: 386527928
+        Data4: 1721306589
+      Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/SuperRareLine
+    - Guid:
+        Data1: 1967484780
+        Data2: 1210059963
+        Data3: -311532613
+        Data4: -777204080
+      Path: event:/VoiceOver/RodShopKeep/FailSpeedButton/UltraRareLine
+    UpgradeBoughtEvents:
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+    - Guid:
+        Data1: 458831336
+        Data2: 1139098375
+        Data3: 1473202351
+        Data4: -441801796
+      Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
+  HatData:
+    UpgradePrices: 
+    UpgradeValues: 
+    UpgradeHoverEvents: []
+    UpgradeBoughtEvents: []

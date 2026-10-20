@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EventFolder" id="{db0a6a5a-2118-4aff-9260-a4724b443185}">
+		<property name="name">
+			<value>ReelSpeedButton</value>
+		</property>
+		<relationship name="folder">
+			<destination>{c9cd03c4-8698-4ffd-a3a9-efcedca5a03d}</destination>
+		</relationship>
+	</object>
+</objects>

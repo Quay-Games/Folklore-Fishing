@@ -11,6 +11,7 @@ public class FishDatas : ScriptableObject {
 
 	[System.Serializable]
 	public class FishData: BaseItemData {
+		public bool IsLoot;
 		public bool IsFailable;
 		public float ReelInSpeed;
 		public float SwimAwaySpeed;
@@ -42,26 +43,23 @@ public class FishDatas : ScriptableObject {
 
 	public FishData[] Datas;
 
-    //public void OnValidate()
-    //{
-    //    List<string> fishNames = new List<string>();
-    //    for (int i = 0; i < Datas.Length; i++)
-    //    {
-    //        fishNames.Add(Datas[i].ItemName.Replace(" ", ""));
-    //    }
+	public void OnValidate() {
+		List<string> fishNames = new List<string>();
+		for (int i = 0; i < Datas.Length; i++) {
+			fishNames.Add(Datas[i].ItemName.Replace(" ", ""));
+		}
 
-    //    StringBuilder sb = new StringBuilder();
-    //    sb.AppendLine("public enum FishName");
-    //    sb.AppendLine("{");
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine("public enum FishName");
+		sb.AppendLine("{");
 
-    //    foreach (var name in fishNames)
-    //    {
-    //        sb.AppendLine($"    {name},");
-    //    }
+		foreach (var name in fishNames) {
+			sb.AppendLine($"    {name},");
+		}
 
-    //    sb.AppendLine("}");
-    //    File.WriteAllText("Assets/Code/FishNames.cs", sb.ToString());
+		sb.AppendLine("}");
+		File.WriteAllText("Assets/Code/FishNames.cs", sb.ToString());
 
-    //    AssetDatabase.Refresh();
-    //}
+		AssetDatabase.Refresh();
+	}
 }

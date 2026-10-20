@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{caa437c4-c44d-40a2-bf53-d2f53bd1a2b9}">
+		<property name="assetPath">
+			<value>Voice Over/Rod Shopkeep/Buttons/Reel Speed Button/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>

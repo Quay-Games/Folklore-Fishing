@@ -47,6 +47,7 @@ public class FMODManager : Singleton<FMODManager>
 	public EventReference Gold;
 	public EventReference And;
 	public EventReference SoldOut;
+	public EventReference MadeByCombining;
 	public EventReference[] Numbers;
 	public List<EventReference> GetNumber (int number) {
 		List<EventReference> numbers = new List<EventReference>();

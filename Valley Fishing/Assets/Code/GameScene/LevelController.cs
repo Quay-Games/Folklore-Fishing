@@ -49,16 +49,17 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.Default:
 				GameManager.Instance.LevelController = this;
 				GameManager.Instance.EventSystem = eventSystem;
-				//AudioManager.Instance.PlayMusic(levelMusic);
-				//the below line causes an error if there is no ambience to play
-				//AudioManager.Instance.PlayAmbience(levelAmbience);
-				SetState(State.Cutscene);
+				AudioManager.Instance.PlayMusic(levelMusic);
+				AudioManager.Instance.PlayAmbience(levelAmbience);
+				SetState(State.Idle);
 				break;
 			case State.Cutscene:
 				break;
 			case State.Idle:
+				SetState(State.AttatchBait);
 				break;
 			case State.AttatchBait:
+				GameManager.Instance.LevelController = this;
 				this.BaitView.EnableBaitUI(true);
 				break;
 			case State.IdleWithBait:

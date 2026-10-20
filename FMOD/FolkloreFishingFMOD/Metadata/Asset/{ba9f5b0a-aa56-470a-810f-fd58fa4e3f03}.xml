@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="EncodableAsset" id="{ba9f5b0a-aa56-470a-810f-fd58fa4e3f03}">
+		<property name="assetPath">
+			<value>Voice Over/Rod Shopkeep/Buttons/Strafe Speed Button/</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8947bfd8-85a4-4658-892e-65752c94929b}</destination>
+		</relationship>
+	</object>
+</objects>
