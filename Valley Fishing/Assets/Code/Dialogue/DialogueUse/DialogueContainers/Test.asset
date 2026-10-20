@@ -19,11 +19,7 @@ MonoBehaviour:
     TargetPortName: Input
   - BaseNodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
     BasePortName: Continue
-    TargetNodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
-    TargetPortName: Input
-  - BaseNodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
-    BasePortName: Output
-    TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+    TargetNodeGuid: 3fae1cab-8f77-44ac-801b-7b9687535af4
     TargetPortName: Input
   - BaseNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
     BasePortName: Continue
@@ -37,25 +33,25 @@ MonoBehaviour:
     BasePortName: Continue
     TargetNodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
     TargetPortName: Input
-  - BaseNodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
-    BasePortName: Continue
-    TargetNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
-    TargetPortName: Input
   - BaseNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
     BasePortName: Continue
     TargetNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
+    TargetPortName: Input
+  - BaseNodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
+    BasePortName: Continue
+    TargetNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
     TargetPortName: Input
   - BaseNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
     BasePortName: Continue
     TargetNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
     TargetPortName: Input
-  - BaseNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
-    BasePortName: Continue
-    TargetNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
-    TargetPortName: Input
   - BaseNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
     BasePortName: Continue
     TargetNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
+    TargetPortName: Input
+  - BaseNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
+    BasePortName: Continue
+    TargetNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
     TargetPortName: Input
   - BaseNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
     BasePortName: Continue
@@ -65,30 +61,34 @@ MonoBehaviour:
     BasePortName: Continue
     TargetNodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
     TargetPortName: Input
+  - BaseNodeGuid: 3fae1cab-8f77-44ac-801b-7b9687535af4
+    BasePortName: Output
+    TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
+    TargetPortName: Input
   NodeDatas:
-  - rid: 2368649690640285792
-  - rid: 2368649690640285793
-  - rid: 2368649690640285794
-  - rid: 2368649690640285795
-  - rid: 2368649690640285796
-  - rid: 2368649690640285797
-  - rid: 2368649690640285798
-  - rid: 2368649690640285799
-  - rid: 2368649690640285800
-  - rid: 2368649690640285801
-  - rid: 2368649690640285802
-  - rid: 2368649690640285803
-  - rid: 2368649690640285804
-  - rid: 2368649690640285805
+  - rid: 2368649777930567756
+  - rid: 2368649777930567757
+  - rid: 2368649777930567758
+  - rid: 2368649777930567759
+  - rid: 2368649777930567760
+  - rid: 2368649777930567761
+  - rid: 2368649777930567762
+  - rid: 2368649777930567763
+  - rid: 2368649777930567764
+  - rid: 2368649777930567765
+  - rid: 2368649777930567766
+  - rid: 2368649777930567767
+  - rid: 2368649777930567768
+  - rid: 2368649777930567769
   references:
     version: 2
     RefIds:
-    - rid: 2368649690640285792
+    - rid: 2368649777930567756
       type: {class: StartData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3d49e76e-43b9-49f8-9aba-d02b65dcc492
         Position: {x: 88.8, y: 296}
-    - rid: 2368649690640285793
+    - rid: 2368649777930567757
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 214de28c-d774-43a2-acf3-6c6c52d50ef3
@@ -124,16 +124,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 2368649690640285794
-      type: {class: EventData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 523e654a-c5d9-4318-87b2-8ae12d7ed2b0
-        Position: {x: 356, y: 298.4}
-        EventType: 7
-        EventData_EventName:
-          StringEventValue:
-            Value: 
-    - rid: 2368649690640285795
+    - rid: 2368649777930567758
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
@@ -169,14 +160,14 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 2368649690640285796
+    - rid: 2368649777930567759
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c11648e4-9013-4a8f-b633-20d0bc1f9d71
         Position: {x: 752.8, y: 298.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
-    - rid: 2368649690640285797
+    - rid: 2368649777930567760
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
@@ -212,7 +203,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 2368649690640285798
+    - rid: 2368649777930567761
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
@@ -229,29 +220,47 @@ MonoBehaviour:
             Value: 0
           GuidID:
             Value: 
-          Text: []
-    - rid: 2368649690640285799
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649777930567762
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
         Position: {x: 1228.8, y: 298.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 8b03f3e5c39ba384daf61ffd3fe096fa, type: 2}
-    - rid: 2368649690640285800
+    - rid: 2368649777930567763
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
         Position: {x: 312, y: 467.2}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
-    - rid: 2368649690640285801
+    - rid: 2368649777930567764
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
         Position: {x: 837.6, y: 467.2}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
-    - rid: 2368649690640285802
+    - rid: 2368649777930567765
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
@@ -268,8 +277,26 @@ MonoBehaviour:
             Value: 0
           GuidID:
             Value: 
-          Text: []
-    - rid: 2368649690640285803
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649777930567766
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
@@ -286,8 +313,26 @@ MonoBehaviour:
             Value: 0
           GuidID:
             Value: 
-          Text: []
-    - rid: 2368649690640285804
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649777930567767
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
@@ -304,11 +349,36 @@ MonoBehaviour:
             Value: 0
           GuidID:
             Value: 
-          Text: []
-    - rid: 2368649690640285805
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 2368649777930567768
       type: {class: EndData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 50e2ec36-dc68-4fae-908f-2534cdde01bd
         Position: {x: 609.6, y: 762.39996}
         EndNodeType:
           Value: 1
+    - rid: 2368649777930567769
+      type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 3fae1cab-8f77-44ac-801b-7b9687535af4
+        Position: {x: 376, y: 296}
+        LevelStateValues:
+          Value: 6

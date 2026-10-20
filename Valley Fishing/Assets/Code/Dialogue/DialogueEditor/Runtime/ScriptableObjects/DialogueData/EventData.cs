@@ -32,10 +32,6 @@ public class EventData : BaseData {
                 break;
             case EventType.GiveMoney:
                 break;
-            case EventType.GiveRod:
-                AudioManager.Instance.PlayReelSound(FMODManager.Instance.ReelSound);
-                GameManager.Instance.LevelController.SetState(LevelController.State.ReelingFish);
-                break;
             default:
                 break;
         }

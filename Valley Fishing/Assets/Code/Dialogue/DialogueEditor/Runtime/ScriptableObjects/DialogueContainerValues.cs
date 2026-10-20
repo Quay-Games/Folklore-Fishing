@@ -76,8 +76,17 @@ public class Container_StringEventConditionType {
 	public StringEventConditionType Value = StringEventConditionType.True;
 }
 
-//events
 [System.Serializable]
+public class Container_Enum<T> where T : System.Enum
+{
+#if UNITY_EDITOR
+    public EnumField EnumField;
+#endif
+    public T Value;
+}
+
+    //events
+    [System.Serializable]
 public class EventData_StringModifier {
 	public Container_String StringEventText = new Container_String();
 	public Container_String StringEventValue = new Container_String();
@@ -95,4 +104,3 @@ public class EventData_StringCondition {
 public class EventData_EventName {
 	public Container_String StringEventValue = new Container_String();
 }
-

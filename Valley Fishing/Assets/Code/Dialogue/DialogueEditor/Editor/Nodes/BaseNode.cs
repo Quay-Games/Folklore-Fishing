@@ -144,23 +144,23 @@ namespace Project.DialogueEditor {
 			return enumField;
 		}
 
-		protected EnumField GetNewEnumField_EndNodeType(Container_EndNodeType enumType, string USS01 = "", string USS02 = "") {
-			EnumField enumField = new EnumField() {
-				value = enumType.Value
-			};
-			enumField.Init(enumType.Value);
+		//protected EnumField GetNewEnumField_EndNodeType(Container_EndNodeType enumType, string USS01 = "", string USS02 = "") {
+		//	EnumField enumField = new EnumField() {
+		//		value = enumType.Value
+		//	};
+		//	enumField.Init(enumType.Value);
 
-			enumField.RegisterValueChangedCallback((value) => {
-				enumType.Value = (EndNodeType)value.newValue;
-			});
-			enumField.SetValueWithoutNotify(enumType.Value);
+		//	enumField.RegisterValueChangedCallback((value) => {
+		//		enumType.Value = (EndNodeType)value.newValue;
+		//	});
+		//	enumField.SetValueWithoutNotify(enumType.Value);
 
-			enumField.AddToClassList(USS01);
-			enumField.AddToClassList(USS02);
+		//	enumField.AddToClassList(USS01);
+		//	enumField.AddToClassList(USS02);
 
-			enumType.EnumField = enumField;
-			return enumField;
-		}
+		//	enumType.EnumField = enumField;
+		//	return enumField;
+		//}
 
 		protected EnumField GetNewEnumField_StringEventModifierType(Container_StringEventModifierType enumType, Action action, string USS01 = "", string USS02 = "") {
 			EnumField enumField = new EnumField() {
@@ -190,6 +190,26 @@ namespace Project.DialogueEditor {
 			enumField.RegisterValueChangedCallback((value) => {
 				enumType.Value = (StringEventConditionType)value.newValue;
 				action?.Invoke();
+			});
+			enumField.SetValueWithoutNotify(enumType.Value);
+
+			enumField.AddToClassList(USS01);
+			enumField.AddToClassList(USS02);
+
+			enumType.EnumField = enumField;
+			return enumField;
+		}
+
+		//A method meant to make the above 4 methods, generic
+		protected EnumField GetNewGenericEnum<T> (Container_Enum<T> enumType, string USS01 = "", string USS02 = "")
+        where T : System.Enum {
+            EnumField enumField = new EnumField() {
+				value = enumType.Value
+			};
+			enumField.Init(enumType.Value);
+
+			enumField.RegisterValueChangedCallback((value) => {
+				enumType.Value = (T)value.newValue;
 			});
 			enumField.SetValueWithoutNotify(enumType.Value);
 
@@ -444,6 +464,12 @@ namespace Project.DialogueEditor {
         {
             data.NodeGuid = nodeGuid;
             data.Position = GetPosition().position;
+        }
+
+		protected void AddGenericPorts()
+		{
+            AddInputPort("Input", Port.Capacity.Multi);
+            AddOutputPort("Output");
         }
         #endregion
 

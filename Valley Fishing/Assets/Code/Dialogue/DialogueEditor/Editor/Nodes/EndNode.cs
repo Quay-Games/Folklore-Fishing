@@ -31,7 +31,7 @@ namespace Project.DialogueEditor {
 		}
 
 		private void MakeMainContainer() {
-			EnumField enumField = GetNewEnumField_EndNodeType(endData.EndNodeType);
+			EnumField enumField = GetNewGenericEnum(endData.EndNodeType);
 
 			mainContainer.Add(enumField);
 		}
