@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: BaitDatas
   m_EditorClassIdentifier: 
   Datas:
-  - ItemName: Worm Bait
+  - ItemName: TUTORIALBrownTroutBait
     ItemNameEvent:
       Guid:
         Data1: 49789276
@@ -27,7 +27,7 @@ MonoBehaviour:
     FishSpawnChances:
     - FishName: 0
       SpawnChance: 1
-  - ItemName: Worm Bait
+  - ItemName: TUTORIALCommonCarpBait
     ItemNameEvent:
       Guid:
         Data1: 49789276
@@ -41,7 +41,7 @@ MonoBehaviour:
     FishSpawnChances:
     - FishName: 1
       SpawnChance: 1
-  - ItemName: Worm Bait
+  - ItemName: TUTORIALStoneLoachBait
     ItemNameEvent:
       Guid:
         Data1: 49789276

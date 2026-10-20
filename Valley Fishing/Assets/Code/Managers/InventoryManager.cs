@@ -126,4 +126,16 @@ public class InventoryManager : Singleton<InventoryManager> {
 		}
 		return null;
 	}
+
+	public void GiveBait(BaitName name, int quantity)
+	{
+		for(int i = 0; i < this.OwnedBaitTypeDatas.Count; i++)
+        {
+            if (this.OwnedBaitTypeDatas[i].OwnedItemData.ItemName.Equals(name.ToString()))
+            {
+                this.OwnedBaitTypeDatas[i].quantity += quantity;
+                return;
+            }
+        }
+    }
 }

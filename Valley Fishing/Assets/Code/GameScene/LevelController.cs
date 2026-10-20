@@ -13,6 +13,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField] private EventReference levelMusic;
 	[SerializeField] private EventReference levelAmbience;
 	[SerializeField] private Transform gameplayContainer;
+	[SerializeField] private bool isTutorialLevel;
 
 	#endregion
 
@@ -51,7 +52,14 @@ public class LevelController : AbstractState<LevelController.State> {
 				GameManager.Instance.EventSystem = eventSystem;
 				AudioManager.Instance.PlayMusic(levelMusic);
 				AudioManager.Instance.PlayAmbience(levelAmbience);
-				SetState(State.Idle);
+				if(isTutorialLevel)
+                {
+                    SetState(State.Cutscene);
+                }
+                else
+                {
+                    SetState(State.Idle);
+                }
 				break;
 			case State.Cutscene:
 				break;

@@ -663,6 +663,7 @@ MonoBehaviour:
       Data4: -674369810
     Path: event:/Ambience/Sea Ambience
   gameplayContainer: {fileID: 641266736}
+  isTutorialLevel: 1
   VoiceOverController: {fileID: 0}
   <FishView>k__BackingField: {fileID: 723462215}
   <BaitView>k__BackingField: {fileID: 1927175311}
@@ -1222,8 +1223,12 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
+      propertyPath: useCheats
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 571263217159520114, guid: 896d17ff8a916e24bb2988e1e367177c, type: 3}
       propertyPath: calvinLevel.Baits.Array.data[0].BaitIndex

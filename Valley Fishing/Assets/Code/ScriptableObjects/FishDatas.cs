@@ -58,7 +58,7 @@ public class FishDatas : ScriptableObject {
 		}
 
 		sb.AppendLine("}");
-		File.WriteAllText("Assets/Code/FishNames.cs", sb.ToString());
+		File.WriteAllText("Assets/Code/ScriptableObjects/Enums/FishNames.cs", sb.ToString());
 
 		AssetDatabase.Refresh();
 	}
