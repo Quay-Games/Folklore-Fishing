@@ -13,7 +13,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField] private EventReference levelMusic;
 	[SerializeField] private EventReference levelAmbience;
 	[SerializeField] private Transform gameplayContainer;
-	[SerializeField] private bool isTutorialLevel;
+	[SerializeField] public bool isTutorialLevel;
 
 	#endregion
 
@@ -27,7 +27,10 @@ public class LevelController : AbstractState<LevelController.State> {
 	[field: SerializeField] public Transform RightStrafeTransform { get; set; }
 	[field: SerializeField] public Transform FishSpawnTransform { get; set; }
 	public BaitDatas.BaitData CurrentBait { get => InventoryManager.Instance.CurrentBait; }
+	//The equivalent of an event describing when the fish bites
 	public Action OnFishSpawned { get; set; }
+	public Action OnFishBit { get; set; }
+	public Action OnFishCaught { get; set; }
 
 	#endregion
 
@@ -92,6 +95,7 @@ public class LevelController : AbstractState<LevelController.State> {
 	private IEnumerator WaitForBite() {
 		yield return new WaitForSeconds(3); // TODO floating number??
 		SetState(State.ReelingFish);
+		OnFishBit?.Invoke();
 		GameManager.Instance.CurrentFish.Initialize();
 	}
 
@@ -112,9 +116,19 @@ public class LevelController : AbstractState<LevelController.State> {
 		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		InventoryManager.Instance.CurrentBait = null;
 		GameManager.Instance.CurrentFish = fishInstance;
+		GameManager.Instance.CurrentFish.OnCatch += NotifyOfCaughtFish;
 		this.OnFishSpawned?.Invoke();
 		StartCoroutine(WaitForBite());
 	}
 
 	#endregion
+
+	//You may think, surely this isnt necessary, why dont people just subscribe to the Fish's event? Well, such places would be able
+	//to do that for single fish, but for successive fish they would lose the listener, because it wont know to attach a new listener
+	//to the new fish, but the level controller knows when new fish spawn and despawn, so it can take care of that responsibility
+	public void NotifyOfCaughtFish()
+	{
+		GameManager.Instance.CurrentFish.OnCatch -= NotifyOfCaughtFish;
+		OnFishCaught?.Invoke();
+	}
 }

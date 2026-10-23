@@ -1904,6 +1904,7 @@ MonoBehaviour:
       Data4: -674369810
     Path: event:/Ambience/Sea Ambience
   gameplayContainer: {fileID: 884090771}
+  isTutorialLevel: 1
   VoiceOverController: {fileID: 582599908}
   <FishView>k__BackingField: {fileID: 1379353193}
   <BaitView>k__BackingField: {fileID: 1379353191}

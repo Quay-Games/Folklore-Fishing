@@ -557,3 +557,99 @@ MonoBehaviour:
         Data4: 376693318
       Path: event:/VoiceOver/Captain/ItemLines/ScrapMetal/ScrapMetalQuip
     catchSFX: 0
+  - ItemName: TUTORIAL Brown Trout
+    ItemNameEvent:
+      Guid:
+        Data1: -626313478
+        Data2: 1106181808
+        Data3: -1103576929
+        Data4: -1050338756
+      Path: event:/VoiceOver/Narrator/Fish Lines/BrownTrout
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: e7be3fcd556abcd4f8b48e6ca1077022, type: 3}
+    IsLoot: 0
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 03000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -1486776638
+        Data2: 1168185540
+        Data3: 197748408
+        Data4: -1059209514
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/9Yourfirstfish
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 689494142
+        Data2: 1230382014
+        Data3: 675815579
+        Data4: -1486664141
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/BrownTroutInfo
+    catchSFX: 0
+  - ItemName: TUTORIAL Common Carp
+    ItemNameEvent:
+      Guid:
+        Data1: -144873139
+        Data2: 1131788272
+        Data3: 1084993983
+        Data4: -2089778651
+      Path: event:/VoiceOver/Narrator/Fish Lines/CommonCarp
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: 9c25ad76b755fca4dbccf69fa7645e97, type: 3}
+    IsLoot: 0
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 01000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: 1226205962
+        Data2: 1264196284
+        Data3: -1006454096
+        Data4: 2134398383
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/11Fishnumbertwo
+    icthyologistInfoAudio:
+      Guid:
+        Data1: 106858057
+        Data2: 1114573127
+        Data3: -1984268899
+        Data4: -494359701
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/CommonCarpInfo
+    catchSFX: 0
+  - ItemName: TUTORIAL Stone Loach
+    ItemNameEvent:
+      Guid:
+        Data1: -48010821
+        Data2: 1154299586
+        Data3: 1941041314
+        Data4: -157560319
+      Path: event:/VoiceOver/Narrator/Fish Lines/StoneLoach
+    ItemSellPrice: 1
+    ItemImage: {fileID: 21300000, guid: b2b21047721790c45913ee4445e53824, type: 3}
+    IsLoot: 0
+    IsFailable: 0
+    ReelInSpeed: 2
+    SwimAwaySpeed: 100
+    StrafedSwimAwaySpeed: 30
+    ActivityLevels: 02000000
+    MovementDirections: 
+    fishCatchAudio:
+      Guid:
+        Data1: -1612792290
+        Data2: 1118612746
+        Data3: 62828695
+        Data4: 1655042738
+      Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/13Ah,astoneloach
+    icthyologistInfoAudio:
+      Guid:
+        Data1: -2044789402
+        Data2: 1321984410
+        Data3: 1692203927
+        Data4: -333913488
+      Path: event:/VoiceLines/Shop Scene/Itchologists/FishInfos/StoneLoach
+    catchSFX: 0

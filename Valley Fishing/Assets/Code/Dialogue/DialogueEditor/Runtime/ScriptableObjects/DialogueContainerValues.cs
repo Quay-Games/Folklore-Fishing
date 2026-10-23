@@ -1,4 +1,5 @@
 using FMOD.Studio;
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,6 +37,12 @@ public class Container_Int {
 [System.Serializable]
 public class Container_Float {
 	public float Value;
+}
+
+[System.Serializable]
+public class Container_Bool
+{
+	public bool Value;
 }
 
 [System.Serializable]

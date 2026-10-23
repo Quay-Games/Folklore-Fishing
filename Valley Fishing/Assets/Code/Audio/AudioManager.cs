@@ -92,7 +92,7 @@ public class AudioManager : Singleton<AudioManager>
 		}
 	}
 
-	public void PlayVoiceOver(EventReference voiceLineReference) {		
+	public void PlayVoiceOver(EventReference voiceLineReference) {
 		if (!this.InVoiceOverChain) {
 			List<EventReference> voicelines = new List<EventReference>();
 			voicelines.Add(voiceLineReference);

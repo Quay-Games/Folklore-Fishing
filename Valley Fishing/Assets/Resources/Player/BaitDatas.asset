@@ -25,7 +25,7 @@ MonoBehaviour:
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
     IsTutorial: 1
     FishSpawnChances:
-    - FishName: 0
+    - FishName: 17
       SpawnChance: 1
   - ItemName: TUTORIALCommonCarpBait
     ItemNameEvent:
@@ -39,7 +39,7 @@ MonoBehaviour:
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
     IsTutorial: 1
     FishSpawnChances:
-    - FishName: 1
+    - FishName: 18
       SpawnChance: 1
   - ItemName: TUTORIALStoneLoachBait
     ItemNameEvent:
@@ -53,7 +53,7 @@ MonoBehaviour:
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
     IsTutorial: 1
     FishSpawnChances:
-    - FishName: 2
+    - FishName: 19
       SpawnChance: 1
   - ItemName: Worm Bait
     ItemNameEvent:

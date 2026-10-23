@@ -55,7 +55,7 @@ public class ListenForReelSpeed : ListenEvent
                 }
                 else
                 {
-                    if (GameManager.Instance.InputController.ReelLevel < (int)reelSpeed)
+                    if (GameManager.Instance.InputController.ReelLevel < (int)reelSpeed + 1)
                     {
                         AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.tooSlowPrompt);
                     }

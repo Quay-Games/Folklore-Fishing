@@ -66,13 +66,14 @@ public class Fish : MonoBehaviour
 	public bool HitBySeagull { get; set; }
 	public bool Caught { get; set; }
 	public bool HitByFlies { get; set; }
+    public Action OnCatch { get; set; }
 
-	#endregion
+    #endregion
 
 
-	#region Mono Behaviours
+    #region Mono Behaviours
 
-	public void Update() {
+    public void Update() {
 		if (this.Caught) {
 			return;
 		}
@@ -154,6 +155,8 @@ public class Fish : MonoBehaviour
 		GameManager.Instance.InputController.SetState(InputController.State.ReelingLocked);
 		VibrationManager.Instance.SetVibrationFrequency(true, 0, Mathf.Infinity);
 		VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
+		//let places know youve caught a fish
+		OnCatch?.Invoke();
 		StartCoroutine(SetCaughtFishState());
 		
 	}
