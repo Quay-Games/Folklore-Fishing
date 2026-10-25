@@ -16,10 +16,10 @@ namespace Project.DialogueEditor {
 			get => dialogueData;
 			set => dialogueData = value;
 		}
-		private EventReferenceHolder eventReferenceHolder;
-		private class EventReferenceHolder : ScriptableObject {
-			public EventReference VoiceEvent;
-		}
+		//private EventReferenceHolder eventReferenceHolder;
+		//private class EventReferenceHolder : ScriptableObject {
+		//	public EventReference VoiceEvent;
+		//}
 		public DialogueNode() {
 
 		}
@@ -28,7 +28,7 @@ namespace Project.DialogueEditor {
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/DialogueNodeStyleSheet", "NPC Dialogue", _data)
         {
 			AddGenericPorts();
-            EventReferenceBox();
+            //EventReferenceBox();
 
             if (_data != null) {
 				DialogueData = _data as NPCDialogueData;
@@ -47,47 +47,47 @@ namespace Project.DialogueEditor {
 		}
 
 
-		public void EventReferenceBox() {
-			Box boxContainer = new Box();
-			boxContainer.AddToClassList("EventReferenceBox");
+		//public void EventReferenceBox() {
+		//	Box boxContainer = new Box();
+		//	boxContainer.AddToClassList("EventReferenceBox");
 
-			Label label = new Label("Voice Event");
-			boxContainer.Add(label);
+		//	Label label = new Label("Voice Event");
+		//	boxContainer.Add(label);
 
-			eventReferenceHolder = ScriptableObject.CreateInstance<EventReferenceHolder>();
-			eventReferenceHolder.VoiceEvent = DialogueData.VoiceEvent;
+		//	eventReferenceHolder = ScriptableObject.CreateInstance<EventReferenceHolder>();
+		//	eventReferenceHolder.VoiceEvent = DialogueData.VoiceEvent;
 
-			SerializedObject serializedObject = new SerializedObject(eventReferenceHolder);
+		//	SerializedObject serializedObject = new SerializedObject(eventReferenceHolder);
 
-			SerializedProperty property = serializedObject.FindProperty("VoiceEvent");
+		//	SerializedProperty property = serializedObject.FindProperty("VoiceEvent");
 
-			PropertyField propertyField = new PropertyField(property);
-			propertyField.label = "";
+		//	PropertyField propertyField = new PropertyField(property);
+		//	propertyField.label = "";
 
-			propertyField.Bind(serializedObject);
+		//	propertyField.Bind(serializedObject);
 
-			propertyField.TrackPropertyValue(property, changedProperty =>
-			{
-				serializedObject.ApplyModifiedProperties();
+		//	propertyField.TrackPropertyValue(property, changedProperty =>
+		//	{
+		//		serializedObject.ApplyModifiedProperties();
 
-				DialogueData.VoiceEvent = eventReferenceHolder.VoiceEvent;
+		//		DialogueData.VoiceEvent = eventReferenceHolder.VoiceEvent;
 
-				Debug.Log($"Saved FMOD Event: {DialogueData.VoiceEvent.Path}");
-			});
+		//		Debug.Log($"Saved FMOD Event: {DialogueData.VoiceEvent.Path}");
+		//	});
 
-			boxContainer.Add(propertyField);
-			mainContainer.Add(boxContainer);
-		}
+		//	boxContainer.Add(propertyField);
+		//	mainContainer.Add(boxContainer);
+		//}
 
 
-		private void UpdateEventButtonText(Button button) {
-			if (DialogueData.VoiceEvent.IsNull) {
-				button.text = "None";
-			}
-			else {
-				button.text = DialogueData.VoiceEvent.Path;
-			}
-		}
+		//private void UpdateEventButtonText(Button button) {
+		//	if (DialogueData.VoiceEvent.IsNull) {
+		//		button.text = "None";
+		//	}
+		//	else {
+		//		button.text = DialogueData.VoiceEvent.Path;
+		//	}
+		//}
 
 
 		public void TextLine(DialogueTextData data_Text = null) {
@@ -99,10 +99,16 @@ namespace Project.DialogueEditor {
 			boxContainer.AddToClassList("DialogueBox");
 
 
-			AddTextField(newDialogueText, boxContainer);
+            TextField textField = GetNewTextField_TextLanguage(
+				newDialogueText.Text,
+				"Text area",
+				"TextBox"
+			);
+
+            boxContainer.Add(textField);
 
 
-			if (data_Text != null) {
+            if (data_Text != null) {
 				newDialogueText.GuidID = data_Text.GuidID;
 
 				foreach (LanguageGeneric<string> incomingText in data_Text.Text) {
@@ -124,17 +130,6 @@ namespace Project.DialogueEditor {
 		}
 
 
-		private void AddTextField(DialogueTextData container, Box boxContainer) {
-			TextField textField = GetNewTextField_TextLanguage(
-				container.Text,
-				"Text area",
-				"TextBox"
-			);
-
-			boxContainer.Add(textField);
-		}
-
-
 		public override void ReloadLanguage() {
 			base.ReloadLanguage();
 		}
@@ -151,6 +146,7 @@ namespace Project.DialogueEditor {
 			NPCDialogueData data = new NPCDialogueData();
 			SaveData(data);
 			data.VoiceEvent = dialogueData.VoiceEvent;
+			data.ProgressGraph = dialogueData.ProgressGraph;
 
             DialogueTextData tmp = DialogueData.DialogueText;
 

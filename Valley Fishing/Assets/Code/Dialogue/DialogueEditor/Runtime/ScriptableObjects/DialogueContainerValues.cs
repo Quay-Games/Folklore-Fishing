@@ -1,7 +1,10 @@
 using FMOD.Studio;
+using FMODUnity;
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
+using UnityEditor.UIElements;
 using UnityEngine;
 #if UNITY_EDITOR
 using UnityEngine.UIElements;
@@ -9,8 +12,6 @@ using UnityEngine.UIElements;
 
 public class DialogueContainerValues {
 }
-
-
 
 [System.Serializable]
 public class LanguageGeneric<T> {
@@ -39,16 +40,52 @@ public class Container_Float {
 	public float Value;
 }
 
-[System.Serializable]
-public class Container_Bool
-{
-	public bool Value;
-}
+//[System.Serializable]
+//public class Container_Bool
+//{
+//	public bool Value;
+//}
 
-[System.Serializable]
-public class Container_EventReference{
-	public EventInstance Value;
-}
+//[System.Serializable]
+//public class Container_EventReference{
+//    public EventReference Value;
+
+//    private class EventReferenceHolder : ScriptableObject
+//    {
+//        public EventReference VoiceEvent;
+//    }
+
+//    public void CreateUI(VisualElement mainContainer)
+//	{
+//        Box boxContainer = new Box();
+//        boxContainer.AddToClassList("EventReferenceBox");
+
+//        Label label = new Label("Voice Event");
+//        boxContainer.Add(label);
+
+//        EventReferenceHolder eventReferenceHolder = ScriptableObject.CreateInstance<EventReferenceHolder>();
+//        eventReferenceHolder.VoiceEvent = Value;
+
+//        SerializedObject serializedObject = new SerializedObject(eventReferenceHolder);
+
+//        SerializedProperty property = serializedObject.FindProperty("VoiceEvent");
+
+//        PropertyField propertyField = new PropertyField(property);
+//        propertyField.label = "";
+
+//        propertyField.Bind(serializedObject);
+
+//        propertyField.TrackPropertyValue(property, changedProperty =>
+//        {
+//            serializedObject.ApplyModifiedProperties();
+
+//            Value = eventReferenceHolder.VoiceEvent;
+//        });
+
+//        boxContainer.Add(propertyField);
+//        mainContainer.Add(boxContainer);
+//    }
+//}
 
 //enums
 [System.Serializable]

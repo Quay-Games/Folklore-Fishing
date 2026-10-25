@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using UnityEditor;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
@@ -42,6 +43,14 @@ namespace Project.DialogueEditor {
             {
                 nodeGuid = data.NodeGuid;
                 SetPosition(new Rect(data.Position, defaultNodeSize));
+                //LOOP OVER PROPERTIES
+                foreach (var field in data.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+                {
+                    if (field.GetValue(data) is UIContainer container)
+                    {
+                        container.CreateUI(mainContainer);
+                    }
+                }
             } else
 			{
                 nodeGuid = Guid.NewGuid().ToString();

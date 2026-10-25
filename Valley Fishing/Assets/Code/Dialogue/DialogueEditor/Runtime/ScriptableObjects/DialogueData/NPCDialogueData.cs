@@ -9,7 +9,8 @@ using UnityEngine.UIElements;
 
 [System.Serializable]
 public class NPCDialogueData : BaseData {
-	public EventReference VoiceEvent;
+    public Container_EventReference VoiceEvent = new Container_EventReference();
+    public Container_Bool ProgressGraph = new Container_Bool("Progress Immediately");
 	public DialogueTextData DialogueText;
     public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
@@ -24,14 +25,17 @@ public class NPCDialogueData : BaseData {
 
         try
         {
-            AudioManager.Instance.PlayVoiceOver(VoiceEvent);
+            AudioManager.Instance.PlayVoiceOver(VoiceEvent.Value);
             DialogueTextData tmp = DialogueText;
 
-            while (!finished)
+            //Only wait if we say to wait
+            if(!ProgressGraph.Value)
             {
-                yield return null;
+                while (!finished)
+                {
+                    yield return null;
+                }
             }
-
         }
         finally
         {
