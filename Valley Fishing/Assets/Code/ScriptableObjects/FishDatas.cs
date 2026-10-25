@@ -14,6 +14,7 @@ public class FishDatas : ScriptableObject {
 		public bool IsLoot;
 		public bool IsFailable;
 		public float ReelInSpeed;
+		public float StrafeSpeed;
 		public float SwimAwaySpeed;
 		public float StrafedSwimAwaySpeed;
 		public enum ActivityLevel {

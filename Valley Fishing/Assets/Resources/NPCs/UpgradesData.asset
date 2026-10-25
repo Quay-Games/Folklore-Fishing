@@ -55,7 +55,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
   StrafeSpeedData:
     UpgradePrices: 010000000200000003000000
-    UpgradeValues: 
+    UpgradeValues: 02000000050000000a000000
     UpgradeHoverEvents:
     - Guid:
         Data1: -1513220456
@@ -96,7 +96,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
   FailSpeedData:
     UpgradePrices: 010000000200000003000000
-    UpgradeValues: 
+    UpgradeValues: 02000000050000000a000000
     UpgradeHoverEvents:
     - Guid:
         Data1: -414414361

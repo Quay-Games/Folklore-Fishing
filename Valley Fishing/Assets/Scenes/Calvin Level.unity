@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2654342741938944997, guid: dc68a014da1dd7f48a34028052b59fef, type: 3}
+      propertyPath: RodShopData
+      value: 
+      objectReference: {fileID: 11400000, guid: 526c8a1176d3efe4fb2d6e06c55633a6, type: 2}
     - target: {fileID: 8516703457522773624, guid: dc68a014da1dd7f48a34028052b59fef, type: 3}
       propertyPath: m_Name
       value: UpgradeManager
