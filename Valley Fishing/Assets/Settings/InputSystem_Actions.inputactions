@@ -516,6 +516,17 @@
                 },
                 {
                     "name": "",
+                    "id": "55331bc7-2745-42da-be59-7379cbaae6c7",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RT",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "1718b117-042b-4da9-873f-085add8f34c5",
                     "path": "<Gamepad>/buttonWest",
                     "interactions": "",
@@ -955,7 +966,7 @@
                     "name": "",
                     "id": "9e92bb26-7e3b-4ec4-b06b-3c8f8e498ddc",
                     "path": "*/{Submit}",
-                    "interactions": "",
+                    "interactions": "Tap",
                     "processors": "",
                     "groups": "Keyboard&Mouse;Gamepad;Touch;Joystick;XR",
                     "action": "Submit",

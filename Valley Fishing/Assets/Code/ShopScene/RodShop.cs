@@ -51,6 +51,10 @@ public class RodShop : Shop {
 
 	private void UpgradeButtonHovered(UpgradeData upgradeData, int upgradeProgress) {
 		List<EventReference> voiceOverChain = new List<EventReference>();
+		if (upgradeProgress > upgradeData.UpgradeHoverEvents.Count - 1) {
+			//TODO handle full upgrade condition
+			upgradeProgress = 2;
+		}
 		voiceOverChain.Add(upgradeData.UpgradeHoverEvents[upgradeProgress]);
 		for (int i = 0; i < FMODManager.Instance.GetNumber(upgradeData.UpgradePrices[upgradeProgress]).Count; i++) {
 			voiceOverChain.Add(FMODManager.Instance.GetNumber(upgradeData.UpgradePrices[upgradeProgress])[i]);
@@ -60,8 +64,13 @@ public class RodShop : Shop {
 	}
 
 	private void UpgradeButtonClicked(UpgradeData upgradeData, ref int upgradeProgress) {
+		if (upgradeProgress > upgradeData.UpgradeHoverEvents.Count - 1) {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
+			return;
+		}
 		int upgradeprice = upgradeData.UpgradePrices[upgradeProgress];
 		if (GameManager.Instance.Money >= upgradeprice) {
+			GameManager.Instance.Money -= upgradeprice;
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ItemBuy);
 			AudioManager.Instance.PlayVoiceOver(upgradeData.UpgradeBoughtEvents[upgradeProgress]);
 			upgradeProgress++;
@@ -70,15 +79,6 @@ public class RodShop : Shop {
 		else {
 			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
 		}
-	}
-	private void UpgradeReelSpeed() {
-	}
-
-	private void UpgradeStrafeSpeed() {
-	}
-
-	private void UpgradeFailSpeed() {
-
 	}
 
 	#endregion

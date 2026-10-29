@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: UpgradesData
   m_EditorClassIdentifier: 
   ReelSpeedData:
-    UpgradePrices: 010000000200000003000000
-    UpgradeValues: 02000000050000000a000000
+    UpgradePrices: 03000000050000000a000000
+    UpgradeValues: 0100000002000000050000000a000000
     UpgradeHoverEvents:
     - Guid:
         Data1: -448664093
@@ -54,8 +54,8 @@ MonoBehaviour:
         Data4: -1235957993
       Path: event:/VoiceOver/BaitShopkeep/ItemLines/BuyLines
   StrafeSpeedData:
-    UpgradePrices: 010000000200000003000000
-    UpgradeValues: 02000000050000000a000000
+    UpgradePrices: 03000000050000000a000000
+    UpgradeValues: 0100000002000000050000000a000000
     UpgradeHoverEvents:
     - Guid:
         Data1: -1513220456
@@ -95,8 +95,8 @@ MonoBehaviour:
         Data4: -441801796
       Path: event:/VoiceOver/BaitShopkeep/ItemLines/SellLines
   FailSpeedData:
-    UpgradePrices: 010000000200000003000000
-    UpgradeValues: 02000000050000000a000000
+    UpgradePrices: 03000000050000000a000000
+    UpgradeValues: 0100000002000000050000000a000000
     UpgradeHoverEvents:
     - Guid:
         Data1: -414414361
