@@ -4,6 +4,7 @@ using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+[System.Serializable]
 public class Container_EventReference : UIContainer
 {
     public EventReference Value;
@@ -42,7 +43,6 @@ public class Container_EventReference : UIContainer
             serializedObject.ApplyModifiedProperties();
 
             Value = eventReferenceHolder.VoiceEvent;
-            Debug.Log("Hi");
         });
 
         boxContainer.Add(propertyField);

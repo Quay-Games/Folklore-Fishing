@@ -16,10 +16,6 @@ namespace Project.DialogueEditor {
 			get => dialogueData;
 			set => dialogueData = value;
 		}
-		//private EventReferenceHolder eventReferenceHolder;
-		//private class EventReferenceHolder : ScriptableObject {
-		//	public EventReference VoiceEvent;
-		//}
 		public DialogueNode() {
 
 		}
@@ -28,7 +24,6 @@ namespace Project.DialogueEditor {
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/DialogueNodeStyleSheet", "NPC Dialogue", _data)
         {
 			AddGenericPorts();
-            //EventReferenceBox();
 
             if (_data != null) {
 				DialogueData = _data as NPCDialogueData;
@@ -45,49 +40,6 @@ namespace Project.DialogueEditor {
                 ReloadLanguage();
             }
 		}
-
-
-		//public void EventReferenceBox() {
-		//	Box boxContainer = new Box();
-		//	boxContainer.AddToClassList("EventReferenceBox");
-
-		//	Label label = new Label("Voice Event");
-		//	boxContainer.Add(label);
-
-		//	eventReferenceHolder = ScriptableObject.CreateInstance<EventReferenceHolder>();
-		//	eventReferenceHolder.VoiceEvent = DialogueData.VoiceEvent;
-
-		//	SerializedObject serializedObject = new SerializedObject(eventReferenceHolder);
-
-		//	SerializedProperty property = serializedObject.FindProperty("VoiceEvent");
-
-		//	PropertyField propertyField = new PropertyField(property);
-		//	propertyField.label = "";
-
-		//	propertyField.Bind(serializedObject);
-
-		//	propertyField.TrackPropertyValue(property, changedProperty =>
-		//	{
-		//		serializedObject.ApplyModifiedProperties();
-
-		//		DialogueData.VoiceEvent = eventReferenceHolder.VoiceEvent;
-
-		//		Debug.Log($"Saved FMOD Event: {DialogueData.VoiceEvent.Path}");
-		//	});
-
-		//	boxContainer.Add(propertyField);
-		//	mainContainer.Add(boxContainer);
-		//}
-
-
-		//private void UpdateEventButtonText(Button button) {
-		//	if (DialogueData.VoiceEvent.IsNull) {
-		//		button.text = "None";
-		//	}
-		//	else {
-		//		button.text = DialogueData.VoiceEvent.Path;
-		//	}
-		//}
 
 
 		public void TextLine(DialogueTextData data_Text = null) {

@@ -1,5 +1,7 @@
 using UnityEngine.UIElements;
 
+//every class derived from this will need this serlializable attribute
+[System.Serializable]
 public abstract class UIContainer
 {
     public string Label;

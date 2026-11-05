@@ -25,7 +25,15 @@ public class NPCDialogueData : BaseData {
 
         try
         {
-            AudioManager.Instance.PlayVoiceOver(VoiceEvent.Value);
+            if(VoiceEvent.Value.IsNull)
+            {
+                Debug.LogWarning("No voice event assigned to this dialogue node.");
+                ProgressGraph.Value = true; //skip this node if no voice event is assigned
+            }
+            else
+            {
+                AudioManager.Instance.PlayVoiceOver(VoiceEvent.Value);
+            }
             DialogueTextData tmp = DialogueText;
 
             //Only wait if we say to wait

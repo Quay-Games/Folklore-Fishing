@@ -120,14 +120,14 @@ public class Container_StringEventConditionType {
 	public StringEventConditionType Value = StringEventConditionType.True;
 }
 
-[System.Serializable]
-public class Container_Enum<T> where T : System.Enum
-{
-#if UNITY_EDITOR
-    public EnumField EnumField;
-#endif
-    public T Value;
-}
+//[System.Serializable]
+//public class Container_Enum<T> where T : System.Enum
+//{
+//#if UNITY_EDITOR
+//    public EnumField EnumField;
+//#endif
+//    public T Value;
+//}
 
     //events
     [System.Serializable]
