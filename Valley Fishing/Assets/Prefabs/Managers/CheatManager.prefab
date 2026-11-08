@@ -86,12 +86,6 @@ MonoBehaviour:
   thirdShopTutorialCheats:
     CaughtFish: []
   calvinShoreCheats:
-    CaughtFish:
-    - FishIndex: 1
-      FishAmount: 5
-    - FishIndex: 3
-      FishAmount: 5
-    - FishIndex: 4
-      FishAmount: 5
+    CaughtFish: []
   calvinLevel:
     Baits: []

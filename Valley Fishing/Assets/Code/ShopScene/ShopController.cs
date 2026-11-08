@@ -20,9 +20,10 @@ public class ShopController : MonoBehaviour {
 	[field: SerializeField] public RodShop RodShop { get; set; }
 	[field: SerializeField] public Icthyologists Icthyologists { get; set; }
 	[field: SerializeField] public InventorsLab InventorsLab { get; set; }
+	[field:SerializeField] public LocationMenu LocationMenu { get; set; }
 
 	public List<GameObject> AllMenus => new List<GameObject>() {
-		this.Shore.gameObject,this.BaitShop.gameObject, this.RodShop.gameObject, this.Icthyologists.gameObject, this.InventorsLab.gameObject
+		this.Shore.gameObject,this.BaitShop.gameObject, this.RodShop.gameObject, this.Icthyologists.gameObject, this.InventorsLab.gameObject, this.LocationMenu.gameObject
 	};
 
 	#endregion

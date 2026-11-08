@@ -15,4 +15,8 @@ public class LevelManager
 	public const string GameSence = "04_GameScene";
 	public const string CalvinShore = "Calvin Shore";
 	public const string CalvinLevel = "Calvin Level";
+	public const string AreaOne = "AreaOne";
+	public const string AreaTwo = "AreaTwo";
+	public const string AreaThree = "AreaThree";
+	public const string AreaFour = "AreaFour";
 }

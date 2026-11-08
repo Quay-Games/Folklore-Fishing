@@ -3,6 +3,13 @@ using UnityEngine;
 
 public class Seagull : MonoBehaviour
 {
+	#region Serialized Fields
+
+	[SerializeField] private InventionDatas inventionDatas;
+
+	#endregion
+
+
 	#region Properties
 
 	private float WarningTime { get; set; }
@@ -40,6 +47,11 @@ public class Seagull : MonoBehaviour
 				AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullMiss);
 				yield break;
 			}
+		}
+		if (InventionManager.Instance.InventionAttatched(InventionName.Scarecrow)) {
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullMiss);
+			InventionManager.Instance.InventionDestroyed(InventionName.Scarecrow);
+			yield break;
 		}
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.SeagullAttack);
 		GameManager.Instance.CurrentFish.HitBySeagull = true;

@@ -244,7 +244,6 @@ public class CheatManager : Singleton<CheatManager>
     [SerializeField] private CalvinShoreCheats calvinShoreCheats;
 
     private void ShowCalvinShopTutorialCheats() {
-		Debug.Log(LevelManager.CalvinShore);
 		if (SceneManager.GetActiveScene().name == LevelManager.CalvinShore) {
 			Debug.Log("here");
             for (int i = 0; i < calvinShoreCheats.CaughtFish.Length; i++) {

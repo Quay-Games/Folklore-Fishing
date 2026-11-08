@@ -44,7 +44,7 @@ public class Shore : MonoBehaviour
     }
 
 	public void LeaveShore() {
-		SceneManager.LoadScene(LevelManager.CalvinLevel);
+		this.ShopController.EnableMenu(this.ShopController.LocationMenu.gameObject);
 	}
 
 	#endregion

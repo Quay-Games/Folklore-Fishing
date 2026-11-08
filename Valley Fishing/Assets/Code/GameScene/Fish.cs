@@ -42,7 +42,8 @@ public class Fish : MonoBehaviour
     public int FishIndex { get; set; }
     private bool IsCentred { get; set; } = true;
 	private InputController InputController { get => GameManager.Instance.InputController; }
-	private float FailedCatchTime { get; set; }
+	[field: SerializeField] public float FailedCatchTime { get; set; }
+	private float CurrentFailedCatchTime { get; set; }
 	private bool CatchStarted { get; set; }
 
 	private List<float> ActivityLevelIntervals = new List<float>();
@@ -82,7 +83,7 @@ public class Fish : MonoBehaviour
 			this.CatchStarted = true;
 		}
 		if (this.FishData.IsFailable) {
-			if (this.FailedCatchTime > 10) {
+			if (this.CurrentFailedCatchTime > FailedCatchTime * UpgradeManager.Instance.RodShopData.FailSpeedData.UpgradeValues[UpgradeManager.Instance.FailSpeed]) {
 				FailedCatch();
 			}
 		}
@@ -173,7 +174,8 @@ public class Fish : MonoBehaviour
 	}
 
 	private void Move() {
-        rb.AddForce(this.InputController.HorizontalInput.x * this.FishData.ReelInSpeed, 0, 0);
+		float input = this.InputController.HorizontalInput.x * this.FishData.StrafeSpeed;
+		rb.AddForce(input * UpgradeManager.Instance.RodShopData.StrafeSpeedData.UpgradeValues[UpgradeManager.Instance.StrafeSpeed], 0, 0);
     }
 
     private void Reel() {
@@ -207,7 +209,7 @@ public class Fish : MonoBehaviour
 			}
 			VibrationManager.Instance.SetVibrationFrequency(true, DistanceAsPercentage(), Mathf.Infinity);
 			VibrationManager.Instance.SetVibrationFrequency(false, 0, Mathf.Infinity);
-			rb.AddForce(0, 0, -this.ReelSpeed);
+			rb.AddForce(0, 0, -this.ReelSpeed * UpgradeManager.Instance.RodShopData.ReelSpeedData.UpgradeValues[UpgradeManager.Instance.ReelSpeed]);
 			AudioManager.Instance.PlayUnspoolSound(false, 0);
 			this.IsUnspooling = false;
 		} else {
@@ -306,7 +308,7 @@ public class Fish : MonoBehaviour
 			return;
 		}
 		if (this.CatchStarted) {
-			this.FailedCatchTime += Time.deltaTime;
+			this.CurrentFailedCatchTime += Time.deltaTime;
 		}
 	}
 

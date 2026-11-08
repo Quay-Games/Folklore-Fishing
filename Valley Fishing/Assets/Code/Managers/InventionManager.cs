@@ -27,6 +27,15 @@ public class InventionManager : Singleton<InventionManager> {
 		}
 	}
 
+	public bool InventionAttatched(InventionName inventionName) {
+		for (int i = 0; i < this.CurrrentIventions.Count; i++) {
+			if (this.CurrrentIventions[i].ItemName == inventionName.ToString()) {
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public void BuyInvention(InventionDatas.InventionData invention) {
 		for (int i = 0; i < invention.InventionComponents.Length; i++) {
 			for (int j = 0; j < InventoryManager.Instance.OwnedLootTypeDatas.Count; j++) {
@@ -38,7 +47,11 @@ public class InventionManager : Singleton<InventionManager> {
 		}
 		this.CurrrentIventions.Add(invention);
 	}
-	public void InventionDestroyed(InventionDatas.InventionData invention) {
-		this.CurrrentIventions.Remove(invention);
+	public void InventionDestroyed(InventionName inventionName) {
+		for (int i = 0; i < this.CurrrentIventions.Count; i++) {
+			if (this.CurrrentIventions[i].ItemName == inventionName.ToString()) {
+				this.CurrrentIventions.RemoveAt(i);
+			}
+		}
 	}
 }
