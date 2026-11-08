@@ -72,48 +72,33 @@ public class BaitView : MonoBehaviour
 	
 	private IEnumerator EnableUI(bool enable) {
 		yield return new WaitForEndOfFrame();
-		if (enable == false) {
+		if (enable == false)
+		{
 			buttonsGameobject.SetActive(enable);
 			GameManager.Instance.LevelController.SetState(LevelController.State.IdleWithBait);
 			GameManager.Instance.EventSystem.SetSelectedGameObject(null);
 			yield break;
-		} 
-		else {
-		//	bool allBaitsAreTutorials = true;
-		//	for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-		//		BaitDatas.BaitData bait = InventoryManager.Instance.OwnedBaitTypeDatas[i].OwnedItemData as BaitDatas.BaitData;
-		//		if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0 && !bait.IsTutorial) {
-		//			allBaitsAreTutorials = false;
-		//		}
-		//	}
-		//	if (allBaitsAreTutorials) {
-		//		for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-		//			if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
-		//				BaitClicked(i);
-		//			}
-		//		}				
-		//		yield break;
-		//	}
-			buttonsGameobject.SetActive(enable);
-		//	bool firstButtonSelected = false;
-		//	for (int i = 0; i < baitButtons.Length; i++) {
-		//		baitButtons[i].gameObject.SetActive(false);
-		//	}
-		//	for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++) {
-		//		if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0) {
-		//			baitButtons[i].gameObject.SetActive(true);
-		//			if (!firstButtonSelected) {
-		//				StartCoroutine(SelectButtonAfterOneFrame(baitButtons[i].gameObject));
-		//				GameManager.Instance.InputController.SelectButton(baitButtons[i].gameObject);
-		//				firstButtonSelected = true;
-		//			}
-		//		}
-		//	}
 		}
-		//GameManager.Instance.InputController.SelectButton(baitButtons[0].gameObject);
-		AudioManager.Instance.PlayBaitSound(false, 0);
-		AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
-		StartCoroutine(WaitToOpenBaitBox());
+		else
+		{
+			if (InventoryManager.Instance.OneBaitTypeLeft)
+			{
+				for (int i = 0; i < InventoryManager.Instance.OwnedBaitTypeDatas.Count; i++)
+				{
+					if (InventoryManager.Instance.OwnedBaitTypeDatas[i].quantity > 0)
+					{
+						BaitClicked(i);
+					}
+				}
+			} else
+			{
+                buttonsGameobject.SetActive(enable);
+
+                AudioManager.Instance.PlayBaitSound(false, 0);
+                AudioManager.Instance.PlayOneShot(FMODManager.Instance.BaitBoxOpen);
+                StartCoroutine(WaitToOpenBaitBox());
+            }
+		}
 	}
 
 	private void SkipBaitSelection(bool value) {

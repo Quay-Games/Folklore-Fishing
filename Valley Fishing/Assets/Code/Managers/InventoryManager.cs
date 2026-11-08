@@ -119,7 +119,6 @@ public class InventoryManager : Singleton<InventoryManager> {
 	public FishDatas.FishData GetLoot(FishName lootname) {
 		for (int i = 0; i < this.FishDatas.Datas.Length; i++) {
 			string itemName = this.FishDatas.Datas[i].ItemName.Replace(" ", "");
-			//Debug.Log(this.FishDatas.Datas[i].ItemName. + " " + lootname.ToString());
 			if (itemName == lootname.ToString()) {
 				return this.FishDatas.Datas[i];
 			}
@@ -131,7 +130,7 @@ public class InventoryManager : Singleton<InventoryManager> {
 	{
 		for(int i = 0; i < this.OwnedBaitTypeDatas.Count; i++)
         {
-            if (this.OwnedBaitTypeDatas[i].OwnedItemData.ItemName.Equals(name.ToString()))
+            if (this.OwnedBaitTypeDatas[i].OwnedItemData.ItemName.Replace(" ", "").Equals(name.ToString()))
             {
                 this.OwnedBaitTypeDatas[i].quantity += quantity;
                 return;

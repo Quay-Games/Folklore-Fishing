@@ -14,7 +14,6 @@ public class LevelController : AbstractState<LevelController.State> {
 	[SerializeField] private EventReference levelAmbience;
 	[SerializeField] private Transform gameplayContainer;
 	[SerializeField] public bool isTutorialLevel;
-	[SerializeField] private Transform gameplayContainer;	
 
 	#endregion
 
