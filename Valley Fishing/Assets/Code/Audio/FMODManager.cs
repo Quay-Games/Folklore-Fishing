@@ -6,6 +6,12 @@ using FMOD.Studio;
 
 public class FMODManager : Singleton<FMODManager>
 {
+
+	[Header("SplashScreen")]
+
+	public EventReference QuayPresents;
+	public EventReference SelectInputDevice;
+
 	[Header("MenuVoiceOver")]
 
 	public EventReference MenuGreeting;
@@ -23,6 +29,8 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("ShopVoiceOver")]
 
 	public EventReference[] ShoreIntros;
+	public EventReference ChooseLocation;
+	public EventReference NoBait;
 	public EventReference[] LeaveShorePrompts;
 	public EventReference[] BaitShopIntros;
 	public EventReference[] BaitNames;

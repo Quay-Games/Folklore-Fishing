@@ -8,12 +8,13 @@ using UnityEngine.EventSystems;
 public class LevelController : AbstractState<LevelController.State> {
 
 	#region Serialized Fields
-	
+	[SerializeField] private int locationIndex;
 	[SerializeField] private EventSystem eventSystem;
 	[SerializeField] private EventReference levelMusic;
 	[SerializeField] private EventReference levelAmbience;
 	[SerializeField] private Transform gameplayContainer;
 	[SerializeField] public bool isTutorialLevel;
+	[SerializeField] private Transform gameplayContainer;	
 
 	#endregion
 
@@ -102,17 +103,16 @@ public class LevelController : AbstractState<LevelController.State> {
 		int fishIndex = 0;
 		float randomValue = UnityEngine.Random.value;
 		float cumulative = 0f;
-;		for (int i = 0; i < this.CurrentBait.FishSpawnChances.Count; i++) {
-			cumulative += this.CurrentBait.FishSpawnChances[i].SpawnChance;
+;		for (int i = 0; i < this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance.Length; i++) {
+			cumulative += this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].SpawnChance;
 			if (randomValue < cumulative) {
-				fishIndex = (int)this.CurrentBait.FishSpawnChances[i].FishName;
+				fishIndex = (int)this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].FishName;
 				break;
 			}
 		}
 		Fish fishInstance = Instantiate(GameManager.Instance.FishPrefab, this.FishSpawnTransform.position, Quaternion.identity);
 		fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[fishIndex];
 		fishInstance.transform.parent = gameplayContainer;
-		fishInstance.IsTutorial = this.CurrentBait.IsTutorial;
 		InventoryManager.Instance.CurrentBait = null;
 		GameManager.Instance.CurrentFish = fishInstance;
 		GameManager.Instance.CurrentFish.OnCatch += NotifyOfCaughtFish;

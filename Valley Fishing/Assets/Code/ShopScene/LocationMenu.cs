@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using UnityEditor.ShaderKeywordFilter;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -24,11 +25,16 @@ public class LocationMenu : MonoBehaviour
 		}
 		Utilities.LinkHorizontalButtons(enabledButtons, shoreButton);
 		EventSystem.current.SetSelectedGameObject(initialButton.gameObject);
+		AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.ChooseLocation);
 	}
 
 	public void EnterZone(int zone) {
-		//SceneManager.LoadScene()
-		//LevelManager.
+		if(InventoryManager.Instance.TotalOwnedBaits == 0) {
+			AudioManager.Instance.PlayVoiceOver(FMODManager.Instance.NoBait);
+			AudioManager.Instance.PlayOneShot(FMODManager.Instance.ClickError);
+			return;
+		}
+		SceneManager.LoadScene(LevelManager.CalvinLevel);
 	}
 
 	public void ReturnToShore() {

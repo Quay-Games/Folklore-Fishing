@@ -44,6 +44,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ca858d811f1374088358f9429bacd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  QuayPresents:
+    Guid:
+      Data1: 516181656
+      Data2: 1283359365
+      Data3: -495615826
+      Data4: -1921879266
+    Path: event:/VoiceOver/Narrator/Misc/Quay Games presents...
+  SelectInputDevice:
+    Guid:
+      Data1: 913936623
+      Data2: 1262556276
+      Data3: -1669348214
+      Data4: 1488632184
+    Path: event:/VoiceOver/Narrator/Misc/SelectInputDevice
   MenuGreeting:
     Guid:
       Data1: 751111704
@@ -131,6 +145,20 @@ MonoBehaviour:
       Data3: 638291110
       Data4: 222862762
     Path: event:/VoiceOver/Captain/GameIntroduction/4-BaitShopTutorial2/1Backondryland
+  ChooseLocation:
+    Guid:
+      Data1: 1438630613
+      Data2: 1153078846
+      Data3: -1544099939
+      Data4: -922356416
+    Path: event:/VoiceOver/Captain/Shore/LocationMenu/ChooseLocation
+  NoBait:
+    Guid:
+      Data1: 378155797
+      Data2: 1212993941
+      Data3: -1246576743
+      Data4: -1853543904
+    Path: event:/VoiceOver/Captain/Shore/LocationMenu/NoBait
   LeaveShorePrompts:
   - Guid:
       Data1: -1414859070
