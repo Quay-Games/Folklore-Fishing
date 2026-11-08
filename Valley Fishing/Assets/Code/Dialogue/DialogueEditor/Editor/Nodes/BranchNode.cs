@@ -12,11 +12,7 @@ namespace Project.DialogueEditor {
     [NodeDataType(typeof(BranchData))]
     public class BranchNode : BaseNode {
 
-		private BranchData branchData = new BranchData();
-		public BranchData BranchData {
-			get => branchData;
-			set => branchData = value; 
-		}
+		public BranchData BranchData => (BranchData)NodeData;
 
 		public BranchNode() {
 
@@ -25,16 +21,8 @@ namespace Project.DialogueEditor {
 		public BranchNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/BranchNodeStyleSheet", "Branch", _data)
         {
-			if (_data != null)
-			{
-				BranchData = _data as BranchData;
-                foreach (EventData_StringCondition item in BranchData.EventData_StringConditions)
-                {
-                    AddCondition(item);
-                }
-
-                ReloadLanguage();
-            }
+			foreach (EventData_StringCondition item in BranchData.EventData_StringConditions)
+				AddCondition(item);
 
 			AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("True", Port.Capacity.Single);
@@ -53,7 +41,7 @@ namespace Project.DialogueEditor {
 		}
 
 		public void AddCondition(EventData_StringCondition stringEvent = null) {
-			AddStringConditionEventBuild(branchData.EventData_StringConditions, stringEvent);
+			AddStringConditionEventBuild(BranchData.EventData_StringConditions, stringEvent);
 		}
 
 		public override BaseData Save()

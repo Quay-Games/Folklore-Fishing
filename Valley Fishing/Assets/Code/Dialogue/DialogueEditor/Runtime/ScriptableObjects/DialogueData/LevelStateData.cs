@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class LevelStateData : BaseData
 {
-    public Container_Enum<LevelController.State> LevelStateValues = new Container_Enum<LevelController.State>();
+    public Container_Enum<LevelController.State> LevelStateValues = new Container_Enum<LevelController.State>("Level State");
 
     public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {

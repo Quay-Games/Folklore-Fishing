@@ -10,12 +10,7 @@ using UnityEngine.UIElements;
 namespace Project.DialogueEditor {
     [NodeDataType(typeof(NPCDialogueData))]
     public class DialogueNode : BaseNode {
-		private NPCDialogueData dialogueData = new NPCDialogueData();
-
-		public NPCDialogueData DialogueData {
-			get => dialogueData;
-			set => dialogueData = value;
-		}
+		public NPCDialogueData DialogueData => (NPCDialogueData)NodeData;
 		public DialogueNode() {
 
 		}
@@ -25,55 +20,27 @@ namespace Project.DialogueEditor {
         {
 			AddGenericPorts();
 
-            if (_data != null) {
-				DialogueData = _data as NPCDialogueData;
-
-                DialogueTextData textData = new DialogueTextData
-                {
-                    GuidID = DialogueData.DialogueText.GuidID,
-                    Text = DialogueData.DialogueText.Text,
-                    ID = DialogueData.DialogueText.ID
-                };
-
-                TextLine(textData);
-
-                ReloadLanguage();
-            }
+			TextLine(DialogueData.DialogueText);
 		}
 
 
 		public void TextLine(DialogueTextData data_Text = null) {
-			DialogueTextData newDialogueText = new DialogueTextData();
-			DialogueData.DialogueText = newDialogueText;
+			DialogueTextData textData = data_Text ?? new DialogueTextData();
+			if (data_Text == null)
+				textData.GuidID.Value = Guid.NewGuid().ToString();
 
-
+			DialogueData.DialogueText = textData;
 			Box boxContainer = new Box();
 			boxContainer.AddToClassList("DialogueBox");
 
 
             TextField textField = GetNewTextField_TextLanguage(
-				newDialogueText.Text,
+				textData.Text,
 				"Text area",
 				"TextBox"
 			);
 
             boxContainer.Add(textField);
-
-
-            if (data_Text != null) {
-				newDialogueText.GuidID = data_Text.GuidID;
-
-				foreach (LanguageGeneric<string> incomingText in data_Text.Text) {
-					foreach (LanguageGeneric<string> existingText in newDialogueText.Text) {
-						if (existingText.LanguageType == incomingText.LanguageType) {
-							existingText.LanguageGenericType = incomingText.LanguageGenericType;
-						}
-					}
-				}
-			}
-			else {
-				newDialogueText.GuidID.Value = Guid.NewGuid().ToString();
-			}
 
 
 			ReloadLanguage();
@@ -97,8 +64,8 @@ namespace Project.DialogueEditor {
 			//into complex types, you can only cast backwards to more simple types
 			NPCDialogueData data = new NPCDialogueData();
 			SaveData(data);
-			data.VoiceEvent = dialogueData.VoiceEvent;
-			data.ProgressGraph = dialogueData.ProgressGraph;
+			data.VoiceEvent = DialogueData.VoiceEvent;
+			data.ProgressGraph = DialogueData.ProgressGraph;
 
             DialogueTextData tmp = DialogueData.DialogueText;
 

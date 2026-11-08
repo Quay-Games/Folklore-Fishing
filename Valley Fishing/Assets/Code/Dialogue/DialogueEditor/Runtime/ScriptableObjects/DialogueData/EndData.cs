@@ -4,7 +4,7 @@ using UnityEngine;
 
 [System.Serializable]
 public class EndData: BaseData {
-	public Container_Enum<EndNodeType> EndNodeType = new Container_Enum<EndNodeType>();
+	public Container_Enum<EndNodeType> EndNodeType = new Container_Enum<EndNodeType>("End State");
 
     public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {

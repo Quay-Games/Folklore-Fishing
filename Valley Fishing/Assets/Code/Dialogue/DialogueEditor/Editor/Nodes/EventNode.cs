@@ -11,12 +11,7 @@ namespace Project.DialogueEditor {
     [NodeDataType(typeof(EventData))]
     public class EventNode : BaseNode {
 
-		EventData eventData = new EventData();
-
-		public EventData NPCEventData {
-			get => eventData;
-			set => eventData = value;
-		}
+		public EventData NPCEventData => (EventData)NodeData;
 
 		public EventNode() {
 
@@ -27,12 +22,7 @@ namespace Project.DialogueEditor {
 		public EventNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Event", _data)
         {
-			//is this the proper way to assign this data and actually have it be used??
-            if (_data != null)
-            {
-                NPCEventData = _data as EventData;
-                TextLine(NPCEventData.EventData_EventName, NPCEventData.EventType);
-            }
+			TextLine(NPCEventData.EventData_EventName, NPCEventData.EventType);
             AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("Output", Port.Capacity.Single);
 		}

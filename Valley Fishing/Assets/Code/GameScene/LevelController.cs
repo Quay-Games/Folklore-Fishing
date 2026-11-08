@@ -70,7 +70,6 @@ public class LevelController : AbstractState<LevelController.State> {
 				SetState(State.AttatchBait);
 				break;
 			case State.AttatchBait:
-				GameManager.Instance.LevelController = this;
 				this.BaitView.EnableBaitUI(true);
 				break;
 			case State.IdleWithBait:

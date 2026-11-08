@@ -11,12 +11,7 @@ namespace Project.DialogueEditor {
     [NodeDataType(typeof(ConditionData))]
     public class ConditionNode : BaseNode {
 
-		ConditionData nPCConditionData = new ConditionData();
-
-		public ConditionData NPCConditionData {
-			get => nPCConditionData;
-			set => nPCConditionData = value;
-		}
+		public ConditionData NPCConditionData => (ConditionData)NodeData;
 
 		public ConditionNode() {
 
@@ -24,11 +19,7 @@ namespace Project.DialogueEditor {
 
 		public ConditionNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "NPC Condition", _data) {
-			if(_data != null)
-            {
-                NPCConditionData = _data as ConditionData;
-                TextLine(NPCConditionData.EventData_EventName);
-            }
+			TextLine();
             AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("True", Port.Capacity.Single);
 			AddOutputPort("False", Port.Capacity.Single);

@@ -11,80 +11,39 @@ namespace Project.DialogueEditor {
     [NodeDataType(typeof(ResponseData))]
     public class ResponseNode : BaseNode {
 
-		private ResponseData responseData = new ResponseData();
-		public ResponseData ResponseData {
-			get => responseData;
-			set => responseData = value;
-		}
+		public ResponseData ResponseData => (ResponseData)NodeData;
 
 		public ResponseNode() {
 
 		}
-		// TODO: make the optional data assign to the rest of the class
 		public ResponseNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
 		: base(_position, _editorWindow, _graphView, "USS/Nodes/BranchNodeStyleSheet", "Response", _data) {
-			if (_data != null) {
-				ResponseData = (_data as ResponseData);
-                List<ResponseData_Text> textData = new List<ResponseData_Text>();
-                if (ResponseData.ResponseData_Texts.Count > 0)
-                {
-                    for (int i = 0; i < ResponseData.ResponseData_Texts.Count; i++)
-                    {
-                        ResponseData_Text tmp = new ResponseData_Text();
-                        tmp.GuidID = ResponseData.ResponseData_Texts[i].GuidID;
-                        tmp.Text = ResponseData.ResponseData_Texts[i].Text;
-                        tmp.ID = ResponseData.ResponseData_Texts[i].ID;
-                        textData.Add(tmp);
-                    }
-                    TextLine(textData[0]);
-                    TextLine(textData[1]);
-                }
-                else
-                {
-                    TextLine();
-                    TextLine();
-                }
+			foreach (ResponseData_Text textData in ResponseData.ResponseData_Texts)
+				BuildTextLine(textData);
 
-                ReloadLanguage();
-            }
+			while (ResponseData.ResponseData_Texts.Count < 2)
+				TextLine();
+
+			ReloadLanguage();
 			AddInputPort("Input", Port.Capacity.Multi);
 			AddOutputPort("Option 1", Port.Capacity.Single);
 			AddOutputPort("Option 2", Port.Capacity.Single);
 		}
 
 		public void TextLine(ResponseData_Text data_Text = null) {
-			ResponseData_Text newDialogueBaseContainer_Text = new ResponseData_Text();
-			ResponseData.ResponseData_Texts.Add(newDialogueBaseContainer_Text);
+			ResponseData_Text textData = data_Text ?? new ResponseData_Text();
+			if (data_Text == null)
+				textData.GuidID.Value = Guid.NewGuid().ToString();
 
-			// Add Container Box
+			ResponseData.ResponseData_Texts.Add(textData);
+			BuildTextLine(textData);
+			ReloadLanguage();
+		}
+
+		private void BuildTextLine(ResponseData_Text textData) {
 			Box boxContainer = new Box();
 			boxContainer.AddToClassList("DialogueBox");
-
-			// Add Fields
-			AddTextField(newDialogueBaseContainer_Text, boxContainer);
-
-			// Load in data if it got any
-			if (data_Text != null) {
-				// Guid ID
-				newDialogueBaseContainer_Text.GuidID = data_Text.GuidID;
-
-				// Text
-				foreach (LanguageGeneric<string> data_text in data_Text.Text) {
-					foreach (LanguageGeneric<string> text in newDialogueBaseContainer_Text.Text) {
-						if (text.LanguageType == data_text.LanguageType) {
-							text.LanguageGenericType = data_text.LanguageGenericType;
-						}
-					}
-				}
-
-			} else {
-				// Make New Guid ID
-				newDialogueBaseContainer_Text.GuidID.Value = Guid.NewGuid().ToString();
-			}
-
-			// Reaload the current selected language
-			ReloadLanguage();
-
+			AddTextField(textData, boxContainer);
 			mainContainer.Add(boxContainer);
 		}
 

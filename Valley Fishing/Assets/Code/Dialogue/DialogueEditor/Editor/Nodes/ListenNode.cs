@@ -14,7 +14,7 @@ namespace Project.DialogueEditor
     public class ListenNode : BaseNode
     {
 
-        ListenData listenData = new ListenData();
+        private ListenData ListenData => (ListenData)NodeData;
 
         public ListenNode()
         {
@@ -24,12 +24,6 @@ namespace Project.DialogueEditor
         public ListenNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
         : base(_position, _editorWindow, _graphView, "USS/Nodes/EventNodeStyleSheet", "ListenNode", _data)
         {
-
-            //if theres data to initialize with, do that, if not use default values
-            if (_data != null)
-            {
-                listenData = _data as ListenData;
-            }
 
             AddInputPort("Input", Port.Capacity.Multi);
             AddOutputPort("Continue");
@@ -43,10 +37,10 @@ namespace Project.DialogueEditor
             boxContainer.AddToClassList("EventBox");
 
             ObjectField objectField;
-            if (listenData.listenEventContainer != null)
+            if (ListenData.listenEventContainer != null)
             {
-                objectField = GetNewObjectField_ListenEvent(listenData.listenEventContainer, "EventObject");
-                objectField.userData = listenData.listenEventContainer; // tag so we can find/update it later
+                objectField = GetNewObjectField_ListenEvent(ListenData.listenEventContainer, "EventObject");
+                objectField.userData = ListenData.listenEventContainer; // tag so we can find/update it later
             }
             else
             {
@@ -54,7 +48,7 @@ namespace Project.DialogueEditor
                 Container_ListenEvent newContainer = new Container_ListenEvent();
                 objectField = GetNewObjectField_ListenEvent(newContainer, "EventObject");
                 objectField.userData = newContainer;
-                listenData.listenEventContainer = newContainer;
+                ListenData.listenEventContainer = newContainer;
             }
             boxContainer.Add(objectField);
             mainContainer.Add(boxContainer);
@@ -64,7 +58,7 @@ namespace Project.DialogueEditor
         {
             ListenData nodeData = new ListenData();
             SaveData(nodeData);
-            nodeData.listenEventContainer = listenData.listenEventContainer;
+            nodeData.listenEventContainer = ListenData.listenEventContainer;
             return nodeData;
         }
     }

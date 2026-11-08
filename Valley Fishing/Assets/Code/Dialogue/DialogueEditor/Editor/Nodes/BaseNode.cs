@@ -8,6 +8,7 @@ using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.UIElements;
+using static UnityEditor.LightingExplorerTableColumn;
 
 namespace Project.DialogueEditor {
     //this below line will never be used, but it is to illustrate what each node type will need to function
@@ -20,6 +21,7 @@ namespace Project.DialogueEditor {
 		protected NodeGraphView graphView;
 		protected NodeGraphEditorWindow editorWindow;
 		protected Vector2 defaultNodeSize = new Vector2(200, 250);
+		protected BaseData NodeData;
 
 		private List<LanguageGenericHolder_Text> languageGenericHolder_Texts = new List<LanguageGenericHolder_Text>();
 
@@ -43,19 +45,40 @@ namespace Project.DialogueEditor {
             {
                 nodeGuid = data.NodeGuid;
                 SetPosition(new Rect(data.Position, defaultNodeSize));
-                //LOOP OVER PROPERTIES
-                foreach (var field in data.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
-                {
-                    if (field.GetValue(data) is UIContainer container)
-                    {
-                        container.CreateUI(mainContainer);
-                    }
-                }
+
+				//LOOP OVER PROPERTIES
+                //foreach (var field in data.GetType().GetFields(BindingFlags.Instance | BindingFlags.Public))
+                //{
+                //    if (field.GetValue(data) is UIContainer container)
+                //    {
+                //        container.CreateUI(mainContainer);
+                //    }
+                //}
             } else
 			{
                 nodeGuid = Guid.NewGuid().ToString();
                 SetPosition(new Rect(_position, defaultNodeSize));
             }
+
+     //       Debug.Log(GetType());
+     //       var attributes = GetType().GetCustomAttributes(typeof(NodeDataTypeAttribute), false);
+     //       foreach (var attribute in attributes)
+     //       {
+     //           if (attribute is NodeDataTypeAttribute nodeDataTypeAttribute)
+     //           {
+					//Debug.Log(nodeDataTypeAttribute.DataType);
+     //               foreach (var field in nodeDataTypeAttribute.DataType.GetFields(BindingFlags.Instance | BindingFlags.Public))
+     //               {
+					//	//Debug.Log(field.FieldType);
+					//	if (field.GetValue(field.FieldType) is UIContainer container)
+					//	{
+					//		container.CreateUI(mainContainer);
+					//	}
+					//}
+     //           }
+     //       }
+			NodeData = data ?? Activator.CreateInstance(GetType().GetCustomAttribute<NodeDataTypeAttribute>().DataType) as BaseData;
+			BuildContainerUI();
 
             StyleSheet styleSheet = Resources.Load<StyleSheet>(_stylesheet);
 			styleSheets.Add(styleSheet);
@@ -225,12 +248,15 @@ namespace Project.DialogueEditor {
 			enumField.AddToClassList(USS01);
 			enumField.AddToClassList(USS02);
 
-			enumType.EnumField = enumField;
+			//enumType.EnumField = enumField;
 			return enumField;
 		}
 
 		protected TextField GetNewTextField_TextLanguage(List<LanguageGeneric<string>> Text, string placeholderText = "", string USS01 = "", string USS02 = "") {
 			foreach (LanguageType language in (LanguageType[])Enum.GetValues(typeof(LanguageType))) {
+				if (Text.Exists(text => text.LanguageType == language))
+					continue;
+
 				Text.Add(new LanguageGeneric<string> {
 					LanguageType = language,
 					LanguageGenericType = ""
@@ -315,15 +341,12 @@ namespace Project.DialogueEditor {
 		}
 
 		protected void AddStringConditionEventBuild(List<EventData_StringCondition> stringEventCondition, EventData_StringCondition stringEvent = null) {
-			EventData_StringCondition tmpStringEventCondition = new EventData_StringCondition();
-
-			if (stringEvent != null) {
-				tmpStringEventCondition.StringEventText.Value = stringEvent.StringEventText.Value;
-				tmpStringEventCondition.StringEventValue.Value = stringEvent.StringEventValue.Value;
-				tmpStringEventCondition.StringEventConditionType.Value = stringEvent.StringEventConditionType.Value;
+			if (stringEvent == null) {
+				stringEvent = new EventData_StringCondition();
+				stringEventCondition.Add(stringEvent);
 			}
 
-			stringEventCondition.Add(tmpStringEventCondition);
+			EventData_StringCondition tmpStringEventCondition = stringEvent;
 
 			Box boxContainer = new Box();
 			Box boxfloatField = new Box();
@@ -479,6 +502,21 @@ namespace Project.DialogueEditor {
 		{
             AddInputPort("Input", Port.Capacity.Multi);
             AddOutputPort("Output");
+        }
+
+        // In BaseNode
+        private void BuildContainerUI()
+        {
+            var fields = NodeData.GetType().GetFields(
+                BindingFlags.Instance | BindingFlags.Public);
+
+            foreach (var field in fields)
+            {
+                if (field.GetValue(NodeData) is UIContainer container)
+                {
+                    container.CreateUI(mainContainer);
+                }
+            }
         }
         #endregion
 

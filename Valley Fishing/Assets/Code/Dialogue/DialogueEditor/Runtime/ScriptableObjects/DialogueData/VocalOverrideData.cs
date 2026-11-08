@@ -2,6 +2,7 @@ using FMODUnity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -11,41 +12,53 @@ using UnityEngine.UIElements;
 public class VocalOverrideData : BaseData
 {
     public Container_EventReference VoiceEvent = new Container_EventReference();
-    public Container_Enum<VoiceEventScenarios> VoiceEventScenario = new Container_Enum<VoiceEventScenarios>();
+    public Container_Enum<VoiceEventScenarios> VoiceEventScenario = new Container_Enum<VoiceEventScenarios>("Voice Line Scenario");
+    public Container_Bool ProgressGraph = new Container_Bool("Progress when line stars");
+
     public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
-        //bool finished = false;
+        if(VoiceEvent.Value.IsNull)
+        {
+            Debug.LogWarning("No voice event assigned to this vocal override node.");
+            yield break;
+        }
+        bool lineTriggered = false;
+        bool lineFinished = false;
 
-        //void OnFinished()
-        //{
-        //    finished = true;
-        //}
+        void OnLineTriggered()
+        {
+            lineTriggered = true;
+        }
 
-        //SubscribeToCorrectEvent(OnFinished);
+        void OnLineFinished(bool skipped)
+        {
+            lineFinished = true;
+        }
 
-        //try
-        //{
-        //    if (VoiceEvent.Value.IsNull)
-        //    {
-        //        Debug.LogWarning("No voice event assigned to this dialogue node.");
-        //        ProgressGraph.Value = true; //skip this node if no voice event is assigned
-        //    }
-        //    else
-        //    {
-        //        AudioManager.Instance.PlayVoiceOver(VoiceEvent.Value);
-        //    }
-        //    DialogueTextData tmp = DialogueText;
+        SubscribeToCorrectEvent(OnLineTriggered);
+        try
+        {
+            while (!lineTriggered)
+            {
+                yield return null;
+            }
 
-        //    //Only wait if we say to wait
-        //    if (!ProgressGraph.Value)
-        //    {
+            UnsubscribeFromCorrectEvent(OnLineTriggered);
 
-        //    }
-        //}
-        //finally
-        //{
-        //    AudioManager.Instance.OnVoiceLineOver -= OnFinished;
-        //}
+            AudioManager.Instance.OnVoiceLineOver += OnLineFinished;
+            AudioManager.Instance.PlayVoiceOver(VoiceEvent.Value);
+            while(!lineFinished && !ProgressGraph.Value)
+            {
+                yield return null;
+            }
+
+            AudioManager.Instance.OnVoiceLineOver -= OnLineFinished;
+        }
+        finally
+        {
+            //just in case it never got there originally
+            UnsubscribeFromCorrectEvent(OnLineTriggered);
+        }
         yield return null;
     }
 
@@ -55,7 +68,7 @@ public class VocalOverrideData : BaseData
         switch (VoiceEventScenario.Value)
         {
             case VoiceEventScenarios.FishCatch:
-                GameManager.Instance.LevelController.OnFishCaught += callbackFunction;
+                GameManager.Instance.LevelController.FishView.FishCatchLineToPlay = callbackFunction;
                 break;
         }
     }
@@ -66,7 +79,10 @@ public class VocalOverrideData : BaseData
         switch (VoiceEventScenario.Value)
         {
             case VoiceEventScenarios.FishCatch:
-                GameManager.Instance.LevelController.OnFishCaught -= callbackFunction;
+                if(GameManager.Instance.LevelController.FishView.FishCatchLineToPlay == callbackFunction)
+                {
+                    GameManager.Instance.LevelController.FishView.FishCatchLineToPlay = null;
+                }
                 break;
         }
     }

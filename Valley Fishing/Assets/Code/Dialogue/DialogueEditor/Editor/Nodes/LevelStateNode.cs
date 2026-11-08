@@ -8,12 +8,7 @@ namespace Project.DialogueEditor
     [NodeDataType(typeof(LevelStateData))]
     public class LevelStateNode : BaseNode
     {
-        private LevelStateData levelStateData = new LevelStateData();
-        public LevelStateData LevelStateData
-        {
-            get => levelStateData;
-            set => levelStateData = value;
-        }
+        public LevelStateData LevelStateData => (LevelStateData)NodeData;
 
         public LevelStateNode()
         {
@@ -23,28 +18,7 @@ namespace Project.DialogueEditor
             : base(_position, _editorWindow, _graphView, "USS/Nodes/NodeStyleSheet", "Level State Change", _data)
         {
 
-            if (_data != null)
-            {
-                LevelStateData.LevelStateValues.Value = (_data as LevelStateData).LevelStateValues.Value;
-                LoadValueInToField();
-            }
-
             AddGenericPorts();
-
-            MakeMainContainer();
-        }
-
-        private void MakeMainContainer()
-        {
-            EnumField enumField = GetNewGenericEnum(levelStateData.LevelStateValues);
-
-            mainContainer.Add(enumField);
-        }
-
-        public override void LoadValueInToField()
-        {
-            if (LevelStateData.LevelStateValues.EnumField != null)
-                LevelStateData.LevelStateValues.EnumField.SetValueWithoutNotify(LevelStateData.LevelStateValues.Value);
         }
 
         public override BaseData Save()

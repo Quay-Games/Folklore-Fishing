@@ -1,5 +1,6 @@
 using FMOD.Studio;
 using FMODUnity;
+using System;
 using System.Collections;
 using System.Linq;
 using TMPro;
@@ -14,13 +15,14 @@ public class FishView : MonoBehaviour {
 	[SerializeField] private Image fishImage;
 	[SerializeField] private TMP_Text fishText;
 	[SerializeField]private string[] fishCaughtTexts;
+    public Action FishCatchLineToPlay { get; set; }
 
-	#endregion
+    #endregion
 
 
-	#region Mono Behaviours
+    #region Mono Behaviours
 
-	public void Start() {
+    public void Start() {
 		GameManager.Instance.InputController.OnClick -= DisableFishUI;
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
 		GameManager.Instance.InputController.OnClick += DisableFishUI;
@@ -46,13 +48,21 @@ public class FishView : MonoBehaviour {
 	public void EnableFishUI(bool enable) {
 		fishImage.sprite = GameManager.Instance.CurrentFish.FishData.ItemImage;
 		fishImage.gameObject.SetActive(enable);
-		int randomCaughtTextIndex = Random.Range(0, fishCaughtTexts.Length);
+		int randomCaughtTextIndex = UnityEngine.Random.Range(0, fishCaughtTexts.Length);
 		fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 		fishText.gameObject.SetActive(enable);
 		if (enable) {
 			PlayCorrectFishCatchSFX();
-			AudioManager.Instance.PlayVoiceOver(GameManager.Instance.CurrentFish.FishData.fishCatchAudio);
-		}	else {
+			//if we have a vocal override node listening, then we fire the event for it to play its own line
+			if(FishCatchLineToPlay != null)
+            {
+                FishCatchLineToPlay.Invoke();
+            } else
+			{
+				AudioManager.Instance.PlayVoiceOver(GameManager.Instance.CurrentFish.FishData.fishCatchAudio);
+			}
+
+        }	else {
 			if(InventoryManager.Instance.TotalOwnedBaits == 0) {
 				SceneManager.LoadScene(LevelManager.CalvinShore);
 				return;

@@ -8,14 +8,7 @@ namespace Project.DialogueEditor
     [NodeDataType(typeof(GiveBaitData))]
     public class GiveBaitNode : BaseNode
     {
-        private GiveBaitData giveBaitData = new GiveBaitData();
-        // a bit of a hack because the integer field doesnt hold its own UI reference, im still learning about using these
-        private IntegerField amountField;
-        public GiveBaitData GiveBaitData
-        {
-            get => giveBaitData;
-            set => giveBaitData = value;
-        }
+        public GiveBaitData GiveBaitData => (GiveBaitData)NodeData;
 
         public GiveBaitNode()
         {
@@ -26,38 +19,15 @@ namespace Project.DialogueEditor
         {
             MakeMainContainer();
 
-            if (_data != null)
-            {
-                GiveBaitData.BaitValues.Value = (_data as GiveBaitData).BaitValues.Value;
-                GiveBaitData.amount.Value = (_data as GiveBaitData).amount.Value;
-                LoadValueInToField();
-            }
-
             AddGenericPorts();
         }
 
         private void MakeMainContainer()
         {
-            EnumField enumField = GetNewGenericEnum(giveBaitData.BaitValues);
-            enumField.label = "Bait Type";
-            amountField = GetNewIntegerField(giveBaitData.amount);
+            IntegerField amountField = GetNewIntegerField(GiveBaitData.amount);
             amountField.label = "Amount";
 
-            mainContainer.Add(enumField);
             mainContainer.Add(amountField);
-        }
-
-        public override void LoadValueInToField()
-        {
-            if (GiveBaitData.BaitValues.EnumField != null)
-            {
-                GiveBaitData.BaitValues.EnumField.SetValueWithoutNotify(GiveBaitData.BaitValues.Value);
-            }
-
-            if(GiveBaitData.amount != null)
-            {
-                amountField.SetValueWithoutNotify(GiveBaitData.amount.Value);
-            }
         }
 
         public override BaseData Save()
