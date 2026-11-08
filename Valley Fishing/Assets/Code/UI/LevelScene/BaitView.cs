@@ -123,11 +123,6 @@ public class BaitView : MonoBehaviour
 		if (GameManager.Instance.LevelController.CurrentState != LevelController.State.AttatchBait) {
 			return;
 		}
-		if (InventoryManager.Instance.CurrentBait != null) {
-			if (InventoryManager.Instance.CurrentBait.IsTutorial) {
-				BaitClicked(this.BaitIndex);
-			}
-		}
 		if (InventoryManager.Instance.OneBaitTypeLeft) {
 			BaitClicked(this.BaitIndex);
 		}

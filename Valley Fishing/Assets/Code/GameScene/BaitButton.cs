@@ -38,18 +38,16 @@ public class BaitButton : MonoBehaviour {
 
 	public void SelectBait(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		baitView.BaitSelected(baitIndex);
-		if (!InventoryManager.Instance.BaitDatas.Datas[baitIndex].IsTutorial) {
-			if (AudioManager.Instance.VoiceLineInProgress) {
-				return;
-			}
-			List<EventReference> voiceOverChain = new List<EventReference>();
-			voiceOverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
-			for (int i = 0; i < FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity).Count; i++) {
-				voiceOverChain.Add(FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity)[i]);
-			}
-			voiceOverChain.Add(FMODManager.Instance.Left);
-			AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
+		if (AudioManager.Instance.VoiceLineInProgress) {
+			return;
 		}
+		List<EventReference> voiceOverChain = new List<EventReference>();
+		voiceOverChain.Add(FMODManager.Instance.BaitNames[baitIndex]);
+		for (int i = 0; i < FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity).Count; i++) {
+			voiceOverChain.Add(FMODManager.Instance.GetNumber(InventoryManager.Instance.OwnedBaitTypeDatas[baitIndex].quantity)[i]);
+		}
+		voiceOverChain.Add(FMODManager.Instance.Left);
+		AudioManager.Instance.PlayVoiceOverChain(voiceOverChain);
 	}
 
 	public void ClickBait() {

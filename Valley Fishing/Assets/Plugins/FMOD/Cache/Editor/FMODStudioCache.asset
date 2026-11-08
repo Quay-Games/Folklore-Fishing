@@ -1170,7 +1170,7 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 639279323169733208
+  lastModified: 639297528430393388
   FileSizes:
   - Name: Desktop
     Value: 1340
@@ -1213,6 +1213,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/UltraRarePole/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-6600681418658807981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/LavaPool/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -1442,6 +1466,34 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-6244283839273185878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/BackToVillage
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/BackToVillage
+  Guid:
+    Data1: 2129405400
+    Data2: 1136124125
+    Data3: -2144322882
+    Data4: -155201378
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2331709208603581552}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-6209615654410233580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,6 +1594,62 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-5981772273199242896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/Sea
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/Sea
+  Guid:
+    Data1: -1356070422
+    Data2: 1317986029
+    Data3: -1052763715
+    Data4: -474848093
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -2141214383249268435}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-5953744691143241893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/LavaPool
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/LavaPool
+  Guid:
+    Data1: -512474354
+    Data2: 1306027560
+    Data3: -1706427478
+    Data4: 1366399092
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6600681418658807981}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-5853794852422440405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1724,6 +1832,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &-5441246933514579306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/NoBait/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-5422927914084317881
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2657,6 +2789,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-3885146948325016952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/River
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/River
+  Guid:
+    Data1: 1591039207
+    Data2: 1256972668
+    Data3: 110549130
+    Data4: 1698631621
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -3245153880873982548}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-3883194426074963301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2931,6 +3091,30 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
   m_Name: parameter:/Help1-Putyourbackintoit/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
+--- !u!114 &-3245153880873982548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/River/ControlScheme
   m_EditorClassIdentifier: 
   Name: ControlScheme
   StudioPath: 
@@ -3609,6 +3793,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-2141214383249268435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Sea/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &-2084415266825826276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3793,6 +4001,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-1730075301215306509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/NoBait
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/NoBait
+  Guid:
+    Data1: 378155797
+    Data2: 1212993941
+    Data3: -1246576743
+    Data4: -1853543904
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -5441246933514579306}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-1702494340890219131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4084,6 +4320,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: -939773350230948222}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &-1204268801072078004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/Swamp
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/Swamp
+  Guid:
+    Data1: 267697200
+    Data2: 1329875993
+    Data3: 1664156077
+    Data4: -1561163478
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 1426772812015680585}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -4454,6 +4718,34 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &-486771058032665784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Captain/Shore/LocationMenu/ChooseLocation
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Captain/Shore/LocationMenu/ChooseLocation
+  Guid:
+    Data1: 1438630613
+    Data2: 1153078846
+    Data3: -1544099939
+    Data4: -922356416
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 7791311868136649879}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
 --- !u!114 &-402394880739423505
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4970,12 +5262,20 @@ MonoBehaviour:
   - {fileID: 7148623640412851386}
   - {fileID: 2944088105709407258}
   - {fileID: -4476791991751883422}
+  - {fileID: -5953744691143241893}
+  - {fileID: -1204268801072078004}
+  - {fileID: -486771058032665784}
+  - {fileID: -3885146948325016952}
+  - {fileID: -5981772273199242896}
+  - {fileID: -6244283839273185878}
+  - {fileID: -1730075301215306509}
+  - {fileID: 304966837481436152}
   EditorParameters: []
   MasterBanks:
   - {fileID: -6716361391410530883}
   StringsBanks:
   - {fileID: 7888339581714095944}
-  cacheTime: 639285451064373179
+  cacheTime: 639297528434927342
   cacheVersion: 131624
 --- !u!114 &31227456887572434
 MonoBehaviour:
@@ -5161,6 +5461,34 @@ MonoBehaviour:
   IsOneShot: 1
   Parameters:
   - {fileID: 8759501578253840815}
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 0
+--- !u!114 &304966837481436152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/VoiceOver/Narrator/Misc/SelectInputDevice
+  m_EditorClassIdentifier: 
+  Path: event:/VoiceOver/Narrator/Misc/SelectInputDevice
+  Guid:
+    Data1: 913936623
+    Data2: 1262556276
+    Data3: -1669348214
+    Data4: 1488632184
+  Banks:
+  - {fileID: 2197604407405510459}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 2424682884290445480}
   MinDistance: 1
   MaxDistance: 20
   Length: 0
@@ -5812,6 +6140,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &1426772812015680585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Swamp/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &1438511451943386607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6378,10 +6730,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/VoiceLines.bank
   Name: VoiceLines
   StudioPath: bank:/VoiceLines
-  lastModified: 639285451064373179
+  lastModified: 639297528434927342
   FileSizes:
   - Name: Desktop
-    Value: 10267424
+    Value: 10444832
   Exists: 1
 --- !u!114 &2266324813074022349
 MonoBehaviour:
@@ -6459,6 +6811,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &2331709208603581552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/BackToVillage/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2390871513974974663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6515,6 +6891,30 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 0
+--- !u!114 &2424682884290445480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/SelectInputDevice/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &2525844186971478576
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9501,6 +9901,30 @@ MonoBehaviour:
   IsGlobal: 0
   Labels: []
   Exists: 1
+--- !u!114 &7791311868136649879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/ChooseLocation/ControlScheme
+  m_EditorClassIdentifier: 
+  Name: ControlScheme
+  StudioPath: 
+  Min: 0
+  Max: 3
+  Default: 0
+  ID:
+    data1: 4086690009
+    data2: 3914322847
+  Type: 1
+  IsGlobal: 0
+  Labels: []
+  Exists: 1
 --- !u!114 &7881078248630257810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9544,10 +9968,10 @@ MonoBehaviour:
   Path: ../FMOD/FolkloreFishingFMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 639279323169773139
+  lastModified: 639297528430423308
   FileSizes:
   - Name: Desktop
-    Value: 11560
+    Value: 11914
   Exists: 1
 --- !u!114 &7911918505699605081
 MonoBehaviour:

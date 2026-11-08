@@ -23,10 +23,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    IsTutorial: 1
-    FishSpawnChances:
-    - FishName: 0
-      SpawnChance: 1
+    FishSpawnChances: []
   - ItemName: Worm Bait
     ItemNameEvent:
       Guid:
@@ -37,10 +34,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    IsTutorial: 1
-    FishSpawnChances:
-    - FishName: 1
-      SpawnChance: 1
+    FishSpawnChances: []
   - ItemName: Worm Bait
     ItemNameEvent:
       Guid:
@@ -51,10 +45,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    IsTutorial: 1
-    FishSpawnChances:
-    - FishName: 2
-      SpawnChance: 1
+    FishSpawnChances: []
   - ItemName: Worm Bait
     ItemNameEvent:
       Guid:
@@ -65,14 +56,14 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    IsTutorial: 0
     FishSpawnChances:
-    - FishName: 0
-      SpawnChance: 0.33
-    - FishName: 1
-      SpawnChance: 0.33
-    - FishName: 2
-      SpawnChance: 0.34
+    - PerLocationFishSpawnChance:
+      - FishName: 0
+        SpawnChance: 0.33
+      - FishName: 1
+        SpawnChance: 0.33
+      - FishName: 2
+        SpawnChance: 0.34
   - ItemName: Cricket Bait
     ItemNameEvent:
       Guid:
@@ -83,12 +74,13 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/CricketBait
     ItemSellPrice: 1
     ItemImage: {fileID: 21300000, guid: 740693aaf7561694eb4134fa998e79c4, type: 3}
-    IsTutorial: 0
     FishSpawnChances:
-    - FishName: 3
-      SpawnChance: 0.5
-    - FishName: 4
-      SpawnChance: 0.5
+    - PerLocationFishSpawnChance:
+      - FishName: 3
+        SpawnChance: 0.5
+      - FishName: 4
+        SpawnChance: 0.5
+    - PerLocationFishSpawnChance: []
   - ItemName: Leech Bait
     ItemNameEvent:
       Guid:
@@ -99,14 +91,14 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/LeechBait
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: 5f948334cba15c94c8ba124439b3d17e, type: 3}
-    IsTutorial: 0
     FishSpawnChances:
-    - FishName: 5
-      SpawnChance: 0.33
-    - FishName: 6
-      SpawnChance: 0.33
-    - FishName: 7
-      SpawnChance: 0.34
+    - PerLocationFishSpawnChance:
+      - FishName: 5
+        SpawnChance: 0.33
+      - FishName: 6
+        SpawnChance: 0.33
+      - FishName: 7
+        SpawnChance: 0.34
   - ItemName: Mussle Bait
     ItemNameEvent:
       Guid:
@@ -117,14 +109,14 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/MussleBait
     ItemSellPrice: 2
     ItemImage: {fileID: 21300000, guid: 141bde58788d23d4ea9f13409c8ce67d, type: 3}
-    IsTutorial: 0
     FishSpawnChances:
-    - FishName: 8
-      SpawnChance: 0.33
-    - FishName: 9
-      SpawnChance: 0.33
-    - FishName: 10
-      SpawnChance: 0.34
+    - PerLocationFishSpawnChance:
+      - FishName: 8
+        SpawnChance: 0.33
+      - FishName: 9
+        SpawnChance: 0.33
+      - FishName: 10
+        SpawnChance: 0.34
   - ItemName: Crank Bait
     ItemNameEvent:
       Guid:
@@ -135,7 +127,7 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/CrankBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 0465b08ee75ac1a41a484479919dfebe, type: 3}
-    IsTutorial: 0
     FishSpawnChances:
-    - FishName: 11
-      SpawnChance: 1
+    - PerLocationFishSpawnChance:
+      - FishName: 11
+        SpawnChance: 1
