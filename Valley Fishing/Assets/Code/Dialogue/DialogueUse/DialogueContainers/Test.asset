@@ -17,30 +17,6 @@ MonoBehaviour:
     BasePortName: Continue
     TargetNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
     TargetPortName: Input
-  - BaseNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
-    BasePortName: Continue
-    TargetNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
-    TargetPortName: Input
-  - BaseNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
-    BasePortName: Continue
-    TargetNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
-    TargetPortName: Input
-  - BaseNodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
-    BasePortName: Output
-    TargetNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
-    TargetPortName: Input
-  - BaseNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
-    BasePortName: Continue
-    TargetNodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
-    TargetPortName: Input
-  - BaseNodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
-    BasePortName: Output
-    TargetNodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
-    TargetPortName: Input
-  - BaseNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
-    BasePortName: Output
-    TargetNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
-    TargetPortName: Input
   - BaseNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
     BasePortName: Output
     TargetNodeGuid: 6ed27a64-2968-40c4-84d5-6bca0776e7af
@@ -48,14 +24,6 @@ MonoBehaviour:
   - BaseNodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
     BasePortName: Output
     TargetNodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
-    TargetPortName: Input
-  - BaseNodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
-    BasePortName: Output
-    TargetNodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
-    TargetPortName: Input
-  - BaseNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
-    BasePortName: Output
-    TargetNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
     TargetPortName: Input
   - BaseNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
     BasePortName: Output
@@ -77,34 +45,156 @@ MonoBehaviour:
     BasePortName: Continue
     TargetNodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
     TargetPortName: Input
-  - BaseNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
+  - BaseNodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
     BasePortName: Output
-    TargetNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
+    TargetNodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
+    TargetPortName: Input
+  - BaseNodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
+    BasePortName: Continue
+    TargetNodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
+    TargetPortName: Input
+  - BaseNodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
+    BasePortName: Output
+    TargetNodeGuid: 07734380-aba8-4dd2-a4fc-3e5b223798e4
+    TargetPortName: Input
+  - BaseNodeGuid: 07734380-aba8-4dd2-a4fc-3e5b223798e4
+    BasePortName: Output
+    TargetNodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
+    TargetPortName: Input
+  - BaseNodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
+    BasePortName: Output
+    TargetNodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
     TargetPortName: Input
   - BaseNodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
     BasePortName: Output
+    TargetNodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
+    TargetPortName: Input
+  - BaseNodeGuid: d12e15fd-aa8f-4d29-aa66-811501221ba7
+    BasePortName: Output
+    TargetNodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
+    TargetPortName: Input
+  - BaseNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
+    BasePortName: Output
+    TargetNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
+    TargetPortName: Input
+  - BaseNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
+    BasePortName: Continue
+    TargetNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
+    TargetPortName: Input
+  - BaseNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
+    BasePortName: Output
+    TargetNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
+    TargetPortName: Input
+  - BaseNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
+    BasePortName: Continue
+    TargetNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
+    TargetPortName: Input
+  - BaseNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
+    BasePortName: Output
+    TargetNodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
+    TargetPortName: Input
+  - BaseNodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
+    BasePortName: Output
+    TargetNodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
+    TargetPortName: Input
+  - BaseNodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
+    BasePortName: Output
+    TargetNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
+    TargetPortName: Input
+  - BaseNodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
+    BasePortName: Output
+    TargetNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
+    TargetPortName: Input
+  - BaseNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
+    BasePortName: Continue
+    TargetNodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
+    TargetPortName: Input
+  - BaseNodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
+    BasePortName: Continue
+    TargetNodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
+    TargetPortName: Input
+  - BaseNodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
+    BasePortName: Output
+    TargetNodeGuid: 8eb4a947-b5dd-44a5-acb9-1e6278be2221
+    TargetPortName: Input
+  - BaseNodeGuid: 8eb4a947-b5dd-44a5-acb9-1e6278be2221
+    BasePortName: Output
+    TargetNodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
+    TargetPortName: Input
+  - BaseNodeGuid: 46eae1fb-faa6-4598-91cb-0e3c9b5bd940
+    BasePortName: Output
+    TargetNodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
+    TargetPortName: Input
+  - BaseNodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
+    BasePortName: Continue
+    TargetNodeGuid: 46eae1fb-faa6-4598-91cb-0e3c9b5bd940
+    TargetPortName: Input
+  - BaseNodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
+    BasePortName: Continue
+    TargetNodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
+    TargetPortName: Input
+  - BaseNodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
+    BasePortName: Output
+    TargetNodeGuid: d12e15fd-aa8f-4d29-aa66-811501221ba7
+    TargetPortName: Input
+  - BaseNodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
+    BasePortName: Continue
+    TargetNodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
+    TargetPortName: Input
+  - BaseNodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
+    BasePortName: Output
+    TargetNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+    TargetPortName: Input
+  - BaseNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+    BasePortName: Continue
+    TargetNodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
+    TargetPortName: Input
+  - BaseNodeGuid: 578582de-6627-4239-9365-582adb51f830
+    BasePortName: Output
     TargetNodeGuid: 3f2bf0ce-976d-4c65-940b-edc3a37f6c8c
     TargetPortName: Input
+  - BaseNodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
+    BasePortName: Output
+    TargetNodeGuid: 578582de-6627-4239-9365-582adb51f830
+    TargetPortName: Input
   NodeDatas:
-  - rid: 605580413384786239
-  - rid: 605580413384786240
-  - rid: 605580413384786241
-  - rid: 605580413384786242
-  - rid: 605580413384786243
-  - rid: 605580413384786244
-  - rid: 605580413384786245
-  - rid: 605580413384786246
-  - rid: 605580413384786247
-  - rid: 605580413384786248
-  - rid: 605580413384786249
-  - rid: 605580413384786250
-  - rid: 605580413384786251
+  - rid: 605580465571103360
+  - rid: 605580465571103361
+  - rid: 605580465571103362
+  - rid: 605580465571103363
+  - rid: 605580465571103364
   - rid: 605580413384786182
-  - rid: 605580413384786252
-  - rid: 605580413384786253
-  - rid: 605580413384786254
-  - rid: 605580413384786255
-  - rid: 605580413384786256
+  - rid: 605580465571103365
+  - rid: 605580465571103366
+  - rid: 605580465571103367
+  - rid: 605580465571103368
+  - rid: 605580465571103369
+  - rid: 605580465571103370
+  - rid: 605580465571103371
+  - rid: 605580465571103372
+  - rid: 605580465571103373
+  - rid: 605580465571103374
+  - rid: 605580465571103375
+  - rid: 605580465571103376
+  - rid: 605580465571103377
+  - rid: 605580465571103378
+  - rid: 605580465571103379
+  - rid: 605580465571103380
+  - rid: 605580465571103381
+  - rid: 605580465571103382
+  - rid: 605580465571103383
+  - rid: 605580465571103384
+  - rid: 605580465571103385
+  - rid: 605580465571103386
+  - rid: 605580465571103387
+  - rid: 605580465571103388
+  - rid: 605580465571103389
+  - rid: 605580465571103390
+  - rid: 605580465571103391
+  - rid: 605580465571103392
+  - rid: 605580465571103393
+  - rid: 605580465571103394
+  - rid: 605580465571103395
   references:
     version: 2
     RefIds:
@@ -113,127 +203,14 @@ MonoBehaviour:
       data:
         NodeGuid: be9ba36b-eb68-4f32-b794-0e0370bb063e
         Position: {x: -54.4, y: 196}
-    - rid: 605580413384786239
+    - rid: 605580465571103360
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
         Position: {x: 1228.8, y: 298.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 8b03f3e5c39ba384daf61ffd3fe096fa, type: 2}
-    - rid: 605580413384786240
-      type: {class: ListenData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
-        Position: {x: 312, y: 467.2}
-        listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
-    - rid: 605580413384786241
-      type: {class: ListenData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
-        Position: {x: 837.6, y: 467.2}
-        listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
-    - rid: 605580413384786242
-      type: {class: GiveBaitData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
-        Position: {x: 336, y: 644.8}
-        BaitValues:
-          Label: Bait
-          Value: 3
-        amount:
-          Value: 1
-    - rid: 605580413384786243
-      type: {class: ListenData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
-        Position: {x: 899.2, y: 644.8}
-        listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
-    - rid: 605580413384786244
-      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
-        Position: {x: 1133.6, y: 649.6}
-        VoiceEvent:
-          Label: 
-          Value:
-            Guid:
-              Data1: 1577069172
-              Data2: 1285667607
-              Data3: 666933652
-              Data4: -1442052773
-            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
-        ProgressGraph:
-          Label: Progress Immediately
-          Value: 1
-        DialogueText:
-          ID:
-            Value: 0
-          GuidID:
-            Value: 
-          Text:
-          - LanguageType: 1
-            LanguageGenericType: 
-          - LanguageType: 2
-            LanguageGenericType: 
-          - LanguageType: 3
-            LanguageGenericType: 
-          - LanguageType: 4
-            LanguageGenericType: 
-          - LanguageType: 5
-            LanguageGenericType: 
-          - LanguageType: 6
-            LanguageGenericType: 
-          - LanguageType: 7
-            LanguageGenericType: 
-          - LanguageType: 8
-            LanguageGenericType: 
-          - LanguageType: 9
-            LanguageGenericType: 
-    - rid: 605580413384786245
-      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
-        Position: {x: 88.8, y: 420}
-        VoiceEvent:
-          Label: 
-          Value:
-            Guid:
-              Data1: 1211343837
-              Data2: 1143557333
-              Data3: -1069247350
-              Data4: -1744123359
-            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/4Nice,hearhowfasttherod
-        ProgressGraph:
-          Label: Progress Immediately
-          Value: 0
-        DialogueText:
-          ID:
-            Value: 0
-          GuidID:
-            Value: 
-          Text:
-          - LanguageType: 1
-            LanguageGenericType: 
-          - LanguageType: 2
-            LanguageGenericType: 
-          - LanguageType: 3
-            LanguageGenericType: 
-          - LanguageType: 4
-            LanguageGenericType: 
-          - LanguageType: 5
-            LanguageGenericType: 
-          - LanguageType: 6
-            LanguageGenericType: 
-          - LanguageType: 7
-            LanguageGenericType: 
-          - LanguageType: 8
-            LanguageGenericType: 
-          - LanguageType: 9
-            LanguageGenericType: 
-    - rid: 605580413384786246
+    - rid: 605580465571103361
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
@@ -274,7 +251,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580413384786247
+    - rid: 605580465571103362
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
@@ -315,89 +292,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580413384786248
-      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
-        Position: {x: 88.8, y: 644.8}
-        VoiceEvent:
-          Label: 
-          Value:
-            Guid:
-              Data1: 2072759395
-              Data2: 1301458639
-              Data3: 267698575
-              Data4: 1209978290
-            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/7You_reready
-        ProgressGraph:
-          Label: Progress Immediately
-          Value: 0
-        DialogueText:
-          ID:
-            Value: 0
-          GuidID:
-            Value: 
-          Text:
-          - LanguageType: 1
-            LanguageGenericType: 
-          - LanguageType: 2
-            LanguageGenericType: 
-          - LanguageType: 3
-            LanguageGenericType: 
-          - LanguageType: 4
-            LanguageGenericType: 
-          - LanguageType: 5
-            LanguageGenericType: 
-          - LanguageType: 6
-            LanguageGenericType: 
-          - LanguageType: 7
-            LanguageGenericType: 
-          - LanguageType: 8
-            LanguageGenericType: 
-          - LanguageType: 9
-            LanguageGenericType: 
-    - rid: 605580413384786249
-      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
-        Position: {x: 588.8, y: 408.80002}
-        VoiceEvent:
-          Label: 
-          Value:
-            Guid:
-              Data1: -1154599147
-              Data2: 1202115397
-              Data3: 1609362845
-              Data4: 1685231117
-            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/5Notastiring
-        ProgressGraph:
-          Label: Progress Immediately
-          Value: 0
-        DialogueText:
-          ID:
-            Value: 0
-          GuidID:
-            Value: 
-          Text:
-          - LanguageType: 1
-            LanguageGenericType: 
-          - LanguageType: 2
-            LanguageGenericType: 
-          - LanguageType: 3
-            LanguageGenericType: 
-          - LanguageType: 4
-            LanguageGenericType: 
-          - LanguageType: 5
-            LanguageGenericType: 
-          - LanguageType: 6
-            LanguageGenericType: 
-          - LanguageType: 7
-            LanguageGenericType: 
-          - LanguageType: 8
-            LanguageGenericType: 
-          - LanguageType: 9
-            LanguageGenericType: 
-    - rid: 605580413384786250
+    - rid: 605580465571103363
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
@@ -438,7 +333,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580413384786251
+    - rid: 605580465571103364
       type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 58a8e186-b73b-4424-85c6-90ab6cbdadd7
@@ -446,7 +341,7 @@ MonoBehaviour:
         LevelStateValues:
           Label: Level State
           Value: 6
-    - rid: 605580413384786252
+    - rid: 605580465571103365
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: e508081a-fcb9-430f-a28d-14f3d1151860
@@ -487,46 +382,580 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580413384786253
+    - rid: 605580465571103366
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 6ed27a64-2968-40c4-84d5-6bca0776e7af
         Position: {x: 764.8, y: 188}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
-    - rid: 605580413384786254
-      type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
+    - rid: 605580465571103367
+      type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
       data:
-        NodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
-        Position: {x: 667.2, y: 672}
-        LevelStateValues:
-          Label: Level State
-          Value: 3
-    - rid: 605580413384786255
-      type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
+        NodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
+        Position: {x: 163.2, y: 985.6}
+        FishToCatch:
+          Label: Fish
+          Value: 1
+    - rid: 605580465571103368
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
-        NodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
-        Position: {x: 88.8, y: 929.6}
+        NodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
+        Position: {x: 417.6, y: 985.6}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+    - rid: 605580465571103369
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
+        Position: {x: 648.8, y: 985.6}
         VoiceEvent:
           Label: 
           Value:
             Guid:
-              Data1: 751111704
-              Data2: 1309586920
-              Data3: -113407324
-              Data4: -772827154
-            Path: event:/VoiceOver/Captain/FolkloreFishing!
+              Data1: 582599164
+              Data2: 1142925318
+              Data3: 444109443
+              Data4: 1442263103
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/10Agentlefish
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 0635140a-39a7-492e-b51a-82789c21dea6
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: A gentle fish...
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103370
+      type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 07734380-aba8-4dd2-a4fc-3e5b223798e4
+        Position: {x: 871.2, y: 984.8}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: 1226205962
+              Data2: 1264196284
+              Data3: -1006454096
+              Data4: 2134398383
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/11Fishnumbertwo
+        VoiceEventScenario:
+          Label: Voice Line Scenario
+          Value: 0
+        ProgressGraph:
+          Label: Progress when line stars
+          Value: 1
+    - rid: 605580465571103371
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
+        Position: {x: 648.8, y: 744}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: 1577069172
+              Data2: 1285667607
+              Data3: 666933652
+              Data4: -1442052773
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/8Abite!
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: A bite!
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103372
+      type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
+        Position: {x: 871.2, y: 744}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1486776638
+              Data2: 1168185540
+              Data3: 197748408
+              Data4: -1059209514
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/9Yourfirstfish
+        VoiceEventScenario:
+          Label: Voice Line Scenario
+          Value: 0
+        ProgressGraph:
+          Label: Progress when line stars
+          Value: 1
+    - rid: 605580465571103373
+      type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: d12e15fd-aa8f-4d29-aa66-811501221ba7
+        Position: {x: 156, y: 1226.4}
+        FishToCatch:
+          Label: Fish
+          Value: 2
+    - rid: 605580465571103374
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
+        Position: {x: -11.2, y: 378.4}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: 1211343837
+              Data2: 1143557333
+              Data3: -1069247350
+              Data4: -1744123359
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/4Nice,hearhowfasttherod
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 0
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103375
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
+        Position: {x: 244.8, y: 378.4}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
+    - rid: 605580465571103376
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
+        Position: {x: 507.2, y: 378.4}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1154599147
+              Data2: 1202115397
+              Data3: 1609362845
+              Data4: 1685231117
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/5Notastiring
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 0
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103377
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
+        Position: {x: 743.2, y: 378.4}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
+    - rid: 605580465571103378
+      type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
+        Position: {x: 698.4, y: 559.19995}
+        LevelStateValues:
+          Label: Level State
+          Value: 3
+    - rid: 605580465571103379
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
+        Position: {x: -169.6, y: 580}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: 2072759395
+              Data2: 1301458639
+              Data3: 267698575
+              Data4: 1209978290
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/7You_reready
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 0
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: 
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103380
+      type: {class: GiveBaitData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: ebba9b65-eafc-4d66-942b-b85e255cc0d4
+        Position: {x: 312, y: 595.19995}
+        BaitValues:
+          Label: Bait
+          Value: 0
+        amount:
+          Value: 8
+    - rid: 605580465571103381
+      type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
+        Position: {x: 163.2, y: 745.6}
+        FishToCatch:
+          Label: Fish
+          Value: 0
+    - rid: 605580465571103382
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
+        Position: {x: 415.2, y: 745.6}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+    - rid: 605580465571103383
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
+        Position: {x: 415.2, y: 1226.4}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+    - rid: 605580465571103384
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
+        Position: {x: 648.8, y: 1226.4}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: 1488789845
+              Data2: 1210625081
+              Data3: 1447121553
+              Data4: 1454808960
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/12MiddilingSplashes
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: ec14bdf3-ee75-4dd1-accf-3411ed180216
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Middling splashes...
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103385
+      type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 8eb4a947-b5dd-44a5-acb9-1e6278be2221
+        Position: {x: 871.2, y: 1226.4}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1612792290
+              Data2: 1118612746
+              Data3: 62828695
+              Data4: 1655042738
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/13Ah,astoneloach
+        VoiceEventScenario:
+          Label: Voice Line Scenario
+          Value: 0
+        ProgressGraph:
+          Label: Progress when line stars
+          Value: 1
+    - rid: 605580465571103386
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 46eae1fb-faa6-4598-91cb-0e3c9b5bd940
+        Position: {x: 1440.8, y: 745.6}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1687440807
+              Data2: 1321411644
+              Data3: -1629747283
+              Data4: 1530815386
+            Path: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: a005015a-0d7a-4ad2-96ac-f62262b6e3eb
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Cast Rod
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103387
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
+        Position: {x: 1133.6, y: 745.6}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+    - rid: 605580465571103388
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
+        Position: {x: 1133.6, y: 986.39996}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+    - rid: 605580465571103389
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
+        Position: {x: 1440.8, y: 986.39996}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1687440807
+              Data2: 1321411644
+              Data3: -1629747283
+              Data4: 1530815386
+            Path: event:/VoiceOver/Narrator/Fishing Prompts/Cast rod prompt
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: afdf0ed0-1f61-49ea-9ef6-73bda6be9eab
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Cast Rod
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103390
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
+        Position: {x: 1124, y: 1226.4}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+    - rid: 605580465571103391
+      type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
+        Position: {x: 1440.8, y: 1209.6}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -247680985
+              Data2: 1182727158
+              Data3: -878210390
+              Data4: 1331013943
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/14Goon,catchsomemore
+        ProgressGraph:
+          Label: Progress Immediately
+          Value: 1
+        DialogueText:
+          ID:
+            Value: 0
+          GuidID:
+            Value: 93309655-c8c8-4c83-a7d6-b5f4931b1689
+          Text:
+          - LanguageType: 1
+            LanguageGenericType: Go on, catch some more
+          - LanguageType: 2
+            LanguageGenericType: 
+          - LanguageType: 3
+            LanguageGenericType: 
+          - LanguageType: 4
+            LanguageGenericType: 
+          - LanguageType: 5
+            LanguageGenericType: 
+          - LanguageType: 6
+            LanguageGenericType: 
+          - LanguageType: 7
+            LanguageGenericType: 
+          - LanguageType: 8
+            LanguageGenericType: 
+          - LanguageType: 9
+            LanguageGenericType: 
+    - rid: 605580465571103392
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+        Position: {x: 148, y: 1397.6}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: 3b9b6b029514eb9489fa540c2f38a3f4, type: 2}
+    - rid: 605580465571103393
+      type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
+        Position: {x: 417.6, y: 1398.4}
+        VoiceEvent:
+          Label: 
+          Value:
+            Guid:
+              Data1: -1500428130
+              Data2: 1259848348
+              Data3: -667063148
+              Data4: -1348337181
+            Path: event:/VoiceOver/Captain/GameIntroduction/1-GameplayTutorial1/15You_regettingthehangofthis
         VoiceEventScenario:
           Label: Voice Line Scenario
           Value: 0
         ProgressGraph:
           Label: Progress when line stars
           Value: 0
-    - rid: 605580413384786256
+    - rid: 605580465571103394
       type: {class: EndData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3f2bf0ce-976d-4c65-940b-edc3a37f6c8c
-        Position: {x: 459.2, y: 940.8}
+        Position: {x: 1300.8, y: 1426.4}
         EndNodeType:
           Label: End State
           Value: 1
+    - rid: 605580465571103395
+      type: {class: SceneChangeData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 578582de-6627-4239-9365-582adb51f830
+        Position: {x: 760.8, y: 1413.6}
+        SceneValues:
+          Label: Scene
+          Value: 3

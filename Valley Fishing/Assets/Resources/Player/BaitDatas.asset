@@ -23,39 +23,6 @@ MonoBehaviour:
       Path: event:/VoiceOver/Narrator/BaitLines/WormBait
     ItemSellPrice: 0
     ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    FishSpawnChances: []
-  - ItemName: Worm Bait
-    ItemNameEvent:
-      Guid:
-        Data1: 49789276
-        Data2: 1251480174
-        Data3: 4451746
-        Data4: -1714487945
-      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
-    ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    FishSpawnChances: []
-  - ItemName: Worm Bait
-    ItemNameEvent:
-      Guid:
-        Data1: 49789276
-        Data2: 1251480174
-        Data3: 4451746
-        Data4: -1714487945
-      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
-    ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
-    FishSpawnChances: []
-  - ItemName: Worm Bait
-    ItemNameEvent:
-      Guid:
-        Data1: 49789276
-        Data2: 1251480174
-        Data3: 4451746
-        Data4: -1714487945
-      Path: event:/VoiceOver/Narrator/BaitLines/WormBait
-    ItemSellPrice: 0
-    ItemImage: {fileID: 21300000, guid: 173b29e031601f646b14bed1ac5b6b20, type: 3}
     FishSpawnChances:
     - PerLocationFishSpawnChance:
       - FishName: 0

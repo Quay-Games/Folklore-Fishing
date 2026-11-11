@@ -17,7 +17,4 @@ public enum FishName
     GlassBottle,
     RustyCoin,
     ScrapMetal,
-    TUTORIALBrownTrout,
-    TUTORIALCommonCarp,
-    TUTORIALStoneLoach,
 }

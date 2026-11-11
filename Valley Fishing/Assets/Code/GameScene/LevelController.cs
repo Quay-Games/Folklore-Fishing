@@ -31,13 +31,14 @@ public class LevelController : AbstractState<LevelController.State> {
 	public Action OnFishSpawned { get; set; }
 	public Action OnFishBit { get; set; }
 	public Action OnFishCaught { get; set; }
+	public Func<FishName> FishToSpawn { get; set; }
 
-	#endregion
+    #endregion
 
 
-	#region Abstract State
+    #region Abstract State
 
-	public enum State {
+    public enum State {
 		Default,
 		Cutscene,
 		Idle,
@@ -99,18 +100,29 @@ public class LevelController : AbstractState<LevelController.State> {
 	}
 
 	private void SpawnFish() {
-		int fishIndex = 0;
-		float randomValue = UnityEngine.Random.value;
-		float cumulative = 0f;
-;		for (int i = 0; i < this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance.Length; i++) {
-			cumulative += this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].SpawnChance;
-			if (randomValue < cumulative) {
-				fishIndex = (int)this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].FishName;
-				break;
-			}
-		}
+
 		Fish fishInstance = Instantiate(GameManager.Instance.FishPrefab, this.FishSpawnTransform.position, Quaternion.identity);
-		fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[fishIndex];
+		//If the catch override node is listening, use its fish instead of the correct fish from the bait
+		if(FishToSpawn != null)
+        {
+            fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[(int)FishToSpawn.Invoke()];
+        }
+        else
+        {
+            int fishIndex = 0;
+            float randomValue = UnityEngine.Random.value;
+            float cumulative = 0f;
+            ; for (int i = 0; i < this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance.Length; i++)
+            {
+                cumulative += this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].SpawnChance;
+                if (randomValue < cumulative)
+                {
+                    fishIndex = (int)this.CurrentBait.FishSpawnChances[locationIndex].PerLocationFishSpawnChance[i].FishName;
+                    break;
+                }
+            }
+            fishInstance.FishData = InventoryManager.Instance.FishDatas.Datas[fishIndex];
+        }
 		fishInstance.transform.parent = gameplayContainer;
 		InventoryManager.Instance.CurrentBait = null;
 		GameManager.Instance.CurrentFish = fishInstance;

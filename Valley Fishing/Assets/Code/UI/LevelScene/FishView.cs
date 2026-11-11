@@ -19,6 +19,10 @@ public class FishView : MonoBehaviour {
 
     #endregion
 
+    #region Public Properties
+    public Action OnFishUIEnabled { get; set; }
+	public Action OnFishUIDisabled { get; set; }
+    #endregion
 
     #region Mono Behaviours
 
@@ -29,9 +33,9 @@ public class FishView : MonoBehaviour {
 		GameManager.Instance.InputController.OnSkip += DisableFishUI;
 		AudioManager.Instance.OnVoiceLineOver -= DisableUI;
 		AudioManager.Instance.OnVoiceLineOver += DisableUI;
-	}
+    }
 
-	public void OnDestroy() {
+    public void OnDestroy() {
 		if(GameManager.Instance == null) {
 			return;
 		}
@@ -40,19 +44,20 @@ public class FishView : MonoBehaviour {
 		AudioManager.Instance.OnVoiceLineOver -= DisableUI;
 	}
 
-	#endregion
+    #endregion
 
 
-	#region Public Methods
+        #region Public Methods
 
-	public void EnableFishUI(bool enable) {
+    public void EnableFishUI(bool enable) {
 		fishImage.sprite = GameManager.Instance.CurrentFish.FishData.ItemImage;
 		fishImage.gameObject.SetActive(enable);
 		int randomCaughtTextIndex = UnityEngine.Random.Range(0, fishCaughtTexts.Length);
 		fishText.text = fishCaughtTexts[randomCaughtTextIndex] + " " + GameManager.Instance.CurrentFish.FishData.ItemName + "!";
 		fishText.gameObject.SetActive(enable);
 		if (enable) {
-			PlayCorrectFishCatchSFX();
+			OnFishUIEnabled?.Invoke();
+            PlayCorrectFishCatchSFX();
 			//if we have a vocal override node listening, then we fire the event for it to play its own line
 			if(FishCatchLineToPlay != null)
             {
@@ -63,7 +68,8 @@ public class FishView : MonoBehaviour {
 			}
 
         }	else {
-			if(InventoryManager.Instance.TotalOwnedBaits == 0) {
+			OnFishUIDisabled?.Invoke();
+            if (InventoryManager.Instance.TotalOwnedBaits == 0 && !GameManager.Instance.LevelController.isTutorialLevel) {
 				SceneManager.LoadScene(LevelManager.CalvinShore);
 				return;
 			}
