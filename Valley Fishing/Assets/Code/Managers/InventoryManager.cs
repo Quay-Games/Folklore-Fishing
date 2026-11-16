@@ -137,4 +137,34 @@ public class InventoryManager : Singleton<InventoryManager> {
             }
         }
     }
+
+	public void SetBaitIfNotHad(BaitName name, int quantity)
+    {
+        for (int i = 0; i < this.OwnedBaitTypeDatas.Count; i++)
+        {
+            if (this.OwnedBaitTypeDatas[i].OwnedItemData.ItemName.Replace(" ", "").Equals(name.ToString()))
+            {
+                if (this.OwnedBaitTypeDatas[i].quantity < quantity)
+                {
+                    this.OwnedBaitTypeDatas[i].quantity = quantity;
+                }
+                return;
+            }
+        }
+    }
+
+	public void SetFishIfNotHad(FishName name, int quantity)
+    {
+        for (int i = 0; i < this.OwnedFishTypeDatas.Count; i++)
+        {
+            if (this.OwnedFishTypeDatas[i].OwnedItemData.ItemName.Replace(" ", "").Equals(name.ToString()))
+            {
+                if (this.OwnedFishTypeDatas[i].quantity < quantity)
+                {
+                    this.OwnedFishTypeDatas[i].quantity = quantity;
+                }
+                return;
+            }
+        }
+    }
 }

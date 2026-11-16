@@ -30,10 +30,10 @@ public class Container_String {
 	public string Value;
 }
 
-[System.Serializable]
-public class Container_Int {
-	public int Value;
-}
+//[System.Serializable]
+//public class Container_Int {
+//	public int Value;
+//}
 
 [System.Serializable]
 public class Container_Float {

@@ -17,19 +17,8 @@ namespace Project.DialogueEditor
         public GiveBaitNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
             : base(_position, _editorWindow, _graphView, "USS/Nodes/NodeStyleSheet", "Give Bait", _data)
         {
-            MakeMainContainer();
-
             AddGenericPorts();
         }
-
-        private void MakeMainContainer()
-        {
-            IntegerField amountField = GetNewIntegerField(GiveBaitData.amount);
-            amountField.label = "Amount";
-
-            mainContainer.Add(amountField);
-        }
-
         public override BaseData Save()
         {
             GiveBaitData data = new GiveBaitData();

@@ -18,10 +18,10 @@ namespace Project.DialogueEditor {
 		private NodeGraphView graphView;
 
 		private Texture2D iconImage;
-		//where nodes should sit
-		private const string NodeFolderPath = "Assets/Code/Dialogue/DialogueEditor/Editor/Nodes";
+        //where nodes should sit
+        private const string NodeFolderPath = "Assets/Code/Node Graph/DialogueEditor/Editor/Nodes";
 
-		public void Configure(NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView) {
+        public void Configure(NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView) {
 			editorWindow = _editorWindow;
 			graphView = _graphView;
 

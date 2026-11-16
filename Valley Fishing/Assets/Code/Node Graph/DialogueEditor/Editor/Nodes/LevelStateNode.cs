@@ -17,7 +17,6 @@ namespace Project.DialogueEditor
         public LevelStateNode(Vector2 _position, NodeGraphEditorWindow _editorWindow, NodeGraphView _graphView, BaseData _data = null)
             : base(_position, _editorWindow, _graphView, "USS/Nodes/NodeStyleSheet", "Level State Change", _data)
         {
-
             AddGenericPorts();
         }
 
