@@ -27,8 +27,9 @@ public class LevelController : AbstractState<LevelController.State> {
 	[field: SerializeField] public Transform RightStrafeTransform { get; set; }
 	[field: SerializeField] public Transform FishSpawnTransform { get; set; }
 	public BaitDatas.BaitData CurrentBait { get => InventoryManager.Instance.CurrentBait; }
-	//The equivalent of an event describing when the fish bites
-	public Action OnFishSpawned { get; set; }
+	public Action OnBaitAttached { get; set; }
+    //The equivalent of an event describing when the fish bites
+    public Action OnFishSpawned { get; set; }
 	public Action OnFishBit { get; set; }
 	public Action OnFishCaught { get; set; }
 	public Func<FishName> FishToSpawn { get; set; }
@@ -76,7 +77,9 @@ public class LevelController : AbstractState<LevelController.State> {
 			case State.IdleWithBait:
 				break;
 			case State.WaitingForBite:
-				SpawnFish();
+				//this is the state that happens right after bait is attached, so im putting this here
+				OnBaitAttached?.Invoke();
+                SpawnFish();
 				break;
 			case State.ReelingFish:
 				GameManager.Instance.InputController.SetState(InputController.State.NotReeling);

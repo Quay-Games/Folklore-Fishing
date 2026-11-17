@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afe24f0481a807045a3d4704d5248074, type: 3}
   m_Name: Three Catches
   m_EditorClassIdentifier: 
-  numCatches: 0
+  numCatches: 3

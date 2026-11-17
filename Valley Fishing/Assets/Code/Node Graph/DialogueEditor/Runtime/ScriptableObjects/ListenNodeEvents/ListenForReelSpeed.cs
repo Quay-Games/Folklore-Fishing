@@ -4,13 +4,6 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue/Listen For Reel Speed")]
 public class ListenForReelSpeed : ListenEvent
 {
-    enum ReelSpeed
-    {
-        Slow,
-        Medium,
-        Fast,
-        Any
-    }
     [SerializeField] private ReelSpeed reelSpeed;
     [SerializeField] private int secondsToListen;
     private float practiceTime = 0;

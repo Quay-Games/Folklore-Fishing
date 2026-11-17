@@ -878,3 +878,17 @@ MonoBehaviour:
       Data3: 1340699794
       Data4: -532687059
     Path: event:/VoiceLines/Shop Scene/Shore/ShopButtons/BaitShopButton
+  NormalLevelMusic:
+    Guid:
+      Data1: 655083191
+      Data2: 1176885309
+      Data3: -493826686
+      Data4: 363304719
+    Path: event:/Music/LevelOneMusic
+  BossLevelMusic:
+    Guid:
+      Data1: 1322761572
+      Data2: 1172901353
+      Data3: 1985929359
+      Data4: 942631019
+    Path: event:/Music/Boss Music

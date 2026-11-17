@@ -33,10 +33,6 @@ MonoBehaviour:
     BasePortName: Output
     TargetNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
     TargetPortName: Input
-  - BaseNodeGuid: be9ba36b-eb68-4f32-b794-0e0370bb063e
-    BasePortName: Output
-    TargetNodeGuid: e508081a-fcb9-430f-a28d-14f3d1151860
-    TargetPortName: Input
   - BaseNodeGuid: e508081a-fcb9-430f-a28d-14f3d1151860
     BasePortName: Output
     TargetNodeGuid: 58a8e186-b73b-4424-85c6-90ab6cbdadd7
@@ -93,6 +89,10 @@ MonoBehaviour:
     BasePortName: Output
     TargetNodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
     TargetPortName: Input
+  - BaseNodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
+    BasePortName: Output
+    TargetNodeGuid: c5d6e615-24c8-4c50-b63d-e869aefb87e1
+    TargetPortName: Input
   - BaseNodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
     BasePortName: Output
     TargetNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
@@ -135,71 +135,86 @@ MonoBehaviour:
     TargetPortName: Input
   - BaseNodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
     BasePortName: Output
-    TargetNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+    TargetNodeGuid: 43f41fcb-4537-4bde-9f33-38bdb92db51e
     TargetPortName: Input
   - BaseNodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
     BasePortName: Output
     TargetNodeGuid: 578582de-6627-4239-9365-582adb51f830
     TargetPortName: Input
-  - BaseNodeGuid: 578582de-6627-4239-9365-582adb51f830
-    BasePortName: Output
-    TargetNodeGuid: 3f2bf0ce-976d-4c65-940b-edc3a37f6c8c
-    TargetPortName: Input
-  - BaseNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
-    BasePortName: Continue
-    TargetNodeGuid: 5af21677-1eb6-404d-aaa7-54429fc3364a
-    TargetPortName: Input
   - BaseNodeGuid: 5af21677-1eb6-404d-aaa7-54429fc3364a
     BasePortName: Output
     TargetNodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
-    TargetPortName: Input
-  - BaseNodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
-    BasePortName: Output
-    TargetNodeGuid: c5d6e615-24c8-4c50-b63d-e869aefb87e1
     TargetPortName: Input
   - BaseNodeGuid: c5d6e615-24c8-4c50-b63d-e869aefb87e1
     BasePortName: Output
     TargetNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
     TargetPortName: Input
+  - BaseNodeGuid: 578582de-6627-4239-9365-582adb51f830
+    BasePortName: Output
+    TargetNodeGuid: 3f2bf0ce-976d-4c65-940b-edc3a37f6c8c
+    TargetPortName: Input
+  - BaseNodeGuid: 43f41fcb-4537-4bde-9f33-38bdb92db51e
+    BasePortName: Output
+    TargetNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+    TargetPortName: Input
+  - BaseNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+    BasePortName: Continue
+    TargetNodeGuid: b5265e04-1196-4ece-b630-27fdb0bc2937
+    TargetPortName: Input
+  - BaseNodeGuid: b5265e04-1196-4ece-b630-27fdb0bc2937
+    BasePortName: Output
+    TargetNodeGuid: 5af21677-1eb6-404d-aaa7-54429fc3364a
+    TargetPortName: Input
+  - BaseNodeGuid: be9ba36b-eb68-4f32-b794-0e0370bb063e
+    BasePortName: Output
+    TargetNodeGuid: 914d3f6d-13cb-413b-b0b6-8b7eb1bbe51b
+    TargetPortName: Input
+  - BaseNodeGuid: 914d3f6d-13cb-413b-b0b6-8b7eb1bbe51b
+    BasePortName: Output
+    TargetNodeGuid: e508081a-fcb9-430f-a28d-14f3d1151860
+    TargetPortName: Input
   NodeDatas:
-  - rid: 605580595397656829
-  - rid: 605580595397656830
-  - rid: 605580595397656831
-  - rid: 605580595397656832
-  - rid: 605580595397656833
+  - rid: 605580595397656905
+  - rid: 605580595397656906
+  - rid: 605580595397656907
+  - rid: 605580595397656908
+  - rid: 605580595397656909
+  - rid: 605580595397656910
+  - rid: 605580595397656911
+  - rid: 605580595397656912
+  - rid: 605580595397656913
+  - rid: 605580595397656914
+  - rid: 605580595397656915
+  - rid: 605580595397656916
+  - rid: 605580595397656917
+  - rid: 605580595397656918
+  - rid: 605580595397656919
+  - rid: 605580595397656920
+  - rid: 605580595397656921
+  - rid: 605580595397656922
+  - rid: 605580595397656923
+  - rid: 605580595397656924
+  - rid: 605580595397656925
+  - rid: 605580595397656926
+  - rid: 605580595397656927
+  - rid: 605580595397656928
+  - rid: 605580595397656929
+  - rid: 605580595397656930
+  - rid: 605580595397656931
+  - rid: 605580595397656932
+  - rid: 605580595397656933
+  - rid: 605580595397656934
+  - rid: 605580595397656935
+  - rid: 605580595397656936
+  - rid: 605580595397656937
+  - rid: 605580595397656938
+  - rid: 605580595397656939
+  - rid: 605580595397656940
+  - rid: 605580595397656941
+  - rid: 605580595397656942
+  - rid: 605580595397656943
   - rid: 605580413384786182
-  - rid: 605580595397656834
-  - rid: 605580595397656835
-  - rid: 605580595397656836
-  - rid: 605580595397656837
-  - rid: 605580595397656838
-  - rid: 605580595397656839
-  - rid: 605580595397656840
-  - rid: 605580595397656841
-  - rid: 605580595397656842
-  - rid: 605580595397656843
-  - rid: 605580595397656844
-  - rid: 605580595397656845
-  - rid: 605580595397656846
-  - rid: 605580595397656847
-  - rid: 605580595397656848
-  - rid: 605580595397656849
-  - rid: 605580595397656850
-  - rid: 605580595397656851
-  - rid: 605580595397656852
-  - rid: 605580595397656853
-  - rid: 605580595397656854
-  - rid: 605580595397656855
-  - rid: 605580595397656856
-  - rid: 605580595397656857
-  - rid: 605580595397656858
-  - rid: 605580595397656859
-  - rid: 605580595397656860
-  - rid: 605580595397656861
-  - rid: 605580595397656862
-  - rid: 605580595397656863
-  - rid: 605580595397656864
-  - rid: 605580595397656865
+  - rid: 605580595397656944
   references:
     version: 2
     RefIds:
@@ -207,15 +222,15 @@ MonoBehaviour:
       type: {class: StartData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: be9ba36b-eb68-4f32-b794-0e0370bb063e
-        Position: {x: -54.4, y: 196}
-    - rid: 605580595397656829
+        Position: {x: -463.2, y: 157.6}
+    - rid: 605580595397656905
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
         Position: {x: 1228.8, y: 298.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 8b03f3e5c39ba384daf61ffd3fe096fa, type: 2}
-    - rid: 605580595397656830
+    - rid: 605580595397656906
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
@@ -257,7 +272,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656831
+    - rid: 605580595397656907
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
@@ -299,7 +314,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656832
+    - rid: 605580595397656908
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
@@ -341,7 +356,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656833
+    - rid: 605580595397656909
       type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 58a8e186-b73b-4424-85c6-90ab6cbdadd7
@@ -349,7 +364,7 @@ MonoBehaviour:
         LevelStateValues:
           Label: Level State
           Value: 6
-    - rid: 605580595397656834
+    - rid: 605580595397656910
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: e508081a-fcb9-430f-a28d-14f3d1151860
@@ -391,14 +406,14 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656835
+    - rid: 605580595397656911
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 6ed27a64-2968-40c4-84d5-6bca0776e7af
         Position: {x: 764.8, y: 188}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
-    - rid: 605580595397656836
+    - rid: 605580595397656912
       type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
@@ -406,14 +421,14 @@ MonoBehaviour:
         FishToCatch:
           Label: Fish
           Value: 1
-    - rid: 605580595397656837
+    - rid: 605580595397656913
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
         Position: {x: 417.6, y: 985.6}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
-    - rid: 605580595397656838
+    - rid: 605580595397656914
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
@@ -455,7 +470,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656839
+    - rid: 605580595397656915
       type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 07734380-aba8-4dd2-a4fc-3e5b223798e4
@@ -475,7 +490,7 @@ MonoBehaviour:
         ProgressGraph:
           Label: Progress when line stars
           Value: 1
-    - rid: 605580595397656840
+    - rid: 605580595397656916
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
@@ -517,7 +532,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656841
+    - rid: 605580595397656917
       type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: aef40778-d2ba-4e17-9b89-4ed4be37c30a
@@ -537,7 +552,7 @@ MonoBehaviour:
         ProgressGraph:
           Label: Progress when line stars
           Value: 1
-    - rid: 605580595397656842
+    - rid: 605580595397656918
       type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: d12e15fd-aa8f-4d29-aa66-811501221ba7
@@ -545,7 +560,7 @@ MonoBehaviour:
         FishToCatch:
           Label: Fish
           Value: 2
-    - rid: 605580595397656843
+    - rid: 605580595397656919
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
@@ -587,14 +602,14 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656844
+    - rid: 605580595397656920
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
         Position: {x: 244.8, y: 378.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
-    - rid: 605580595397656845
+    - rid: 605580595397656921
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
@@ -636,14 +651,14 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656846
+    - rid: 605580595397656922
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
         Position: {x: 743.2, y: 378.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
-    - rid: 605580595397656847
+    - rid: 605580595397656923
       type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
@@ -651,7 +666,7 @@ MonoBehaviour:
         LevelStateValues:
           Label: Level State
           Value: 3
-    - rid: 605580595397656848
+    - rid: 605580595397656924
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c63e3460-1b6e-4b3e-91f2-4c5806359500
@@ -693,7 +708,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656849
+    - rid: 605580595397656925
       type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 9ddbd569-30db-4017-90aa-31c0f59c73ac
@@ -701,21 +716,21 @@ MonoBehaviour:
         FishToCatch:
           Label: Fish
           Value: 0
-    - rid: 605580595397656850
+    - rid: 605580595397656926
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
         Position: {x: 415.2, y: 745.6}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
-    - rid: 605580595397656851
+    - rid: 605580595397656927
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
         Position: {x: 415.2, y: 1226.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
-    - rid: 605580595397656852
+    - rid: 605580595397656928
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
@@ -757,7 +772,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656853
+    - rid: 605580595397656929
       type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 8eb4a947-b5dd-44a5-acb9-1e6278be2221
@@ -777,7 +792,7 @@ MonoBehaviour:
         ProgressGraph:
           Label: Progress when line stars
           Value: 1
-    - rid: 605580595397656854
+    - rid: 605580595397656930
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 46eae1fb-faa6-4598-91cb-0e3c9b5bd940
@@ -819,21 +834,21 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656855
+    - rid: 605580595397656931
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
         Position: {x: 1133.6, y: 745.6}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
-    - rid: 605580595397656856
+    - rid: 605580595397656932
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
         Position: {x: 1133.6, y: 986.39996}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
-    - rid: 605580595397656857
+    - rid: 605580595397656933
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
@@ -875,14 +890,14 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656858
+    - rid: 605580595397656934
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
         Position: {x: 1124, y: 1226.4}
         listenEventContainer:
           ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
-    - rid: 605580595397656859
+    - rid: 605580595397656935
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
@@ -924,14 +939,7 @@ MonoBehaviour:
             LanguageGenericType: 
           - LanguageType: 9
             LanguageGenericType: 
-    - rid: 605580595397656860
-      type: {class: ListenData, ns: , asm: Assembly-CSharp}
-      data:
-        NodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
-        Position: {x: 2.4, y: 1398.4}
-        listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3cd3914842467b047a8ee8a3deea5d71, type: 2}
-    - rid: 605580595397656861
+    - rid: 605580595397656936
       type: {class: VocalOverrideData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 0f57913a-30fc-4337-8c7b-f6d4d4f47fdd
@@ -951,7 +959,7 @@ MonoBehaviour:
         ProgressGraph:
           Label: Progress when line stars
           Value: 0
-    - rid: 605580595397656862
+    - rid: 605580595397656937
       type: {class: InputStateData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 5af21677-1eb6-404d-aaa7-54429fc3364a
@@ -959,7 +967,7 @@ MonoBehaviour:
         InputStateValues:
           Label: Input State
           Value: 1
-    - rid: 605580595397656863
+    - rid: 605580595397656938
       type: {class: GiveItemIfNotHadData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: c5d6e615-24c8-4c50-b63d-e869aefb87e1
@@ -974,19 +982,56 @@ MonoBehaviour:
         amount:
           Label: Amount
           Value: 8
-    - rid: 605580595397656864
+    - rid: 605580595397656939
       type: {class: EndData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 3f2bf0ce-976d-4c65-940b-edc3a37f6c8c
-        Position: {x: 1104.8, y: 1447.2}
+        Position: {x: 1248, y: 1423.2}
         EndNodeType:
           Label: End State
           Value: 1
-    - rid: 605580595397656865
+    - rid: 605580595397656940
       type: {class: SceneChangeData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 578582de-6627-4239-9365-582adb51f830
-        Position: {x: 793.6, y: 1423.2}
+        Position: {x: 953.6, y: 1405.6}
         SceneValues:
           Label: Scene
           Value: 3
+    - rid: 605580595397656941
+      type: {class: ToggleCaptainHelpData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 43f41fcb-4537-4bde-9f33-38bdb92db51e
+        Position: {x: -68.8, y: 1268}
+        ToggleCaptainHelp:
+          Label: On/Off
+          Value: 1
+        Seconds:
+          Label: Seconds till Prompt
+          Value: 3
+    - rid: 605580595397656942
+      type: {class: ListenData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
+        Position: {x: -92.8, y: 1405.6}
+        listenEventContainer:
+          ListenEvent: {fileID: 11400000, guid: 3cd3914842467b047a8ee8a3deea5d71, type: 2}
+    - rid: 605580595397656943
+      type: {class: ToggleCaptainHelpData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: b5265e04-1196-4ece-b630-27fdb0bc2937
+        Position: {x: -68.8, y: 1527.2}
+        ToggleCaptainHelp:
+          Label: On/Off
+          Value: 0
+        Seconds:
+          Label: Seconds till Prompt
+          Value: 0
+    - rid: 605580595397656944
+      type: {class: PlayMusicData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: 914d3f6d-13cb-413b-b0b6-8b7eb1bbe51b
+        Position: {x: -323.2, y: 157.6}
+        MusicTrackHolder:
+          Label: Track
+          Value: 0

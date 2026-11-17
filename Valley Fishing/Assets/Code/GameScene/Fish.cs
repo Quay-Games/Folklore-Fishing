@@ -11,7 +11,7 @@ public class Fish : MonoBehaviour
 
     #region States
 
-    public FishDatas.FishData.ActivityLevel CurrentActivityLevel { get; set; }
+    public ActivityLevel CurrentActivityLevel { get; set; }
 
 	#endregion
 
@@ -60,7 +60,7 @@ public class Fish : MonoBehaviour
 	public Transform LineEnd { get => lineEnd; }
 	public bool IsTutorial { get; set; }
 	public Action OnInitialized { get; set; }
-	public Action<FishDatas.FishData.MovementDirection> Strafe { get; set; }
+	public Action<MovementDirection> Strafe { get; set; }
 	public Action BecameCentered { get; set; }
 	public RodLineComponent RodLineComponent { get; set; }
 	[field:SerializeField] public float ReelSpeed { get; set; }
@@ -68,6 +68,8 @@ public class Fish : MonoBehaviour
 	public bool Caught { get; set; }
 	public bool HitByFlies { get; set; }
     public Action OnCatch { get; set; }
+	public Action OnStrafe { get; set; }
+    public Action OnActivityLevelChange { get; set; }
 
     #endregion
 
@@ -119,7 +121,7 @@ public class Fish : MonoBehaviour
 		float movementInterval = (reelStart - reelEnd) / this.FishData.MovementDirections.Count;
 		bool isStrafer = false;
 		for (int i = 0; i < this.FishData.MovementDirections.Count; i++) {
-			if(this.FishData.MovementDirections[i]!= FishDatas.FishData.MovementDirection.none) {
+			if(this.FishData.MovementDirections[i]!= MovementDirection.NONE) {
 				isStrafer = true;
 			}
 			this.MovementIntervals.Add(reelStart - (i * movementInterval));
@@ -186,15 +188,15 @@ public class Fish : MonoBehaviour
 			return;
 		}
         switch (this.CurrentActivityLevel) {
-            case FishDatas.FishData.ActivityLevel.none:
+            case ActivityLevel.none:
 				break;
-            case FishDatas.FishData.ActivityLevel.calm:
+            case ActivityLevel.calm:
 				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.CalmReeling);
 				break;
-            case FishDatas.FishData.ActivityLevel.medium:
+            case ActivityLevel.medium:
 				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.NormalReeling);
 				break;
-            case FishDatas.FishData.ActivityLevel.active:
+            case ActivityLevel.active:
 				ReelingSuccesfully(this.InputController.CurrentState == InputController.State.FastReeling);
 				break;
         }
@@ -237,7 +239,8 @@ public class Fish : MonoBehaviour
 			if (transform.position.z < (this.ActivityLevelIntervals[i])) {
 				if (this.CurrentActivityLevel != this.FishData.ActivityLevels[i]) {
 					SetActivityLevel(this.FishData.ActivityLevels[i]);
-					GameManager.Instance.InputController.PauseReelSFX(correctActivityChangeTime * 2);
+					OnActivityLevelChange?.Invoke();
+                    GameManager.Instance.InputController.PauseReelSFX(correctActivityChangeTime * 2);
 					if (i != 0) {
 						this.ActivityLevelChanging = true;
 					}
@@ -271,9 +274,10 @@ public class Fish : MonoBehaviour
 				if (this.MovementIntervalsCompleted > i) {
 					break;
 				}
-				if(this.FishData.MovementDirections[i] != FishDatas.FishData.MovementDirection.none) {
+				if(this.FishData.MovementDirections[i] != MovementDirection.NONE) {
 					SetStrafePosition(this.FishData.MovementDirections[i]);
-					this.MovementDirectionChanging = true;
+					OnStrafe?.Invoke();
+                    this.MovementDirectionChanging = true;
 				}
 				this.MovementIntervalsCompleted++;
 			}
@@ -321,25 +325,25 @@ public class Fish : MonoBehaviour
 		Destroy(gameObject);
 	}
 
-	private void SetActivityLevel(FishDatas.FishData.ActivityLevel activityLevel) {
+	private void SetActivityLevel(ActivityLevel activityLevel) {
 		this.CurrentActivityLevel = activityLevel;
 		for (int i = 0; i < activityParticles.Length; i++) {
 			activityParticles[i].SetActive(false);
 		}
 		GameManager.Instance.InputController.ResetReelInput();
 		switch (this.CurrentActivityLevel) {
-			case FishDatas.FishData.ActivityLevel.none:
+			case ActivityLevel.none:
 				AudioManager.Instance.PlayFishActivitySound(this, 0, true);
 				break;
-			case FishDatas.FishData.ActivityLevel.calm:
+			case ActivityLevel.calm:
 				activityParticles[0].SetActive(true);
 				AudioManager.Instance.PlayFishActivitySound(this, 1, true);
 				break;
-			case FishDatas.FishData.ActivityLevel.medium:
+			case ActivityLevel.medium:
 				activityParticles[1].SetActive(true);
 				AudioManager.Instance.PlayFishActivitySound(this, 2, true);
 				break;
-			case FishDatas.FishData.ActivityLevel.active:
+			case ActivityLevel.active:
 				activityParticles[2].SetActive(true);
 				AudioManager.Instance.PlayFishActivitySound(this, 3, true);
 				break;
@@ -348,15 +352,15 @@ public class Fish : MonoBehaviour
 		}
 	}
 
-	private void SetStrafePosition(FishDatas.FishData.MovementDirection movementDirection) {
+	private void SetStrafePosition(MovementDirection movementDirection) {
 		switch (movementDirection) {
-			case FishDatas.FishData.MovementDirection.none:
+			case MovementDirection.NONE:
 				break;
-			case FishDatas.FishData.MovementDirection.left:
+			case MovementDirection.LEFT:
 				Strafe?.Invoke(movementDirection);
 				transform.position = new Vector3(GameManager.Instance.LevelController.LeftStrafeTransform.position.x,transform.position.y,transform.position.z);
 				break;
-			case FishDatas.FishData.MovementDirection.right:
+			case MovementDirection.RIGHT:
 				Strafe?.Invoke(movementDirection);
 				transform.position = new Vector3(GameManager.Instance.LevelController.RightStrafeTransform.position.x, transform.position.y, transform.position.z);
 				break;

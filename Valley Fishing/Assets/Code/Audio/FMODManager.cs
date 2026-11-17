@@ -119,4 +119,7 @@ public class FMODManager : Singleton<FMODManager>
 	[Header("ShoreMenuButtons")]
 	public EventReference BaitShopButton;
 
+	[Header("Music")]
+	public EventReference NormalLevelMusic;
+	public EventReference BossLevelMusic;
 }

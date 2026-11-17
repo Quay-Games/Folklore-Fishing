@@ -17,19 +17,7 @@ public class FishDatas : ScriptableObject {
 		public float StrafeSpeed;
 		public float SwimAwaySpeed;
 		public float StrafedSwimAwaySpeed;
-		public enum ActivityLevel {
-			none,
-			calm,
-			medium,
-			active
-		}
 		public List<ActivityLevel> ActivityLevels;
-
-		public enum MovementDirection {
-			none,
-			left,
-			right
-		}
 		public List<MovementDirection> MovementDirections;
 		public EventReference fishCatchAudio;
 		public EventReference icthyologistInfoAudio;

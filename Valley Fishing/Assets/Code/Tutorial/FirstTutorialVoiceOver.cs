@@ -38,13 +38,13 @@ public class FirstTutorialVoiceOver : VoiceOverController
 		else if(GameManager.Instance.InputController.ReelLevel == this.LastReelLevel && GameManager.Instance.InputController.ReelLevel != 0) {
 			if (GameManager.Instance.CurrentFish != null) {
 				switch (GameManager.Instance.CurrentFish.CurrentActivityLevel) {
-					case FishDatas.FishData.ActivityLevel.calm:
+					case ActivityLevel.calm:
 						CountReelInput(1);
 						break;
-					case FishDatas.FishData.ActivityLevel.medium:
+					case ActivityLevel.medium:
 						CountReelInput(2);
 						break;
-					case FishDatas.FishData.ActivityLevel.active:
+					case ActivityLevel.active:
 						CountReelInput(3);
 						break;
 					default:
