@@ -1,6 +1,11 @@
 using UnityEngine;
 
-public enum ButtonType{
+public enum UIType{
+	//Level
+	LEVEL,
+	LevelBaitSelect,
+	LevelCatchUI,
+
 
 	//Shore	
 	SHORE,
@@ -25,6 +30,18 @@ public enum ButtonType{
    RodshopReelSpeed,
    RodshopStrafeSpeed,
    RodshopFailSpeed,
-   RodshopLeaveShop
+   RodshopLeaveShop,
+
+    //Icthyologist
+    ICTHYOLOGIST,
+	IchthyologistEntry,
+
+	//Inventorys
+	INVENTORS,
+	InventorsItem,
+
+	//Utility
+	GENERATED,
+	DEFAULT
 
 }

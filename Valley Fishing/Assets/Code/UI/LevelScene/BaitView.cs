@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BaitView : MonoBehaviour
+public class BaitView : GameUIItem
 {
 	#region Serialized Fields
 
@@ -22,19 +22,23 @@ public class BaitView : MonoBehaviour
 	#region Properties
 
 	[field:SerializeField]private int BaitIndex {	get; set; }
+    public override UIType ButtonType { get => UIType.LevelBaitSelect; set => throw new System.NotImplementedException(); }
 
-	#endregion
+    #endregion
 
 
-	#region MonoBehaviours
+    #region MonoBehaviours
 
-	public void Start() {
+    public void Start() {
+		UIManager.Instance.Register(this);
 		buttonsGameobject.SetActive(false);
+		//why is this here twice?
 		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
 		AudioManager.Instance.OnVoiceLineOver += SkipBaitSelection;
 	}
 
 	public void OnDestroy() {
+		UIManager.Instance.Deregister(this);
 		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
 	}
 
@@ -58,6 +62,11 @@ public class BaitView : MonoBehaviour
 	}
 
 	public void BaitClicked(int baitIndex) {
+		if(!base.AllowUIPress(ButtonType))
+		{
+			//allow overriding
+			return;
+		}
 		AudioManager.Instance.PlayBaitSound(false, 0);
 		AudioManager.Instance.PlayOneShot(FMODManager.Instance.AttatchBaitSounds[baitIndex]);
 		InventoryManager.Instance.CurrentBait = InventoryManager.Instance.BaitDatas.Datas[baitIndex];

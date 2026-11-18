@@ -1,16 +1,32 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    List<GameUIItem> uiItems = new List<GameUIItem>();
+    public Action DoInstead;
+    public UIType IfType;
+
+    public void Register(GameUIItem uiItem)
     {
-        
+        uiItems.Add(uiItem);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Deregister(GameUIItem uiItem)
     {
-        
+        uiItems.Remove(uiItem);
+    }
+
+    public bool DeferButtonPressIfNeeded(UIType pressingButton)
+    {
+        if(pressingButton == IfType && DoInstead != null)
+        {
+            DoInstead.Invoke();
+            return false;
+        } else
+        {
+            return true;
+        }
     }
 }

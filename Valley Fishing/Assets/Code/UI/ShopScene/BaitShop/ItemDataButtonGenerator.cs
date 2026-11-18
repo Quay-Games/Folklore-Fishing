@@ -48,23 +48,33 @@ public class ItemDataButtonGenerator : MonoBehaviour
     public void OnEnable()
     {
         List<OwnedItemTypeData> chosenList;
+		UIType buttonType;
         switch(listUsed)
         {
             case ListUsed.Fish:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
+				buttonType = UIType.BaitshopFish;
                 break;
             case ListUsed.Bait:
+				//this if statement is actually an important distinction
 				if (GameManager.Instance.ShopController != null) {
+					//this is the list of the bait shop's bait, and is used in the shop
 					chosenList = GetTempBaitListForSelling();
-				} else {
+                    buttonType = UIType.BaitshopBait;
+                }
+                else {
+					//this is the list of the player's bait, and is used in the level
 					chosenList = InventoryManager.Instance.OwnedBaitTypeDatas;
+					buttonType = UIType.LevelBaitSelect;
 				}
                 break;
 			case ListUsed.Inventions:
 				chosenList = InventionManager.Instance.CraftableInventions;
+				buttonType = UIType.InventorsItem;
 				break;
 			default:
                 chosenList = InventoryManager.Instance.OwnedFishTypeDatas;
+                buttonType = UIType.BaitshopFish;
                 break;
         }
 		
@@ -97,7 +107,9 @@ public class ItemDataButtonGenerator : MonoBehaviour
 				this.ItemDataButtons[i]= buttonInstance;
 				this.Buttons[i] = buttonInstance.Button;
 			}
-			buttonInstance.AssignData(chosenList[i]);				
+			//here is where we assign the button types to the buttons, needed for the UI types of nodes
+			buttonInstance.buttonType = buttonType;
+            buttonInstance.AssignData(chosenList[i]);				
 		}
 		Utilities.DisableUnusedButtons(buttonsToEnable, this.Buttons);
 		if (navigationType == NavigationType.Horizontal) {

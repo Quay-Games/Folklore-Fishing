@@ -108,7 +108,7 @@ public class FirstTutorialBaitShop : BaitShop {
 		}
 	}
 
-	public override void FishBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void FishBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.FishBoardSelected(buttonType, buttonVoiceOverComponent);
 		if (this.PlayFishBoardIntro) {
 			AudioManager.Instance.PlayVoiceOver(fishBoardIntroEvent);
@@ -118,7 +118,7 @@ public class FirstTutorialBaitShop : BaitShop {
 		AudioManager.Instance.PlayVoiceOver(fishBoardEvent);
 	}
 
-	public override void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void FishBasketSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.FishBasketSelected(buttonType, buttonVoiceOverComponent);
 		if (this.PlayFishBasketIntro) {
 			AudioManager.Instance.PlayVoiceOver(fishBasketIntroEvent);
@@ -128,7 +128,7 @@ public class FirstTutorialBaitShop : BaitShop {
 		AudioManager.Instance.PlayVoiceOver(fishBasketEvent);
 	}
 
-	public override void BaitBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void BaitBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.BaitBoardSelected(buttonType, buttonVoiceOverComponent);
 		if (this.PlayBaitBoardIntro) {
 			AudioManager.Instance.PlayVoiceOver(baitBoardIntroEvent);
@@ -137,7 +137,7 @@ public class FirstTutorialBaitShop : BaitShop {
 		}
 		AudioManager.Instance.PlayVoiceOver(baitBoardEvent);
 	}
-	public override void LeaveShopSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void LeaveShopSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.LeaveShopSelected(buttonType, buttonVoiceOverComponent);
 		AudioManager.Instance.PlayVoiceOver(leaveShopEvent);
 	}

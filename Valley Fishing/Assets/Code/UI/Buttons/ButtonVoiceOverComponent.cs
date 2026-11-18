@@ -5,20 +5,22 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISelectHandler, IMoveHandler, ISubmitHandler 
+public class ButtonVoiceOverComponent : GameUIItem, IPointerEnterHandler, ISelectHandler, IMoveHandler, ISubmitHandler
 {
 	#region Serialised Fields
-	[SerializeField] protected ButtonType buttonType;
+	[SerializeField] public UIType buttonType;
     [SerializeField] protected EventReference HoverButtonSoundEventReference;
 	[SerializeField] protected UnityEvent hoverEvent;
 	[SerializeField] protected UnityEvent clickEvent;
+	//im just gonna keep this one separate so we dont unlink all the buttons in the scene
+    public override UIType ButtonType { get => buttonType; set => buttonType = value; }
 
     #endregion
 
 
     #region Properties
 
-    public Action<ButtonType, ButtonVoiceOverComponent> SelectAction { get; set; }
+    public Action<UIType, ButtonVoiceOverComponent> SelectAction { get; set; }
 	private Button ButtonReference { get; set; }
 	public bool TutorialTriggered { get; set; }
 	public Button Button {
@@ -30,14 +32,32 @@ public class ButtonVoiceOverComponent : MonoBehaviour, IPointerEnterHandler, ISe
 		}
 	}
 
-	#endregion
+    #endregion
 
-	public virtual void OnPointerEnter(PointerEventData eventData) {
+    #region Mono Behaviors
+    public void Start()
+    {
+        UIManager.Instance.Register(this);
+    }
+
+    public void OnDestroy()
+    {
+        UIManager.Instance.Deregister(this);
+    }
+    #endregion
+
+    public virtual void OnPointerEnter(PointerEventData eventData) {
 		GameManager.Instance.LastSelectedButton = gameObject;
 		DoHoverEffect(); 
 	}
 
 	public virtual void OnSelect(BaseEventData eventData) {
+		if(!base.AllowUIPress(ButtonType))
+		{
+			//this is the case where the button's action has been taken over;
+			//may not exactly work like this, as im not sure what the hover effect is doing on there.
+			return;
+		}
 		if (GameManager.Instance.InputController.SelectionManuallySet) {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 			return;

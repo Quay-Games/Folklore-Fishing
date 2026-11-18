@@ -36,7 +36,7 @@ public class BaitButton : MonoBehaviour {
 
 	#region Public Methods
 
-	public void SelectBait(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public void SelectBait(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		baitView.BaitSelected(baitIndex);
 		if (AudioManager.Instance.VoiceLineInProgress) {
 			return;

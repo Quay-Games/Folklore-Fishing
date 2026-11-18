@@ -89,22 +89,22 @@ public class SecondTutorialBaitShop : BaitShop {
 		gameObject.SetActive(enter);
 	}
 
-	public override void FishBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void FishBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.FishBoardSelected(buttonType, buttonVoiceOverComponent);
 		AudioManager.Instance.PlayVoiceOver(fishBoardEvent);
 	}
 
-	public override void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void FishBasketSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.FishBasketSelected(buttonType, buttonVoiceOverComponent);
 		AudioManager.Instance.PlayVoiceOver(fishBasketEvent);
 	}
 
-	public override void BaitBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void BaitBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.BaitBoardSelected(buttonType, buttonVoiceOverComponent);
 		AudioManager.Instance.PlayVoiceOver(baitBoardEvent);
 	}
 
-	public override void LeaveShopSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public override void LeaveShopSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		base.LeaveShopSelected(buttonType, buttonVoiceOverComponent);
 		AudioManager.Instance.PlayVoiceOver(leaveShopEvent);
 	}

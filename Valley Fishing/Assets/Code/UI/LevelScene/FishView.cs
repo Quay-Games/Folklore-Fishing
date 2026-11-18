@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class FishView : MonoBehaviour {
+public class FishView : GameUIItem {
 
 	#region Serialized Fields
 
@@ -22,11 +22,13 @@ public class FishView : MonoBehaviour {
     #region Public Properties
     public Action OnFishUIEnabled { get; set; }
 	public Action OnFishUIDisabled { get; set; }
+    public override UIType ButtonType { get => UIType.LevelCatchUI; set => throw new System.NotImplementedException(); }
     #endregion
 
     #region Mono Behaviours
 
     public void Start() {
+		UIManager.Instance.Register(this);
 		GameManager.Instance.InputController.OnClick -= DisableFishUI;
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
 		GameManager.Instance.InputController.OnClick += DisableFishUI;
@@ -36,6 +38,7 @@ public class FishView : MonoBehaviour {
     }
 
     public void OnDestroy() {
+		UIManager.Instance.Deregister(this);
 		if(GameManager.Instance == null) {
 			return;
 		}

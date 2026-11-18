@@ -187,18 +187,18 @@ public class CalvinBaitShop : Shop {
 			OpenFishBoard();
 		}
 	}
-    public virtual void FishBasketSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+    public virtual void FishBasketSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
 		StartCoroutine(RunBeginLerp(lerpTransforms[0]));
     }
 
-    public virtual void FishBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+    public virtual void FishBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[1]));
     }	
 
-	public virtual void BaitBoardSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public virtual void BaitBoardSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[2]));
     }
-	public virtual void LeaveShopSelected(ButtonType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
+	public virtual void LeaveShopSelected(UIType buttonType, ButtonVoiceOverComponent buttonVoiceOverComponent) {
         StartCoroutine(RunBeginLerp(lerpTransforms[3]));
     }
     private IEnumerator RunBeginLerp(Transform lerpTransform) {
