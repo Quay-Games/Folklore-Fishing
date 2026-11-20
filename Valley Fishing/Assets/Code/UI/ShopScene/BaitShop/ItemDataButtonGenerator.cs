@@ -59,7 +59,7 @@ public class ItemDataButtonGenerator : MonoBehaviour
 				//this if statement is actually an important distinction
 				if (GameManager.Instance.ShopController != null) {
 					//this is the list of the bait shop's bait, and is used in the shop
-					chosenList = GetTempBaitListForSelling();
+					chosenList = GameManager.Instance.ShopController.BaitShop.ShopStock;
                     buttonType = UIType.BaitshopBait;
                 }
                 else {

@@ -34,30 +34,12 @@ public class ButtonVoiceOverComponent : GameUIItem, IPointerEnterHandler, ISelec
 
     #endregion
 
-    #region Mono Behaviors
-    public void Start()
-    {
-        UIManager.Instance.Register(this);
-    }
-
-    public void OnDestroy()
-    {
-        UIManager.Instance.Deregister(this);
-    }
-    #endregion
-
     public virtual void OnPointerEnter(PointerEventData eventData) {
 		GameManager.Instance.LastSelectedButton = gameObject;
 		DoHoverEffect(); 
 	}
 
 	public virtual void OnSelect(BaseEventData eventData) {
-		if(!base.AllowUIPress(ButtonType))
-		{
-			//this is the case where the button's action has been taken over;
-			//may not exactly work like this, as im not sure what the hover effect is doing on there.
-			return;
-		}
 		if (GameManager.Instance.InputController.SelectionManuallySet) {
 			GameManager.Instance.InputController.SelectionManuallySet = false;
 			return;
@@ -114,7 +96,14 @@ public class ButtonVoiceOverComponent : GameUIItem, IPointerEnterHandler, ISelec
 	}
 
 	public virtual bool ButtonClicked(bool buttonInteractable) {
-		clickEvent?.Invoke();
+		//this is where a UI override node could step in
+        if (!base.AllowUIPress(ButtonType))
+        {
+			//returns true because some subclasses of this will stop if true returns from this function,
+			//which is what we want
+            return true;
+        }
+        clickEvent?.Invoke();
 		return buttonInteractable;
 	}
 }

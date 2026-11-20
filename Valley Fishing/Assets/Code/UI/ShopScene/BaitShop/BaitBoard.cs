@@ -8,7 +8,6 @@ public class BaitBoard : ItemDataButtonGenerator {
 
 	[SerializeField] private GameObject baitBoardObject;
 	[SerializeField] private GameObject[] baitshopComponents;
-	
 
 	#endregion
 
@@ -18,11 +17,11 @@ public class BaitBoard : ItemDataButtonGenerator {
 	public bool Initialized { get; set; }
 	[field: SerializeField] public int[] BaitQuantities;
 
-	#endregion
+    #endregion
 
-	#region Mono Behaviours
+    #region Mono Behaviours
 
-	public void Start() {
+    public void Start() {
 		AudioManager.Instance.OnVoiceLineOver += InitiallizeBaitBoard;
 	}
 

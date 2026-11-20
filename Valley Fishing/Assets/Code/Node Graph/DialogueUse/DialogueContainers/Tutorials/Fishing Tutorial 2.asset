@@ -15,11 +15,16 @@ MonoBehaviour:
   NodeLinkDatas:
   - BaseNodeGuid: 9f6f491b-4e78-4027-a658-37bcd228148f
     BasePortName: Output
-    TargetNodeGuid: 1f8d33e9-7e5d-4859-bc1f-d95eb3c5699d
+    TargetNodeGuid: ee5d2240-50b2-4132-a8a4-0133c0e514cd
+    TargetPortName: Input
+  - BaseNodeGuid: ee5d2240-50b2-4132-a8a4-0133c0e514cd
+    BasePortName: Output
+    TargetNodeGuid: f36a8819-ed7d-4e3b-9807-47786ea24fb9
     TargetPortName: Input
   NodeDatas:
   - rid: 605580595397656642
-  - rid: 605580595397656644
+  - rid: 605580667806810183
+  - rid: 605580667806810184
   references:
     version: 2
     RefIds:
@@ -28,18 +33,19 @@ MonoBehaviour:
       data:
         NodeGuid: 9f6f491b-4e78-4027-a658-37bcd228148f
         Position: {x: 416, y: 316.80002}
-    - rid: 605580595397656644
-      type: {class: GiveItemIfNotHadData, ns: , asm: Assembly-CSharp}
+    - rid: 605580667806810183
+      type: {class: EndData, ns: , asm: Assembly-CSharp}
       data:
-        NodeGuid: 1f8d33e9-7e5d-4859-bc1f-d95eb3c5699d
-        Position: {x: 517.6, y: 316.80002}
-        ChosenItem:
-          Label: Item Category
-          listCategory: 1
-          enumTypeNames:
-          - FishName, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          - BaitName, Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-          selectedMemberName: CricketBait
-        amount:
-          Label: Amount
-          Value: 5
+        NodeGuid: f36a8819-ed7d-4e3b-9807-47786ea24fb9
+        Position: {x: 974.4, y: 316.80002}
+        EndNodeType:
+          Label: End State
+          Value: 1
+    - rid: 605580667806810184
+      type: {class: EnterShopData, ns: , asm: Assembly-CSharp}
+      data:
+        NodeGuid: ee5d2240-50b2-4132-a8a4-0133c0e514cd
+        Position: {x: 659.2, y: 296.80002}
+        selectedShop:
+          Label: Shop
+          Value: 0

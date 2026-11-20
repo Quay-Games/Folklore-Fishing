@@ -8,9 +8,10 @@ using UnityEngine.EventSystems;
 
 public class CalvinBaitShop : Shop {
 
-	#region Serialized Fields
+    #region Serialized Fields
 
-	[SerializeField] private GameObject baitShopObject;
+    [SerializeField] public List<OwnedItemTypeData> ShopStock = new List<OwnedItemTypeData>();
+    [SerializeField] private GameObject baitShopObject;
 	[SerializeField] protected FishBoard fishBoard;
 	[SerializeField] protected BaitBoard baitBoard;
 	[SerializeField] protected ButtonVoiceOverComponent fishBoardButton;
@@ -159,6 +160,7 @@ public class CalvinBaitShop : Shop {
 
 
 		#region Private Methods
+
 
 	private void PerformSellFish(int fishIndex) {
 		InventoryManager.Instance.OwnedFishTypeDatas[fishIndex].quantity = 0;

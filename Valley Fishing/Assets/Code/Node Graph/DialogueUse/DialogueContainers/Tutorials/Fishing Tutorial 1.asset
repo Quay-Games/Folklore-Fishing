@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   NodeLinkDatas:
   - BaseNodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 448953da-dc52-4c48-a5e4-b151773d58ca
     TargetPortName: Input
   - BaseNodeGuid: 904d409f-fccc-401e-926f-5fa474a1954d
@@ -38,7 +38,7 @@ MonoBehaviour:
     TargetNodeGuid: 58a8e186-b73b-4424-85c6-90ab6cbdadd7
     TargetPortName: Input
   - BaseNodeGuid: 6ed27a64-2968-40c4-84d5-6bca0776e7af
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 425ddd36-34c6-47ab-bf62-da031d5e9212
     TargetPortName: Input
   - BaseNodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
@@ -46,7 +46,7 @@ MonoBehaviour:
     TargetNodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
     TargetPortName: Input
   - BaseNodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
     TargetPortName: Input
   - BaseNodeGuid: 442c5987-8ea7-4934-867d-436e1fb38ad4
@@ -74,7 +74,7 @@ MonoBehaviour:
     TargetNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
     TargetPortName: Input
   - BaseNodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
     TargetPortName: Input
   - BaseNodeGuid: febe3a95-ce32-4de5-8e20-430ab9186858
@@ -82,7 +82,7 @@ MonoBehaviour:
     TargetNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
     TargetPortName: Input
   - BaseNodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 7d5bc3e6-7bf7-4c0b-92c0-bf0cca7a046d
     TargetPortName: Input
   - BaseNodeGuid: 202926e0-ae78-4324-8f61-f5c2ace4508f
@@ -98,11 +98,11 @@ MonoBehaviour:
     TargetNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
     TargetPortName: Input
   - BaseNodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 5a32b349-6cbf-4ed8-9a3a-daf94b78b68c
     TargetPortName: Input
   - BaseNodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
     TargetPortName: Input
   - BaseNodeGuid: ed3eccae-78ed-490b-83a1-5deb138f7a8f
@@ -118,11 +118,11 @@ MonoBehaviour:
     TargetNodeGuid: 880ea187-4c61-4258-9649-0edc63a40f5b
     TargetPortName: Input
   - BaseNodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 46eae1fb-faa6-4598-91cb-0e3c9b5bd940
     TargetPortName: Input
   - BaseNodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
     TargetPortName: Input
   - BaseNodeGuid: 1e010920-e593-49a0-8101-d8c61f3e2423
@@ -130,7 +130,7 @@ MonoBehaviour:
     TargetNodeGuid: d12e15fd-aa8f-4d29-aa66-811501221ba7
     TargetPortName: Input
   - BaseNodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
     TargetPortName: Input
   - BaseNodeGuid: 0773e8dd-7b9d-4eeb-96ab-d8943a9b5d3d
@@ -158,7 +158,7 @@ MonoBehaviour:
     TargetNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
     TargetPortName: Input
   - BaseNodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
-    BasePortName: Continue
+    BasePortName: Output
     TargetNodeGuid: b5265e04-1196-4ece-b630-27fdb0bc2937
     TargetPortName: Input
   - BaseNodeGuid: b5265e04-1196-4ece-b630-27fdb0bc2937
@@ -229,7 +229,7 @@ MonoBehaviour:
         NodeGuid: ab482386-c2ff-47b0-9986-e0574f4a1265
         Position: {x: 1228.8, y: 298.4}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 8b03f3e5c39ba384daf61ffd3fe096fa, type: 2}
+          Value: {fileID: 11400000, guid: 8b03f3e5c39ba384daf61ffd3fe096fa, type: 2}
     - rid: 605580595397656906
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -412,7 +412,7 @@ MonoBehaviour:
         NodeGuid: 6ed27a64-2968-40c4-84d5-6bca0776e7af
         Position: {x: 764.8, y: 188}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
+          Value: {fileID: 11400000, guid: 197070674e1989945899c7ed294b5d21, type: 2}
     - rid: 605580595397656912
       type: {class: CatchOverrideData, ns: , asm: Assembly-CSharp}
       data:
@@ -427,7 +427,7 @@ MonoBehaviour:
         NodeGuid: aa6901f7-c34f-42a0-b572-16052fe4d451
         Position: {x: 417.6, y: 985.6}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+          Value: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
     - rid: 605580595397656914
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -608,7 +608,7 @@ MonoBehaviour:
         NodeGuid: 85151144-255e-4fe0-9bf6-1895ec2f01fe
         Position: {x: 244.8, y: 378.4}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
+          Value: {fileID: 11400000, guid: 3f6afe283150e0a4691dfe543fb20a02, type: 2}
     - rid: 605580595397656921
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -657,7 +657,7 @@ MonoBehaviour:
         NodeGuid: c1e48b9e-a1d6-43dd-b9b9-a9092f81afa0
         Position: {x: 743.2, y: 378.4}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
+          Value: {fileID: 11400000, guid: 3831c275761a9e54cab49d7b7ca7fee0, type: 2}
     - rid: 605580595397656923
       type: {class: LevelStateData, ns: , asm: Assembly-CSharp}
       data:
@@ -722,14 +722,14 @@ MonoBehaviour:
         NodeGuid: 15ff3794-ae50-4f64-b57b-60cbd9d89dee
         Position: {x: 415.2, y: 745.6}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+          Value: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
     - rid: 605580595397656927
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: f0616d45-c7ad-4fe6-9345-0a245c2feae2
         Position: {x: 415.2, y: 1226.4}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
+          Value: {fileID: 11400000, guid: fc5180705e19aeb49b2f12655188d3be, type: 2}
     - rid: 605580595397656928
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -840,14 +840,14 @@ MonoBehaviour:
         NodeGuid: c788d110-de0b-4d74-9c24-b950882bc49b
         Position: {x: 1133.6, y: 745.6}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+          Value: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
     - rid: 605580595397656932
       type: {class: ListenData, ns: , asm: Assembly-CSharp}
       data:
         NodeGuid: 04d1fce4-a290-4513-9e39-1a77e89c472a
         Position: {x: 1133.6, y: 986.39996}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+          Value: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
     - rid: 605580595397656933
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -896,7 +896,7 @@ MonoBehaviour:
         NodeGuid: c97decb6-fbf4-4ea3-9e9d-de4e15e9099c
         Position: {x: 1124, y: 1226.4}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
+          Value: {fileID: 11400000, guid: b9062f11ab5e8d44a938c67a1c540e74, type: 2}
     - rid: 605580595397656935
       type: {class: NPCDialogueData, ns: , asm: Assembly-CSharp}
       data:
@@ -1015,7 +1015,7 @@ MonoBehaviour:
         NodeGuid: 4cccdb79-f50d-4a64-aa28-9bd50d2dcf0c
         Position: {x: -92.8, y: 1405.6}
         listenEventContainer:
-          ListenEvent: {fileID: 11400000, guid: 3cd3914842467b047a8ee8a3deea5d71, type: 2}
+          Value: {fileID: 11400000, guid: 3cd3914842467b047a8ee8a3deea5d71, type: 2}
     - rid: 605580595397656943
       type: {class: ToggleCaptainHelpData, ns: , asm: Assembly-CSharp}
       data:

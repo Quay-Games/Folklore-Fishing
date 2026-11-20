@@ -28,8 +28,7 @@ public class FishView : GameUIItem {
     #region Mono Behaviours
 
     public void Start() {
-		UIManager.Instance.Register(this);
-		GameManager.Instance.InputController.OnClick -= DisableFishUI;
+        GameManager.Instance.InputController.OnClick -= DisableFishUI;
 		GameManager.Instance.InputController.OnSkip -= DisableFishUI;
 		GameManager.Instance.InputController.OnClick += DisableFishUI;
 		GameManager.Instance.InputController.OnSkip += DisableFishUI;
@@ -38,7 +37,6 @@ public class FishView : GameUIItem {
     }
 
     public void OnDestroy() {
-		UIManager.Instance.Deregister(this);
 		if(GameManager.Instance == null) {
 			return;
 		}
@@ -50,7 +48,7 @@ public class FishView : GameUIItem {
     #endregion
 
 
-        #region Public Methods
+    #region Public Methods
 
     public void EnableFishUI(bool enable) {
 		fishImage.sprite = GameManager.Instance.CurrentFish.FishData.ItemImage;

@@ -31,7 +31,7 @@ public class FirstTutorialBaitShop : BaitShop {
     public override void Awake()
     {
 		base.Awake();
-        leaveShopButton.gameObject.SetActive(false);
+        //leaveShopButton.gameObject.SetActive(false);
         GameManager.Instance.InputController.SelectButton(lockedFishBoardButton.gameObject);
     }
 

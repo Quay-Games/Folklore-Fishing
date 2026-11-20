@@ -1225,6 +1225,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1528413033}
   m_CullTransparentMesh: 1
+--- !u!1 &1583533660
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583533661}
+  m_Layer: 0
+  m_Name: SceneUIController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1583533661
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1583533660}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 390.14417, y: 215.25119, z: -3.8511105}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!224 &1643587356 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1173905145787020784, guid: ed0993cd77f66f64cb34412caaaaa204, type: 3}
@@ -1785,3 +1816,4 @@ SceneRoots:
   - {fileID: 1700058524}
   - {fileID: 1820882505}
   - {fileID: 3142449377639618612}
+  - {fileID: 1583533661}

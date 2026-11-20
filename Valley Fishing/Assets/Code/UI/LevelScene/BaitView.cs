@@ -30,24 +30,23 @@ public class BaitView : GameUIItem
     #region MonoBehaviours
 
     public void Start() {
-		UIManager.Instance.Register(this);
-		buttonsGameobject.SetActive(false);
+        buttonsGameobject.SetActive(false);
 		//why is this here twice?
 		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
 		AudioManager.Instance.OnVoiceLineOver += SkipBaitSelection;
 	}
 
-	public void OnDestroy() {
-		UIManager.Instance.Deregister(this);
+
+    public void OnDestroy() {
 		AudioManager.Instance.OnVoiceLineOver -= SkipBaitSelection;
 	}
 
-	#endregion
+    #endregion
 
 
-	#region Public Methods
+    #region Public Methods
 
-	public void EnableBaitUI(bool enable) {
+    public void EnableBaitUI(bool enable) {
 		StartCoroutine(EnableUI(enable));
 		return;
 	}

@@ -113,7 +113,6 @@ public class InventoryManager : Singleton<InventoryManager> {
             baitTypeData.quantity = 0;
             baitTypeData.OwnedItemData = this.BaitDatas.Datas[i];
 			OwnedBaitTypeDatas.Add(baitTypeData);
-
         }
 	}
 	public FishDatas.FishData GetLoot(FishName lootname) {
@@ -167,4 +166,5 @@ public class InventoryManager : Singleton<InventoryManager> {
             }
         }
     }
+
 }

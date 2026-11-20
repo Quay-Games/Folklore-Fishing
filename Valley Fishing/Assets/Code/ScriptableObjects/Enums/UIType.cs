@@ -5,7 +5,7 @@ public enum UIType{
 	LEVEL,
 	LevelBaitSelect,
 	LevelCatchUI,
-
+	DemoEndScreen,
 
 	//Shore	
 	SHORE,
@@ -32,14 +32,19 @@ public enum UIType{
    RodshopFailSpeed,
    RodshopLeaveShop,
 
-    //Icthyologist
-    ICTHYOLOGIST,
+	//Icthyologist
+	ICTHYOLOGIST,
 	IchthyologistEntry,
 
 	//Inventorys
 	INVENTORS,
 	InventorsItem,
 
+	//Locations
+	LocationRiver,
+	LocationSwamp,
+	LocationSea,
+	LocationLavaPool,
 	//Utility
 	GENERATED,
 	DEFAULT

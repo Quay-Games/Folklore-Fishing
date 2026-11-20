@@ -6,17 +6,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Dialogue/Listen For UI Open or Close")]
 public class ListenForUIOpenClose : ListenEvent
 {
-    enum UIType
-    {
-        CatchUI
-    }
-    enum UIStatus
-    {
-        Open,
-        Close
-    }
     [SerializeField] private UIType UiType;
-    [SerializeField] private UIStatus UiStatus;
+    [SerializeField] private bool Open;
     private bool satisfied = false;
 
     public override IEnumerator StartListening()
@@ -27,53 +18,22 @@ public class ListenForUIOpenClose : ListenEvent
 
     private IEnumerator CheckUIStatus()
     {
-        
-        SubscribeToCorrectMethod(Satisfy);
+
+        UIManager.Instance.UIOpenClosed += Satisfy;
         while (!satisfied)
         {
             yield return null;
         }
-        UnsubscribeFromCorrectMethod(Satisfy);
+        UIManager.Instance.UIOpenClosed -= Satisfy;
 
         OnEventTriggered?.Invoke();
     }
 
-    private void Satisfy()
+    private void Satisfy(UIType listenType, bool isOpen)
     {
-        satisfied = true;
-    }
-
-    private void SubscribeToCorrectMethod(Action callbackFunction)
-    {
-        switch (UiType)
+        if(listenType == UiType && isOpen)
         {
-            case UIType.CatchUI:
-                if(UiStatus == UIStatus.Open)
-                {
-                    GameManager.Instance.LevelController.FishView.OnFishUIEnabled += callbackFunction;
-
-                } else
-                {
-                    GameManager.Instance.LevelController.FishView.OnFishUIDisabled += callbackFunction;
-                }
-                break;
-        }
-    }
-
-    private void UnsubscribeFromCorrectMethod(Action callbackFunction)
-    {
-        switch (UiType)
-        {
-            case UIType.CatchUI:
-                if (UiStatus == UIStatus.Open)
-                {
-                    GameManager.Instance.LevelController.FishView.OnFishUIEnabled -= callbackFunction;
-                }
-                else
-                {
-                    GameManager.Instance.LevelController.FishView.OnFishUIDisabled -= callbackFunction;
-                }
-                break;
+            satisfied = true;
         }
     }
 }

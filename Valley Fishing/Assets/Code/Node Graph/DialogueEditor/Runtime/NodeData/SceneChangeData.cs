@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 [System.Serializable]
 public class SceneChangeData : BaseData
 {
-    public Container_Enum<SceneNames> SceneValues = new Container_Enum<SceneNames>("Scene");
+    public Container_Enum<SceneName> SceneValues = new Container_Enum<SceneName>("Scene");
 
     public override IEnumerator Run(IGraphRunnerRuntime runtime)
     {
